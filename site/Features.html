@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Features · LineUp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<script src="cricketers.js"></script>
+</head>
+<body data-page="features">
+<div class="page-bg"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="Home.html" aria-label="LineUp home">
+      <svg width="34" height="34" viewBox="0 0 100 100"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B4BD6"/><stop offset="1" stop-color="#2E2566"/></linearGradient></defs><rect width="100" height="100" rx="27" fill="url(#lg)"/><rect x="27" y="52" width="12" height="26" rx="6" transform="rotate(26 33 65)" fill="#fff"/><rect x="43" y="38" width="12" height="40" rx="6" transform="rotate(26 49 58)" fill="#fff"/><rect x="61" y="16" width="12" height="62" rx="6" transform="rotate(26 67 47)" fill="#fff"/></svg>
+      <span class="wordmark">Line<b>Up</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="Features.html" class="active">Features</a>
+      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost btn-sm" href="../LineUp.html">Open app</a>
+      <a class="btn btn-primary btn-sm" href="Home.html#download">Get the app</a>
+      <button class="nav-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="container">
+      <a href="Home.html">Home</a>
+      <a href="Features.html">Features</a>
+      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Contact.html">Contact</a>
+      <a class="btn btn-primary" href="Home.html#download">Get the app</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRADING PLAYERS RAIL ============ -->
+<section class="players-rail"><div id="players-rail"></div></section>
+
+
+<!-- ============ HERO ============ -->
+<section class="section" style="padding-top:80px;padding-bottom:40px">
+  <div class="container">
+    <div class="section-head center reveal" style="max-width:760px">
+      <span class="eyebrow" style="justify-content:center">Features</span>
+      <h1 class="h-display" style="font-size:clamp(38px,5.4vw,68px);margin-top:18px">Everything you need to trade the game</h1>
+      <p class="lede big">From ball-by-ball scalps to season-long positions, LineUp gives you a real trading desk for cricket, in your pocket.</p>
+      <div class="cta-row reveal d1" style="justify-content:center;margin-top:30px">
+        <a class="btn btn-primary btn-lg" href="Home.html#download">Get the app</a>
+        <a class="btn btn-ghost btn-lg" href="Liquidity-Engine.html">See the engine</a>
+      </div>
+    </div>
+    <div class="grid grid-4 reveal d2" style="margin-top:18px">
+      <div class="stat-cell" style="background:transparent;border:1px solid var(--line);border-radius:18px"><div class="v">180+</div><div class="k">Players listed</div></div>
+      <div class="stat-cell" style="background:transparent;border:1px solid var(--line);border-radius:18px"><div class="v">4</div><div class="k">Trade horizons</div></div>
+      <div class="stat-cell" style="background:transparent;border:1px solid var(--line);border-radius:18px"><div class="v">2-way</div><div class="k">Long &amp; short</div></div>
+      <div class="stat-cell" style="background:transparent;border:1px solid var(--line);border-radius:18px"><div class="v">₹10</div><div class="k">Minimum trade</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE ROWS ============ -->
+<section class="section tight">
+  <div class="container">
+
+    <!-- 1. Live pricing -->
+    <div class="feat-row">
+      <div class="feat-media reveal">
+        <div class="panel glow-edge">
+          <div class="panel-head"><span class="panel-title">V. Kohli · Live</span><span class="tag pill-up">+3.42%</span></div>
+          <svg width="100%" height="160" viewBox="0 0 440 160" preserveAspectRatio="none" fill="none">
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--up)" stop-opacity=".26"/><stop offset="1" stop-color="var(--up)" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0,120 L55,112 L110,118 L165,92 L220,100 L275,64 L330,74 L385,40 L440,24 L440,160 L0,160 Z" fill="url(#g1)"/>
+            <path d="M0,120 L55,112 L110,118 L165,92 L220,100 L275,64 L330,74 L385,40 L440,24" stroke="var(--up)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="440" cy="24" r="4.5" fill="var(--up)" stroke="var(--bg-2)" stroke-width="2"/>
+          </svg>
+          <div class="ob-mid" style="margin-top:14px;background:rgba(255,255,255,.04);border-style:solid">
+            <div><div style="font-size:11px;color:var(--text-3);font-weight:700">LAST PRICE</div><div class="num" style="font-size:20px;font-weight:800">₹2,847.50</div></div>
+            <div style="text-align:right"><div style="font-size:11px;color:var(--text-3);font-weight:700">24H RANGE</div><div class="num" style="font-size:13px;font-weight:700">₹2,718 – ₹2,889</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Real-time pricing</span>
+        <h2 class="h-sec">Prices that breathe with the game</h2>
+        <p class="lede">Each player trades on a live curve driven by on-field events and order flow. Watch the line move on the ball you called.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Sub-second updates on every delivery</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Boundary, wicket &amp; milestone markers on the chart</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Day high, low, open and volume at a glance</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Long & short -->
+    <div class="feat-row rev">
+      <div class="feat-media reveal">
+        <div class="device sm">
+          <div class="device-notch"></div>
+          <div class="device-screen">
+            <div class="dev-status"><span>9:41</span><span class="dots"><svg width="17" height="11" viewBox="0 0 18 13" fill="currentColor"><rect x="0" y="8" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="8" rx="1"/><rect x="10" y="2" width="3" height="11" rx="1"/><rect x="15" y="0" width="3" height="13" rx="1"/></svg></span></div>
+            <div class="dev-scroll">
+              <div style="display:flex;align-items:center;gap:10px;padding:4px 2px">
+                <div class="d-av" style="background:linear-gradient(150deg,#2A6FDB,#1B4F9E)">JB</div>
+                <div style="flex:1"><div style="font-weight:800;font-size:15px">Trade J. Bumrah</div><div style="font-size:12px;color:var(--text-3);font-weight:700">IND · Bowler</div></div>
+                <div class="num" style="font-weight:800">₹2,615.8</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+                <div style="height:64px;border-radius:15px;border:1.5px solid var(--up);background:var(--up-bg);color:var(--up);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:15px">Long ↑<small style="font-size:10.5px;font-weight:600;opacity:.8">Price rises</small></div>
+                <div style="height:64px;border-radius:15px;border:1.5px solid var(--line);background:rgba(255,255,255,.03);color:var(--text-2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:15px">Short ↓<small style="font-size:10.5px;font-weight:600;opacity:.8">Price falls</small></div>
+              </div>
+              <div class="d-card">
+                <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-2);font-weight:700"><span>Horizon</span><span style="color:var(--accent-2)">Day · settles today</span></div>
+                <div style="height:1px;background:var(--line);margin:11px 0"></div>
+                <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:13px;color:var(--text-2);font-weight:700">Quantity</span>
+                  <div style="display:flex;align-items:center;gap:12px"><div style="width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.06);display:grid;place-items:center;font-size:18px">−</div><span class="num" style="font-weight:800;font-size:16px">8</span><div style="width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.06);display:grid;place-items:center;font-size:18px">+</div></div>
+                </div>
+              </div>
+              <div class="d-card" style="background:rgba(255,255,255,.04)">
+                <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--text-2);font-weight:700">Order value</span><span class="num" style="font-weight:800">₹20,926</span></div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px"><span style="color:var(--text-2);font-weight:700">Est. fee</span><span class="num" style="font-weight:700;color:var(--text-2)">₹42</span></div>
+              </div>
+              <div style="height:50px;border-radius:15px;background:var(--up);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;box-shadow:0 12px 26px -10px var(--up)">Buy J. Bumrah · Long</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Two-way trading</span>
+        <h2 class="h-sec">Go long, or short the slump</h2>
+        <p class="lede">Back form or fade it. LineUp lets you profit whether a player is climbing or cooling off, with the position sizing in your control.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Long when you back a player, short when you don't</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Set quantity by units or rupee amount</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Transparent fees shown before you confirm</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Portfolio & P/L -->
+    <div class="feat-row">
+      <div class="feat-media reveal">
+        <div class="panel glow-edge">
+          <div class="panel-head"><span class="panel-title">Your portfolio</span><span class="tag pill-up">+₹14,280 · +8.6%</span></div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="d-card" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.03)">
+              <div class="d-av" style="background:linear-gradient(150deg,#2A6FDB,#1B4F9E)">VK</div>
+              <div style="flex:1"><div style="font-weight:800;font-size:14px">V. Kohli · Long</div><div style="font-size:11.5px;color:var(--text-3);font-weight:700">12 units · avg ₹2,610</div></div>
+              <div style="text-align:right"><div class="num" style="font-weight:800">₹34,170</div><div class="num" style="font-size:12px;color:var(--up);font-weight:700">+₹2,850</div></div>
+            </div>
+            <div class="d-card" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.03)">
+              <div class="d-av" style="background:linear-gradient(150deg,#0F8A4A,#0a5e32)">BA</div>
+              <div style="flex:1"><div style="font-weight:800;font-size:14px">B. Azam · Short</div><div style="font-size:11.5px;color:var(--text-3);font-weight:700">10 units · avg ₹2,270</div></div>
+              <div style="text-align:right"><div class="num" style="font-weight:800">₹22,700</div><div class="num" style="font-size:12px;color:var(--up);font-weight:700">+₹805</div></div>
+            </div>
+            <div class="d-card" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.03)">
+              <div class="d-av" style="background:linear-gradient(150deg,#1FAA6E,#127a4c)">GM</div>
+              <div style="flex:1"><div style="font-weight:800;font-size:14px">G. Maxwell · Long</div><div style="font-size:11.5px;color:var(--text-3);font-weight:700">15 units · avg ₹1,490 · Scalp</div></div>
+              <div style="text-align:right"><div class="num" style="font-weight:800">₹24,183</div><div class="num" style="font-size:12px;color:var(--up);font-weight:700">+₹1,833</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Portfolio &amp; P/L</span>
+        <h2 class="h-sec">Every position, one clear view</h2>
+        <p class="lede">See open longs and shorts, live P/L, and which horizon each trade settles on, colour-coded so you always know your clock.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Live unrealised P/L on every position</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Day, total and per-horizon breakdowns</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Close any position in a single tap</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FEATURE GRID ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">And a lot more</span>
+      <h2 class="h-sec">A full toolkit, out of the box</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="feature-card reveal"><div class="f-ico" style="background:linear-gradient(150deg,#5B4BD6,#3a2e7a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3"/></svg></div><h4>Smart search</h4><p>Find any player by name, team or role and jump straight to their live market.</p></div>
+      <div class="feature-card reveal d1"><div class="f-ico" style="background:linear-gradient(150deg,#E0863A,#b9692a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L3.5 9.7l5.9-.9z"/></svg></div><h4>Watchlists</h4><p>Star the players you follow and keep their prices a swipe away.</p></div>
+      <div class="feature-card reveal d2"><div class="f-ico" style="background:linear-gradient(150deg,#3A86E0,#245a9e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6M9.5 20a2.5 2.5 0 0 0 5 0"/></svg></div><h4>Price alerts</h4><p>Get pinged when a player crosses your level or a big event lands.</p></div>
+      <div class="feature-card reveal"><div class="f-ico" style="background:linear-gradient(150deg,#1FAA6E,#127a4c)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4a5 5 0 0 1-10 0V4zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3M9 16h6M8 21h8M12 14v2"/></svg></div><h4>Leaderboard</h4><p>See where you rank by returns and follow the traders beating the market.</p></div>
+      <div class="feature-card reveal d1"><div class="f-ico" style="background:linear-gradient(150deg,#8B4DE0,#5a2e9e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2H3V7zM3 9h18v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h4>Instant wallet</h4><p>Add and withdraw over UPI in seconds, with a clean transaction history.</p></div>
+      <div class="feature-card reveal d2"><div class="f-ico" style="background:linear-gradient(150deg,#2A6FDB,#1B4F9E)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 0 1 14 0M8 12a4 4 0 0 1 8 0M12 12h.01M4 16h16"/></svg></div><h4>Live match centre</h4><p>Scorecards, ball-by-ball commentary and the players in play, all in one tab.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORIZONS RECAP ============ -->
+<section class="section tight">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Trade horizons</span>
+      <h2 class="h-sec">Pick your timeframe, every trade</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="hz-card reveal"><div class="bar" style="background:#E0863A"></div><div class="ic" style="background:linear-gradient(150deg,#E0863A,#b9692a)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h4>Scalp</h4><p>Seconds–minutes. Trade ball by ball, settled automatically as the over unfolds.</p></div>
+      <div class="hz-card reveal d1"><div class="bar" style="background:#5B4BD6"></div><div class="ic" style="background:linear-gradient(150deg,#5B4BD6,#3a2e7a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div><h4>Day</h4><p>One match. Open at the toss, settle on the final ball of the game.</p></div>
+      <div class="hz-card reveal d2"><div class="bar" style="background:#3A86E0"></div><div class="ic" style="background:linear-gradient(150deg,#3A86E0,#245a9e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11l4 4 8-8M14 7h7v7"/></svg></div><h4>Swing</h4><p>Days–weeks. Hold across a Test or series and ride the form curve.</p></div>
+      <div class="hz-card reveal d3"><div class="bar" style="background:#1FAA6E"></div><div class="ic" style="background:linear-gradient(150deg,#1FAA6E,#127a4c)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5M3 17l9 5 9-5"/></svg></div><h4>Position</h4><p>Weeks–months. Hold a player through a whole tournament season.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="inner">
+        <h2 class="h-sec">Ready to take a position?</h2>
+        <p class="lede" style="margin-left:auto;margin-right:auto">Open an account in under two minutes and place your first trade today.</p>
+        <div class="cta-row" style="justify-content:center;margin-top:26px">
+          <a class="btn btn-primary btn-lg" href="Home.html#download">Get the app</a>
+          <a class="btn btn-ghost btn-lg" href="../LineUp.html">Open the app</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="risk-strip reveal" style="margin-bottom:40px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      <p><b>Risk warning.</b> Trading on LineUp involves financial risk and may not be suitable for everyone. Prices can move against you. This is a skill-based product for users 18 and over. Please trade responsibly and only with money you can afford to lose.</p>
+    </div>
+    <div class="footer-grid">
+      <div class="f-about">
+        <a class="brand" href="Home.html">
+          <svg width="30" height="30" viewBox="0 0 100 100"><rect width="100" height="100" rx="27" fill="#5B4BD6"/><rect x="27" y="52" width="12" height="26" rx="6" transform="rotate(26 33 65)" fill="#fff"/><rect x="43" y="38" width="12" height="40" rx="6" transform="rotate(26 49 58)" fill="#fff"/><rect x="61" y="16" width="12" height="62" rx="6" transform="rotate(26 67 47)" fill="#fff"/></svg>
+          <span class="wordmark">Line<b>Up</b></span>
+        </a>
+        <p>The live market for cricket. Trade players like stocks, powered by a real order book and matching engine.</p>
+        <div class="social-row" style="margin-top:20px">
+          <a class="social-btn" href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7 8 8.2 12h-6.4l-5-7.3L9 22H5.9l7.5-8.6L5.5 2h6.6l4.5 6.7L18.9 2z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social-btn" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2zM10 15V9l5.2 3z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.5 20c-.25 1.1-.9 1.4-1.85.86l-5.1-3.76-2.46 2.37c-.27.27-.5.5-1 .5l.36-5.16 9.4-8.5c.4-.36-.1-.56-.63-.2L5.06 13.1l-5-1.56c-1.1-.34-1.1-1.1.23-1.62l19.5-7.5c.9-.34 1.7.2 1.4 1.5z"/></svg></a>
+        </div>
+      </div>
+      <div><h5>Product</h5><div class="f-links"><a href="Features.html">Features</a><a href="Liquidity-Engine.html">Liquidity &amp; Engine</a><a href="Home.html#download">Download</a><a href="../LineUp.html">Open the app</a></div></div>
+      <div><h5>Company</h5><div class="f-links"><a href="Home.html#give-back">Social impact</a><a href="Contact.html">Contact</a><a href="Contact.html">Support</a><a href="Contact.html">Partnerships</a><a href="#">Careers</a></div></div>
+      <div><h5>Legal</h5><div class="f-links"><a href="#">Terms of use</a><a href="#">Privacy policy</a><a href="#">Responsible play</a><a href="#">Risk disclosure</a></div></div>
+    </div>
+    <div class="footer-disc">
+      <div class="age"><span class="age-badge">18+</span><p><b style="color:var(--text)">Skill-based · 18+ only.</b> LineUp is intended for users aged 18 and above. Trading involves risk of financial loss. Not available in states where prohibited.</p></div>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 LineUp Technologies Pvt. Ltd. All rights reserved.</span>
+      <span>Made in India 🇮🇳</span>
+    </div>
+  </div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Liquidity &amp; Trading Engine · LineUp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<script src="cricketers.js"></script>
+</head>
+<body data-page="engine">
+<div class="page-bg"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="Home.html" aria-label="LineUp home">
+      <svg width="34" height="34" viewBox="0 0 100 100"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B4BD6"/><stop offset="1" stop-color="#2E2566"/></linearGradient></defs><rect width="100" height="100" rx="27" fill="url(#lg)"/><rect x="27" y="52" width="12" height="26" rx="6" transform="rotate(26 33 65)" fill="#fff"/><rect x="43" y="38" width="12" height="40" rx="6" transform="rotate(26 49 58)" fill="#fff"/><rect x="61" y="16" width="12" height="62" rx="6" transform="rotate(26 67 47)" fill="#fff"/></svg>
+      <span class="wordmark">Line<b>Up</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="Features.html">Features</a>
+      <a href="Liquidity-Engine.html" class="active">Liquidity &amp; Engine</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost btn-sm" href="../LineUp.html">Open app</a>
+      <a class="btn btn-primary btn-sm" href="Home.html#download">Get the app</a>
+      <button class="nav-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="container">
+      <a href="Home.html">Home</a>
+      <a href="Features.html">Features</a>
+      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Contact.html">Contact</a>
+      <a class="btn btn-primary" href="Home.html#download">Get the app</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRADING PLAYERS RAIL ============ -->
+<section class="players-rail"><div id="players-rail"></div></section>
+
+
+<!-- ============ HERO ============ -->
+<section class="hero" style="padding-bottom:30px">
+  <div class="hero-fx" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Liquidity &amp; trading engine</span>
+      <h1 class="h-display reveal d1" style="font-size:clamp(38px,5.6vw,70px)">The engine behind <span class="text-grad">every price.</span></h1>
+      <p class="lede big reveal d2">LineUp isn't a bookmaker. It's a real exchange, a live order book where your buys and sells meet other traders, matched in milliseconds at a fair, transparent price.</p>
+      <div class="cta-row reveal d3">
+        <a class="btn btn-primary btn-lg" href="#orderbook">See how it works</a>
+        <a class="btn btn-ghost btn-lg" href="Features.html">Explore features</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="hero-glow"></div>
+      <div class="panel glow-edge" style="max-width:420px">
+        <div class="panel-head">
+          <span class="panel-title">V. Kohli · Order book</span>
+          <span class="chip" style="height:26px"><span class="live-dot"></span>Live</span>
+        </div>
+        <div class="orderbook">
+          <div class="ob-head"><span>Price</span><span style="text-align:center">Size</span><span style="text-align:right">Total</span></div>
+          <div class="ob-row ob-ask"><div class="depth" style="width:38%"></div><span class="px">2,851.0</span><span style="text-align:center">142</span><span style="text-align:right">412</span></div>
+          <div class="ob-row ob-ask"><div class="depth" style="width:55%"></div><span class="px">2,850.0</span><span style="text-align:center">208</span><span style="text-align:right">270</span></div>
+          <div class="ob-row ob-ask"><div class="depth" style="width:22%"></div><span class="px">2,849.0</span><span style="text-align:center">62</span><span style="text-align:right">62</span></div>
+          <div class="ob-mid"><div><span class="sp">SPREAD ₹1.5</span></div><div class="lp num" style="color:var(--accent-2)">₹2,847.5</div></div>
+          <div class="ob-row ob-bid"><div class="depth" style="width:48%"></div><span class="px">2,847.0</span><span style="text-align:center">176</span><span style="text-align:right">176</span></div>
+          <div class="ob-row ob-bid"><div class="depth" style="width:64%"></div><span class="px">2,846.0</span><span style="text-align:center">244</span><span style="text-align:right">420</span></div>
+          <div class="ob-row ob-bid"><div class="depth" style="width:30%"></div><span class="px">2,845.0</span><span style="text-align:center">98</span><span style="text-align:right">518</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="section tight">
+  <div class="container">
+    <div class="stats-band reveal">
+      <div class="stat-cell"><div class="v">38ms</div><div class="k">Median match latency</div></div>
+      <div class="stat-cell"><div class="v">120k</div><div class="k">Orders / second peak</div></div>
+      <div class="stat-cell"><div class="v">99.98%</div><div class="k">Match-day uptime</div></div>
+      <div class="stat-cell"><div class="v">&lt;0.1%</div><div class="k">Typical spread</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDER BOOK EXPLAINER ============ -->
+<section class="section tight" id="orderbook">
+  <div class="container">
+    <div class="feat-row">
+      <div class="reveal">
+        <span class="eyebrow">The order book</span>
+        <h2 class="h-sec">Buyers on one side, sellers on the other</h2>
+        <p class="lede">Every player has a live, two-sided book. <b style="color:var(--text)">Bids</b> are traders willing to buy; <b style="color:var(--text)">asks</b> are traders willing to sell. The price you see is where the two meet.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span><b style="color:var(--text)">Depth you can see.</b> Sizes at each level show exactly how much liquidity is available.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span><b style="color:var(--text)">A real mid-price.</b> The last traded price sits between the best bid and best ask, no hidden margin.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span><b style="color:var(--text)">Tight spreads.</b> Market makers keep the gap between buy and sell small, so you trade close to fair value.</span></li>
+        </ul>
+      </div>
+      <div class="feat-media reveal d1">
+        <div class="panel">
+          <div class="panel-head"><span class="panel-title">Anatomy of a book</span></div>
+          <div class="orderbook">
+            <div style="font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--down);margin-bottom:6px">ASKS · SELLERS</div>
+            <div class="ob-row ob-ask"><div class="depth" style="width:45%"></div><span class="px">2,851.0</span><span style="text-align:center">142</span><span style="text-align:right">412</span></div>
+            <div class="ob-row ob-ask"><div class="depth" style="width:60%"></div><span class="px">2,850.0</span><span style="text-align:center">208</span><span style="text-align:right">270</span></div>
+            <div class="ob-mid"><div><span class="sp">BEST BID ₹2,847 · BEST ASK ₹2,849</span></div><div class="lp num" style="color:var(--accent-2)">₹2,847.5</div></div>
+            <div style="font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--up);margin:6px 0">BIDS · BUYERS</div>
+            <div class="ob-row ob-bid"><div class="depth" style="width:52%"></div><span class="px">2,847.0</span><span style="text-align:center">176</span><span style="text-align:right">176</span></div>
+            <div class="ob-row ob-bid"><div class="depth" style="width:68%"></div><span class="px">2,846.0</span><span style="text-align:center">244</span><span style="text-align:right">420</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MATCHING ENGINE, FLOW ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Matching engine</span>
+      <h2 class="h-sec">How an order becomes a trade</h2>
+      <p class="lede">When you tap buy, here's the path your order takes, start to filled, in well under a tenth of a second.</p>
+    </div>
+    <div class="flow reveal d1">
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#5B4BD6,#3a2e7a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h5>1 · You place</h5><p>You submit a buy or sell at market or a chosen limit price.</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#3A86E0,#245a9e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l3-4 3 2 5-7"/></svg></div><h5>2 · Book sorts</h5><p>The engine ranks resting orders by best price, then by who got there first.</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#1FAA6E,#127a4c)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v13M4 14l3 3 3-3M17 20V7M20 10l-3-3-3 3"/></svg></div><h5>3 · It matches</h5><p>Your order pairs with the best available counter-orders, instantly.</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#E0863A,#b9692a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div><h5>4 · Filled</h5><p>You get a confirmation and the position lands in your portfolio.</p></div>
+    </div>
+    <p class="muted reveal d2" style="text-align:center;font-size:13.5px;margin-top:24px">Price–time priority: better prices match first; at the same price, the earlier order wins. Same rules for everyone.</p>
+  </div>
+</section>
+
+<!-- ============ LIQUIDITY / MARKET MAKING ============ -->
+<section class="section tight">
+  <div class="container">
+    <div class="feat-row rev">
+      <div class="feat-media reveal">
+        <div class="panel">
+          <div class="panel-head"><span class="panel-title">Spread &amp; depth</span><span class="tag pill-up">Tight</span></div>
+          <!-- depth chart -->
+          <svg width="100%" height="180" viewBox="0 0 440 180" preserveAspectRatio="none" fill="none">
+            <defs>
+              <linearGradient id="bidg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--up)" stop-opacity=".3"/><stop offset="1" stop-color="var(--up)" stop-opacity="0"/></linearGradient>
+              <linearGradient id="askg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--down)" stop-opacity=".3"/><stop offset="1" stop-color="var(--down)" stop-opacity="0"/></linearGradient>
+            </defs>
+            <path d="M210,170 L210,40 L160,55 L120,80 L80,110 L30,150 L20,170 Z" fill="url(#bidg)"/>
+            <path d="M210,40 L160,55 L120,80 L80,110 L30,150 L20,170" stroke="var(--up)" stroke-width="2.4" stroke-linejoin="round" fill="none"/>
+            <path d="M230,170 L230,40 L280,55 L320,80 L360,110 L410,150 L420,170 Z" fill="url(#askg)"/>
+            <path d="M230,40 L280,55 L320,80 L360,110 L410,150 L420,170" stroke="var(--down)" stroke-width="2.4" stroke-linejoin="round" fill="none"/>
+            <line x1="220" y1="20" x2="220" y2="170" stroke="var(--text-3)" stroke-width="1" stroke-dasharray="3 4"/>
+            <text x="220" y="14" text-anchor="middle" font-size="11" font-weight="800" fill="var(--accent-2)" font-family="var(--font-num)">MID ₹2,847.5</text>
+          </svg>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <div style="flex:1;text-align:center;padding:8px;border-radius:11px;background:var(--up-bg)"><div class="num" style="font-weight:800;color:var(--up)">₹2,847</div><div style="font-size:11px;color:var(--text-3);font-weight:700;margin-top:2px">Best bid</div></div>
+            <div style="flex:1;text-align:center;padding:8px;border-radius:11px;background:rgba(255,255,255,.04)"><div class="num" style="font-weight:800">₹1.5</div><div style="font-size:11px;color:var(--text-3);font-weight:700;margin-top:2px">Spread</div></div>
+            <div style="flex:1;text-align:center;padding:8px;border-radius:11px;background:var(--down-bg)"><div class="num" style="font-weight:800;color:var(--down)">₹2,849</div><div style="font-size:11px;color:var(--text-3);font-weight:700;margin-top:2px">Best ask</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Liquidity</span>
+        <h2 class="h-sec">Always someone on the other side</h2>
+        <p class="lede">Dedicated market makers continuously quote buy and sell prices on every listed player. That means deep books, tight spreads, and fills when you want them, even at 2 a.m. between innings.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Continuous two-sided quotes on all markets</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Deeper books during live matches when activity spikes</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg><span>Enter and exit without moving the price against yourself</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE FORMATION ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Price formation</span>
+      <h2 class="h-sec">From a six to a new fair value</h2>
+      <p class="lede">On-field events feed a fair-value model. Traders react. The book re-clears. A new price is born, in real time.</p>
+    </div>
+    <div class="flow reveal d1">
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#E0863A,#b9692a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-9 9-3-3zM7 14l-4 4 3 3 4-4"/></svg></div><h5>On-field event</h5><p>A six, wicket, milestone or economical over is registered live.</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#5B4BD6,#3a2e7a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/></svg></div><h5>Model reprices</h5><p>A fair-value model nudges the player's reference price by event weight.</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#3A86E0,#245a9e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l3-4 3 2 5-7"/></svg></div><h5>Traders react</h5><p>Buyers and sellers update their orders around the new level.</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-node"><div class="n-ic" style="background:linear-gradient(150deg,#1FAA6E,#127a4c)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11l4 4 8-8M14 7h7v7"/></svg></div><h5>New price clears</h5><p>The book settles on a fresh traded price, visible to everyone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAIRNESS ============ -->
+<section class="section tight">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Fairness &amp; transparency</span>
+      <h2 class="h-sec">One price. Same rules. For everyone.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="trust-item reveal" style="flex-direction:column"><div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 6l1 14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1l1-14M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></div><h4>No hidden margin</h4><p>You trade against the book, not a bookmaker's loaded odds. The mid-price is the mid-price.</p></div>
+      <div class="trust-item reveal d1" style="flex-direction:column"><div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div><h4>Price–time priority</h4><p>Better prices fill first; at the same price, whoever ordered first wins. No queue-jumping.</p></div>
+      <div class="trust-item reveal d2" style="flex-direction:column"><div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></div><h4>Visible depth</h4><p>The full book is on screen. You can see the liquidity before you commit a single rupee.</p></div>
+      <div class="trust-item reveal" style="flex-direction:column"><div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h12v9a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zM9 11V8a3 3 0 0 1 6 0v3"/></svg></div><h4>Circuit limits</h4><p>Per-player price bands prevent runaway moves and protect against fat-finger orders.</p></div>
+      <div class="trust-item reveal d1" style="flex-direction:column"><div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM14 3v4h4M8 13h8M8 17h5"/></svg></div><h4>Auditable trails</h4><p>Every order and fill is timestamped and logged, so the tape can always be checked.</p></div>
+      <div class="trust-item reveal d2" style="flex-direction:column"><div class="ti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><h4>Segregated funds</h4><p>Trader balances sit in escrow, separate from company funds, settled on each horizon.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SETTLEMENT BY HORIZON ============ -->
+<section class="section">
+  <div class="container">
+    <div class="feat-row">
+      <div class="reveal">
+        <span class="eyebrow">Settlement</span>
+        <h2 class="h-sec">Each horizon settles on its own clock</h2>
+        <p class="lede">When a position closes depends on the horizon you chose. The engine handles it automatically, crediting or debiting your wallet the moment a trade resolves.</p>
+      </div>
+      <div class="feat-media reveal d1">
+        <div class="panel" style="max-width:460px">
+          <div class="steps">
+            <div class="step"><div class="n" style="background:linear-gradient(150deg,#E0863A,#b9692a)"></div><div><h4 style="font-size:16px">Scalp</h4><p>Auto-settles within the over you traded, ball by ball.</p></div></div>
+            <div class="step"><div class="n" style="background:linear-gradient(150deg,#5B4BD6,#3a2e7a)"></div><div><h4 style="font-size:16px">Day</h4><p>Settles at the final ball of the match you entered.</p></div></div>
+            <div class="step"><div class="n" style="background:linear-gradient(150deg,#3A86E0,#245a9e)"></div><div><h4 style="font-size:16px">Swing</h4><p>Resolves at the end of the Test or series window.</p></div></div>
+            <div class="step"><div class="n" style="background:linear-gradient(150deg,#1FAA6E,#127a4c)"></div><div><h4 style="font-size:16px">Position</h4><p>Carries through to the close of the full tournament.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="inner">
+        <h2 class="h-sec">A real market, in your pocket</h2>
+        <p class="lede" style="margin-left:auto;margin-right:auto">See the book, place an order, watch it fill. Trade cricket the way markets are meant to work.</p>
+        <div class="cta-row" style="justify-content:center;margin-top:26px">
+          <a class="btn btn-primary btn-lg" href="Home.html#download">Get the app</a>
+          <a class="btn btn-ghost btn-lg" href="Contact.html">Talk to our team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="risk-strip reveal" style="margin-bottom:40px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      <p><b>Risk warning.</b> Trading on LineUp involves financial risk and may not be suitable for everyone. Prices can move against you. This is a skill-based product for users 18 and over. Please trade responsibly and only with money you can afford to lose.</p>
+    </div>
+    <div class="footer-grid">
+      <div class="f-about">
+        <a class="brand" href="Home.html">
+          <svg width="30" height="30" viewBox="0 0 100 100"><rect width="100" height="100" rx="27" fill="#5B4BD6"/><rect x="27" y="52" width="12" height="26" rx="6" transform="rotate(26 33 65)" fill="#fff"/><rect x="43" y="38" width="12" height="40" rx="6" transform="rotate(26 49 58)" fill="#fff"/><rect x="61" y="16" width="12" height="62" rx="6" transform="rotate(26 67 47)" fill="#fff"/></svg>
+          <span class="wordmark">Line<b>Up</b></span>
+        </a>
+        <p>The live market for cricket. Trade players like stocks, powered by a real order book and matching engine.</p>
+        <div class="social-row" style="margin-top:20px">
+          <a class="social-btn" href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7 8 8.2 12h-6.4l-5-7.3L9 22H5.9l7.5-8.6L5.5 2h6.6l4.5 6.7L18.9 2z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social-btn" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2zM10 15V9l5.2 3z"/></svg></a>
+          <a class="social-btn" href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.5 20c-.25 1.1-.9 1.4-1.85.86l-5.1-3.76-2.46 2.37c-.27.27-.5.5-1 .5l.36-5.16 9.4-8.5c.4-.36-.1-.56-.63-.2L5.06 13.1l-5-1.56c-1.1-.34-1.1-1.1.23-1.62l19.5-7.5c.9-.34 1.7.2 1.4 1.5z"/></svg></a>
+        </div>
+      </div>
+      <div><h5>Product</h5><div class="f-links"><a href="Features.html">Features</a><a href="Liquidity-Engine.html">Liquidity &amp; Engine</a><a href="Home.html#download">Download</a><a href="../LineUp.html">Open the app</a></div></div>
+      <div><h5>Company</h5><div class="f-links"><a href="Home.html#give-back">Social impact</a><a href="Contact.html">Contact</a><a href="Contact.html">Support</a><a href="Contact.html">Partnerships</a><a href="#">Careers</a></div></div>
+      <div><h5>Legal</h5><div class="f-links"><a href="#">Terms of use</a><a href="#">Privacy policy</a><a href="#">Responsible play</a><a href="#">Risk disclosure</a></div></div>
+    </div>
+    <div class="footer-disc">
+      <div class="age"><span class="age-badge">18+</span><p><b style="color:var(--text)">Skill-based · 18+ only.</b> LineUp is intended for users aged 18 and above. Trading involves risk of financial loss. Not available in states where prohibited.</p></div>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 LineUp Technologies Pvt. Ltd. All rights reserved.</span>
+      <span>Made in India 🇮🇳</span>
+    </div>
+  </div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
