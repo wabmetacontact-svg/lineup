@@ -71,23 +71,7 @@
   /* ---------------- Logo mark ---------------- */
   function LogoMark({ size = 40, radius }) {
     const r = radius != null ? radius : size * 0.27;
-    const uid = useMemo(() => 'lg' + Math.random().toString(36).slice(2, 7), []);
-    const bar = (cx, h, k) => {
-      const w = 12, y0 = 78 - h, cy = y0 + h / 2;
-      return <rect key={k} x={cx - w / 2} y={y0} width={w} height={h} rx={w / 2}
-        transform={`rotate(26 ${cx} ${cy})`} fill="#fff" />;
-    };
-    return (
-      <svg width={size} height={size} viewBox="0 0 100 100" style={{ borderRadius: r, display: 'block' }}>
-        <defs>
-          <linearGradient id={uid} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#5B4BD6" /><stop offset="1" stopColor="#2E2566" />
-          </linearGradient>
-        </defs>
-        <rect width="100" height="100" rx="27" fill={`url(#${uid})`} />
-        {bar(33, 26, 'a')}{bar(49, 40, 'b')}{bar(67, 62, 'c')}
-      </svg>
-    );
+    return <img src="logo.png" alt="LineUp" width={size} height={size} style={{ borderRadius: r, display: 'block', objectFit: 'contain' }} />;
   }
   function Wordmark({ size = 22, color }) {
     return <span style={{ fontWeight: 800, fontSize: size, letterSpacing: '-0.04em', color: color || 'var(--text)' }}>
