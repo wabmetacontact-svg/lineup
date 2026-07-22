@@ -1,0 +1,1459 @@
+Table of Contents 
+LINEUP TERMS & CONDITIONS.............................................................................................................................3 
+PREAMBLE AND STRUCTURE OF THIS DOCUMENT .............................................................................4 
+PART I: INTRODUCTION ...........................................................................................................................................5 
+1. Acceptance of Terms .........................................................................................................................................5 
+2. Definitions ..............................................................................................................................................................6 
+3. About LineUp ........................................................................................................................................................8 
+4. Nature of the Platform ......................................................................................................................................8 
+5. Relationship Between You and LineUp ....................................................................................................9 
+PART II: ELIGIBILITY ............................................................................................................................................... 10 
+6. Eligibility Requirements ............................................................................................................................... 10 
+7. Restricted Jurisdictions ................................................................................................................................. 10 
+8. Age Requirement.............................................................................................................................................. 11 
+9. Institutional Accounts.................................................................................................................................... 11 
+10. Account Verification .................................................................................................................................... 12 
+PART III: ACCOUNT................................................................................................................................................... 12 
+11. Registration ...................................................................................................................................................... 12 
+12. KYC & Identity Verification ...................................................................................................................... 12 
+13. Security .............................................................................................................................................................. 13 
+14. Multiple Accounts ......................................................................................................................................... 13 
+15. Suspension & Termination ....................................................................................................................... 14 
+PART IV: PLATFORM ................................................................................................................................................ 15 
+16. Synthetic Player Assets .............................................................................................................................. 15 
+17. Market Operation .......................................................................................................................................... 15 
+18. Trading Hours ................................................................................................................................................. 16 
+19. Liquidity Engine ............................................................................................................................................. 16 
+20. Pricing Methodology.................................................................................................................................... 17 
+21. Performance-Based Valuation ................................................................................................................ 17 
+22. Market Interruptions................................................................................................................................... 18 
+23. Market Suspension ....................................................................................................................................... 18 
+24. Delisting ............................................................................................................................................................. 19 
+PART V: TRADING ..................................................................................................................................................... 19 
+25. Orders ................................................................................................................................................................. 19 
+26. Trade Matching .............................................................................................................................................. 20 
+27. Fractional Ownership.................................................................................................................................. 20 
+28. Margin Trading ............................................................................................................................................... 20 
+29. Short Selling ..................................................................................................................................................... 21 
+30. Liquidation ....................................................................................................................................................... 22 
+31. Position Limits ................................................................................................................................................ 22 
+32. Leverage ............................................................................................................................................................ 23 
+33. Settlement ......................................................................................................................................................... 23 
+34. Corporate Actions (Retirement, Suspension, and Similar Events) ....................................... 24 
+PART VI: PAYMENTS ................................................................................................................................................ 25 
+35. Deposits ............................................................................................................................................................. 25 
+36. Withdrawals .................................................................................................................................................... 25 
+37. Fiat Payments.................................................................................................................................................. 26 
+38. Crypto Payments ........................................................................................................................................... 27 
+39. Taxes ................................................................................................................................................................... 28 
+40. Fees ...................................................................................................................................................................... 28 
+PART VII: USER RESPONSIBILITIES ................................................................................................................. 28 
+41. Permitted Use ................................................................................................................................................. 28 
+42. Prohibited Activities .................................................................................................................................... 29 
+43. Market Manipulation ................................................................................................................................... 29 
+44. Insider Information ...................................................................................................................................... 30 
+45. Bots & Automation ....................................................................................................................................... 30 
+46. API Usage .......................................................................................................................................................... 31 
+PART VIII: RISK ........................................................................................................................................................... 31 
+47. General Risk ..................................................................................................................................................... 31 
+48. Synthetic Asset Risk ..................................................................................................................................... 32 
+49. Liquidity Risk .................................................................................................................................................. 32 
+50. Leverage Risk .................................................................................................................................................. 32 
+51. Technology Risk ............................................................................................................................................. 32 
+52. Sports Event Risk .......................................................................................................................................... 33 
+53. Data Risk ............................................................................................................................................................ 33 
+PART IX: INTELLECTUAL PROPERTY .............................................................................................................. 33 
+54. Platform IP ........................................................................................................................................................ 33 
+55. Player Information ....................................................................................................................................... 33 
+56. Trademarks ...................................................................................................................................................... 34 
+57. User Content .................................................................................................................................................... 34 
+PART X: LIABILITY .................................................................................................................................................... 34 
+58. Disclaimers ....................................................................................................................................................... 34 
+59. Limitation of Liability .................................................................................................................................. 35 
+60. Indemnification .............................................................................................................................................. 35 
+PART XI: PRIVACY ..................................................................................................................................................... 36 
+61. Data Collection................................................................................................................................................ 36 
+62. Third-Party Providers ................................................................................................................................. 36 
+63. Communication .............................................................................................................................................. 37 
+PART XII: MISCELLANEOUS ................................................................................................................................. 37 
+64. Amendments ................................................................................................................................................... 37 
+65. Force Majeure ................................................................................................................................................. 38 
+66. Assignment ....................................................................................................................................................... 38 
+67. Governing Law ................................................................................................................................................ 38 
+68. Dispute Resolution ....................................................................................................................................... 38 
+69. Contact ................................................................................................................................................................ 39 
+SCHEDULES .................................................................................................................................................................. 39 
+Schedule 1: Restricted Jurisdictions ............................................................................................................ 39 
+Schedule 2: Feature Availability .................................................................................................................... 40 
+Schedule 3: Data Providers .............................................................................................................................. 40 
+Schedule 4: Payment Partners........................................................................................................................ 40 
+Schedule 5: Published Parameters (Reference) ..................................................................................... 40 
+ 
+LINEUP TERMS & CONDITIONS 
+A Market Rulebook and User Agreement 
+Effective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.2 Operator: 
+LineUp | Established in: the Emirate of Dubai, United Arab Emirates Platform: 
+https://lineup.trade/ | Contact: Support@Lineup.trade 
+ 
+Publication checklist, verify before going live 
+This document is complete and internally consistent, but a small number of items 
+depend on facts only you and your lawyers can finalise. Confirm each before 
+publishing: 1. Entity details. Replace the operating name “LineUp” with the full 
+registered entity (e.g. LineUp FZ-LLC), and add your Dubai trade-licence number 
+and registered street address in Section 3 and Section 69. 2. Governing-law 
+forum. This draft uses DIFC (Dubai International Financial Centre) law with 
+LCIA arbitration seated in the DIFC, chosen to match your English-language, 
+common-law preference. Confirm DIFC vs. onshore Dubai/UAE with counsel 
+(Sections 67-68). 3. Regulatory-status statement (Section 3.4). Written as an 
+honest “not currently licensed; operate only where lawful” position. Have counsel 
+confirm and update as licences are obtained, this is the first line a regulator or 
+app-store reviewer reads. 4. Restricted-jurisdictions list (Schedule 1). Includes 
+the United States and India by default (US pending licensing; India per its 2025 
+real-money-gaming ban). Confirm the full list market-by-market with local 
+counsel. 5. Published parameter/policy pages. The lineup.trade/… links 
+referenced throughout (fees, margin, limits, methodology, companion policies) 
+must be live before launch. 6. Non-custodial fund flow & collateral locks 
+(Sections 28, 35, 38). Confirm with counsel and your engineers that Razorpay 
+holds/reserves fiat and the self-custody wallet escrow locks crypto exactly as 
+described, so the “no custody” position is true in substance. 
+ 
+PREAMBLE AND STRUCTURE OF THIS DOCUMENT  
+This document (the “Terms”) is the master agreement governing all access to and use of 
+the LineUp platform. It is drafted in the style of an exchange rulebook: it sets out not only 
+the contractual relationship between you and LineUp, but also the operating rules of the 
+market itself, how instruments are created, how prices form, how orders execute, how 
+positions settle, and how the market is protected. Where these Terms describe market 
+mechanics, those descriptions are operating rules binding on every User, and LineUp 
+administers them uniformly. 
+These Terms are organised into twelve Parts: Part I, Introduction (Sections 1-5); Part II, 
+Eligibility (Sections 6-10); Part III, Account (Sections 11-15); Part IV, Platform (Sections 
+16-24); Part V, Trading (Sections 25-34); Part VI, Payments (Sections 35-40); Part VII, User 
+Responsibilities (Sections 41-46); Part VIII, Risk (Sections 47-53); Part IX, Intellectual 
+Property (Sections 54-57); Part X, Liability (Sections 58-60); Part XI, Privacy (Sections 61-
+63); Part XII, Miscellaneous (Sections 64-69); followed by Schedules. 
+The following documents are incorporated into these Terms by reference and form part of 
+the agreement between you and LineUp: the Privacy Policy (https://lineup.trade/privacy), 
+the Risk Disclosure Statement (https://lineup.trade/risk-disclosure), the Responsible 
+Trading Policy (https://lineup.trade/responsible-trading), the AML/KYC Policy 
+(https://lineup.trade/aml-kyc), the Acceptable Use Policy 
+(https://lineup.trade/acceptable-use), the Fee Schedule (https://lineup.trade/fees), the 
+Cookie Policy (https://lineup.trade/cookies), the API Terms (https://lineup.trade/api-
+terms) where applicable, and the Schedules annexed to these Terms. In the event of 
+conflict, these Terms prevail over the incorporated documents except where an 
+incorporated document expressly states otherwise, and except that the Risk Disclosure 
+Statement prevails on matters of risk description. 
+Interpretation. In these Terms: (a) headings are for convenience and do not affect 
+interpretation; (b) “including” means “including without limitation”; (c) the singular 
+includes the plural and vice versa; (d) references to a statute include its amendments and 
+re-enactments; (e) references to “writing” include email and in-Platform notices; (f) 
+references to Sections and Schedules are to sections of and schedules to these Terms; (g) 
+where these Terms grant LineUp a discretion, LineUp will exercise it in good faith and, 
+where the discretion concerns market operation, in a manner intended to preserve fair and 
+orderly markets; and (h) capitalised terms have the meanings given in Section 2. 
+ 
+PART I: INTRODUCTION 
+1. Acceptance of Terms 
+1.1. These Terms constitute a legally binding agreement between you and LineUp. You 
+accept these Terms by any of the following: (a) creating an Account; (b) clicking or tapping 
+an acceptance mechanism presented on the Platform; (c) accessing or using any part of the 
+Platform; or (d) placing any Order. Acceptance by any of these means has the same legal 
+effect as a signature. 
+1.2. If you do not agree to these Terms, or if you are ineligible under Part II, you must not 
+access or use the Platform, and you must not create an Account. 
+1.3. If you accept these Terms on behalf of a company, partnership, fund, or other legal 
+entity, you represent and warrant that you are duly authorised to bind that entity, and 
+“you” refers to that entity. Institutional accounts are further governed by Section 9. 
+1.4. You acknowledge that you have read and understood the Risk Disclosure Statement 
+before trading. Certain higher-risk features, including Margin Trading (Section 28) and 
+Short Selling (Section 29), require a separate, feature-specific acknowledgement before 
+first use. Those acknowledgements form part of these Terms. 
+1.5. These Terms apply to every version of the Platform through which you access LineUp, 
+including the website at https://lineup.trade/, mobile applications, and any API made 
+available under Section 46. 
+1.6. You are responsible for reviewing these Terms periodically. The version in force at the 
+time of any act or omission governs that act or omission. Amendments are governed by 
+Section 64. 
+1.7. Nothing in these Terms creates any right enforceable by any person who is not a party 
+to them, except as expressly stated (including the protections extended to LineUp’s officers, 
+employees, affiliates, and suppliers under Part X). 
+2. Definitions 
+“Account” means the user account registered with LineUp through which you access the 
+Platform. 
+“Affiliate” means in relation to a person, any entity that directly or indirectly controls, is 
+controlled by, or is under common control with that person. 
+“AML/KYC Policy” means LineUp’s anti-money-laundering and know-your-customer 
+policy at https://lineup.trade/aml-kyc, as amended from time to time. 
+“Base Currency” means Indian Rupees (INR), the unit in which SPA prices, Position values, 
+margin, and profit and loss are calculated and settled on the Platform. Users may choose to 
+view balances and prices in INR, US Dollars (USD), or Euros (EUR); USD and EUR are 
+display conversions only, and INR remains the accounting and settlement base (Section 
+37.4). 
+“Business Day” means a day other than a Saturday, Sunday, or public holiday in Dubai, 
+United Arab Emirates. 
+“Circuit Breaker” means a temporary, automatic or discretionary halt in trading of one or 
+more SPAs, applied under Section 22 or 23. 
+“Collateral” means value committed by you to secure Margin obligations, locked through 
+the mechanisms in Section 28.4. 
+“Corporate Action” means a real-world event affecting a Reference Player that triggers 
+adjustment of an SPA under Section 34. 
+“Data Providers” means the third-party sources from which the Platform obtains sports 
+data: for football, football-data.org; for cricket, cricketdata.org; together with any successor 
+or additional providers designated by LineUp (Schedule 3). 
+“Fee Schedule” means the schedule of fees at https://lineup.trade/fees, as amended from 
+time to time. 
+“Fiat Balance” means INR value credited to you and held by the Payment Partner under 
+Sections 35 and 37. A Fiat Balance is a claim against the Payment Partner under its terms, 
+not a deposit with LineUp. 
+“Leverage” means trading exposure exceeding the Collateral committed, capped as set out 
+in Section 32. 
+“Linked Wallet” means a Self-Custody Wallet you have connected to your Account under 
+Section 38. 
+“Liquidation” means the compulsory closure of some or all of your Positions under Section 
+30. 
+“Liquidity Engine” means the automated system operated by LineUp through which 
+Orders execute against Liquidity Pools (Section 19). It does not match Users peer-to-peer, 
+and LineUp is not a counterparty to trades executed through it. 
+“Liquidity Pool” means a pool of capital, seeded by LineUp, its Affiliates, and/or its 
+investors, against which Orders execute. Liquidity Pools are legally and operationally 
+distinct from LineUp’s role as Platform operator (Sections 5 and 19). 
+“Margin” means the minimum Collateral required to open (“Initial Margin”) or maintain 
+(“Maintenance Margin”) a leveraged or short Position. 
+“Order” means an instruction submitted through the Platform to buy or sell an SPA 
+(Section 25). 
+“Payment Partner” means the regulated third-party provider through which INR deposits, 
+balances, and withdrawals are processed and held. At the Effective Date this is Razorpay 
+(Schedule 4). 
+“Performance Engine” means the algorithmic system (Sections 20-21) that determines 
+and adjusts SPA prices by reference to Reference Player performance and market 
+dynamics. 
+“Platform” means the LineUp websites, mobile applications, APIs, and related services 
+made available by LineUp. 
+“Position” means your open exposure in an SPA, whether long or short, including 
+fractional quantities. 
+“Reference Player” means the real-world sports player whose identity and performance 
+statistics are used to identify and price an SPA. A Reference Player is not a party to these 
+Terms and has no relationship with LineUp except where separately and expressly 
+licensed. 
+“Restricted Jurisdiction” means any jurisdiction listed in Schedule 1, and any other 
+jurisdiction in which the Platform or any feature of it is unlawful, unlicensed, or restricted, 
+or whose residents LineUp elects not to serve. 
+“Self-Custody Wallet” means a cryptocurrency wallet whose private keys are controlled 
+solely by you. 
+“Settlement” means the process by which a closed, expired, liquidated, or adjusted 
+Position is reconciled and the resulting value credited or debited (Section 33). 
+“SPA” / “Synthetic Player Asset” means a synthetic digital asset made available for 
+trading on the Platform, whose price references market activity in that asset and the 
+performance of a Reference Player. The nature and limits of SPAs are set out in Sections 4, 
+16, and 48. 
+“Trading Session” means a period during which trading in a given SPA is open (Section 
+18). 
+“User” means any person or entity that has registered an Account and, where the context 
+requires, any person accessing the Platform. 
+3. About LineUp 
+3.1. The Platform is owned and operated by LineUp, a company established under the laws 
+of the Emirate of Dubai, United Arab Emirates, with its registered office in Dubai, United 
+Arab Emirates. Full entity, trade-licence, and registered-address details are stated in 
+Section 69. 
+3.2. LineUp is a sports trading platform on which Users trade Synthetic Player Assets 
+representing real-world sports players, with prices driven by market activity on the 
+Platform and the live performance of the Reference Players. The sports covered at launch 
+are association football and cricket; LineUp may add or remove sports at its discretion. 
+3.3. LineUp is not a betting platform. The Platform does not offer, and Users cannot place, 
+bets or wagers on the outcome of matches, sporting events, or player outcomes. No product 
+on the Platform pays out by reference to whether a discrete sporting event occurs or does 
+not occur. Users take continuous price exposure to SPAs, which they may open and close at 
+prevailing prices while the market is open, in the manner of trading rather than wagering. 
+3.4. Regulatory status. LineUp is a technology platform operator. As at the Effective Date, 
+LineUp is not authorised or licensed as a bank, e-money institution, securities exchange, or 
+regulated financial-services provider in any jurisdiction, and it does not custody User funds 
+(Part VI). LineUp makes the Platform available only in jurisdictions where doing so is 
+lawful without a licence or authorisation that LineUp does not hold, and restricts access 
+elsewhere (Section 7 and Schedule 1). As LineUp obtains licences or registrations in 
+particular markets, it will update this Section and the applicable Schedules. 
+3.5. Contact details for LineUp are set out in Section 69. 
+4. Nature of the Platform 
+4.1. The Platform is a venue and a set of automated systems through which Users may open 
+and close Positions in SPAs, whose prices are determined by the Performance Engine by 
+reference to (a) trading activity and market dynamics on the Platform and (b) the 
+performance of Reference Players in real-world matches, using data supplied by the Data 
+Providers. 
+4.2. What SPAs are not. Each SPA is a synthetic digital asset that exists solely as an entry in 
+the Platform’s systems. An SPA: (a) is not a share, stock, bond, security, or other financial 
+instrument issued by or on behalf of any Reference Player, club, team, league, or governing 
+body; (b) confers no ownership interest, equity, income right, dividend, or revenue share 
+on or against any Reference Player or organisation; (c) confers no rights against any 
+Reference Player, who is a stranger to these Terms; (d) is not legal tender, money, or e-
+money; (e) has no existence, value, or transferability outside the Platform, and may not be 
+transferred between Users off-market, pledged, or encumbered; and (f) may lose some or 
+all of its value, including upon Corporate Actions (Section 34) or delisting (Section 24). 
+4.3. No advice. LineUp does not provide investment, financial, trading, tax, accounting, or 
+legal advice. All information on the Platform, prices, charts, statistics, form indicators, 
+leaderboards, and commentary, is provided for information only and is not a 
+recommendation to trade. You are solely responsible for your trading decisions. 
+4.4. No solicitation. Nothing on the Platform constitutes an offer or solicitation in any 
+jurisdiction where such offer or solicitation would be unlawful. 
+4.5. Independence. LineUp is an independent platform. Unless expressly stated in writing, 
+LineUp is not affiliated with, endorsed by, sponsored by, or licensed by any Reference 
+Player, club, team, league, federation, or governing body, and the use of player names and 
+statistics does not imply any such relationship (Sections 55-56). 
+5. Relationship Between You and LineUp 
+5.1. Operator, not counterparty. LineUp operates the Platform, the Liquidity Engine, and 
+the Performance Engine as technology and market-administration services. LineUp does 
+not act as counterparty to any User trade. When your Order executes, it executes against 
+a Liquidity Pool through the Liquidity Engine, not against LineUp and not against another 
+identified User. 
+5.2. Not your broker, agent, adviser, or fiduciary. LineUp does not act as your broker, 
+dealer, agent, portfolio manager, adviser, or fiduciary, and owes you no fiduciary duties. 
+The relationship is that of platform operator and platform user, on the arm’s-length terms 
+of this agreement. 
+5.3. Not a custodian. LineUp does not hold, custody, or control User funds. Fiat Balances 
+are held by the Payment Partner; cryptocurrency remains in your Self-Custody Wallet (Part 
+VI). LineUp’s systems record balances and Positions as ledger entries for the operation of 
+the market, but those records are not deposits with LineUp, and LineUp is not a bank, e-
+money issuer, or custodian. 
+5.4. Liquidity Pool disclosure. Liquidity Pools may be seeded, in whole or in part, by 
+LineUp, its Affiliates, and/or its investors, and those contributors may receive returns 
+generated by the Pools. The Pools are structured and operated so that they are legally and 
+functionally distinct from LineUp’s role as operator: LineUp’s operation of the market 
+(including the Performance Engine and market-protection mechanisms) is governed by 
+these Terms and applied uniformly, and is not conducted to favour Pool outcomes over 
+User outcomes. You acknowledge this structure and the potential conflict of interest it 
+creates, which LineUp manages through the uniform application of these rules, its internal 
+conflicts-of-interest controls, and the disclosures in this Section. 
+5.5. No guarantee of liquidity, price, or profit. LineUp does not guarantee that any Order 
+will execute, that liquidity will be available at any time or price, that any SPA will retain 
+value, or that you will make a profit. Liquidity depends on the Liquidity Pools and market 
+conditions (Section 19). 
+5.6. Service providers. The Payment Partner, Data Providers, KYC and screening 
+providers, and hosting and infrastructure providers are independent third parties. Your 
+relationship with the Payment Partner in respect of your Fiat Balance is governed by that 
+partner’s terms in addition to these Terms. 
+ 
+PART II: ELIGIBILITY 
+6. Eligibility Requirements 
+6.1. You may register an Account and use the Platform only if all of the following are and 
+remain true: (a) you are a natural person aged at least 18 years (Section 8) or a validly 
+existing entity (Section 9); (b) you have full legal capacity to enter into a binding contract; 
+(c) you are not located, resident, or incorporated in, or accessing the Platform from, a 
+Restricted Jurisdiction (Section 7); (d) you are not a person with whom dealings are 
+prohibited under applicable sanctions laws, including those of the United Nations, the 
+United States (OFAC), the European Union, the United Kingdom, and the United Arab 
+Emirates, and you are not owned or controlled by such a person; (e) you have successfully 
+completed KYC verification (Sections 10 and 12); (f) you act for your own account and 
+benefit (or, for institutional accounts, for the registered entity), and not as an undisclosed 
+nominee or agent for a third party; (g) you have not previously been suspended, 
+terminated, or self-excluded from the Platform, unless LineUp has expressly reinstated you; 
+and (h) your use of the Platform is lawful in every jurisdiction applicable to you. 
+6.2. Each statement in Section 6.1 is a continuing representation and warranty, repeated 
+each time you access the Platform or place an Order. You must notify LineUp promptly if 
+any ceases to be true. 
+6.3. LineUp may decline any registration and may restrict, suspend, or terminate any 
+Account where eligibility cannot be established or maintained, or where required by law, 
+without obligation to give reasons except where the law requires them. 
+7. Restricted Jurisdictions 
+7.1. The Platform is offered internationally, except in Restricted Jurisdictions listed in 
+Schedule 1, which may be amended at any time, including with immediate effect where 
+required by law. 
+7.2. Restricted Jurisdictions include, at minimum: (a) jurisdictions subject to 
+comprehensive sanctions; (b) jurisdictions where the operation or use of the Platform, or 
+any material feature (including leveraged trading in synthetic sports-linked assets, or 
+cryptocurrency transactions), is unlawful or requires a licence LineUp does not hold; and 
+(c) jurisdictions LineUp elects not to serve for legal, regulatory, or commercial reasons. 
+7.3. You must not access or attempt to access the Platform from a Restricted Jurisdiction, 
+and you must not use any technology or technique, including VPNs, proxies, remote 
+desktops, or false address or residency information, to circumvent geographic controls. 
+Doing so is a material breach. 
+7.4. LineUp uses geolocation, IP analysis, KYC data, payment data, and other controls to 
+enforce jurisdiction restrictions. If LineUp determines that you are in, or have become 
+subject to the laws of, a Restricted Jurisdiction, LineUp may block access, restrict features, 
+suspend the Account, close open Positions in an orderly manner at prevailing prices (or at 
+fair value under Section 33.5 where markets are closed), and remit remaining eligible 
+balances through the applicable rails, subject to law. 
+7.5. If your circumstances change, including relocation to a Restricted Jurisdiction, you 
+must notify LineUp and cease trading; Section 7.4 will then apply. 
+8. Age Requirement 
+8.1. You must be at least 18 years old to use the Platform, or older where the law of your 
+jurisdiction sets a higher minimum age for the activities offered. 
+8.2. Age is verified during KYC. LineUp will refuse or close any Account where age cannot 
+be verified or where the holder is under the applicable minimum age, and will handle 
+related funds and data in accordance with applicable law. 
+8.3. You must not assist or enable any person under the applicable minimum age to access 
+the Platform, including through your Account or devices. 
+9. Institutional Accounts 
+9.1. Companies, partnerships, funds, and other legal entities may register institutional 
+Accounts. Professional traders acting as individuals may register standard Accounts and 
+may be classified by LineUp as professional users for limits, features, or disclosures. 
+9.2. Institutional registration requires enhanced verification, including constitutional 
+documents; proof of existence and good standing; identification of directors and ultimate 
+beneficial owners to the thresholds in the AML/KYC Policy; evidence of the authority of 
+each individual operating the Account; and any further information LineUp or the Payment 
+Partner requires. 
+9.3. The entity is bound by the acts and omissions of every person it permits to operate its 
+Account. Institutional Accounts may be subject to different limits, fees, margin parameters, 
+API entitlements, and documentation. 
+9.4. An institutional User represents on a continuing basis that its use of the Platform is 
+within its corporate capacity and authority, is lawful under the laws applicable to it, and 
+complies with any regulatory permissions it requires. 
+10. Account Verification 
+10.1. KYC is mandatory for all Users. You must successfully complete identity verification 
+before accessing trading features, making deposits, or requesting withdrawals. The 
+standard is set by the AML/KYC Policy and by the requirements of the Payment Partner. 
+10.2. Verification tiers may apply, with different functional and transactional limits at each 
+tier. LineUp may require additional or enhanced verification at any time and may suspend 
+functionality pending completion. 
+10.3. You must keep verification information current. Material changes, name, nationality, 
+residency, entity ownership or control, must be notified promptly and may require re-
+verification. 
+10.4. LineUp and its verification providers may collect, verify, and retain identity 
+documents and biometric or liveness data to the extent described in the Privacy Policy and 
+permitted by law. 
+ 
+PART III: ACCOUNT 
+11. Registration 
+11.1. To register, you must provide the information requested accurately and completely 
+and create credentials meeting the Platform’s security requirements. 
+11.2. You may hold one Account only, unless LineUp expressly authorises additional 
+Accounts in writing (for example, a personal Account and a duly authorised institutional 
+Account). Section 14 governs breaches. 
+11.3. Registration is an application only. LineUp may accept or decline any application at its 
+discretion, subject to applicable law. 
+11.4. You must keep all Account information accurate and up to date. LineUp may rely on 
+your most recent information, and communications sent to your registered contact details 
+are deemed received under Section 63. 
+11.5. Your Account is personal to you. You must not sell, lend, share, or transfer your 
+Account or credentials, and any purported transfer is void. 
+12. KYC & Identity Verification 
+12.1. This Section supplements Section 10 and the AML/KYC Policy, which governs in full. 
+12.2. Required verification includes, at minimum: full legal name; date of birth; residential 
+address; nationality; a valid government-issued identity document; and, where required, 
+proof of address, a liveness check or biometric selfie, source-of-funds and source-of-wealth 
+information, and tax identification details. 
+12.3. LineUp screens Users against sanctions, politically-exposed-persons, and adverse-
+media lists at onboarding and on an ongoing basis, and monitors activity for suspicious 
+patterns. LineUp may pause transactions or suspend Accounts while checks are performed. 
+12.4. Where required by law, LineUp will report suspicious activity to the competent 
+authorities and may be prohibited from informing you that it has done so. 
+12.5. Providing false, misleading, forged, or incomplete verification information is a 
+material breach and grounds for immediate termination, avoidance of trades, and reporting 
+to authorities. 
+12.6. Records collected for verification are retained for the periods required by applicable 
+law, as described in the Privacy Policy and the AML/KYC Policy. 
+13. Security 
+13.1. You are responsible for maintaining the confidentiality and security of your 
+credentials, devices, email accounts, and Linked Wallets, and for all activity conducted 
+through your Account, whether or not authorised by you, until you notify LineUp of a 
+compromise under Section 13.4. 
+13.2. You must enable two-factor authentication where offered, use a strong unique 
+password, and keep your devices free of malware. For Linked Wallets, you alone control 
+your private keys; LineUp never has access to them and can never recover them. Loss 
+of your keys means loss of access to the cryptoassets they control, and LineUp has no 
+ability to restore them. 
+13.3. LineUp implements technical and organisational security measures appropriate to the 
+service, as described in the Privacy Policy. No system is invulnerable, and LineUp does not 
+warrant that the Platform is free of vulnerabilities. 
+13.4. You must notify LineUp immediately at Support@Lineup.trade if you suspect 
+unauthorised access or any security incident. LineUp may freeze the Account, suspend 
+trading, and coordinate with the Payment Partner while investigating. 
+13.5. LineUp will never ask you for your password, 2FA codes, or wallet private keys. Any 
+such request is fraudulent and should be reported. 
+13.6. To the extent permitted by law, LineUp is not liable for losses arising from 
+compromise of your credentials, devices, email, or Self-Custody Wallet, except to the extent 
+caused by LineUp’s own breach of these Terms or negligence. 
+14. Multiple Accounts 
+14.1. Operating, controlling, or benefiting from more than one Account without express 
+written authorisation is prohibited, including Accounts opened in the names of relatives, 
+associates, nominees, or entities you control, where the purpose or effect is to evade limits, 
+margin requirements, jurisdiction restrictions, self-exclusion, promotions, or verification 
+outcomes. 
+14.2. Where LineUp identifies linked Accounts in breach of this Section, it may treat them 
+as a single Account for limit purposes; suspend or close any or all of them; void trades 
+executed through them; withhold or claw back benefits obtained through the breach to the 
+extent lawful; and report the conduct where required. 
+14.3. Legitimate household use (separate individuals in one household each holding their 
+own Account) is permitted, but each individual must complete their own KYC and use their 
+own funds and payment methods. 
+15. Suspension & Termination 
+15.1. Suspension by LineUp. LineUp may suspend or restrict your Account, in whole or in 
+part (including disabling new Orders while permitting risk-reducing closures), where: (a) it 
+reasonably suspects breach of these Terms, fraud, market abuse, or unlawful conduct; (b) 
+verification or screening is outstanding or has failed; (c) required by law, a regulator, a 
+court, or the Payment Partner; (d) a security incident affects the Account; or (e) suspension 
+is reasonably necessary to protect the Platform, other Users, or market integrity. 
+15.2. Termination by LineUp. LineUp may terminate your Account: (a) for material 
+breach; (b) where eligibility under Part II cannot be maintained; (c) where required by law 
+or regulatory direction; (d) on 30 days’ notice for any reason, where permitted by law; or 
+(e) with immediate effect in the cases in Sections 12.5, 14.2, and 43. 
+15.3. Closure by you. You may close your Account at any time via Account settings 
+(“Account → Close Account”) or by emailing Support@Lineup.trade, after closing all open 
+Positions and settling all obligations and fees. 
+15.4. Effect of termination. On suspension or termination: (a) open Orders may be 
+cancelled; (b) LineUp may close open Positions in an orderly manner at prevailing prices, 
+or at fair value under Section 33.5 where markets are closed or disrupted; (c) eligible 
+remaining Fiat Balances will be remitted through the Payment Partner to a verified account 
+in your name, and platform records relating to cryptoassets will be reconciled to your 
+Linked Wallet, in each case subject to compliance holds, set-off for amounts you owe, and 
+applicable law; and (d) LineUp will retain records as required by law. 
+15.5. Survival. Provisions that by their nature survive, including Sections 2, 4, 5, Part VIII, 
+Part IX, Part X, Sections 61-63, and Sections 67-69, continue after termination. 
+15.6. Dormancy. Accounts inactive for 6 (six) consecutive months may be designated 
+dormant. No dormancy fee is charged. Dormant Accounts remain subject to applicable 
+unclaimed-property laws, and eligible balances are returned on verified request. 
+ 
+PART IV: PLATFORM 
+16. Synthetic Player Assets 
+16.1. Creation and administration. SPAs are created, listed, configured, and administered 
+solely by LineUp. Each SPA references one Reference Player (or, where expressly stated, a 
+defined group offered as a single instrument). LineUp determines, for each SPA: its 
+identifier; its Reference Player; its initial price and float parameters; its minimum tradeable 
+size (Section 27); its Trading Sessions (Section 18); its margin and leverage parameters 
+(Sections 28 and 32); and any SPA-specific rules published on its market page. 
+16.2. Legal character. Section 4.2 applies to every SPA. No SPA is issued by, backed by, or 
+connected to any Reference Player or sports organisation; no Reference Player receives or 
+owes anything under any SPA; and holding an SPA creates rights only to have the Position 
+recorded, priced, and settled according to these rules. 
+16.3. Listing standards. LineUp may apply listing criteria, including data availability, 
+expected liquidity, and integrity considerations, in deciding which Reference Players to list. 
+Listing is not a statement about the merit or prospects of any Reference Player or SPA. 
+16.4. Non-transferability. SPAs exist only as records within the Platform. They cannot be 
+withdrawn, transferred off-Platform, transferred privately between Users, gifted, pledged, 
+or used outside the Platform. Any purported off-Platform dealing is void. 
+16.5. Modifications. LineUp may modify SPA parameters prospectively (for example, tick 
+size, session hours, margin rates) on notice published on the Platform. Modifications with 
+retroactive economic effect are permitted only as expressly provided in these Terms 
+(Sections 22-24, 30, 33, 34, and manifest-error corrections under Section 20.6). 
+17. Market Operation 
+17.1. LineUp operates the market as an automated, continuous-pricing venue during 
+Trading Sessions. Users submit Orders; the Liquidity Engine executes eligible Orders 
+against Liquidity Pools at prices determined under Sections 20-21; executed trades create, 
+increase, reduce, or close Positions; and Settlement occurs under Section 33. 
+17.2. No peer-to-peer matching. The Platform does not operate a peer-to-peer order book 
+in which one User’s Order is matched against another User’s Order. All executions occur 
+against Liquidity Pools through the Liquidity Engine. References on the Platform to “the 
+market”, “buyers”, or “sellers” describe aggregate activity, not identified counterparties. 
+17.3. Uniform rules. Market rules, pricing, execution priority, halts, limits, liquidation, are 
+applied uniformly to all Users in like circumstances. LineUp does not offer preferential 
+execution to any User, Affiliate, or Pool contributor. 
+17.4. Market parameters. LineUp may set and revise market-wide parameters, including 
+tick sizes, minimum and maximum Order sizes, price bands, throttles, and fee tiers, 
+publishing changes on the Platform. Parameter changes apply prospectively. 
+17.5. Records. LineUp’s records of Orders, executions, prices, Positions, and balances are 
+maintained to a standard intended to permit reconstruction of market activity and, absent 
+manifest error, are conclusive evidence of that activity as between you and LineUp. 
+18. Trading Hours 
+18.1. Trading in each SPA is open only during live matches involving the relevant 
+Reference Player, within the Trading Sessions published for that SPA. Outside a live match 
+there is no open market in that SPA, and Positions in same-match products are settled at 
+match end under Section 33.3. 
+18.2. Session times are published on the Platform and follow the fixtures of the relevant 
+competitions. LineUp may open, delay, extend, shorten, pause, or close any session, 
+including in response to fixture changes, data availability, or the events in Sections 22-23. 
+18.3. Orders submitted outside a Trading Session are rejected. LineUp does not guarantee 
+that any session will open or remain open; fixture postponements, abandonments, and data 
+interruptions may prevent or interrupt sessions (Sections 22 and 52). 
+19. Liquidity Engine 
+19.1. Function. The Liquidity Engine is the automated execution system through which all 
+trades occur. It quotes prices derived from the Performance Engine, executes eligible 
+Orders against Liquidity Pools, and applies the market-protection mechanisms in these 
+Terms. 
+19.2. Liquidity Pools. Liquidity Pools are pools of capital against which trades execute, 
+seeded by LineUp, its Affiliates, and/or its investors. The economic outcome of trades 
+against a Pool accrues to that Pool and its contributors, not to LineUp in its capacity as 
+operator. The legal separation between LineUp-as-operator and Pool capital is described in 
+Section 5.4, and the associated conflict of interest is disclosed there. 
+19.3. LineUp is not a counterparty. Notwithstanding that LineUp or its Affiliates may 
+contribute capital to Liquidity Pools, LineUp does not take the opposite side of User trades 
+in its capacity as operator, and no trade creates a bilateral contract between you and 
+LineUp in respect of the price movement of an SPA. Your trade executes against Pool 
+liquidity under these market rules. 
+19.4. No liquidity guarantee. Liquidity depends on Pool capital, market conditions, 
+volatility, concurrent activity, and the parameters of the Liquidity Engine. LineUp does not 
+guarantee that liquidity will be available for any Order, size, or SPA; that quoted prices will 
+be available at execution; that spreads will remain within any range; or that you will be 
+able to open or close a Position at any particular time or price. During stress, liquidity may 
+be reduced, spreads may widen, execution may be throttled, and price impact may be 
+substantial. 
+19.5. Execution mechanics. Orders execute at the price determined by the Liquidity 
+Engine at execution time, reflecting the Performance Engine price adjusted for Order size, 
+available Pool depth, spread, and price-impact parameters. Large Orders may execute at 
+prices materially different from displayed indicative prices, or partially, or not at all. 
+19.6. Pool operations. LineUp may create, merge, rebalance, cap, or wind down Liquidity 
+Pools and adjust Pool parameters in the interest of orderly markets. Where a Pool is wound 
+down, affected SPAs may be migrated to other Pools or handled under Sections 23-24. 
+20. Pricing Methodology 
+20.1. SPA prices are determined by the Performance Engine, which combines (a) a 
+market component, reflecting buying and selling pressure and Pool depth on the Platform, 
+and (b) a performance component, reflecting the Reference Player’s real-world 
+performance (Section 21), subject to (c) control mechanisms, including per-event caps, 
+smoothing, price bands, and Circuit Breakers. 
+20.2. The precise weightings, formulas, and parameters of the Performance Engine are 
+proprietary and confidential. LineUp publishes and maintains a plain-language description 
+of the methodology, sufficient for Users to understand how prices form, at 
+https://lineup.trade/pricing-methodology. LineUp may revise the methodology; material 
+revisions are announced prospectively and do not retroactively re-price closed Positions. 
+20.3. Indicative prices. Prices displayed before execution are indicative. The binding price 
+of any trade is the price recorded at execution by the Liquidity Engine. 
+20.4. No off-Platform meaning. Prices are internal to the Platform, are not official 
+valuations of any player, are not sourced from any external market, and have no meaning 
+or use off-Platform. 
+20.5. Price integrity. LineUp monitors pricing for anomalies. Where inputs are corrupted, 
+including data-feed errors, provider integrity incidents, or manipulation attempts, LineUp 
+may suspend affected pricing, substitute corrected data, and apply Sections 22-23. 
+20.6. Manifest error. Where a price, execution, or Settlement results from a manifest error, 
+including feed error, software defect, mis-configuration, or obvious mispricing far outside 
+prevailing levels, LineUp may, acting in good faith and within 48 hours of discovery, cancel 
+or amend affected trades to the price that would have applied absent the error, and correct 
+affected balances. LineUp will notify affected Users and keep records of every correction. 
+This Section applies symmetrically, whether the error favoured you or the Pool. 
+21. Performance-Based Valuation 
+21.1. The performance component for each SPA is computed from the Reference Player’s 
+match events, for cricket, events such as runs, strike rate, wickets, economy, catches, and 
+milestones; for football, events such as goals, assists, minutes, and defensive or disciplinary 
+events, using data from the Data Providers, normalised for format, competition, and 
+context as described in the published methodology. 
+21.2. Caps and normalisation. Per-match and per-event effects on price are capped and 
+normalised to limit extreme moves and reduce manipulation incentives. These parameters 
+are part of the methodology and may be revised prospectively. 
+21.3. Timing. Performance updates are applied as data is received and validated. Data 
+latency means price adjustments may lag real-world events by seconds or longer, and may 
+occasionally be revised when Data Providers correct their records (Section 21.4). 
+21.4. Official data corrections. Where a Data Provider retrospectively corrects match 
+data, LineUp may apply the correction prospectively from the moment of processing. 
+Trades executed before the correction stand at their executed prices, except where Section 
+20.6 applies. 
+21.5. Data unavailability. Where data for a match or player is unavailable, materially 
+delayed, or unreliable, LineUp may freeze the performance component, suspend the 
+affected session, or apply Sections 22-23, and may settle affected same-match products at 
+fair value under Section 33.5. 
+22. Market Interruptions 
+22.1. LineUp may interrupt trading in one or more SPAs, automatically or by decision, 
+where any of the following occurs: (a) extreme volatility or disorderly price movement; (b) 
+failure, delay, or corruption of data from Data Providers; (c) technical failure of the 
+Platform, the Liquidity Engine, or supporting infrastructure; (d) suspected market abuse or 
+integrity incident (on the Platform or in the underlying sport); (e) interruption, suspension, 
+or abandonment of a relevant match; (f) a cyber-security incident; or (g) any event where 
+interruption is reasonably necessary to preserve a fair and orderly market. 
+22.2. Automatic volatility interruptions. Where the price of an SPA moves by more than 
+the published band within the published window, trading in that SPA is automatically 
+paused for the published cooling period, after which it may reopen, reopen in a closing-
+only state, or remain suspended. Bands, windows, and cooling periods are published at 
+https://lineup.trade/market-parameters. 
+22.3. During an interruption: new Orders are rejected or held; resting Orders may be 
+cancelled; and open Positions remain open and continue to bear market risk but cannot be 
+closed until trading resumes. You may be unable to exit a Position during an 
+interruption, and the reopening price may differ materially from the pre-
+interruption price. 
+22.4. LineUp will communicate interruptions and expected handling through the Platform 
+as promptly as practicable and will maintain records of every interruption and its cause. 
+23. Market Suspension 
+23.1. LineUp may suspend trading in an SPA, a sport, or the entire market for a sustained 
+period where the causes in Section 22.1 persist, where required by law or regulatory 
+direction, or where continued trading would be inconsistent with fair and orderly markets. 
+23.2. During suspension: no Orders execute; margin calculations continue against the last 
+validated price or a fair-value reference under Section 33.5; and liquidation triggers are 
+administered under Section 30.7. 
+23.3. On resumption, LineUp will publish the resumption basis, which may include an 
+auction-style or reference-price reopening. Where resumption is not practicable within a 
+reasonable period, LineUp may settle open Positions at fair value under Section 33.5 or 
+proceed to delisting under Section 24. 
+24. Delisting 
+24.1. LineUp may delist an SPA where: (a) a Corporate Action so requires (Section 34); (b) 
+reliable data for the Reference Player ceases to be available; (c) sustained illiquidity makes 
+an orderly market impracticable; (d) legal, regulatory, or rights-related considerations 
+require it; or (e) LineUp determines delisting is appropriate for the integrity or operation 
+of the Platform. 
+24.2. Process. Except where immediate delisting is required, LineUp will announce 
+delisting in advance, specifying the final trading time, whether the market enters a closing-
+only state, and the settlement basis for Positions still open at delisting. 
+24.3. Settlement on delisting. Positions open at delisting are closed and settled at fair 
+value under Section 33.5, using the last validated price, the published methodology, and, 
+where relevant, the circumstances of the triggering event. Proceeds are credited or debited 
+through the normal Settlement process. 
+24.4. Delisting is not a default or fault of LineUp and gives rise to no claim except the right 
+to Settlement under this Section. 
+ 
+PART V: TRADING 
+25. Orders 
+25.1. Order types. The Platform supports Market Orders (execute immediately at the best 
+price determined by the Liquidity Engine, subject to depth and price impact) and Limit 
+Orders (execute only at your specified price or better, resting until executed, cancelled, or 
+expired). Additional order types (stop-loss, take-profit, time-in-force variants) may be 
+offered and described on the Platform; stop orders convert to market or limit orders on 
+trigger and are subject to gapping (the execution price after trigger may be materially 
+worse than the trigger price). 
+25.2. Minimum size and confirmation. The minimum Order value is ₹10 (or its display 
+equivalent). You are responsible for the accuracy of every Order. For Orders at or above 
+₹5,000 (or the equivalent of USD 100 / EUR 100 in the selected display currency), the 
+Platform presents a confirmation step before execution, as indicated in the interface; 
+execution follows your confirmation. An Order, once executed, is binding and cannot be 
+reversed by you. 
+25.3. Rejection and cancellation. The Liquidity Engine may reject or cancel Orders that 
+exceed limits (Section 31), fail margin checks (Section 28), would execute outside price 
+bands, are submitted outside sessions (Section 18), breach throttles, or are flagged by 
+integrity controls. Resting Limit Orders may be cancelled on session close, interruption, 
+suspension, parameter change, or Account restriction. 
+25.4. Partial execution. Orders may execute partially where depth is insufficient. 
+Unexecuted remainders of Market Orders are cancelled; unexecuted remainders of Limit 
+Orders continue to rest unless cancelled. 
+25.5. Fees. Execution incurs fees under the Fee Schedule, applied at execution and reflected 
+in Settlement. 
+26. Trade Matching 
+26.1. There is no peer-to-peer matching (Section 17.2). “Matching” means the pairing of 
+your Order with Pool liquidity by the Liquidity Engine according to these rules. 
+26.2. Priority. Eligible Orders are processed in the sequence received by the Liquidity 
+Engine, subject to uniform system throttles. Where multiple Limit Orders become 
+executable simultaneously, they are processed in time priority. 
+26.3. Binding effect. A trade is formed when the Liquidity Engine records execution. The 
+recorded price, quantity, and time are binding, subject only to Section 20.6 and the market-
+protection provisions of Part IV. 
+26.4. No guaranteed execution. Neither submission nor display of an Order guarantees 
+execution. LineUp is not liable for non-execution, partial execution, or execution at a price 
+different from an indicative display, where these rules have been applied. 
+27. Fractional Ownership 
+27.1. SPAs may be traded in fractional quantities, subject to the ₹10 minimum Order value. 
+“Ownership” here means holding a recorded Position and has the limited meaning given by 
+Sections 4.2 and 16.2, it is not ownership of any real-world asset or interest. 
+27.2. Fractional Positions carry the same rights, risks, pricing, margin treatment, and 
+Settlement as whole units, pro-rated. Quantities are rounded to the nearest supported 
+increment using standard rounding, with any residual value credited to your Fiat Balance. 
+28. Margin Trading 
+28.1. Where enabled for your Account and the relevant SPA, you may open Positions on 
+margin, committing Collateral smaller than the notional exposure of the Position. Margin 
+trading amplifies both gains and losses and is subject to the Risk Disclosure Statement and 
+the feature acknowledgement in Section 1.4. 
+28.2. Initial and Maintenance Margin. The Initial Margin is 50% of Position value 
+(equivalent to the maximum 2× Leverage in Section 32). The Maintenance Margin and the 
+Liquidation threshold are published at https://lineup.trade/margin-parameters and may 
+be changed prospectively, including intraday for new Positions, where volatility, liquidity, 
+or risk conditions require. Changes to Maintenance Margin for existing Positions apply with 
+the notice published with the change, except in stressed conditions where immediate 
+application is necessary for market protection. 
+28.3. Margin calls. If your Account margin level falls below Maintenance Margin, the 
+Platform may issue a margin call through in-Platform and registered-contact notifications, 
+satisfied by committing additional Collateral or reducing Positions within the stated 
+window. LineUp is not obliged to issue a margin call before Liquidation where 
+conditions move too quickly; Section 30 governs. 
+28.4. Collateral mechanics (non-custodial). Because LineUp does not custody funds, 
+Collateral is locked in place, not transferred to LineUp: (a) for INR, the required amount 
+within your Payment-Partner-held Fiat Balance is placed under a hold/reservation so that 
+it cannot be withdrawn or spent while committed; (b) for cryptoassets, the required 
+amount is locked from your Self-Custody Wallet through an on-chain escrow arrangement 
+whose keys you control together with the escrow’s coded release conditions. Locked 
+Collateral remains yours, subject to the application rights in Section 28.5. 
+28.5. Application of Collateral. To the extent permitted by applicable law, you grant 
+LineUp a security interest in (or equivalent right over) locked Collateral to secure 
+obligations arising from margined and short Positions. On Settlement, Liquidation, or 
+default, losses and fees are satisfied from locked Collateral through the applicable rail, and 
+any surplus is released to you. 
+28.6. No funding charges. LineUp does not charge periodic funding or financing charges 
+on Positions. Because trading occurs only during live matches (Section 18) and same-match 
+Positions settle at match end, Positions are not carried overnight. 
+29. Short Selling 
+29.1. Where enabled, you may open a Short Position, selling an SPA you do not hold, 
+profiting if its price falls and losing if it rises. All Short Positions are margined under 
+Section 28 and subject to the limits in Section 31. 
+29.2. Loss profile. Because an SPA’s price can rise, a Short Position can move against you. 
+Your maximum loss is limited by LineUp’s negative-balance protection and Liquidation 
+process (Sections 30.5-30.6): you will not lose more than the Collateral committed to 
+the Position. 
+29.3. Short-specific controls. LineUp may impose, per SPA or market-wide: higher margin 
+for shorts within the overall leverage cap; short-exposure caps; restrictions on new shorts 
+during specified events (including around Corporate Actions or integrity investigations); 
+and forced-close mechanisms where market protection requires. 
+29.4. Short Positions remain subject to all market-protection mechanisms, including Circuit 
+Breakers and suspensions, during which shorts, like longs, continue to bear market risk 
+and may be unable to close. 
+30. Liquidation 
+30.1. Trigger. If your Account margin level falls to or below the Liquidation threshold 
+published at https://lineup.trade/margin-parameters, the Platform may liquidate some or 
+all of your margined and short Positions, automatically and without further notice, to the 
+extent necessary to restore your Account above the required level. 
+30.2. Order of liquidation. Where you hold multiple Positions, Liquidation proceeds on a 
+largest-loss-first basis, closing the Position(s) with the greatest unrealised loss first, until 
+your Account is restored above the required level. Liquidation may occur in one or multiple 
+tranches and, in fast markets, at prices materially worse than the trigger price. 
+30.3. Liquidation fee. A Liquidation fee of 0.1% of the value of each liquidated Position 
+applies, to defray the costs and risks of compulsory closure, as set out in the Fee Schedule. 
+30.4. Priority of application. Collateral and proceeds are applied in this order: (i) realised 
+losses on liquidated Positions; (ii) the Liquidation fee and other trading fees; (iii) other 
+amounts you owe under these Terms; (iv) surplus released to you. 
+30.5. No liability for timing or price. Provided the published rules were applied, LineUp is 
+not liable for the occurrence, timing, sequence, or price of any Liquidation, including where 
+a less damaging outcome might have been achieved by different timing or where prices 
+recovered afterwards. 
+30.6. Negative-balance protection. LineUp operates the Liquidation process to close 
+Positions before your Collateral is exhausted. You cannot lose more than the Collateral 
+committed to your Positions, and you will not be left owing LineUp a negative 
+balance in respect of market losses. Where rapid price movement (“gapping”) causes a 
+Position to close beyond its Collateral, LineUp (through the relevant Liquidity Pool) bears 
+the shortfall, and no debt is created against you. This protection does not cover amounts 
+you owe through fraud, abuse, chargeback reversal, or breach of these Terms. 
+30.7. Liquidation during interruptions and suspensions. During a Circuit Breaker, 
+interruption, or suspension, automatic Liquidation is paused for the affected SPA except 
+where a reliable fair-value reference exists under Section 33.5. On resumption, margin 
+levels are recalculated at reopening prices and Liquidation may occur immediately. 
+31. Position Limits 
+31.1. LineUp may impose limits on Position size per SPA per Account, aggregate exposure 
+per Account, short exposure per SPA, open Order counts, and market-wide concentration 
+per SPA. Current limits are published at https://lineup.trade/position-limits. 
+31.2. Limits may differ by verification tier, account type, SPA, and market conditions, and 
+may be changed prospectively, including intraday in stressed conditions (applying to new 
+Positions immediately and to existing Positions with the published transition treatment). 
+31.3. Orders that would breach a limit are rejected or reduced. Where existing Positions 
+exceed a newly reduced limit, you may be required to reduce within a stated window, 
+failing which LineUp may reduce them at prevailing prices. 
+31.4. Limits are risk and integrity tools; they are not advice about appropriate position 
+sizing for you. 
+32. Leverage 
+32.1. Where offered, Leverage allows exposure exceeding committed Collateral. The 
+maximum Leverage is 2× (two times), applied uniformly to all Users (equivalent to 
+50% Initial Margin). LineUp may reduce available Leverage prospectively at any time, 
+including intraday for new Positions, and may deny or reduce Leverage for any Account on 
+risk grounds. 
+32.2. Leverage multiplies the effect of price movements on your Collateral in both 
+directions and shortens the distance to margin calls and Liquidation. At the maximum 2× 
+Leverage, a 50% adverse move in an SPA can eliminate the Collateral supporting a Position. 
+32.3. Leverage availability is a market feature, not a recommendation, and the same cap 
+applies to retail, professional, and institutional Users unless a stricter cap is required by 
+applicable law in a particular market. 
+33. Settlement 
+33.1. Continuous settlement. When a Position is closed, by your Order, by expiry of a 
+session-linked product, by Liquidation, by delisting, or by Corporate Action handling, the 
+Platform computes realised profit or loss as the difference between opening and closing 
+executed prices, net of fees, and settles it in the Platform’s records. 
+33.2. Non-custodial settlement rails. Settlement is effected through the funds 
+architecture in Part VI: (a) INR settlement amounts are credited or debited to your Fiat 
+Balance by instruction to the Payment Partner; (b) crypto settlement amounts are credited 
+or debited through the escrow mechanism connected to your Linked Wallet. Settlement 
+instructions are issued promptly on close; crediting is subject to the operational timelines 
+of the applicable rail. 
+33.3. Same-match products. Positions in products linked to a specific match are 
+automatically closed at the published settlement price at match end. You are responsible 
+for managing such Positions before automatic closure. 
+33.4. Finality. Settlement is final when recorded, subject only to Section 20.6 and to 
+corrections required by law. 
+33.5. Fair value. Where these Terms require settlement at fair value (interruptions that 
+cannot resume, suspensions, delistings, Corporate Actions), fair value is determined by 
+LineUp in good faith using, in descending priority: the last validated executed price; the 
+Performance Engine output computed on validated data; comparable-SPA references; and, 
+where none is reliable, a reasoned valuation documented in LineUp’s records. LineUp 
+publishes the fair-value basis used for each such event. 
+33.6. Netting and set-off. Amounts payable on the same day and rail may be netted. 
+LineUp may set off amounts you owe under these Terms against Settlement amounts due to 
+you and may instruct corresponding holds through the applicable rails. 
+34. Corporate Actions (Retirement, Suspension, and Similar Events) 
+34.1. Real-world events affecting a Reference Player can fundamentally change or end the 
+basis on which an SPA is priced. Corporate Actions include: announced or effective 
+retirement; disciplinary suspension or ban; sustained deselection or non-
+participation; transfer, league change, or format change materially affecting data 
+coverage; loss of data coverage by Data Providers; and death of the Reference Player. 
+(Injury is not a Corporate Action and does not, by itself, trigger this Section; injury risk is 
+addressed in Section 52.) 
+34.2. Toolkit. On a Corporate Action, LineUp may, as appropriate to the event and in the 
+sequence it determines: (a) halt or restrict trading in the SPA (including closing-only 
+mode); (b) freeze or adjust the performance component; (c) re-parameterise the SPA 
+prospectively; (d) close and settle open Positions at fair value under Section 33.5; and/or 
+(e) delist the SPA under Section 24. 
+34.3. Standards. LineUp administers Corporate Actions in good faith, consistently across 
+comparable events, and with the objective of preserving the economic position of open 
+Positions as nearly as the event permits, recognising that some events (such as retirement 
+or death) may leave an SPA with little or no continuing basis of value, in which case 
+Settlement at fair value is the full extent of any entitlement. 
+34.4. Announcements. Corporate Action treatments are announced on the Platform, with 
+the event, the treatment applied, the fair-value basis (where used), and effective times. 
+LineUp maintains records of all determinations. 
+34.5. Sensitive events. Where an event involves the death of a Reference Player, LineUp 
+will administer the market consequences under this Section and may restrict promotional 
+display of the affected SPA as a matter of basic respect. No User acquires any claim arising 
+from such restraint. 
+34.6. Integrity events. Where a match or player is subject to a published integrity 
+investigation (for example, alleged fixing), LineUp may suspend affected SPAs, defer 
+Settlement until reliable data or official outcomes are available, and void trades 
+demonstrably connected to the integrity breach. 
+ 
+PART VI: PAYMENTS 
+35. Deposits 
+35.1. Architecture. LineUp operates a non-custodial funds model and does not hold, 
+custody, or control User funds at any time. INR value is deposited with, held by, and paid 
+out by the Payment Partner (Razorpay), with your Fiat Balance constituting your claim 
+against the Payment Partner under its terms. Cryptoassets remain at all times in your Self-
+Custody Wallet, interacting with the Platform through the connection and lock 
+mechanisms in Sections 28.4 and 38. Because LineUp holds no User funds, questions of 
+client-money segregation by LineUp do not arise; the protection of your INR depends on 
+the regulatory status and safeguarding arrangements of the Payment Partner, described at 
+https://lineup.trade/payment-partners. 
+35.2. Eligibility to deposit. Deposits require a fully verified Account. Funding sources 
+must be in your own name; third-party deposits are prohibited and may be rejected or 
+returned at your cost. 
+35.3. INR deposits. INR deposits are made via the Payment Partner using supported 
+methods published at https://lineup.trade/supported-assets. Deposits are credited to your 
+Fiat Balance when confirmed by the Payment Partner, whose own terms, cut-offs, and 
+compliance checks apply in addition to these Terms. 
+35.4. Crypto funding. Supported cryptoassets and networks are published at 
+https://lineup.trade/supported-assets. Crypto is not “deposited” to LineUp: you connect a 
+Self-Custody Wallet and commit value through the mechanisms in Section 38. You are 
+solely responsible for using supported assets and correct networks; unsupported transfers 
+may be irrecoverable, and LineUp has no obligation or ability to recover them. 
+35.5. Rejected and returned deposits. LineUp or the Payment Partner may reject, hold, or 
+return any deposit that fails compliance checks, appears fraudulent, originates from a 
+prohibited source or jurisdiction, or breaches these Terms. Costs of returns may be 
+deducted where lawful. 
+35.6. No interest. Neither LineUp nor, unless its terms state otherwise, the Payment 
+Partner pays interest on balances connected with the Platform. 
+36. Withdrawals 
+36.1. You may withdraw your available balance, the portion of your Fiat Balance or 
+committed crypto not locked as Collateral, reserved for open Orders, or subject to holds, at 
+any time. 
+36.2. Instant intent. Withdrawals are intended to be processed instantly upon request. 
+Actual crediting depends on (a) payment-network and blockchain availability, cut-offs, and 
+confirmation times; (b) compliance checks (AML screening, fraud review, source-of-funds 
+verification, sanctions screening), which may pause a withdrawal until resolved; and (c) 
+the operational status of the Payment Partner or network. Instant processing is an 
+intention, not a guarantee, and a paused or delayed withdrawal is not a default by LineUp 
+where these Terms or applicable law require the pause. 
+36.3. Destinations. INR withdrawals are paid only to a verified account in your own name 
+via the Payment Partner. Crypto withdrawals/releases go only to your verified Self-
+Custody Wallet. Withdrawals to third parties are not permitted. 
+36.4. Currency of withdrawal (launch scope). At launch, withdrawals are available in 
+INR (via the Payment Partner) and in supported cryptoassets (to your Self-Custody 
+Wallet). Withdrawal in USD or EUR via an integrated self-custody (Web3) wallet is a 
+planned later-phase feature and is not available at the Effective Date; until it is launched 
+and governed by updated terms, USD and EUR function only as display currencies under 
+Section 37.4. 
+36.5. Limits and fees. Minimums, maximums, velocity limits, and fees are published in the 
+Fee Schedule and at https://lineup.trade/supported-assets, and may differ by rail and 
+currency. 
+36.6. Obligations first. LineUp may decline or reduce a withdrawal to the extent of 
+unsettled obligations, amounts owed, or amounts subject to set-off under Section 33.6. 
+36.7. Suspicious activity. Where withdrawal patterns indicate fraud, layering, or abuse, 
+LineUp and the Payment Partner may hold withdrawals, require enhanced verification, and 
+report as required by law, and may be prohibited from explaining the hold (Section 12.4). 
+37. Fiat Payments 
+37.1. INR payment processing and holding is performed by the Payment Partner 
+(Razorpay), a regulated third party (Schedule 4). By using fiat features you also accept the 
+Payment Partner’s terms, presented at onboarding or first use. LineUp may change or add 
+Payment Partners on notice under Section 63.3; the current Payment Partner is stated in 
+Schedule 4. 
+37.2. Your claim is against the Payment Partner. Your Fiat Balance is an entitlement 
+against the Payment Partner under its terms and applicable safeguarding rules. LineUp is 
+not a party to that entitlement, does not guarantee the Payment Partner’s performance or 
+solvency, and is not liable for its acts, omissions, or failure, except to the extent caused by 
+LineUp’s breach of these Terms. In a Payment Partner insolvency, your recourse is 
+determined by the partner’s regulatory regime and applicable law. 
+37.3. Instructions. You authorise LineUp to transmit instructions to the Payment Partner 
+to credit and debit your Fiat Balance for Settlement, to lock and release Collateral holds, to 
+collect fees, and to execute withdrawals. Instructions are transmitted on the basis of your 
+Orders and these rules, and you ratify instructions so transmitted. 
+37.4. Currency display and conversion. INR is the Base Currency (Section 2). You may 
+choose to view balances and prices in INR, USD, or EUR; USD and EUR are display 
+conversions only, calculated at a reference FX rate disclosed at https://lineup.trade/fx-
+and-conversion, and do not change the fact that your balance, margin, and Settlement are 
+maintained in INR. Where an actual currency conversion occurs (for example, on a 
+supported deposit or withdrawal), it is performed by the Payment Partner or its FX 
+provider at the rate and fee disclosed at the time. 
+37.5. Chargebacks. Initiating a chargeback or payment reversal in bad faith, including to 
+reverse trading losses, is a material breach. LineUp and the Payment Partner may contest 
+such reversals, suspend the Account, recover costs, and set off amounts under Section 33.6. 
+38. Crypto Payments 
+38.1. Self-custody model. Cryptoassets used on the Platform remain in your Self-Custody 
+Wallet. You alone control your private keys; LineUp never holds them, never takes 
+possession of your cryptoassets, and cannot reverse, freeze (except through the coded 
+escrow lock you enter under Section 28.4), or recover on-chain transactions. 
+38.2. Linked Wallets. To use crypto features, you connect a Self-Custody Wallet through 
+the supported connection flow and verify control of it. Linked Wallets are screened 
+(including on-chain analytics) at linking and on an ongoing basis; wallets associated with 
+sanctioned addresses, mixers, hacks, or illicit-finance typologies may be refused or 
+unlinked, and connected activity may be reported as required by law. 
+38.3. Commitment and lock mechanics. Trading with crypto value uses the on-chain 
+escrow lock described in Section 28.4(b). You should review the mechanism’s published 
+documentation at https://lineup.trade/wallet-security before use. Locked value is released 
+according to Settlement outcomes under Section 33. 
+38.4. Your responsibilities. You are solely responsible for the security of your wallet and 
+keys; verifying addresses, assets, and networks before every transaction; network/gas fees; 
+and the tax character of your crypto transactions. Transactions sent to wrong addresses or 
+networks, or in unsupported assets, may be permanently lost. 
+38.5. Network risk. Blockchain networks are outside LineUp’s control. Congestion, forks, 
+reorganisations, validator failures, and protocol exploits may delay, alter, or prevent 
+transactions. LineUp may suspend crypto features for affected networks and determine, 
+reasonably and consistently, how forks and airdrops are treated for platform purposes (by 
+default: unsupported unless announced). 
+38.6. Volatility and conversion. Where crypto value is measured against INR for margin, 
+Settlement, or fees, the conversion basis and timing are published at 
+https://lineup.trade/fx-and-conversion. Where crypto is used as Collateral, its own 
+volatility can independently trigger margin calls and Liquidation even without SPA price 
+movement. 
+38.7. Stablecoins. Where stablecoins are supported, you acknowledge issuer risk, de-peg 
+risk, and the possibility of issuer freezes at the token-contract level, none of which are 
+within LineUp’s control. 
+39. Taxes 
+39.1. You are solely responsible for determining, reporting, and paying all taxes arising 
+from your use of the Platform, including taxes on trading profits, crypto transactions and 
+conversions, and withdrawals, under the laws of every jurisdiction applicable to you. 
+39.2. LineUp does not provide tax advice. Platform records and statements are provided for 
+convenience and are not tax documents unless expressly labelled as such. 
+39.3. Where required by law, LineUp or the Payment Partner may withhold amounts, apply 
+transaction-level taxes or levies, collect tax residency and taxpayer identification 
+information (including under FATCA/CRS-type regimes), and report to tax authorities. 
+Withheld amounts are not recoverable from LineUp. 
+39.4. If a tax authority asserts a liability against LineUp attributable to your activity or your 
+failure to provide accurate tax information, you will indemnify LineUp for that liability to 
+the extent lawful (Section 60). 
+40. Fees 
+40.1. Fees are set out in the Fee Schedule (https://lineup.trade/fees), which forms part of 
+these Terms. Fee categories may include trading fees (per execution or spread-based); the 
+Liquidation fee of 0.1% (Section 30.3); INR deposit/withdrawal fees (including Payment 
+Partner pass-throughs); crypto network fee pass-throughs; and currency-conversion fees. 
+LineUp does not charge funding/financing charges (Section 28.6) or dormancy fees 
+(Section 15.6). 
+40.2. Fees are displayed before execution where the interface reasonably permits and are 
+recorded in your transaction history. Fees are deducted at source from the relevant 
+transaction, Settlement, or balance through the applicable rail. 
+40.3. LineUp may amend the Fee Schedule prospectively on 30 days’ notice, or with 
+immediate effect for new features, promotional reductions, or pass-through changes 
+imposed by third parties. Continued use after the effective date constitutes acceptance of 
+amended fees. 
+40.4. Fees are non-refundable once the corresponding service is performed, except where 
+required by law or expressly stated. 
+ 
+PART VII: USER RESPONSIBILITIES 
+41. Permitted Use 
+41.1. Subject to these Terms, LineUp grants you a limited, personal, revocable, non-
+exclusive, non-transferable, non-sublicensable licence to access and use the Platform to 
+trade on your own Account (or, for institutional Users, the registered entity’s account) in 
+accordance with these Terms. 
+41.2. You must use the Platform honestly, lawfully, and in accordance with these Terms, the 
+Acceptable Use Policy, and all applicable laws, including financial-crime, sanctions, tax, and 
+market-conduct laws applicable to you. 
+41.3. All rights not expressly granted are reserved. The licence terminates automatically on 
+suspension or termination of your Account. 
+42. Prohibited Activities 
+42.1. You must not, and must not attempt or assist any person to: (a) use the Platform for 
+money laundering, terrorist financing, sanctions evasion, fraud, or any unlawful purpose; 
+(b) provide false, misleading, or incomplete information; (c) impersonate any person, or 
+use another person’s identity, documents, payment methods, or wallet; (d) access the 
+Platform from a Restricted Jurisdiction or circumvent geographic, eligibility, or exclusion 
+controls (Section 7.3); (e) interfere with, disrupt, overload, probe, or gain unauthorised 
+access to the Platform, its infrastructure, other Accounts, or connected systems, or 
+introduce malicious code; (f) copy, scrape, harvest, mirror, or systematically extract 
+Platform data, content, or prices except through an authorised API within its limits; (g) 
+reverse-engineer, decompile, or attempt to derive the Performance Engine, Liquidity 
+Engine, or other proprietary systems, except to the extent a mandatory law permits; (h) 
+exploit bugs, errors, latency, promotions, or feed defects for gain rather than reporting 
+them at https://lineup.trade/security-disclosure; (i) engage in the market-abuse conduct 
+described in Sections 43-45; or (j) resell, commercialise, or provide the Platform or its data 
+to third parties without written authorisation. 
+42.2. Breach of this Section is a material breach. LineUp’s remedies include those in 
+Sections 14.2, 15, 43.4, and Part X, cumulatively. 
+43. Market Manipulation 
+43.1. The integrity of the market is fundamental. You must not engage in, attempt, or 
+participate in manipulation of any SPA or of the Platform, including: (a) price 
+manipulation, trading intended to move, peg, or stabilise a price artificially, including 
+pump-and-dump and ramping; (b) wash trading and self-dealing, trading with yourself 
+across Accounts or wallets, or with colluding parties, to create artificial volume, price, or 
+activity; (c) spoofing and layering, submitting Orders you intend to cancel to create a false 
+impression of supply or demand; (d) collusion, coordinating trading with others to distort 
+the market or exploit the Liquidity Engine; (e) disorderly strategies, strategies designed 
+to trigger Circuit Breakers, Liquidations, or cascade effects; (f) cross-market abuse, 
+attempting to influence real-world sporting events, or the reporting of them, to profit on 
+the Platform (which may also be a serious crime); and (g) information-based abuse as 
+described in Section 44. 
+43.2. Manipulation is assessed by conduct and effect; disguising manipulative activity 
+through structure, size-splitting, timing, or intermediaries does not remove it from this 
+Section. 
+43.3. LineUp operates automated and manual surveillance of trading activity and may 
+investigate any Account, requiring your cooperation, including explanations of trading 
+rationale. 
+43.4. On reasonable determination of a breach, LineUp may void or unwind affected trades; 
+confiscate profits attributable to the breach to the extent lawful; suspend or terminate 
+Accounts (including linked Accounts under Section 14); adjust affected market prices 
+under Section 20.6 where the breach corrupted pricing; report to law-enforcement, 
+regulators, and, for conduct touching real-world sport, sports governing bodies and 
+integrity units; and pursue damages. 
+44. Insider Information 
+44.1. You must not trade on the Platform on the basis of material non-public information 
+obtained through a position of access or in breach of a duty, including undisclosed team 
+selection, injury or fitness information, disciplinary decisions, retirement decisions, or 
+match-management intentions, until that information is public. 
+44.2. Persons with inside access, players, coaches, support staff, team and league officials, 
+medical staff, agents, journalists under embargo, Data Provider personnel, and LineUp 
+personnel, are prohibited from trading SPAs to which their access relates, and LineUp may 
+impose broader trading bans on such persons’ Accounts. LineUp may share information 
+about suspected insider trading with authorities and relevant sports bodies where 
+required or permitted by law. 
+44.3. LineUp personnel and contractors are additionally bound by internal dealing rules; 
+suspected breaches may be reported to authorities. 
+44.4. Suspected insider trading is treated under Section 43.4 and may also constitute a 
+criminal offence in jurisdictions applying market-abuse or sports-integrity laws to this 
+activity. 
+45. Bots & Automation 
+45.1. Automated interaction with the Platform, bots, scripts, headless clients, auto-clickers, 
+or algorithmic order submission, is prohibited except through an authorised API key 
+under Section 46 and the API Terms. 
+45.2. Unauthorised automation may be detected through behavioural, device, and network 
+signals. LineUp may challenge suspected automation, throttle or block traffic, cancel Orders 
+placed by unauthorised automation, and apply Section 42.2 remedies. 
+45.3. Authorised automated trading remains fully subject to Sections 43 and 44; 
+automation is never a defence to market abuse, and you are responsible for the conduct of 
+your algorithms as if it were your manual conduct. 
+46. API Usage 
+46.1. Where LineUp offers an API, access requires an issued API key and acceptance of the 
+API Terms at https://lineup.trade/api-terms, which govern authentication, entitlements, 
+rate limits, market-data usage, and technical requirements. In conflict, the API Terms 
+govern API-specific matters. 
+46.2. You must keep API credentials confidential and not share or sell them; stay within 
+published rate and message limits; implement kill-switch and error-handling controls 
+appropriate to automated trading; and ensure your systems fail safe (no runaway order 
+loops). 
+46.3. Market data received via the API is licensed for your own trading use only and may 
+not be redistributed, resold, or used to operate a competing or derivative service, absent a 
+written data licence. 
+46.4. LineUp may suspend, throttle, or revoke API access at any time, immediately where 
+your API activity threatens Platform stability, breaches limits, or indicates abuse, and may 
+vary API functionality on notice. 
+46.5. API users remain bound by every other provision of these Terms, including Part V and 
+Sections 43-45. 
+ 
+PART VIII: RISK 
+This Part summarises principal risks. The Risk Disclosure Statement 
+(https://lineup.trade/risk-disclosure) is the governing risk document and prevails on matters 
+of risk description. By trading you confirm you have read both. 
+47. General Risk 
+47.1. Trading SPAs is speculative and involves a high risk of loss. Prices can move sharply, 
+gap, and behave unpredictably, particularly during live matches. You may lose the entire 
+Collateral you commit. Your losses on any Position are, however, limited to the Collateral 
+committed to it (Section 30.6). 
+47.2. Trade only with funds whose loss you can bear, never with borrowed money or funds 
+needed for living expenses, and only if you understand these Terms, the market rules, and 
+the products. 
+47.3. Past performance of any SPA, Reference Player, or strategy is not indicative of future 
+results. Nothing on the Platform is a prediction, recommendation, or assurance of any 
+outcome. 
+47.4. Speculative trading can become harmful. The Responsible Trading Policy 
+(https://lineup.trade/responsible-trading) describes limits, cooling-off, and self-exclusion 
+tools available to you. 
+48. Synthetic Asset Risk 
+48.1. SPAs have no existence or value outside the Platform, no claim on any real-world 
+asset or person, and no income. Their value derives entirely from Platform market 
+dynamics and the Performance Engine, and can fall rapidly to a nominal level, including on 
+Corporate Actions, delisting, methodology changes, or shifts in demand. 
+48.2. The Performance Engine is an algorithmic construct designed and revised by LineUp; 
+its behaviour in unusual conditions may differ from expectations formed in normal 
+conditions. 
+49. Liquidity Risk 
+49.1. Liquidity is not guaranteed (Sections 5.5 and 19.4). You may be unable to open or 
+close Positions at displayed prices, in desired sizes, or at all, particularly in stressed 
+markets, around major match events, in less active SPAs, and during interruptions and 
+suspensions, when Positions continue to bear risk that cannot be exited. 
+49.2. Price impact means that your own Orders, particularly large ones, can move the price 
+against you. 
+50. Leverage Risk 
+50.1. Margin and Leverage (capped at 2×) amplify losses and shorten the distance to 
+Liquidation. Liquidation can occur without prior margin call in fast markets and at prices 
+worse than trigger levels, though your loss remains limited to committed Collateral 
+(Section 30.6). 
+50.2. Where crypto is used as Collateral, its own volatility adds an independent path to 
+margin deficiency (Section 38.6). 
+51. Technology Risk 
+51.1. The Platform depends on software, infrastructure, networks, the Payment Partner, 
+blockchains, and Data Providers. Failures, latency, congestion, cyber incidents, and 
+maintenance can delay or prevent Order submission, execution, pricing updates, 
+Settlement, deposits, and withdrawals, including at the worst possible moments. 
+51.2. LineUp may correct manifest errors (Section 20.6) and does not warrant 
+uninterrupted or error-free operation (Section 58). 
+51.3. For crypto features, smart-contract and protocol risk exists notwithstanding audits; 
+exploits may result in loss of locked value in mechanisms outside LineUp’s control. 
+52. Sports Event Risk 
+52.1. SPA prices respond to inherently unpredictable sporting events. Match 
+abandonments, weather interruptions, tactical decisions, disciplinary events, and player 
+injuries occurring before or during a match can cause large, immediate price moves. 
+Such events, including any injury to a Reference Player, are outside LineUp’s control 
+and are your risk as a trader; LineUp is not responsible for losses arising from them. 
+52.2. Sporting bodies’ decisions, scheduling, selection, sanctions, result amendments, are 
+outside LineUp’s control and may materially affect SPAs without notice. 
+53. Data Risk 
+53.1. Pricing depends on data from third-party Data Providers (Schedule 3). That data may 
+be delayed, incomplete, erroneous, or subsequently corrected, and coverage may lapse. 
+Sections 21.3-21.5 describe how the Platform responds; residual effects on prices, margin 
+calculations, and Settlement may nonetheless occur. 
+53.2. LineUp does not verify Data Provider output beyond its published validation 
+processes and is not liable for third-party data defects except as expressly provided in 
+these Terms. 
+ 
+PART IX: INTELLECTUAL PROPERTY 
+54. Platform IP 
+54.1. The Platform and everything comprising it, software, source and object code, the 
+Performance Engine and Liquidity Engine, interfaces, designs, databases, documentation, 
+text, graphics, audiovisual elements, and compilations, are owned by LineUp or its licensors 
+and protected by copyright, database, trade-secret, and other intellectual-property laws 
+worldwide. 
+54.2. Your only rights are the limited licence in Section 41.1 and any API data licence under 
+Section 46.3. No implied licences arise from your use of the Platform. 
+54.3. If you provide feedback or suggestions, you grant LineUp a perpetual, irrevocable, 
+worldwide, royalty-free licence to use them without restriction or attribution. 
+55. Player Information 
+55.1. The Platform uses the names and publicly available performance statistics of 
+Reference Players solely to identify SPAs and to compute the performance component of 
+pricing. Such use is informational and does not assert any sponsorship, endorsement, 
+approval, or commercial association by any Reference Player or sports organisation. 
+55.2. Sports data is supplied under licence from the Data Providers (Schedule 3) and 
+remains subject to their rights and terms. You acquire no rights in the underlying data. 
+55.3. Player names, images (where any are displayed), team names, and competition names 
+may be protected by personality, image, trademark, and database rights belonging to third 
+parties. LineUp’s use is confined to what it reasonably considers lawful in the relevant 
+jurisdictions; Users must not extract or reuse this material. 
+55.4. If any Reference Player or rights-holder objects to the listing of an SPA, LineUp may 
+amend, suspend, or delist it under Sections 23-24, and such action gives rise to no claim 
+beyond Settlement under those Sections. 
+56. Trademarks 
+56.1. “LineUp”, the LineUp logo, and associated marks are trademarks of LineUp. You may 
+not use them, including in domain names, apps, promotions, or metadata, without prior 
+written consent. 
+56.2. Third-party marks appearing on the Platform (including team, league, and 
+competition names used nominatively) belong to their owners; their appearance does not 
+imply affiliation or endorsement in either direction. 
+57. User Content 
+57.1. Where the Platform offers user-content features (chat, comments, usernames, 
+leaderboard display names), you retain your rights in content you submit and grant LineUp 
+a worldwide, non-exclusive, royalty-free, sublicensable licence to host, store, reproduce, 
+display, moderate, and remove it for operating and promoting the Platform. 
+57.2. You are solely responsible for your content. You must not post content that is 
+unlawful, defamatory, harassing, hateful, obscene, infringing, deceptive, or designed to 
+manipulate the market (tips, signals, or claims intended to move SPA prices are subject to 
+Section 43). 
+57.3. LineUp may moderate, remove, or decline to display content, may suspend content 
+features for any Account, and will act on lawful takedown notices sent to 
+Support@Lineup.trade. 
+ 
+PART X: LIABILITY 
+58. Disclaimers 
+58.1. The Platform is provided “as is” and “as available”. To the maximum extent 
+permitted by law, LineUp disclaims all warranties, conditions, and representations, express 
+or implied, including merchantability, fitness for a particular purpose, non-infringement, 
+accuracy, availability, and uninterrupted or error-free operation. 
+58.2. Without limiting Section 58.1, LineUp does not warrant that prices, data, or statistics 
+are accurate, complete, or timely; that Orders will execute, or execute at displayed prices; 
+that liquidity will exist; that deposits, Settlement instructions, or withdrawals will complete 
+within any particular time; that the Payment Partner, Data Providers, blockchains, or other 
+third parties will perform; or that the Platform is free of vulnerabilities. 
+58.3. Nothing in the Platform’s content, including prices, charts, indicators, and any 
+commentary, constitutes advice or a recommendation (Section 4.3). 
+58.4. Some jurisdictions do not allow certain disclaimers; where a mandatory law grants 
+you rights that cannot be excluded, those rights prevail to that extent. 
+59. Limitation of Liability 
+59.1. To the maximum extent permitted by law, LineUp and its directors, officers, 
+employees, agents, Affiliates, licensors, and suppliers (“LineUp Parties”) are not liable, in 
+contract, tort (including negligence), breach of statutory duty, or otherwise, for: (a) 
+indirect, incidental, special, consequential, punitive, or exemplary loss; (b) trading losses, 
+loss of profits, loss of anticipated gains, loss of opportunity, loss of data, or loss of goodwill; 
+(c) losses caused by market movements, Liquidations conducted under these rules, 
+interruptions, suspensions, delistings, Corporate Action treatments, or fair-value 
+determinations made in accordance with these Terms; (d) acts, omissions, insolvency, or 
+failure of the Payment Partner, Data Providers, blockchain networks, wallet providers, or 
+other third parties; or (e) losses arising from your breach of these Terms, compromise of 
+your credentials or wallet, or your own trading decisions. 
+59.2. Cap. The aggregate liability of the LineUp Parties for all claims arising in any 12-
+month period will not exceed the greater of (a) the total fees you paid to LineUp in that 
+period and (b) INR 100 (one hundred Indian Rupees). 
+59.3. Carve-outs. Nothing in these Terms excludes or limits liability for fraud or fraudulent 
+misrepresentation; death or personal injury caused by negligence; or any liability that 
+cannot lawfully be excluded or limited. 
+59.4. The limitations in this Part reflect the allocation of risk on which the Platform is 
+offered without individually negotiated pricing; each provision is severable and survives 
+termination. 
+59.5. Any claim must be brought within 12 months of the date you knew or reasonably 
+should have known of the facts giving rise to it, where such a limitation is enforceable in 
+your jurisdiction. 
+60. Indemnification 
+60.1. You will indemnify, defend, and hold harmless the LineUp Parties from and against all 
+claims, demands, actions, damages, losses, liabilities, penalties, and expenses (including 
+reasonable legal fees) arising out of or connected with: (a) your breach of these Terms or of 
+applicable law; (b) your trading activity, content, or use of the Platform; (c) your violation 
+of any third party’s rights; (d) taxes as described in Section 39.4; and (e) chargebacks or 
+payment reversals initiated in bad faith. 
+60.2. LineUp may assume the defence of any indemnified claim at your cost, and you must 
+cooperate. You may not settle any indemnified claim in a manner affecting LineUp without 
+its written consent. 
+ 
+PART XI: PRIVACY 
+61. Data Collection 
+61.1. LineUp collects and processes personal data as described in the Privacy Policy 
+(https://lineup.trade/privacy), which forms part of these Terms. Categories include 
+identity and KYC data (including identity documents and, where used, biometric/liveness 
+data); contact and account data; financial and transaction data; trading and Position data; 
+device, log, and usage data; and communications. 
+61.2. Processing purposes include operating the Platform and market, verification and 
+financial-crime compliance, security and integrity surveillance (Section 43.3), Settlement 
+instruction to the Payment Partner, support, service communications, and legal 
+compliance. Legal bases and retention periods are set out in the Privacy Policy. 
+61.3. Your rights over your personal data, access, correction, deletion, restriction, objection, 
+portability, and complaint to a supervisory authority, as applicable in your jurisdiction, and 
+how to exercise them are set out in the Privacy Policy. Certain data must be retained 
+despite deletion requests where financial-crime, tax, or record-keeping laws require. 
+62. Third-Party Providers 
+62.1. Personal data is shared with providers necessary to run the Platform: the Payment 
+Partner; KYC, sanctions-screening, and fraud-prevention providers; blockchain-analytics 
+providers (for Linked Wallet screening); hosting and infrastructure providers; analytics 
+and communications providers; and professional advisers, under contracts imposing 
+confidentiality and security obligations, as detailed in the Privacy Policy. 
+62.2. Data is disclosed to regulators, law enforcement, courts, tax authorities, and, for 
+sports-integrity matters, sports governing bodies and integrity units, where required or 
+permitted by law. 
+62.3. Where data is transferred internationally, LineUp uses lawful transfer mechanisms 
+appropriate to the jurisdictions involved, as described in the Privacy Policy. 
+62.4. The Payment Partner and wallet providers are independent controllers of the data 
+they process under their own terms; their privacy notices apply to that processing. 
+63. Communication 
+63.1. Service communications. By holding an Account you consent to receive, and cannot 
+opt out of while the Account is active: transactional messages (Order and execution 
+confirmations, Settlement statements); risk messages (margin calls, Liquidation notices, 
+volatility and exposure alerts); security messages; and legal and operational notices 
+(amendments, interruptions, Corporate Actions). 
+63.2. Marketing. Marketing communications are sent only with any consent required by 
+law and can be switched off at any time in Account settings or via unsubscribe mechanisms, 
+without affecting service communications. 
+63.3. Delivery. Notices from LineUp are validly given when posted on the Platform, sent to 
+your registered email, or delivered by in-app notification, and are deemed received on 
+posting or sending. Notices from you to LineUp must be sent to Support@Lineup.trade and 
+are effective on receipt. 
+63.4. You are responsible for keeping your contact details current and your inbox able to 
+receive Platform messages. Time-critical messages, margin calls above all, may allow 
+only minutes for response; failure to receive or read a message does not suspend the 
+operation of these rules (Sections 28.3 and 30). 
+63.5. Communications are conducted in English. Where translations are provided, the 
+English version prevails. 
+ 
+PART XII: MISCELLANEOUS 
+64. Amendments 
+64.1. LineUp may amend these Terms, the incorporated documents, and the Schedules by 
+publishing the revised document with a new version number and effective date. 
+64.2. Material amendments, those materially affecting your rights, obligations, or the 
+economics of open Positions, will be notified at least 30 days before effect through the 
+channels in Section 63.3, except where a shorter period (including immediate effect) is 
+required by law, regulatory direction, security, or the protection of orderly markets, in 
+which case the reason will be stated. 
+64.3. If you do not accept an amendment, your remedy is to close your Positions and 
+Account before the effective date under Section 15.3. Continued use after the effective date 
+constitutes acceptance. 
+64.4. Amendments do not retroactively change the price, fees, or Settlement of trades 
+already executed, except corrections under Section 20.6 or as required by law. 
+65. Force Majeure 
+65.1. LineUp is not liable for any failure or delay in performance caused by events beyond 
+its reasonable control, including natural disasters; war, terrorism, and civil unrest; 
+epidemics; power, internet, and telecommunications failures; failures of the Payment 
+Partner, Data Providers, blockchains, or other third-party systems; strikes; cyber-attacks; 
+changes in law or regulatory action; and cancellation, postponement, or restructuring of 
+sporting events or competitions. 
+65.2. During a force-majeure event LineUp may take the market-protection actions in Part 
+IV (interruption, suspension, fair-value settlement, delisting) to the extent reasonably 
+necessary, and will resume performance as soon as reasonably practicable. 
+65.3. Your payment and margin obligations accrued before the event are not suspended by 
+it, except to the extent performance is itself prevented by the event. 
+66. Assignment 
+66.1. You may not assign, transfer, charge, or deal with your rights or obligations under 
+these Terms, and any purported dealing is void. 
+66.2. LineUp may assign or transfer these Terms, in whole or in part, to an Affiliate or to a 
+successor in connection with a merger, acquisition, reorganisation, or sale of assets, 
+provided the assignee assumes LineUp’s obligations. Notice will be given under Section 
+63.3, and material changes to the operating entity will be treated as material amendments 
+under Section 64.2. 
+67. Governing Law 
+67.1. These Terms, and any non-contractual obligations arising out of or in connection with 
+them, are governed by the laws of the Dubai International Financial Centre (DIFC), 
+United Arab Emirates, without regard to conflict-of-laws principles. 
+67.2. Where you are a consumer and the mandatory consumer-protection laws of your 
+habitual residence grant you protections that cannot be derogated from by agreement, 
+those protections are unaffected by Section 67.1. 
+68. Dispute Resolution 
+68.1. Good-faith resolution first. Before commencing formal proceedings, you must raise 
+the dispute with LineUp at Support@Lineup.trade and allow 30 days for good-faith 
+resolution through the Complaints Handling Procedure at https://lineup.trade/complaints. 
+68.2. Arbitration. Subject to Sections 68.3-68.4, any dispute, controversy, or claim arising 
+out of or relating to these Terms, including their existence, validity, breach, or termination, 
+will be finally resolved by binding arbitration under the Rules of the London Court of 
+International Arbitration (LCIA) by a sole arbitrator, seated in the Dubai International 
+Financial Centre (DIFC), conducted in English. The arbitration agreement is governed by 
+the law of the seat. Judgment on the award may be entered in any court of competent 
+jurisdiction. 
+68.3. Individual basis. To the extent permitted by law, disputes must be brought on an 
+individual basis only; class, collective, and representative proceedings are waived. If this 
+waiver is unenforceable in your jurisdiction, Section 68.2 does not apply to the affected 
+claim and Section 68.4 governs. 
+68.4. Consumer and mandatory-forum carve-out. Where mandatory law grants you the 
+right to bring or defend proceedings in the courts (or before an ombudsman or consumer-
+dispute body) of your residence, nothing in this Section deprives you of that right, and 
+LineUp may bring proceedings against you in the courts of your residence. 
+68.5. Interim relief. Either party may seek urgent injunctive or protective relief from a 
+competent court without breaching this Section. 
+69. Contact 
+LineUp Established in: the Emirate of Dubai, United Arab Emirates Registered office: 
+Dubai, United Arab Emirates (insert full registered address and trade-licence number before 
+publication) Website: https://lineup.trade/ 
+All communications, general support, complaints, security incidents, privacy and data-
+rights requests, compliance/AML, and legal notices and IP takedowns, may be sent to 
+Support@Lineup.trade. Notices to LineUp are effective on receipt at that address (Section 
+63.3). 
+ 
+SCHEDULES 
+Schedule 1: Restricted Jurisdictions 
+The Platform is not available to persons located, resident, or incorporated in, or accessing it 
+from: 
+1. Comprehensively sanctioned jurisdictions and regions, including North Korea 
+(DPRK), Iran, Syria, Cuba, the Russian Federation, Belarus, and the Crimea, Donetsk, 
+Luhansk, Zaporizhzhia, and Kherson regions; 
+2. The United States of America and its territories, pending the licences required to 
+serve US users; 
+3. India, in light of the Promotion and Regulation of Online Gaming Act, 2025 and its 
+prohibition on real-money online games (to be revisited if the legal position 
+changes); 
+4. Any jurisdiction identified by the Financial Action Task Force (FATF) as a high-risk 
+jurisdiction subject to a call for action; and 
+5. Any other jurisdiction in which the Platform or any material feature of it is unlawful, 
+unlicensed, or restricted, or which LineUp elects not to serve. 
+This Schedule may be amended at any time under Section 7.1. (Confirm the full list market-
+by-market with local counsel before launch.) 
+Schedule 2: Feature Availability 
+At launch, the following features are available uniformly to all eligible Users in non-
+Restricted Jurisdictions, subject to verification tier: spot trading of SPAs; fractional trading 
+(minimum ₹10 per Order); margin trading and short selling at a maximum 2× Leverage; 
+INR funding and withdrawal via the Payment Partner; and crypto funding and withdrawal 
+via Self-Custody Wallet. USD/EUR withdrawal via an integrated self-custody wallet, and 
+any API access, are later-phase features (Sections 36.4 and 46). LineUp may enable or 
+disable specific features in specific jurisdictions for legal, regulatory, or risk reasons, and 
+will reflect any such differences in this Schedule. 
+Schedule 3: Data Providers 
+• Football: football-data.org, match and player data for supported football 
+competitions. 
+• Cricket: cricketdata.org, match and player data for supported cricket formats. 
+Additional or successor providers may be designated by notice under Section 63.3. Data 
+remains subject to providers’ rights and terms (Section 55.2). 
+Schedule 4: Payment Partners 
+Razorpay is the Payment Partner at the Effective Date, processing and holding INR 
+deposits, balances, and withdrawals via supported methods (published at 
+https://lineup.trade/supported-assets). Users’ Fiat Balances are held by, and constitute 
+claims against, the Payment Partner (Section 37.2); its terms and safeguarding disclosures 
+are linked at https://lineup.trade/payment-partners. LineUp may add or replace Payment 
+Partners on notice under Section 63.3. (Before launch, confirm with counsel that the 
+Payment Partner’s merchant-category rules permit this platform type, that the cross-border 
+collection model is compliant, and that the flow keeps LineUp outside the flow of funds as 
+Section 35.1 requires.) 
+Schedule 5: Published Parameters (Reference)  
+The following pages form part of the market rules and are incorporated by reference: 
+pricing-methodology summary (https://lineup.trade/pricing-methodology); volatility 
+bands and Circuit Breaker parameters (https://lineup.trade/market-parameters); margin, 
+leverage, and liquidation parameters (https://lineup.trade/margin-parameters); position 
+and exposure limits (https://lineup.trade/position-limits); Fee Schedule 
+(https://lineup.trade/fees); supported assets, networks, and rails 
+(https://lineup.trade/supported-assets); FX and conversion basis (https://lineup.trade/fx-
+and-conversion); wallet-security and escrow documentation (https://lineup.trade/wallet-
+security); Payment Partner disclosures (https://lineup.trade/payment-partners); API 
+Terms (https://lineup.trade/api-terms); security-disclosure programme 
+(https://lineup.trade/security-disclosure); and Complaints Handling Procedure 
+(https://lineup.trade/complaints). 
+ 
+ACKNOWLEDGEMENT 
+By creating an Account or using the Platform you acknowledge that: you have read and 
+understood these Terms and the Risk Disclosure Statement; you understand that SPAs are 
+synthetic assets with no existence outside the Platform; you understand that LineUp is not 
+a counterparty to your trades and does not custody your funds; you understand that 
+liquidity is not guaranteed and that you may lose the entire Collateral you commit (though 
+not more than that); and you accept these Terms in full. 
+End of Terms & Conditions (Version 1.2) 

@@ -491,13 +491,15 @@
 
         {/* support */}
         <div className="screen-pad" style={{ marginTop: 18 }}>
-          <div className="label" style={{ marginBottom: 10 }}>Support</div>
+          <div className="label" style={{ marginBottom: 10 }}>Support & Legal</div>
           <div className="card" style={{ overflow: 'hidden' }}>
             <Item icon="headset" label="Help & support" onClick={() => app.toast('Support chat opening…', 'headset')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="doc" label="Risk disclosure" sub="Trading involves risk of loss" onClick={() => app.toast('Opening risk disclosure', 'doc')} />
+            <Item icon="doc" label="Terms & Conditions" sub="v1.2 · Effective 15 July 2026" onClick={() => app.go('terms')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="info" label="About LineUp" sub="v1.0.0" onClick={() => app.toast('LineUp v1.0.0 · Demo', 'info')} />
+            <Item icon="shield" label="Risk disclosure" sub="Trading involves risk of loss" onClick={() => app.toast('Opening risk disclosure', 'doc')} />
+            <div className="divider" style={{ marginLeft: 62 }} />
+            <Item icon="info" label="About LineUp" sub="v1.2.0" onClick={() => app.toast('LineUp v1.2.0', 'info')} />
           </div>
         </div>
         <div className="screen-pad" style={{ marginTop: 18 }}>
@@ -595,5 +597,136 @@
     );
   }
 
-  window.SCR_C = { LiveMatch, Leaderboard, Wallet, AddFunds, Profile, Search, Notifications, History };
+  /* ===================== TERMS & CONDITIONS ===================== */
+  function Terms({ app }) {
+    const [q, setQ] = useState('');
+    const [activePart, setActivePart] = useState(0);
+    const [expandedSec, setExpandedSec] = useState({});
+
+    const termsData = window.LU_TERMS || { meta: {}, parts: [] };
+    const meta = termsData.meta || {};
+    const parts = termsData.parts || [];
+
+    const toggleSec = (key) => {
+      setExpandedSec(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = meta.pdfFile || 'LineUp_Terms_and_Conditions_v1.2.pdf';
+      link.download = meta.pdfFile || 'LineUp_Terms_and_Conditions_v1.2.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      app.toast('Downloading PDF v1.2...', 'doc');
+    };
+
+    const filteredParts = useMemo(() => {
+      if (!q.trim()) return parts;
+      const term = q.toLowerCase();
+      return parts.map(part => {
+        const matchingSections = (part.sections || []).filter(sec => 
+          (sec.title || '').toLowerCase().includes(term) || 
+          (sec.content || '').toLowerCase().includes(term)
+        );
+        if (matchingSections.length > 0) {
+          return { ...part, sections: matchingSections };
+        }
+        return null;
+      }).filter(Boolean);
+    }, [q, parts]);
+
+    return (
+      <div className="screen screen-scroll">
+        <div className="appbar solid" style={{ background: 'var(--bg)', gap: 10 }}>
+          <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: 16, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Terms &amp; Conditions</div>
+            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>v{meta.version || '1.2'} · {meta.effectiveDate || '15 Jul 2026'}</div>
+          </div>
+          <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
+            <Icon name="doc" size={14} /> PDF
+          </button>
+        </div>
+
+        {/* Search & Meta Banner */}
+        <div className="screen-pad" style={{ marginTop: 6 }}>
+          <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
+            <div className="row-between" style={{ marginBottom: 8 }}>
+              <span className="chip" style={{ background: 'var(--brand-soft)', color: 'var(--brand-2)', fontWeight: 700 }}>Version {meta.version || '1.2'}</span>
+              <span style={{ fontSize: 11, color: 'var(--text-3)' }}>Updated {meta.lastUpdated || '20 Jul 2026'}</span>
+            </div>
+            <div style={{ fontSize: 13, color: 'var(--text-2)', lineHeight: 1.4, marginBottom: 12 }}>
+              Master rulebook &amp; agreement governing synthetic player assets, trading, settlements &amp; market operation.
+            </div>
+            <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 9, height: 42, padding: '0 12px' }}>
+              <Icon name="search" size={17} style={{ color: 'var(--text-3)' }} />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search terms, margin, KYC, liquidation..." style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontWeight: 600, fontSize: 13.5 }} />
+              {q && <button onClick={() => setQ('')}><Icon name="x" size={16} style={{ color: 'var(--text-3)' }} /></button>}
+            </div>
+          </div>
+        </div>
+
+        {/* Part Tabs */}
+        {!q && parts.length > 0 && (
+          <div style={{ padding: '0 16px', overflowX: 'auto', display: 'flex', gap: 8, scrollbarWidth: 'none', marginTop: 10, paddingBottom: 6 }}>
+            {parts.map((p, idx) => (
+              <button key={idx} className={`pill-tab ${activePart === idx ? 'active' : ''}`} style={{ whiteSpace: 'nowrap', fontSize: 12, flexShrink: 0 }} onClick={() => setActivePart(idx)}>
+                {p.title ? p.title.split(':')[0] : `Part ${idx+1}`}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Content list */}
+        <div className="screen-pad" style={{ marginTop: 10 }}>
+          {(q ? filteredParts : [parts[activePart]]).filter(Boolean).map((part, pIdx) => (
+            <div key={pIdx} style={{ marginBottom: 20 }}>
+              <div style={{ fontWeight: 800, fontSize: 14, color: 'var(--brand-2)', marginBottom: 10, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                {part.title}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {(part.sections || []).map((sec, sIdx) => {
+                  const key = `${pIdx}-${sIdx}`;
+                  const isOpen = expandedSec[key] || q.length > 0;
+                  return (
+                    <div key={sIdx} className="card" style={{ overflow: 'hidden', transition: 'all 0.2s' }}>
+                      <div className="row-between" style={{ padding: '14px 16px', cursor: 'pointer', background: isOpen ? 'var(--surface-2)' : 'var(--surface)' }} onClick={() => toggleSec(key)}>
+                        <div style={{ fontWeight: 700, fontSize: 13.5, flex: 1, paddingRight: 10, color: 'var(--text)' }}>
+                          {sec.title}
+                        </div>
+                        <Icon name={isOpen ? "chevU" : "chevD"} size={18} style={{ color: 'var(--text-3)' }} />
+                      </div>
+                      {isOpen && (
+                        <div style={{ padding: '14px 16px', borderTop: '1px solid var(--border)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-2)', background: 'var(--bg)' }}>
+                          {sec.subsections && sec.subsections.length > 0 ? (
+                            sec.subsections.map((sub, subIdx) => (
+                              <div key={subIdx} style={{ marginBottom: subIdx < sec.subsections.length - 1 ? 12 : 0, whiteSpace: 'pre-line' }}>
+                                {sub}
+                              </div>
+                            ))
+                          ) : (
+                            <div style={{ whiteSpace: 'pre-line' }}>{sec.content}</div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+          {q && filteredParts.length === 0 && (
+            <div className="card" style={{ padding: 30, textAlign: 'center' }}>
+              <Icon name="search" size={28} style={{ color: 'var(--text-3)', marginBottom: 8 }} />
+              <div style={{ fontWeight: 700, fontSize: 14 }}>No matches found</div>
+              <div className="muted" style={{ fontSize: 12, marginTop: 4 }}>Try searching for keywords like "margin", "withdrawal", "KYC", or "liquidation".</div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  window.SCR_C = { LiveMatch, Leaderboard, Wallet, AddFunds, Profile, Search, Notifications, History, Terms };
 })();

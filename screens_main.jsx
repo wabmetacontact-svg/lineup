@@ -68,7 +68,7 @@
                   ))}
                 </div>
               </div>
-              <p className="muted" style={{ color: '#7d76a8', fontSize: 11.5, textAlign: 'center', lineHeight: 1.5 }}>By continuing you agree to LineUp's Terms &amp; our Risk Disclosure. Trading involves risk of loss.</p>
+              <p className="muted" style={{ color: '#7d76a8', fontSize: 11.5, textAlign: 'center', lineHeight: 1.5 }}>By continuing you agree to LineUp's <span style={{ color: 'var(--brand-2)', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => app.go('terms')}>Terms (v1.2)</span> &amp; our Risk Disclosure. Trading involves risk of loss.</p>
             </>
           )}
         </div>

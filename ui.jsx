@@ -22,6 +22,7 @@
     chevR: 'M9 6l6 6-6 6',
     chevL: 'M15 6l-6 6 6 6',
     chevD: 'M6 9l6 6 6-6',
+    chevU: 'M6 15l6-6 6 6',
     plus: 'M12 5v14M5 12h14',
     minus: 'M5 12h14',
     wallet: 'M3 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2H3V7zM3 9h18v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9zM16 13.5h.01',

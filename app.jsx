@@ -12,6 +12,7 @@
     player: B.PlayerDetail, trade: B.TradeTicket, live: C.LiveMatch,
     leaderboard: C.Leaderboard, wallet: C.Wallet, addfunds: C.AddFunds,
     search: C.Search, notifications: C.Notifications, history: C.History,
+    terms: C.Terms,
   };
 
   function App() {
