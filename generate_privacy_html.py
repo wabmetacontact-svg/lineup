@@ -1,17 +1,17 @@
 import json
 
-with open('terms_data.json', 'r', encoding='utf-8') as f:
+with open('privacy_data.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 meta = data['meta']
-parts = data['parts']
+sections = data['sections']
 
 html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Terms &amp; Conditions · LineUp</title>
+<title>Privacy Policy · LineUp</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700" rel="stylesheet" />
@@ -157,27 +157,13 @@ html_content = f"""<!DOCTYPE html>
     pointer-events: none;
   }}
 
-  .part-block {{
-    margin-bottom: 48px;
-    scroll-margin-top: 100px;
-  }}
-  .part-header {{
-    font-size: 22px;
-    font-weight: 800;
-    color: #a59bf4;
-    padding-bottom: 12px;
-    border-bottom: 2px solid rgba(91, 75, 214, 0.3);
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }}
   .section-card {{
     background: rgba(255, 255, 255, 0.025);
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     overflow: hidden;
+    scroll-margin-top: 100px;
     transition: border 0.2s;
   }}
   .section-card:hover {{
@@ -185,14 +171,13 @@ html_content = f"""<!DOCTYPE html>
   }}
   .section-title {{
     padding: 18px 22px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
-    color: #ffffff;
+    color: #a59bf4;
     background: rgba(255, 255, 255, 0.02);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
   }}
   .section-body {{
     padding: 20px 22px;
@@ -227,7 +212,7 @@ html_content = f"""<!DOCTYPE html>
   }}
 </style>
 </head>
-<body data-page="terms">
+<body data-page="privacy">
 <div class="page-bg"></div>
 
 <!-- ============ NAV ============ -->
@@ -245,7 +230,7 @@ html_content = f"""<!DOCTYPE html>
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost btn-sm" href="LineUp.html">Open app</a>
-      <a class="download-btn" href="LineUp_Terms_and_Conditions_v1.2.pdf" download="LineUp_Terms_and_Conditions_v1.2.pdf" style="padding: 8px 16px; font-size: 13px;">
+      <a class="download-btn" href="{meta['pdfFile']}" download="{meta['pdfFile']}" style="padding: 8px 16px; font-size: 13px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download PDF
       </a>
@@ -258,7 +243,7 @@ html_content = f"""<!DOCTYPE html>
   <div class="container">
     <div class="terms-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Official Legal Rulebook &amp; User Agreement
+      Official Data Protection &amp; Privacy Notice
     </div>
     <h1 class="terms-title">{meta['title']}</h1>
     <p class="terms-subtitle">{meta['subtitle']}</p>
@@ -266,16 +251,16 @@ html_content = f"""<!DOCTYPE html>
     <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
       <a class="download-btn" href="{meta['pdfFile']}" download="{meta['pdfFile']}">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Full PDF Document
+        Download Full Privacy Policy (PDF)
       </a>
     </div>
 
     <div class="meta-grid">
       <div class="meta-item"><span class="label">Effective Date</span><span class="val">{meta['effectiveDate']}</span></div>
       <div class="meta-item"><span class="label">Last Updated</span><span class="val">{meta['lastUpdated']}</span></div>
-      <div class="meta-item"><span class="label">Platform Operator</span><span class="val">{meta['operator']}</span></div>
-      <div class="meta-item"><span class="label">Jurisdiction</span><span class="val">{meta['jurisdiction']}</span></div>
-      <div class="meta-item"><span class="label">Contact Support</span><span class="val">{meta['contact']}</span></div>
+      <div class="meta-item"><span class="label">Data Controller</span><span class="val">{meta['dataController']}</span></div>
+      <div class="meta-item"><span class="label">Platform URL</span><span class="val">{meta['platformUrl']}</span></div>
+      <div class="meta-item"><span class="label">Privacy Contact</span><span class="val">{meta['contact']}</span></div>
     </div>
   </div>
 </section>
@@ -290,10 +275,10 @@ html_content = f"""<!DOCTYPE html>
       <nav class="toc-menu" id="toc-menu">
 """
 
-for p in parts:
-    part_id = p['id']
-    title_short = p['title'].split(':')[0] if ':' in p['title'] else p['title']
-    html_content += f"""        <a class="toc-link" href="#{part_id}">{p['title']}</a>\n"""
+for sec in sections:
+    sec_id = sec['id']
+    stitle = sec['title']
+    html_content += f"""        <a class="toc-link" href="#{sec_id}">{stitle}</a>\n"""
 
 html_content += """      </nav>
     </aside>
@@ -303,46 +288,36 @@ html_content += """      </nav>
       <div class="search-box">
         <div style="position: relative;">
           <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="terms-search" placeholder="Search terms, keywords (e.g. margin, KYC, liquidation, synthetic)..." />
+          <input type="text" id="terms-search" placeholder="Search privacy topics (e.g. data collection, cookies, GDPR, rights, security)..." />
         </div>
       </div>
 
       <div id="terms-content">
 """
 
-for p in parts:
-    part_id = p['id']
+for sec in sections:
+    sec_id = sec['id']
+    stitle = sec['title']
     html_content += f"""
-        <section class="part-block" id="{part_id}">
-          <div class="part-header">
-            <span>{p['title']}</span>
-            <span style="font-size: 12px; font-weight: 600; color: #8b85b4;">{len(p['sections'])} Sections</span>
+        <div class="section-card" id="{sec_id}">
+          <div class="section-title">
+            <span>{stitle}</span>
           </div>
+          <div class="section-body">
 """
-    for sec in p['sections']:
-        stitle = sec['title']
-        html_content += f"""
-          <div class="section-card">
-            <div class="section-title">
-              <span>{stitle}</span>
-            </div>
-            <div class="section-body">
-"""
-        if 'subsections' in sec and sec['subsections']:
-            for sub in sec['subsections']:
-                # Escape html < > and remove any trailing '(Version 1.2)' text
-                sub_clean = sub.replace('<', '&lt;').replace('>', '&gt;').replace('(Version 1.2)', '').replace('v1.2', '')
-                html_content += f"""              <div class="subsection-text">{sub_clean}</div>\n"""
-        else:
-            content_clean = sec['content'].replace('<', '&lt;').replace('>', '&gt;').replace('(Version 1.2)', '').replace('v1.2', '')
-            html_content += f"""              <div class="subsection-text">{content_clean}</div>\n"""
+    if 'subsections' in sec and sec['subsections']:
+        for sub in sec['subsections']:
+            sub_clean = sub.replace('<', '&lt;').replace('>', '&gt;')
+            html_content += f"""            <div class="subsection-text">{sub_clean}</div>\n"""
+    else:
+        content_clean = sec['content'].replace('<', '&lt;').replace('>', '&gt;')
+        html_content += f"""            <div class="subsection-text">{content_clean}</div>\n"""
 
-        html_content += """            </div>
-          </div>
+    html_content += """          </div>
+        </div>
 """
-    html_content += """        </section>\n"""
 
-html_content += """
+html_content += f"""
       </div>
     </main>
   </div>
@@ -363,7 +338,7 @@ html_content += """
       <div class="f-links">
         <a href="terms.html">Terms &amp; Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
-        <a href="LineUp_Terms_and_Conditions_v1.2.pdf" download>Download PDF</a>
+        <a href="{meta['pdfFile']}" download>Download Privacy PDF</a>
         <a href="#">Risk Disclosure</a>
       </div>
     </div>
@@ -374,56 +349,43 @@ html_content += """
   // Live search functionality
   const searchInput = document.getElementById('terms-search');
   const sections = document.querySelectorAll('.section-card');
-  const partBlocks = document.querySelectorAll('.part-block');
 
-  searchInput.addEventListener('input', (e) => {
+  searchInput.addEventListener('input', (e) => {{
     const q = e.target.value.toLowerCase().trim();
     
-    partBlocks.forEach(part => {
-      let partHasMatch = false;
-      const partSections = part.querySelectorAll('.section-card');
-      
-      partSections.forEach(sec => {
-        const text = sec.textContent.toLowerCase();
-        if (!q || text.includes(q)) {
-          sec.style.display = 'block';
-          partHasMatch = true;
-        } else {
-          sec.style.display = 'none';
-        }
-      });
-
-      if (!q || partHasMatch) {
-        part.style.display = 'block';
-      } else {
-        part.style.display = 'none';
-      }
-    });
-  });
+    sections.forEach(sec => {{
+      const text = sec.textContent.toLowerCase();
+      if (!q || text.includes(q)) {{
+        sec.style.display = 'block';
+      }} else {{
+        sec.style.display = 'none';
+      }}
+    }});
+  }});
 
   // TOC active state highlighting
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {{
     let current = '';
-    partBlocks.forEach(part => {
-      const partTop = part.offsetTop;
-      if (pageYOffset >= partTop - 120) {
-        current = part.getAttribute('id');
-      }
-    });
+    sections.forEach(sec => {{
+      const secTop = sec.offsetTop;
+      if (pageYOffset >= secTop - 120) {{
+        current = sec.getAttribute('id');
+      }}
+    }});
 
-    document.querySelectorAll('.toc-link').forEach(link => {
+    document.querySelectorAll('.toc-link').forEach(link => {{
       link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
+      if (link.getAttribute('href') === '#' + current) {{
         link.classList.add('active');
-      }
-    });
-  });
+      }}
+    }});
+  }});
 </script>
 </body>
 </html>
 """
 
-with open('terms.html', 'w', encoding='utf-8') as f:
+with open('privacy.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-print('terms.html generated cleanly without version numbers!')
+print('privacy.html generated successfully!')

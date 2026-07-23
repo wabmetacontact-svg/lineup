@@ -495,11 +495,13 @@
           <div className="card" style={{ overflow: 'hidden' }}>
             <Item icon="headset" label="Help & support" onClick={() => app.toast('Support chat opening…', 'headset')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="doc" label="Terms & Conditions" sub="v1.2 · Effective 15 July 2026" onClick={() => app.go('terms')} />
+            <Item icon="doc" label="Terms & Conditions" sub="Effective 15 July 2026" onClick={() => app.go('terms')} />
+            <div className="divider" style={{ marginLeft: 62 }} />
+            <Item icon="shield" label="Privacy Policy" sub="Data protection & rights" onClick={() => app.go('privacy')} />
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="shield" label="Risk disclosure" sub="Trading involves risk of loss" onClick={() => app.toast('Opening risk disclosure', 'doc')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="info" label="About LineUp" sub="v1.2.0" onClick={() => app.toast('LineUp v1.2.0', 'info')} />
+            <Item icon="info" label="About LineUp" sub="v1.0.0" onClick={() => app.toast('LineUp v1.0.0', 'info')} />
           </div>
         </div>
         <div className="screen-pad" style={{ marginTop: 18 }}>
@@ -618,7 +620,7 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      app.toast('Downloading PDF v1.2...', 'doc');
+      app.toast('Downloading PDF...', 'doc');
     };
 
     const filteredParts = useMemo(() => {
@@ -642,7 +644,7 @@
           <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontWeight: 800, fontSize: 16, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Terms &amp; Conditions</div>
-            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>v{meta.version || '1.2'} · {meta.effectiveDate || '15 Jul 2026'}</div>
+            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>Effective {meta.effectiveDate || '15 Jul 2026'}</div>
           </div>
           <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
             <Icon name="doc" size={14} /> PDF
@@ -653,7 +655,7 @@
         <div className="screen-pad" style={{ marginTop: 6 }}>
           <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
             <div className="row-between" style={{ marginBottom: 8 }}>
-              <span className="chip" style={{ background: 'var(--brand-soft)', color: 'var(--brand-2)', fontWeight: 700 }}>Version {meta.version || '1.2'}</span>
+              <span className="chip" style={{ background: 'var(--brand-soft)', color: 'var(--brand-2)', fontWeight: 700 }}>Legal Agreement</span>
               <span style={{ fontSize: 11, color: 'var(--text-3)' }}>Updated {meta.lastUpdated || '20 Jul 2026'}</span>
             </div>
             <div style={{ fontSize: 13, color: 'var(--text-2)', lineHeight: 1.4, marginBottom: 12 }}>
@@ -728,5 +730,111 @@
     );
   }
 
-  window.SCR_C = { LiveMatch, Leaderboard, Wallet, AddFunds, Profile, Search, Notifications, History, Terms };
+  /* ===================== PRIVACY POLICY ===================== */
+  function Privacy({ app }) {
+    const [q, setQ] = useState('');
+    const [expandedSec, setExpandedSec] = useState({});
+
+    const privacyData = window.LU_PRIVACY || { meta: {}, sections: [] };
+    const meta = privacyData.meta || {};
+    const sections = privacyData.sections || [];
+
+    const toggleSec = (key) => {
+      setExpandedSec(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = meta.pdfFile || 'LineUp_Privacy_Policy.pdf';
+      link.download = meta.pdfFile || 'LineUp_Privacy_Policy.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      app.toast('Downloading Privacy Policy PDF...', 'doc');
+    };
+
+    const filteredSections = useMemo(() => {
+      if (!q.trim()) return sections;
+      const term = q.toLowerCase();
+      return sections.filter(sec => 
+        (sec.title || '').toLowerCase().includes(term) || 
+        (sec.content || '').toLowerCase().includes(term)
+      );
+    }, [q, sections]);
+
+    return (
+      <div className="screen screen-scroll">
+        <div className="appbar solid" style={{ background: 'var(--bg)', gap: 10 }}>
+          <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: 16, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Privacy Policy</div>
+            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>Effective {meta.effectiveDate || '15 Jul 2026'}</div>
+          </div>
+          <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
+            <Icon name="doc" size={14} /> PDF
+          </button>
+        </div>
+
+        {/* Search & Meta Banner */}
+        <div className="screen-pad" style={{ marginTop: 6 }}>
+          <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
+            <div className="row-between" style={{ marginBottom: 8 }}>
+              <span className="chip" style={{ background: 'var(--brand-soft)', color: 'var(--brand-2)', fontWeight: 700 }}>Data Protection</span>
+              <span style={{ fontSize: 11, color: 'var(--text-3)' }}>Updated {meta.lastUpdated || '20 Jul 2026'}</span>
+            </div>
+            <div style={{ fontSize: 13, color: 'var(--text-2)', lineHeight: 1.4, marginBottom: 12 }}>
+              How LineUp collects, protects, uses, and retains your personal data &amp; your privacy rights.
+            </div>
+            <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 9, height: 42, padding: '0 12px' }}>
+              <Icon name="search" size={17} style={{ color: 'var(--text-3)' }} />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search data collection, cookies, GDPR, rights..." style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontWeight: 600, fontSize: 13.5 }} />
+              {q && <button onClick={() => setQ('')}><Icon name="x" size={16} style={{ color: 'var(--text-3)' }} /></button>}
+            </div>
+          </div>
+        </div>
+
+        {/* Content list */}
+        <div className="screen-pad" style={{ marginTop: 10 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {filteredSections.map((sec, sIdx) => {
+              const key = `privacy-${sIdx}`;
+              const isOpen = expandedSec[key] || q.length > 0;
+              return (
+                <div key={sIdx} className="card" style={{ overflow: 'hidden', transition: 'all 0.2s' }}>
+                  <div className="row-between" style={{ padding: '14px 16px', cursor: 'pointer', background: isOpen ? 'var(--surface-2)' : 'var(--surface)' }} onClick={() => toggleSec(key)}>
+                    <div style={{ fontWeight: 700, fontSize: 13.5, flex: 1, paddingRight: 10, color: 'var(--text)' }}>
+                      {sec.title}
+                    </div>
+                    <Icon name={isOpen ? "chevU" : "chevD"} size={18} style={{ color: 'var(--text-3)' }} />
+                  </div>
+                  {isOpen && (
+                    <div style={{ padding: '14px 16px', borderTop: '1px solid var(--border)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-2)', background: 'var(--bg)' }}>
+                      {sec.subsections && sec.subsections.length > 0 ? (
+                        sec.subsections.map((sub, subIdx) => (
+                          <div key={subIdx} style={{ marginBottom: subIdx < sec.subsections.length - 1 ? 12 : 0, whiteSpace: 'pre-line' }}>
+                            {sub}
+                          </div>
+                        ))
+                      ) : (
+                        <div style={{ whiteSpace: 'pre-line' }}>{sec.content}</div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          {q && filteredSections.length === 0 && (
+            <div className="card" style={{ padding: 30, textAlign: 'center' }}>
+              <Icon name="search" size={28} style={{ color: 'var(--text-3)', marginBottom: 8 }} />
+              <div style={{ fontWeight: 700, fontSize: 14 }}>No matches found</div>
+              <div className="muted" style={{ fontSize: 12, marginTop: 4 }}>Try searching for keywords like "cookies", "retention", "GDPR", or "sharing".</div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  window.SCR_C = { LiveMatch, Leaderboard, Wallet, AddFunds, Profile, Search, Notifications, History, Terms, Privacy };
 })();
