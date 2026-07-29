@@ -495,11 +495,15 @@
           <div className="card" style={{ overflow: 'hidden' }}>
             <Item icon="headset" label="Help & support" onClick={() => app.toast('Support chat opening…', 'headset')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="doc" label="Terms & Conditions" sub="Effective 15 July 2026" onClick={() => app.go('terms')} />
+            <Item icon="doc" label="Terms & Conditions" sub="Master Rulebook v1.2" onClick={() => app.go('terms')} />
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="shield" label="Privacy Policy" sub="Data protection & rights" onClick={() => app.go('privacy')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="shield" label="Risk disclosure" sub="Trading involves risk of loss" onClick={() => app.toast('Opening risk disclosure', 'doc')} />
+            <Item icon="bolt" label="Trading & Market Rules" sub="Exchange execution & order rules" onClick={() => app.go('tradingRules')} />
+            <div className="divider" style={{ marginLeft: 62 }} />
+            <Item icon="refresh" label="Refund Policy" sub="Deposit refunds & order finality" onClick={() => app.go('refundPolicy')} />
+            <div className="divider" style={{ marginLeft: 62 }} />
+            <Item icon="alert" label="Risk Disclosure" sub="Trading involves risk of loss" onClick={() => app.go('riskDisclosure')} />
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="info" label="About LineUp" sub="v1.0.0" onClick={() => app.toast('LineUp v1.0.0', 'info')} />
           </div>
@@ -836,5 +840,302 @@
     );
   }
 
-  window.SCR_C = { LiveMatch, Leaderboard, Wallet, AddFunds, Profile, Search, Notifications, History, Terms, Privacy };
+  /* ===================== TRADING & MARKET RULES ===================== */
+  function TradingRules({ app }) {
+    const [q, setQ] = useState('');
+    const [activePart, setActivePart] = useState(0);
+    const [expandedSec, setExpandedSec] = useState({});
+
+    const tradingData = window.LU_TRADING || { meta: {}, parts: [] };
+    const meta = tradingData.meta || {};
+    const parts = tradingData.parts || [];
+
+    const toggleSec = (key) => {
+      setExpandedSec(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = meta.pdfFile || 'LineUp_Trading_and_Market_Rules.pdf';
+      link.download = meta.pdfFile || 'LineUp_Trading_and_Market_Rules.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      app.toast('Downloading Trading Rules PDF...', 'doc');
+    };
+
+    const filteredParts = useMemo(() => {
+      if (!q.trim()) return parts;
+      const term = q.toLowerCase();
+      return parts.map(part => {
+        const matchingSecs = (part.sections || []).filter(sec => 
+          (sec.title || '').toLowerCase().includes(term) || 
+          (sec.content || '').toLowerCase().includes(term)
+        );
+        return matchingSecs.length > 0 ? { ...part, sections: matchingSecs } : null;
+      }).filter(Boolean);
+    }, [q, parts]);
+
+    return (
+      <div className="screen screen-scroll">
+        <div className="appbar solid" style={{ background: 'var(--bg)', gap: 10 }}>
+          <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Trading & Market Rules</div>
+            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>Effective {meta.effectiveDate || '15 Jul 2026'}</div>
+          </div>
+          <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
+            <Icon name="doc" size={14} /> PDF
+          </button>
+        </div>
+
+        <div className="screen-pad" style={{ marginTop: 6 }}>
+          <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
+            <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{meta.title || 'Trading & Market Rules'}</div>
+            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Exchange Operating Standards'}</div>
+            <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'var(--bg)', borderRadius: 10 }}>
+              <Icon name="search" size={16} style={{ color: 'var(--text-3)' }} />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search rules (e.g. order, execution, margin)..." style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontSize: 13, width: '100%' }} />
+              {q && <button onClick={() => setQ('')}><Icon name="x" size={16} style={{ color: 'var(--text-3)' }} /></button>}
+            </div>
+          </div>
+        </div>
+
+        {!q && parts.length > 0 && (
+          <div style={{ padding: '0 16px', overflowX: 'auto', display: 'flex', gap: 8, scrollbarWidth: 'none', marginTop: 10, paddingBottom: 6 }}>
+            {parts.map((p, idx) => (
+              <button key={idx} className={`pill-tab ${activePart === idx ? 'active' : ''}`} style={{ whiteSpace: 'nowrap', fontSize: 12, flexShrink: 0 }} onClick={() => setActivePart(idx)}>
+                {p.title ? p.title.split('.')[0] : `Part ${idx+1}`}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="screen-pad" style={{ marginTop: 10 }}>
+          {(q ? filteredParts : [parts[activePart]]).filter(Boolean).map((part, pIdx) => (
+            <div key={pIdx} style={{ marginBottom: 20 }}>
+              <div style={{ fontWeight: 800, fontSize: 14, color: 'var(--brand-2)', marginBottom: 10, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                {part.title}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {(part.sections || []).map((sec, sIdx) => {
+                  const key = `${pIdx}-${sIdx}`;
+                  const isOpen = expandedSec[key] || q.length > 0;
+                  return (
+                    <div key={sIdx} className="card" style={{ overflow: 'hidden', transition: 'all 0.2s' }}>
+                      <div className="row-between" style={{ padding: '14px 16px', cursor: 'pointer', background: isOpen ? 'var(--surface-2)' : 'var(--surface)' }} onClick={() => toggleSec(key)}>
+                        <div style={{ fontWeight: 700, fontSize: 13.5, flex: 1, paddingRight: 10, color: 'var(--text)' }}>
+                          {sec.title}
+                        </div>
+                        <Icon name={isOpen ? "chevU" : "chevD"} size={18} style={{ color: 'var(--text-3)' }} />
+                      </div>
+                      {isOpen && (
+                        <div style={{ padding: '14px 16px', borderTop: '1px solid var(--border)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-2)', background: 'var(--bg)' }}>
+                          {sec.subsections && sec.subsections.length > 0 ? (
+                            sec.subsections.map((sub, subIdx) => (
+                              <div key={subIdx} style={{ marginBottom: subIdx < sec.subsections.length - 1 ? 12 : 0, whiteSpace: 'pre-line' }}>
+                                {sub}
+                              </div>
+                            ))
+                          ) : (
+                            <div style={{ whiteSpace: 'pre-line' }}>{sec.content}</div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  /* ===================== REFUND & CANCELLATION POLICY ===================== */
+  function RefundPolicy({ app }) {
+    const [q, setQ] = useState('');
+    const [expandedSec, setExpandedSec] = useState({});
+
+    const refundData = window.LU_REFUND || { meta: {}, sections: [] };
+    const meta = refundData.meta || {};
+    const sections = refundData.sections || [];
+
+    const toggleSec = (key) => {
+      setExpandedSec(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = meta.pdfFile || 'LineUp_Refund_and_Cancellation_Policy.pdf';
+      link.download = meta.pdfFile || 'LineUp_Refund_and_Cancellation_Policy.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      app.toast('Downloading Refund Policy PDF...', 'doc');
+    };
+
+    const filteredSections = useMemo(() => {
+      if (!q.trim()) return sections;
+      const term = q.toLowerCase();
+      return sections.filter(sec => 
+        (sec.title || '').toLowerCase().includes(term) || 
+        (sec.content || '').toLowerCase().includes(term)
+      );
+    }, [q, sections]);
+
+    return (
+      <div className="screen screen-scroll">
+        <div className="appbar solid" style={{ background: 'var(--bg)', gap: 10 }}>
+          <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Refund & Cancellation</div>
+            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>Effective {meta.effectiveDate || '15 Jul 2026'}</div>
+          </div>
+          <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
+            <Icon name="doc" size={14} /> PDF
+          </button>
+        </div>
+
+        <div className="screen-pad" style={{ marginTop: 6 }}>
+          <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
+            <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{meta.title || 'Refund & Cancellation Policy'}</div>
+            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Refund & Order Cancellation Rules'}</div>
+            <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'var(--bg)', borderRadius: 10 }}>
+              <Icon name="search" size={16} style={{ color: 'var(--text-3)' }} />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search refund policy..." style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontSize: 13, width: '100%' }} />
+              {q && <button onClick={() => setQ('')}><Icon name="x" size={16} style={{ color: 'var(--text-3)' }} /></button>}
+            </div>
+          </div>
+        </div>
+
+        <div className="screen-pad" style={{ marginTop: 10 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {filteredSections.map((sec, idx) => {
+              const key = `ref-${idx}`;
+              const isOpen = expandedSec[key] || q.length > 0;
+              return (
+                <div key={idx} className="card" style={{ overflow: 'hidden', transition: 'all 0.2s' }}>
+                  <div className="row-between" style={{ padding: '14px 16px', cursor: 'pointer', background: isOpen ? 'var(--surface-2)' : 'var(--surface)' }} onClick={() => toggleSec(key)}>
+                    <div style={{ fontWeight: 700, fontSize: 13.5, flex: 1, paddingRight: 10, color: 'var(--text)' }}>
+                      {sec.title}
+                    </div>
+                    <Icon name={isOpen ? "chevU" : "chevD"} size={18} style={{ color: 'var(--text-3)' }} />
+                  </div>
+                  {isOpen && (
+                    <div style={{ padding: '14px 16px', borderTop: '1px solid var(--border)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-2)', background: 'var(--bg)' }}>
+                      {sec.subsections && sec.subsections.length > 0 ? (
+                        sec.subsections.map((sub, subIdx) => (
+                          <div key={subIdx} style={{ marginBottom: subIdx < sec.subsections.length - 1 ? 12 : 0, whiteSpace: 'pre-line' }}>
+                            {sub}
+                          </div>
+                        ))
+                      ) : (
+                        <div style={{ whiteSpace: 'pre-line' }}>{sec.content}</div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  /* ===================== RISK DISCLOSURE STATEMENT ===================== */
+  function RiskDisclosure({ app }) {
+    const [q, setQ] = useState('');
+    const [expandedSec, setExpandedSec] = useState({});
+
+    const riskData = window.LU_RISK || { meta: {}, sections: [] };
+    const meta = riskData.meta || {};
+    const sections = riskData.sections || [];
+
+    const toggleSec = (key) => {
+      setExpandedSec(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = meta.pdfFile || 'LineUp_Risk_Disclosure_Statement.pdf';
+      link.download = meta.pdfFile || 'LineUp_Risk_Disclosure_Statement.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      app.toast('Downloading Risk Disclosure PDF...', 'doc');
+    };
+
+    const filteredSections = useMemo(() => {
+      if (!q.trim()) return sections;
+      const term = q.toLowerCase();
+      return sections.filter(sec => 
+        (sec.title || '').toLowerCase().includes(term) || 
+        (sec.content || '').toLowerCase().includes(term)
+      );
+    }, [q, sections]);
+
+    return (
+      <div className="screen screen-scroll">
+        <div className="appbar solid" style={{ background: 'var(--bg)', gap: 10 }}>
+          <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Risk Disclosure</div>
+            <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>Effective {meta.effectiveDate || '15 Jul 2026'}</div>
+          </div>
+          <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
+            <Icon name="doc" size={14} /> PDF
+          </button>
+        </div>
+
+        <div className="screen-pad" style={{ marginTop: 6 }}>
+          <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
+            <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{meta.title || 'Risk Disclosure Statement'}</div>
+            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Key Risks of Trading Synthetic Player Assets'}</div>
+            <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'var(--bg)', borderRadius: 10 }}>
+              <Icon name="search" size={16} style={{ color: 'var(--text-3)' }} />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search risk disclosure..." style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontSize: 13, width: '100%' }} />
+              {q && <button onClick={() => setQ('')}><Icon name="x" size={16} style={{ color: 'var(--text-3)' }} /></button>}
+            </div>
+          </div>
+        </div>
+
+        <div className="screen-pad" style={{ marginTop: 10 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {filteredSections.map((sec, idx) => {
+              const key = `risk-${idx}`;
+              const isOpen = expandedSec[key] || q.length > 0;
+              return (
+                <div key={idx} className="card" style={{ overflow: 'hidden', transition: 'all 0.2s' }}>
+                  <div className="row-between" style={{ padding: '14px 16px', cursor: 'pointer', background: isOpen ? 'var(--surface-2)' : 'var(--surface)' }} onClick={() => toggleSec(key)}>
+                    <div style={{ fontWeight: 700, fontSize: 13.5, flex: 1, paddingRight: 10, color: 'var(--text)' }}>
+                      {sec.title}
+                    </div>
+                    <Icon name={isOpen ? "chevU" : "chevD"} size={18} style={{ color: 'var(--text-3)' }} />
+                  </div>
+                  {isOpen && (
+                    <div style={{ padding: '14px 16px', borderTop: '1px solid var(--border)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-2)', background: 'var(--bg)' }}>
+                      {sec.subsections && sec.subsections.length > 0 ? (
+                        sec.subsections.map((sub, subIdx) => (
+                          <div key={subIdx} style={{ marginBottom: subIdx < sec.subsections.length - 1 ? 12 : 0, whiteSpace: 'pre-line' }}>
+                            {sub}
+                          </div>
+                        ))
+                      ) : (
+                        <div style={{ whiteSpace: 'pre-line' }}>{sec.content}</div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  window.SCR_C = { LiveMatch, Leaderboard, Wallet, AddFunds, Profile, Search, Notifications, History, Terms, Privacy, TradingRules, RefundPolicy, RiskDisclosure };
 })();

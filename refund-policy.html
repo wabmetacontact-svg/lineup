@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LINEUP REFUND AND CANCELLATION POLICY · LineUp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+  .terms-hero {
+    padding: 60px 0 40px;
+    background: linear-gradient(180deg, rgba(91, 75, 214, 0.12) 0%, rgba(10, 7, 24, 0) 100%);
+    border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  }
+  .terms-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(91, 75, 214, 0.2);
+    border: 1px solid rgba(91, 75, 214, 0.4);
+    border-radius: 20px;
+    color: #a59bf4;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .terms-title {
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #cfc9fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .terms-subtitle {
+    font-size: 16px;
+    color: var(--text-muted, #938eb4);
+    max-width: 680px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    font-size: 13px;
+  }
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .meta-item span.label {
+    color: #8b85b4;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-item span.val {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .terms-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    padding: 40px 0 80px;
+  }
+  @media (max-width: 900px) {
+    .terms-layout {
+      grid-template-columns: 1fr;
+    }
+    .terms-sidebar {
+      position: static !important;
+      max-height: none !important;
+    }
+  }
+
+  .terms-sidebar {
+    position: sticky;
+    top: 90px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 12px;
+  }
+  .terms-sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .terms-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
+
+  .toc-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8b85b4;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .toc-link {
+    color: #a099c7;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: block;
+    line-height: 1.4;
+  }
+  .toc-link:hover, .toc-link.active {
+    background: rgba(108, 92, 231, 0.15);
+    color: #fff;
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+  }
+  .search-box input:focus {
+    border-color: #6c5ce7;
+  }
+
+  .section-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6c5ce7 0%, #4834d4 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(108, 92, 231, 0.5);
+  }
+</style>
+</head>
+<body data-page="legal">
+<div class="page-bg"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="LineUp home">
+      <img src="logo.png" alt="LineUp" width="34" height="34" style="border-radius: 9px;" />
+      <span class="wordmark">Line<b>Up</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Features.html">Features</a>
+      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost btn-sm" href="https://app.lineup.trade/sport-select">Open app</a>
+      <a class="download-btn" href="LineUp_Refund_and_Cancellation_Policy.pdf" download="LineUp_Refund_and_Cancellation_Policy.pdf" style="padding: 8px 16px; font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="terms-hero">
+  <div class="container">
+    <div class="terms-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Official Exchange Policy & Governance Document
+    </div>
+    <h1 class="terms-title">LINEUP REFUND AND CANCELLATION POLICY</h1>
+    <p class="terms-subtitle">Refund, Return & Order Cancellation Rules</p>
+    
+    <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
+      <a class="download-btn" href="LineUp_Refund_and_Cancellation_Policy.pdf" download="LineUp_Refund_and_Cancellation_Policy.pdf">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full Document (PDF)
+      </a>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">Effective Date</span><span class="val">15 July 2026</span></div>
+      <div class="meta-item"><span class="label">Last Updated</span><span class="val">20 July 2026</span></div>
+      <div class="meta-item"><span class="label">Version</span><span class="val">1.0</span></div>
+      <div class="meta-item"><span class="label">Operator</span><span class="val">LineUp, Emirate of Dubai, United Arab Emirates</span></div>
+      <div class="meta-item"><span class="label">Platform URL</span><span class="val">https://lineup.trade/</span></div>
+      <div class="meta-item"><span class="label">Contact</span><span class="val">Support@Lineup.trade</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAIN CONTENT LAYOUT ============ -->
+<div class="container terms-layout">
+  <aside class="terms-sidebar">
+    <div class="search-box">
+      <input type="text" id="terms-search" placeholder="Search document..." />
+    </div>
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-list">
+      <a href="#sec-1" class="toc-link">1. Purpose and Scope</a><a href="#sec-2" class="toc-link">2. Important Context: LineUp Does Not Hold Your Funds</a><a href="#sec-3" class="toc-link">3. Deposits: Refunds of Unused Funds</a><a href="#sec-4" class="toc-link">4. Refund Method, Timeframe, and Fees</a><a href="#sec-5" class="toc-link">5. Orders and Trades: Cancellation and Finality</a><a href="#sec-6" class="toc-link">6. Limited Exceptions: Platform Errors</a><a href="#sec-7" class="toc-link">7. Cryptocurrency: Returns and Irreversibility</a><a href="#sec-8" class="toc-link">8. Chargebacks and Payment Disputes</a><a href="#sec-9" class="toc-link">9. How to Request a Refund or Raise a Concern</a><a href="#sec-10" class="toc-link">10. Changes to This Policy</a><a href="#sec-11" class="toc-link">11. Contact</a>
+    </div>
+  </aside>
+
+  <main class="terms-body">
+    
+            <div class="section-card" id="sec-1">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">1. Purpose and Scope</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">.............................................................................................................................................1</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">.............................................................................................................................................1</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-2">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">2. Important Context: LineUp Does Not Hold Your Funds</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">...................................................................2</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">...................................................................2</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-3">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">3. Deposits: Refunds of Unused Funds</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">..........................................................................................................2</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">..........................................................................................................2</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-4">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">4. Refund Method, Timeframe, and Fees</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">......................................................................................................3</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">......................................................................................................3</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-5">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">5. Orders and Trades: Cancellation and Finality</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">.......................................................................................3</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">.......................................................................................3</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-6">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">6. Limited Exceptions: Platform Errors</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">.........................................................................................................3</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">.........................................................................................................3</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-7">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">7. Cryptocurrency: Returns and Irreversibility</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">.........................................................................................4</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">.........................................................................................4</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-8">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">8. Chargebacks and Payment Disputes</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">..........................................................................................................4</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">..........................................................................................................4</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-9">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">9. How to Request a Refund or Raise a Concern</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">.......................................................................................4</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">.......................................................................................4</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-10">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">10. Changes to This Policy</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">...................................................................................................................................5</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">...................................................................................................................................5</p>
+                    </div>
+                    
+            </div>
+            
+            <div class="section-card" id="sec-11">
+                <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">11. Contact</h3>
+                
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">...................................................................................................................................................................5</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">Effective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.0 Issuer: LineUp, 
+established in the Emirate of Dubai, United Arab Emirates Platform: https://lineup.trade/ 
+| Contact: Support@Lineup.trade 
+ 
+PLEASE READ CAREFULLY. LineUp is a trading platform. This Policy explains 
+what can and cannot be refunded or cancelled. In summary: unused deposited 
+funds can be refunded or withdrawn to you, but executed trades and trading 
+losses are final and cannot be refunded, reversed, or cancelled. Trading 
+involves risk, and losses arising from your trading decisions are not eligible for a 
+refund. 
+ 
+1. Purpose and Scope</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">1.1. This Refund and Cancellation Policy (the "Policy") explains when deposits, orders, and</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">trades on the LineUp platform (the "Platform") may be refunded or cancelled, and when 
+they may not. It forms part of, and must be read together with, the LineUp Terms & 
+Conditions (https://lineup.trade/terms). Capitalised terms not defined here have the 
+meanings given in the Terms & Conditions.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">1.2. This Policy distinguishes between two different things that are often confused:</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">(a) funding your account (deposits and withdrawals of money that you have not yet 
+used to trade), where genuine refund and cancellation situations can arise; and 
+(b) trading (orders and executed trades), where, by the nature of a trading platform, 
+executed trades are final and trading losses are not refundable.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">1.3. Nothing in this Policy limits any right you have under mandatory consumer-protection</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">law that cannot be excluded or varied by agreement. 
+2. Important Context: LineUp Does Not Hold Your Funds</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">2.1. LineUp operates a non-custodial model and does not custody User funds. Indian Rupee</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">(INR) balances are held and processed by our payment partner, Razorpay, and 
+cryptocurrency remains in your own self-custody wallet, as described in the Terms & 
+Conditions.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">2.2. Because LineUp does not hold your funds, refunds and returns of money are processed</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">through the relevant payment rail (Razorpay for INR, or your self-custody wallet for 
+cryptocurrency) and are subject to the operating timelines, terms, and checks of that rail, in 
+addition to this Policy. 
+3. Deposits: Refunds of Unused Funds</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">3.1. Unused deposited funds are refundable. If you have deposited funds into your</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">account and have not yet used them to open a position, you may request that those 
+unused funds be returned to you, either as a standard withdrawal or as a refund to the 
+original payment method, subject to this Policy and to verification and compliance checks.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">3.2. A refund or return of unused funds may be requested through your account or by</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">contacting Support@Lineup.trade.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">3.3. Verification and compliance. All refunds and withdrawals are subject to identity</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">verification (KYC) and to anti-money-laundering, fraud, sanctions, and source-of-funds 
+checks. LineUp or the payment partner may pause, decline, or request further information 
+in relation to a refund where required by law or these policies, and may be prohibited by 
+law from explaining the reason for a hold.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">3.4. Destination. Refunds of INR are returned only to the original payment method or to a</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">verified account in your own name. Refunds of cryptocurrency value are returned only to 
+your verified self-custody wallet. Refunds to any third party are not permitted.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">3.5. Once funds are used to trade, they are no longer "unused funds" and are subject to</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">the outcome of your trading. The value of an open or closed position is determined by the 
+market and by settlement under the Terms & Conditions, not by this Section. 
+4. Refund Method, Timeframe, and Fees</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">4.1. Method. Approved refunds of INR are returned to the original payment method used</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">for the deposit wherever possible. Where a return to the original method is not possible, 
+the refund is made to a verified account in your own name.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">4.2. Timeframe. Approved refunds are processed as promptly as practicable and are</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">ordinarily completed within 7 to 14 business days of approval. The actual time to receipt 
+depends on the payment partner, your bank or card issuer, and the applicable payment 
+network, and may be longer for reasons outside LineUp's control.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">4.3. Fees. Refund amounts, and any deduction of payment-gateway or processing fees, are</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">subject to the terms of the payment partner (Razorpay) and the applicable payment 
+network. Third-party gateway or network fees associated with the original transaction may 
+be non-recoverable and may not be returned as part of a refund. Any such deduction will 
+be in accordance with the payment partner's terms.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">4.4. No interest. No interest is payable on any amount held pending a refund or</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">withdrawal. 
+5. Orders and Trades: Cancellation and Finality</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">5.1. Resting limit orders can be cancelled. A limit order that has been placed but has not</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">yet executed may be cancelled by you at any time before it executes, through the Platform, 
+in accordance with the Terms & Conditions. Resting orders may also be cancelled 
+automatically on session close, interruption, suspension, parameter change, or account 
+restriction.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">5.2. Executed trades are final. A market order, and any order once it has executed (in</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">whole or in part), cannot be cancelled, reversed, or refunded by you. When the Liquidity 
+Engine records an execution, the trade is binding, as set out in the Terms & Conditions.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">5.3. Trading losses are not refundable. Losses resulting from your trading, including</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">losses from price movements, margin, leverage, short positions, liquidation, and 
+settlement, are the result of market activity and your own trading decisions. They are not 
+errors, and they are not eligible for any refund, reversal, or compensation.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">5.4. Liquidations and settlement. Positions closed through liquidation, automatic</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">settlement at match end, delisting, or corporate-action handling are closed in accordance 
+with the market rules in the Terms & Conditions, and the resulting outcome is not 
+refundable. 
+6. Limited Exceptions: Platform Errors</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">6.1. This Section is the only circumstance in which an executed trade may be adjusted, and</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">it is at LineUp's determination, not on request as a matter of right.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">6.2. Where a price, execution, or settlement results from a manifest error (for example, a</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">data-feed error, software defect, misconfiguration, or obvious mispricing far outside 
+prevailing levels), LineUp may cancel or amend the affected trades and correct affected 
+balances, in accordance with the manifest-error provisions of the Terms & Conditions. This 
+applies symmetrically, whether the error was in your favour or against you.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">6.3. A manifest-error correction is not a "refund" of a trading loss. It is a restoration of the</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">position that would have applied had the error not occurred.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">6.4. If you believe a trade was affected by a genuine Platform error, you should contact</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">Support@Lineup.trade promptly, with details, so that LineUp can investigate. LineUp will 
+keep records of any correction it makes. 
+7. Cryptocurrency: Returns and Irreversibility</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">7.1. Unused cryptocurrency value that you have committed to the Platform but have not</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">used to open a position may be released back to your self-custody wallet, subject to the 
+same verification and compliance checks as other refunds.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">7.2. On-chain transactions are irreversible. Once a cryptocurrency transaction is</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">confirmed on a blockchain network, it cannot be reversed by LineUp. If you send 
+cryptocurrency to an incorrect address or on an unsupported network, or send an 
+unsupported asset, those funds may be permanently and irretrievably lost, and 
+LineUp cannot recover or refund them. You are solely responsible for verifying 
+addresses, assets, and networks before every transaction.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">7.3. Network fees (including gas fees) associated with cryptocurrency transactions are not</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">refundable. 
+8. Chargebacks and Payment Disputes</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">8.1. If you believe there is a genuine problem with a payment, please contact</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">Support@Lineup.trade first so that we can try to resolve it.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">8.2. Initiating a chargeback or payment reversal in bad faith, including to reverse</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">trading losses or to reclaim funds that were properly used to trade, is a breach of the Terms 
+& Conditions. LineUp and the payment partner may contest such reversals, suspend or 
+close the account, recover associated costs, and set off amounts owed, as described in the 
+Terms & Conditions. 
+9. How to Request a Refund or Raise a Concern</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">9.1. To request a refund of unused funds, to cancel a resting order, or to raise a concern</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">about a payment or a suspected Platform error, contact Support@Lineup.trade or use the 
+relevant function in your account.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">9.2. Please include enough detail for us to identify the transaction or order, including the</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">date, amount, and any reference number. We may require identity verification before 
+processing a request.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">9.3. Complaints about the handling of a refund may be raised through the Complaints</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">Handling Procedure (https://lineup.trade/complaints). 
+10. Changes to This Policy</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 18px; padding: 16px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                        <h4 style="color: #6c5ce7; margin-bottom: 8px; font-size: 15px;">10.1. LineUp may update this Policy from time to time. When we do, we will revise the "Last</h4>
+                        <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">Updated" date and, where the changes are material, provide additional notice through the 
+Platform or by email before the changes take effect. Your continued use of the Platform 
+after the effective date constitutes acceptance of the updated Policy. 
+11. Contact 
+Questions about this Policy may be sent to Support@Lineup.trade. 
+Issuer: LineUp, established in the Emirate of Dubai, United Arab Emirates. Website: 
+https://lineup.trade/</p>
+                    </div>
+                    
+            </div>
+            
+  </main>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="LineUp" width="30" height="30" style="border-radius: 8px;" />
+        <span class="wordmark">Line<b>Up</b></span>
+      </a>
+      <p style="margin-top: 12px; font-size: 13px; color: #8b85b4;">The premier synthetic cricket player asset &amp; liquidity exchange.</p>
+    </div>
+    <div>
+      <h5>Legal &amp; Governance</h5>
+      <div class="f-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="trading-rules.html">Trading &amp; Market Rules</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="risk-disclosure.html">Risk Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('terms-search');
+  const sections = document.querySelectorAll('.section-card');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      sections.forEach(sec => {
+        const text = sec.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      const secTop = sec.offsetTop;
+      if (pageYOffset >= secTop - 120) {
+        current = sec.getAttribute('id');
+      }
+    });
+
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>

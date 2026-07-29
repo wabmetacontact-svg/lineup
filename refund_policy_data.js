@@ -1,0 +1,134 @@
+window.LU_REFUND = {
+  "meta": {
+    "title": "LINEUP REFUND AND CANCELLATION POLICY",
+    "subtitle": "Refund, Return & Order Cancellation Rules",
+    "effectiveDate": "15 July 2026",
+    "lastUpdated": "20 July 2026",
+    "version": "1.0",
+    "operator": "LineUp, Emirate of Dubai, United Arab Emirates",
+    "platformUrl": "https://lineup.trade/",
+    "contact": "Support@Lineup.trade",
+    "pdfFile": "LineUp_Refund_and_Cancellation_Policy.pdf"
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "title": "1. Purpose and Scope",
+      "content": ".............................................................................................................................................1",
+      "subsections": [
+        ".............................................................................................................................................1"
+      ]
+    },
+    {
+      "id": "sec-2",
+      "title": "2. Important Context: LineUp Does Not Hold Your Funds",
+      "content": "...................................................................2",
+      "subsections": [
+        "...................................................................2"
+      ]
+    },
+    {
+      "id": "sec-3",
+      "title": "3. Deposits: Refunds of Unused Funds",
+      "content": "..........................................................................................................2",
+      "subsections": [
+        "..........................................................................................................2"
+      ]
+    },
+    {
+      "id": "sec-4",
+      "title": "4. Refund Method, Timeframe, and Fees",
+      "content": "......................................................................................................3",
+      "subsections": [
+        "......................................................................................................3"
+      ]
+    },
+    {
+      "id": "sec-5",
+      "title": "5. Orders and Trades: Cancellation and Finality",
+      "content": ".......................................................................................3",
+      "subsections": [
+        ".......................................................................................3"
+      ]
+    },
+    {
+      "id": "sec-6",
+      "title": "6. Limited Exceptions: Platform Errors",
+      "content": ".........................................................................................................3",
+      "subsections": [
+        ".........................................................................................................3"
+      ]
+    },
+    {
+      "id": "sec-7",
+      "title": "7. Cryptocurrency: Returns and Irreversibility",
+      "content": ".........................................................................................4",
+      "subsections": [
+        ".........................................................................................4"
+      ]
+    },
+    {
+      "id": "sec-8",
+      "title": "8. Chargebacks and Payment Disputes",
+      "content": "..........................................................................................................4",
+      "subsections": [
+        "..........................................................................................................4"
+      ]
+    },
+    {
+      "id": "sec-9",
+      "title": "9. How to Request a Refund or Raise a Concern",
+      "content": ".......................................................................................4",
+      "subsections": [
+        ".......................................................................................4"
+      ]
+    },
+    {
+      "id": "sec-10",
+      "title": "10. Changes to This Policy",
+      "content": "...................................................................................................................................5",
+      "subsections": [
+        "...................................................................................................................................5"
+      ]
+    },
+    {
+      "id": "sec-11",
+      "title": "11. Contact",
+      "content": "...................................................................................................................................................................5 \n \n \nEffective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.0 Issuer: LineUp, \nestablished in the Emirate of Dubai, United Arab Emirates Platform: https://lineup.trade/ \n| Contact: Support@Lineup.trade \n \nPLEASE READ CAREFULLY. LineUp is a trading platform. This Policy explains \nwhat can and cannot be refunded or cancelled. In summary: unused deposited \nfunds can be refunded or withdrawn to you, but executed trades and trading \nlosses are final and cannot be refunded, reversed, or cancelled. Trading \ninvolves risk, and losses arising from your trading decisions are not eligible for a \nrefund. \n \n1. Purpose and Scope \n1.1. This Refund and Cancellation Policy (the \"Policy\") explains when deposits, orders, and \ntrades on the LineUp platform (the \"Platform\") may be refunded or cancelled, and when \nthey may not. It forms part of, and must be read together with, the LineUp Terms & \nConditions (https://lineup.trade/terms). Capitalised terms not defined here have the \nmeanings given in the Terms & Conditions. \n1.2. This Policy distinguishes between two different things that are often confused: \n(a) funding your account (deposits and withdrawals of money that you have not yet \nused to trade), where genuine refund and cancellation situations can arise; and \n(b) trading (orders and executed trades), where, by the nature of a trading platform, \nexecuted trades are final and trading losses are not refundable. \n1.3. Nothing in this Policy limits any right you have under mandatory consumer-protection \nlaw that cannot be excluded or varied by agreement. \n2. Important Context: LineUp Does Not Hold Your Funds  \n2.1. LineUp operates a non-custodial model and does not custody User funds. Indian Rupee \n(INR) balances are held and processed by our payment partner, Razorpay, and \ncryptocurrency remains in your own self-custody wallet, as described in the Terms & \nConditions. \n2.2. Because LineUp does not hold your funds, refunds and returns of money are processed \nthrough the relevant payment rail (Razorpay for INR, or your self-custody wallet for \ncryptocurrency) and are subject to the operating timelines, terms, and checks of that rail, in \naddition to this Policy. \n3. Deposits: Refunds of Unused Funds \n3.1. Unused deposited funds are refundable. If you have deposited funds into your \naccount and have not yet used them to open a position, you may request that those \nunused funds be returned to you, either as a standard withdrawal or as a refund to the \noriginal payment method, subject to this Policy and to verification and compliance checks. \n3.2. A refund or return of unused funds may be requested through your account or by \ncontacting Support@Lineup.trade. \n3.3. Verification and compliance. All refunds and withdrawals are subject to identity \nverification (KYC) and to anti-money-laundering, fraud, sanctions, and source-of-funds \nchecks. LineUp or the payment partner may pause, decline, or request further information \nin relation to a refund where required by law or these policies, and may be prohibited by \nlaw from explaining the reason for a hold. \n3.4. Destination. Refunds of INR are returned only to the original payment method or to a \nverified account in your own name. Refunds of cryptocurrency value are returned only to \nyour verified self-custody wallet. Refunds to any third party are not permitted. \n3.5. Once funds are used to trade, they are no longer \"unused funds\" and are subject to \nthe outcome of your trading. The value of an open or closed position is determined by the \nmarket and by settlement under the Terms & Conditions, not by this Section. \n4. Refund Method, Timeframe, and Fees \n4.1. Method. Approved refunds of INR are returned to the original payment method used \nfor the deposit wherever possible. Where a return to the original method is not possible, \nthe refund is made to a verified account in your own name. \n4.2. Timeframe. Approved refunds are processed as promptly as practicable and are \nordinarily completed within 7 to 14 business days of approval. The actual time to receipt \ndepends on the payment partner, your bank or card issuer, and the applicable payment \nnetwork, and may be longer for reasons outside LineUp's control. \n4.3. Fees. Refund amounts, and any deduction of payment-gateway or processing fees, are \nsubject to the terms of the payment partner (Razorpay) and the applicable payment \nnetwork. Third-party gateway or network fees associated with the original transaction may \nbe non-recoverable and may not be returned as part of a refund. Any such deduction will \nbe in accordance with the payment partner's terms. \n4.4. No interest. No interest is payable on any amount held pending a refund or \nwithdrawal. \n5. Orders and Trades: Cancellation and Finality \n5.1. Resting limit orders can be cancelled. A limit order that has been placed but has not \nyet executed may be cancelled by you at any time before it executes, through the Platform, \nin accordance with the Terms & Conditions. Resting orders may also be cancelled \nautomatically on session close, interruption, suspension, parameter change, or account \nrestriction. \n5.2. Executed trades are final. A market order, and any order once it has executed (in \nwhole or in part), cannot be cancelled, reversed, or refunded by you. When the Liquidity \nEngine records an execution, the trade is binding, as set out in the Terms & Conditions. \n5.3. Trading losses are not refundable. Losses resulting from your trading, including \nlosses from price movements, margin, leverage, short positions, liquidation, and \nsettlement, are the result of market activity and your own trading decisions. They are not \nerrors, and they are not eligible for any refund, reversal, or compensation. \n5.4. Liquidations and settlement. Positions closed through liquidation, automatic \nsettlement at match end, delisting, or corporate-action handling are closed in accordance \nwith the market rules in the Terms & Conditions, and the resulting outcome is not \nrefundable. \n6. Limited Exceptions: Platform Errors \n6.1. This Section is the only circumstance in which an executed trade may be adjusted, and \nit is at LineUp's determination, not on request as a matter of right. \n6.2. Where a price, execution, or settlement results from a manifest error (for example, a \ndata-feed error, software defect, misconfiguration, or obvious mispricing far outside \nprevailing levels), LineUp may cancel or amend the affected trades and correct affected \nbalances, in accordance with the manifest-error provisions of the Terms & Conditions. This \napplies symmetrically, whether the error was in your favour or against you. \n6.3. A manifest-error correction is not a \"refund\" of a trading loss. It is a restoration of the \nposition that would have applied had the error not occurred. \n6.4. If you believe a trade was affected by a genuine Platform error, you should contact \nSupport@Lineup.trade promptly, with details, so that LineUp can investigate. LineUp will \nkeep records of any correction it makes. \n7. Cryptocurrency: Returns and Irreversibility \n7.1. Unused cryptocurrency value that you have committed to the Platform but have not \nused to open a position may be released back to your self-custody wallet, subject to the \nsame verification and compliance checks as other refunds. \n7.2. On-chain transactions are irreversible. Once a cryptocurrency transaction is \nconfirmed on a blockchain network, it cannot be reversed by LineUp. If you send \ncryptocurrency to an incorrect address or on an unsupported network, or send an \nunsupported asset, those funds may be permanently and irretrievably lost, and \nLineUp cannot recover or refund them. You are solely responsible for verifying \naddresses, assets, and networks before every transaction. \n7.3. Network fees (including gas fees) associated with cryptocurrency transactions are not \nrefundable. \n8. Chargebacks and Payment Disputes \n8.1. If you believe there is a genuine problem with a payment, please contact \nSupport@Lineup.trade first so that we can try to resolve it. \n8.2. Initiating a chargeback or payment reversal in bad faith, including to reverse \ntrading losses or to reclaim funds that were properly used to trade, is a breach of the Terms \n& Conditions. LineUp and the payment partner may contest such reversals, suspend or \nclose the account, recover associated costs, and set off amounts owed, as described in the \nTerms & Conditions. \n9. How to Request a Refund or Raise a Concern  \n9.1. To request a refund of unused funds, to cancel a resting order, or to raise a concern \nabout a payment or a suspected Platform error, contact Support@Lineup.trade or use the \nrelevant function in your account. \n9.2. Please include enough detail for us to identify the transaction or order, including the \ndate, amount, and any reference number. We may require identity verification before \nprocessing a request. \n9.3. Complaints about the handling of a refund may be raised through the Complaints \nHandling Procedure (https://lineup.trade/complaints). \n10. Changes to This Policy \n10.1. LineUp may update this Policy from time to time. When we do, we will revise the \"Last \nUpdated\" date and, where the changes are material, provide additional notice through the \nPlatform or by email before the changes take effect. Your continued use of the Platform \nafter the effective date constitutes acceptance of the updated Policy. \n11. Contact \nQuestions about this Policy may be sent to Support@Lineup.trade. \nIssuer: LineUp, established in the Emirate of Dubai, United Arab Emirates. Website: \nhttps://lineup.trade/",
+      "subsections": [
+        "...................................................................................................................................................................5 \n \n \nEffective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.0 Issuer: LineUp, \nestablished in the Emirate of Dubai, United Arab Emirates Platform: https://lineup.trade/ \n| Contact: Support@Lineup.trade \n \nPLEASE READ CAREFULLY. LineUp is a trading platform. This Policy explains \nwhat can and cannot be refunded or cancelled. In summary: unused deposited \nfunds can be refunded or withdrawn to you, but executed trades and trading \nlosses are final and cannot be refunded, reversed, or cancelled. Trading \ninvolves risk, and losses arising from your trading decisions are not eligible for a \nrefund. \n \n1. Purpose and Scope",
+        "1.1. This Refund and Cancellation Policy (the \"Policy\") explains when deposits, orders, and \ntrades on the LineUp platform (the \"Platform\") may be refunded or cancelled, and when \nthey may not. It forms part of, and must be read together with, the LineUp Terms & \nConditions (https://lineup.trade/terms). Capitalised terms not defined here have the \nmeanings given in the Terms & Conditions.",
+        "1.2. This Policy distinguishes between two different things that are often confused: \n(a) funding your account (deposits and withdrawals of money that you have not yet \nused to trade), where genuine refund and cancellation situations can arise; and \n(b) trading (orders and executed trades), where, by the nature of a trading platform, \nexecuted trades are final and trading losses are not refundable.",
+        "1.3. Nothing in this Policy limits any right you have under mandatory consumer-protection \nlaw that cannot be excluded or varied by agreement. \n2. Important Context: LineUp Does Not Hold Your Funds",
+        "2.1. LineUp operates a non-custodial model and does not custody User funds. Indian Rupee \n(INR) balances are held and processed by our payment partner, Razorpay, and \ncryptocurrency remains in your own self-custody wallet, as described in the Terms & \nConditions.",
+        "2.2. Because LineUp does not hold your funds, refunds and returns of money are processed \nthrough the relevant payment rail (Razorpay for INR, or your self-custody wallet for \ncryptocurrency) and are subject to the operating timelines, terms, and checks of that rail, in \naddition to this Policy. \n3. Deposits: Refunds of Unused Funds",
+        "3.1. Unused deposited funds are refundable. If you have deposited funds into your \naccount and have not yet used them to open a position, you may request that those \nunused funds be returned to you, either as a standard withdrawal or as a refund to the \noriginal payment method, subject to this Policy and to verification and compliance checks.",
+        "3.2. A refund or return of unused funds may be requested through your account or by \ncontacting Support@Lineup.trade.",
+        "3.3. Verification and compliance. All refunds and withdrawals are subject to identity \nverification (KYC) and to anti-money-laundering, fraud, sanctions, and source-of-funds \nchecks. LineUp or the payment partner may pause, decline, or request further information \nin relation to a refund where required by law or these policies, and may be prohibited by \nlaw from explaining the reason for a hold.",
+        "3.4. Destination. Refunds of INR are returned only to the original payment method or to a \nverified account in your own name. Refunds of cryptocurrency value are returned only to \nyour verified self-custody wallet. Refunds to any third party are not permitted.",
+        "3.5. Once funds are used to trade, they are no longer \"unused funds\" and are subject to \nthe outcome of your trading. The value of an open or closed position is determined by the \nmarket and by settlement under the Terms & Conditions, not by this Section. \n4. Refund Method, Timeframe, and Fees",
+        "4.1. Method. Approved refunds of INR are returned to the original payment method used \nfor the deposit wherever possible. Where a return to the original method is not possible, \nthe refund is made to a verified account in your own name.",
+        "4.2. Timeframe. Approved refunds are processed as promptly as practicable and are \nordinarily completed within 7 to 14 business days of approval. The actual time to receipt \ndepends on the payment partner, your bank or card issuer, and the applicable payment \nnetwork, and may be longer for reasons outside LineUp's control.",
+        "4.3. Fees. Refund amounts, and any deduction of payment-gateway or processing fees, are \nsubject to the terms of the payment partner (Razorpay) and the applicable payment \nnetwork. Third-party gateway or network fees associated with the original transaction may \nbe non-recoverable and may not be returned as part of a refund. Any such deduction will \nbe in accordance with the payment partner's terms.",
+        "4.4. No interest. No interest is payable on any amount held pending a refund or \nwithdrawal. \n5. Orders and Trades: Cancellation and Finality",
+        "5.1. Resting limit orders can be cancelled. A limit order that has been placed but has not \nyet executed may be cancelled by you at any time before it executes, through the Platform, \nin accordance with the Terms & Conditions. Resting orders may also be cancelled \nautomatically on session close, interruption, suspension, parameter change, or account \nrestriction.",
+        "5.2. Executed trades are final. A market order, and any order once it has executed (in \nwhole or in part), cannot be cancelled, reversed, or refunded by you. When the Liquidity \nEngine records an execution, the trade is binding, as set out in the Terms & Conditions.",
+        "5.3. Trading losses are not refundable. Losses resulting from your trading, including \nlosses from price movements, margin, leverage, short positions, liquidation, and \nsettlement, are the result of market activity and your own trading decisions. They are not \nerrors, and they are not eligible for any refund, reversal, or compensation.",
+        "5.4. Liquidations and settlement. Positions closed through liquidation, automatic \nsettlement at match end, delisting, or corporate-action handling are closed in accordance \nwith the market rules in the Terms & Conditions, and the resulting outcome is not \nrefundable. \n6. Limited Exceptions: Platform Errors",
+        "6.1. This Section is the only circumstance in which an executed trade may be adjusted, and \nit is at LineUp's determination, not on request as a matter of right.",
+        "6.2. Where a price, execution, or settlement results from a manifest error (for example, a \ndata-feed error, software defect, misconfiguration, or obvious mispricing far outside \nprevailing levels), LineUp may cancel or amend the affected trades and correct affected \nbalances, in accordance with the manifest-error provisions of the Terms & Conditions. This \napplies symmetrically, whether the error was in your favour or against you.",
+        "6.3. A manifest-error correction is not a \"refund\" of a trading loss. It is a restoration of the \nposition that would have applied had the error not occurred.",
+        "6.4. If you believe a trade was affected by a genuine Platform error, you should contact \nSupport@Lineup.trade promptly, with details, so that LineUp can investigate. LineUp will \nkeep records of any correction it makes. \n7. Cryptocurrency: Returns and Irreversibility",
+        "7.1. Unused cryptocurrency value that you have committed to the Platform but have not \nused to open a position may be released back to your self-custody wallet, subject to the \nsame verification and compliance checks as other refunds.",
+        "7.2. On-chain transactions are irreversible. Once a cryptocurrency transaction is \nconfirmed on a blockchain network, it cannot be reversed by LineUp. If you send \ncryptocurrency to an incorrect address or on an unsupported network, or send an \nunsupported asset, those funds may be permanently and irretrievably lost, and \nLineUp cannot recover or refund them. You are solely responsible for verifying \naddresses, assets, and networks before every transaction.",
+        "7.3. Network fees (including gas fees) associated with cryptocurrency transactions are not \nrefundable. \n8. Chargebacks and Payment Disputes",
+        "8.1. If you believe there is a genuine problem with a payment, please contact \nSupport@Lineup.trade first so that we can try to resolve it.",
+        "8.2. Initiating a chargeback or payment reversal in bad faith, including to reverse \ntrading losses or to reclaim funds that were properly used to trade, is a breach of the Terms \n& Conditions. LineUp and the payment partner may contest such reversals, suspend or \nclose the account, recover associated costs, and set off amounts owed, as described in the \nTerms & Conditions. \n9. How to Request a Refund or Raise a Concern",
+        "9.1. To request a refund of unused funds, to cancel a resting order, or to raise a concern \nabout a payment or a suspected Platform error, contact Support@Lineup.trade or use the \nrelevant function in your account.",
+        "9.2. Please include enough detail for us to identify the transaction or order, including the \ndate, amount, and any reference number. We may require identity verification before \nprocessing a request.",
+        "9.3. Complaints about the handling of a refund may be raised through the Complaints \nHandling Procedure (https://lineup.trade/complaints). \n10. Changes to This Policy",
+        "10.1. LineUp may update this Policy from time to time. When we do, we will revise the \"Last \nUpdated\" date and, where the changes are material, provide additional notice through the \nPlatform or by email before the changes take effect. Your continued use of the Platform \nafter the effective date constitutes acceptance of the updated Policy. \n11. Contact \nQuestions about this Policy may be sent to Support@Lineup.trade. \nIssuer: LineUp, established in the Emirate of Dubai, United Arab Emirates. Website: \nhttps://lineup.trade/"
+      ]
+    }
+  ]
+};

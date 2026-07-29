@@ -1,0 +1,247 @@
+Table of Contents 
+LINEUP RISK DISCLOSURE STATEMENT ..........................................................................................................1 
+1. Purpose and Status of This Statement ......................................................................................................2 
+2. Capital-at-Risk and No Guaranteed Returns ..........................................................................................2 
+3. Nature of Synthetic Player Assets ...............................................................................................................2 
+4. Leverage and Margin Risk ..............................................................................................................................3 
+5. Short-Selling Risk ................................................................................................................................................3 
+6. Liquidation Risk...................................................................................................................................................4 
+7. Negative-Balance Protection and Its Limits ...........................................................................................4 
+8. Liquidity and Execution Risk.........................................................................................................................4 
+9. Volatility, Interruptions, and Circuit Breakers .....................................................................................5 
+10. Technology, Latency, and Operational Risk ........................................................................................5 
+11. Cryptocurrency and Self-Custody Wallet Risk ...................................................................................5 
+12. Currency and Conversion Risk ..................................................................................................................6 
+13. Data Risk ...............................................................................................................................................................6 
+14. Sports-Event Risk .............................................................................................................................................6 
+15. No Advice and Suitability .............................................................................................................................6 
+16. Regulatory and Legal Risk ...........................................................................................................................6 
+17. Tax Risk .................................................................................................................................................................7 
+18. Responsible Trading and Wellbeing .......................................................................................................7 
+19. Acknowledgement ...........................................................................................................................................7 
+20. Contact ...................................................................................................................................................................7 
+ 
+LINEUP RISK DISCLOSURE STATEMENT 
+Effective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.0 Issuer: LineUp, 
+established in the Emirate of Dubai, United Arab Emirates Platform: https://lineup.trade/ 
+| Contact: Support@Lineup.trade 
+ 
+RISK WARNING. Trading Synthetic Player Assets on LineUp involves a high risk 
+of loss and is not suitable for everyone. Prices can move rapidly and 
+unpredictably, and you may lose the entire amount you commit. Where you 
+use margin, leverage, or short positions, losses can occur very quickly, up to the 
+full value of the collateral committed to a position. Only trade with money you can 
+afford to lose. Do not trade with borrowed funds or with money you need for 
+essentials. If you do not understand a product or a risk described in this 
+Statement, do not trade until you do. 
+ 
+1. Purpose and Status of This Statement 
+1.1. This Risk Disclosure Statement (the “Statement”) describes the principal risks of 
+accessing and using the LineUp platform (the “Platform”) and of trading Synthetic Player 
+Assets (“SPAs”). It forms part of, and must be read together with, the LineUp Terms & 
+Conditions (https://lineup.trade/terms), the Responsible Trading Policy 
+(https://lineup.trade/responsible-trading), and the other documents incorporated into the 
+Terms & Conditions. Capitalised terms not defined here have the meanings given in the 
+Terms & Conditions. 
+1.2. This Statement is not exhaustive. It cannot describe every risk that may arise, and the 
+risks described may combine and reinforce one another. The absence of a particular risk 
+from this Statement does not mean that it does not exist. 
+1.3. This Statement is provided for information and risk-awareness purposes. It is not 
+financial, investment, legal, or tax advice, and it is not a recommendation to trade. 
+You are solely responsible for your own trading decisions and their outcomes. 
+1.4. Where the Terms & Conditions and this Statement address the same subject, the Terms 
+& Conditions govern the parties’ rights and obligations, while this Statement governs the 
+description of risk. 
+2. Capital-at-Risk and No Guaranteed Returns 
+2.1. Trading SPAs is speculative and carries a high risk of financial loss. Prices can rise or 
+fall sharply, gap between levels, and behave unpredictably, particularly during live 
+matches. 
+2.2. You may lose some or all of the amount you commit to a position. You should not 
+trade with funds you cannot afford to lose, with borrowed money, or with money required 
+for living expenses or other obligations. 
+2.3. LineUp does not promise, guarantee, or predict any return, profit, or outcome. Past 
+performance of any SPA, Reference Player, strategy, or market is not a reliable indicator of 
+future results. 
+2.4. Any illustration, example, chart, statistic, form indicator, or projection shown on the 
+Platform is for information only and does not guarantee any result. 
+3. Nature of Synthetic Player Assets 
+3.1. An SPA is a synthetic digital asset that exists only as a record within the Platform. It is 
+not a share, security, or financial instrument issued by any player or organisation, confers 
+no ownership of or claim against any Reference Player, club, league, or governing body, and 
+pays no dividend or income. 
+3.2. The value of an SPA is derived entirely from market activity on the Platform and from 
+the output of LineUp’s automated Performance Engine, which references the performance 
+of a Reference Player. That value exists only on the Platform, has no meaning off-Platform, 
+and can fall rapidly to a nominal amount. 
+3.3. SPAs cannot be transferred off the Platform, transferred privately between Users, or 
+used as money. An SPA may be re-priced, halted, or delisted, and a Corporate Action 
+affecting a Reference Player (such as retirement, suspension, or death) may leave an SPA 
+with little or no continuing basis of value, in which case settlement at fair value is the full 
+extent of any entitlement. 
+4. Leverage and Margin Risk 
+4.1. LineUp permits trading on margin, up to a maximum leverage of 2x (two times), which 
+corresponds to an initial margin requirement of 50% of position value. Leverage is 
+available to all Users at the same cap, subject to any stricter limit required by applicable 
+law. 
+4.2. Leverage magnifies both gains and losses. Using leverage means a relatively small 
+movement in the price of an SPA can produce a proportionately larger effect on the 
+collateral supporting your position. At the maximum 2x leverage, a 50% adverse movement 
+in an SPA can eliminate the entire collateral committed to that position. 
+4.3. Margin requirements are not fixed. LineUp may change initial and maintenance margin 
+requirements, and reduce available leverage, prospectively and, where risk conditions 
+require, with immediate effect for new positions, as described in the Terms & Conditions. 
+4.4. If your account falls below the maintenance margin level, you may receive a margin 
+call. LineUp is not obliged to issue a margin call before liquidating your positions 
+where market conditions move too quickly, and you should not rely on receiving one. 
+5. Short-Selling Risk 
+5.1. Where enabled, you may open a short position, which profits if the price of an SPA falls 
+and loses if the price rises. Short positions are subject to margin and to the limits and 
+controls described in the Terms & Conditions. 
+5.2. Because the price of an SPA can rise, a short position can move against you quickly. 
+Your losses on a short position are limited by LineUp’s liquidation process and negative-
+balance protection (Section 7), so that you will not lose more than the collateral 
+committed to the position, but you can lose all of that collateral. 
+5.3. LineUp may apply additional controls to short positions, including higher margin 
+within the overall leverage cap, short-exposure caps, and restrictions on opening new short 
+positions around certain events, which may prevent you from trading as you intend. 
+6. Liquidation Risk 
+6.1. If your account margin level falls to or below the published liquidation threshold, 
+LineUp may close some or all of your positions automatically and without further notice, in 
+order to protect against further loss. 
+6.2. Liquidation is carried out on a largest-loss-first basis and may occur in one or more 
+steps. In fast-moving markets, liquidation may take place at prices materially worse than 
+the level at which the liquidation was triggered, and your entire committed collateral may 
+be lost. 
+6.3. A liquidation fee of 0.1% of the value of each liquidated position applies, as set out 
+in the Fee Schedule, and is deducted in addition to any trading losses. 
+6.4. LineUp is not liable for the occurrence, timing, sequence, or price of any liquidation 
+carried out in accordance with the market rules, including where prices recover after a 
+liquidation or where a different outcome might have been achieved by different timing. 
+7. Negative-Balance Protection and Its Limits 
+7.1. LineUp operates negative-balance protection. This means that, in respect of market 
+losses on your positions, you cannot lose more than the collateral you have committed, 
+and you will not be left owing LineUp a negative balance arising from those market 
+losses. Where rapid price movement (“gapping”) causes a position to close beyond its 
+collateral, the relevant Liquidity Pool bears the shortfall. 
+7.2. Negative-balance protection applies only to market losses. It does not cover amounts 
+you may owe to LineUp through fraud, market abuse, chargeback reversals, taxes, or 
+breach of the Terms & Conditions, which remain your responsibility. 
+7.3. Negative-balance protection limits your downside on a position but does not prevent 
+the loss of all committed collateral, and it does not guarantee any positive outcome. 
+8. Liquidity and Execution Risk 
+8.1. Liquidity on the Platform is provided through an automated Liquidity Engine and 
+Liquidity Pools. Liquidity is not guaranteed. LineUp does not act as counterparty to your 
+trades and does not guarantee that any order will execute, that liquidity will be available at 
+any time or price, or that you will be able to open or close a position when you wish. 
+8.2. In volatile or stressed conditions, liquidity may be reduced, spreads may widen, 
+execution may be delayed or throttled, and the effect of your order on the price (“price 
+impact”) may be significant. Large orders may execute at prices materially different from 
+displayed indicative prices, may execute only in part, or may not execute at all. 
+8.3. Displayed prices are indicative until an order executes. The binding price of any trade 
+is the price recorded at execution, which may differ from the price you expected. 
+9. Volatility, Interruptions, and Circuit Breakers 
+9.1. SPA prices can be highly volatile, especially during live play, and can move by large 
+amounts in very short periods. 
+9.2. LineUp may pause, halt, or suspend trading in one or more SPAs, automatically or by 
+decision, including through circuit breakers triggered by extreme price movement, and 
+may suspend or delist SPAs as described in the Terms & Conditions. 
+9.3. During an interruption or suspension you may be unable to close a position, 
+while the position continues to bear market risk. When trading resumes, the reopening 
+price may differ materially from the price before the interruption, and losses may have 
+increased in the meantime. 
+10. Technology, Latency, and Operational Risk 
+10.1. The Platform depends on software, systems, networks, the payment partner, 
+blockchain networks, and third-party data providers. Failures, outages, latency, congestion, 
+maintenance, and errors in any of these can delay or prevent order submission, execution, 
+price updates, settlement, deposits, and withdrawals, including at critical moments. 
+10.2. Your own device, connectivity, and configuration also affect your ability to trade. 
+LineUp is not responsible for losses arising from your equipment, network, or software. 
+10.3. LineUp does not warrant uninterrupted or error-free operation and may correct 
+manifest errors in pricing, execution, or settlement in accordance with the Terms & 
+Conditions, which may reverse or adjust affected trades. 
+11. Cryptocurrency and Self-Custody Wallet Risk 
+11.1. Where you fund or withdraw using cryptocurrency, you do so through your own self-
+custody wallet. You alone control your private keys, seed phrases, and recovery 
+phrases. LineUp never holds them and cannot recover them. If you lose your keys or 
+send assets to an incorrect address or network, those assets may be permanently and 
+irretrievably lost, and LineUp cannot restore them. 
+11.2. Cryptocurrency is volatile. Where cryptocurrency is used as collateral or is converted 
+to or measured against the Base Currency (INR), its own price movement can 
+independently trigger margin calls and liquidation, even without a change in the price of an 
+SPA. 
+11.3. Blockchain networks are outside LineUp’s control. Network congestion, delays, forks, 
+reorganisations, validator failures, and protocol or smart-contract exploits may delay, alter, 
+or prevent transactions, including the release of collateral held in escrow. Where 
+stablecoins are used, issuer risk, loss of the peg, and issuer-level freezes may occur, none of 
+which are within LineUp’s control. 
+12. Currency and Conversion Risk 
+12.1. The Base Currency of the Platform is the Indian Rupee (INR). Where you view 
+balances or prices in US Dollars or Euros, those are display conversions only, and your 
+balances, margin, and settlement remain in INR. 
+12.2. Where an actual currency conversion occurs, exchange rates fluctuate and conversion 
+fees apply, so the value you receive or pay may differ from what you expected. Currency 
+movements can affect the real value of your funds independently of your trading results. 
+13. Data Risk 
+13.1. SPA prices depend on data supplied by third-party data providers. That data may be 
+delayed, incomplete, inaccurate, or subsequently corrected, and coverage may lapse. 
+13.2. Data latency means price adjustments may lag real-world events, and official data 
+corrections may change the basis on which prices move. LineUp may freeze, suspend, or 
+settle affected markets where data is unavailable or unreliable, and residual effects on 
+prices, margin, and settlement may nonetheless occur. 
+14. Sports-Event Risk 
+14.1. SPA prices respond to inherently unpredictable real-world sporting events. Match 
+outcomes, abandonments, weather interruptions, tactical and selection decisions, 
+disciplinary events, and player injuries occurring before or during a match can cause 
+large and immediate price movements. 
+14.2. Such events, including any injury to a Reference Player, are outside LineUp’s 
+control and are your risk as a trader. LineUp is not responsible for losses arising 
+from them. Decisions of sporting bodies, including scheduling, selection, sanctions, and 
+result amendments, may also materially affect SPAs without notice. 
+15. No Advice and Suitability 
+15.1. LineUp provides an execution venue and tools only. It does not assess whether 
+trading, or any particular SPA, product, or strategy, is suitable or appropriate for you, and it 
+does not act as your broker, adviser, or fiduciary. 
+15.2. You are responsible for determining whether trading on the Platform is appropriate 
+for you in light of your financial situation, experience, risk tolerance, and objectives, and for 
+obtaining independent professional advice if you need it. 
+16. Regulatory and Legal Risk 
+16.1. The legal and regulatory treatment of the Platform and of SPAs varies between 
+jurisdictions and may change. Features, or the entire Platform, may be restricted, 
+suspended, or withdrawn in a jurisdiction, and you may be required to close positions as a 
+result. 
+16.2. You are responsible for ensuring that your use of the Platform is lawful in every 
+jurisdiction applicable to you. The Platform is not available in Restricted Jurisdictions, as 
+described in the Terms & Conditions. 
+17. Tax Risk 
+17.1. You are solely responsible for determining, reporting, and paying any taxes arising 
+from your use of the Platform, including on trading profits, cryptocurrency transactions 
+and conversions, and withdrawals, under the laws of every jurisdiction applicable to you. 
+LineUp does not provide tax advice, and Platform records are not tax documents unless 
+expressly labelled as such. 
+18. Responsible Trading and Wellbeing 
+18.1. Fast, frequent, or leveraged trading can be financially and emotionally harmful and, 
+for some people, can become difficult to control. If trading stops feeling in control, or is 
+affecting your finances or wellbeing, please use the tools described in the Responsible 
+Trading Policy (https://lineup.trade/responsible-trading), including deposit limits, 
+cooling-off periods, and self-exclusion, and consider seeking support from a qualified 
+service in your area. 
+19. Acknowledgement 
+19.1. By opening a position, and in particular before enabling and using margin or short-
+selling features, you acknowledge and confirm that: 
+(a) you have read and understood this Risk Disclosure Statement and the Terms & 
+Conditions; 
+(b) you understand that SPAs are synthetic assets with no existence or value outside the 
+Platform and no ownership of any real player or asset; 
+(c) you understand that LineUp is not a counterparty to your trades, does not custody 
+your funds, and does not guarantee liquidity, execution, price, or profit; 
+(d) you understand that you may lose the entire amount of collateral you commit, that 
+leverage and short selling increase risk, and that liquidation may occur without a 
+prior margin call; 
+(e) you understand that negative-balance protection limits, but does not remove, your 
+risk of loss; and 
+(f) you accept these risks and take full responsibility for your trading decisions and 
+their outcomes. 
+20. Contact 
+Questions about this Statement may be sent to Support@Lineup.trade. 
+Issuer: LineUp, established in the Emirate of Dubai, United Arab Emirates. Website: 
+https://lineup.trade/ 

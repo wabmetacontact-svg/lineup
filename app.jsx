@@ -13,6 +13,7 @@
     leaderboard: C.Leaderboard, wallet: C.Wallet, addfunds: C.AddFunds,
     search: C.Search, notifications: C.Notifications, history: C.History,
     terms: C.Terms, privacy: C.Privacy,
+    tradingRules: C.TradingRules, refundPolicy: C.RefundPolicy, riskDisclosure: C.RiskDisclosure,
   };
 
   function App() {

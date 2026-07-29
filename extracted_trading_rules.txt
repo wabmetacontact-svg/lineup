@@ -1,0 +1,912 @@
+Table of Contents 
+LINEUP TRADING RULES AND MARKET RULES  ................................ ................................ ......................  3 
+PART I. MARKET FUNDAMENTALS  ................................ ................................ ................................ ............... 3 
+1. Purpose of the Rulebook  ................................ ................................ ................................ ...........................  3 
+2. Definitions ................................ ................................ ................................ ................................ ......................  4 
+3. Exchange Principles  ................................ ................................ ................................ ................................ .... 4 
+4. Market Architecture ................................ ................................ ................................ ................................ ... 5 
+5. Market Participants  ................................ ................................ ................................ ................................ .... 5 
+PART II. MARKET INSTRUMENTS  ................................ ................................ ................................ ..................  6 
+6. Synthetic Player Assets (SPAs)  ................................ ................................ ................................ ............... 6 
+7. Asset Lifecycle ................................ ................................ ................................ ................................ ............... 6 
+8. Fractional Trading ................................ ................................ ................................ ................................ ....... 7 
+9. Asset Availability ................................ ................................ ................................ ................................ ......... 7 
+10. Delisting ................................ ................................ ................................ ................................ ........................  7 
+PART III. TRADING OPERATIONS  ................................ ................................ ................................ ...................  8 
+11. Trading Sessions................................ ................................ ................................ ................................ ........ 8 
+12. Order Types ................................ ................................ ................................ ................................ .................  8 
+13. Order Lifecycle ................................ ................................ ................................ ................................ ........... 9 
+14. Trade Execution ................................ ................................ ................................ ................................ ......... 9 
+15. Slippage ................................ ................................ ................................ ................................ ......................  10 
+16. Order Rejections ................................ ................................ ................................ ................................ ..... 10 
+PART IV. PRICING SYSTEM ................................ ................................ ................................ .............................  11 
+17. Performance Engine ................................ ................................ ................................ ..............................  11 
+18. Market Pricing ................................ ................................ ................................ ................................ ......... 11 
+19. Price Updates ................................ ................................ ................................ ................................ ........... 11 
+20. Data Validation................................ ................................ ................................ ................................ ........ 11 
+21. Data Corrections ................................ ................................ ................................ ................................ ..... 12 
+22. Price Integrity ................................ ................................ ................................ ................................ .......... 12 
+PART V. RISK ENGINE ................................ ................................ ................................ ................................ ...... 12 
+23. Margin ................................ ................................ ................................ ................................ ........................  12 
+24. Leverage ................................ ................................ ................................ ................................ ....................  13 
+25. Position Limits ................................ ................................ ................................ ................................ ........ 13 
+26. Exposure Limits ................................ ................................ ................................ ................................ ...... 13 
+27. Liquidation ................................ ................................ ................................ ................................ ............... 14 
+28. Negative Balance Protection  ................................ ................................ ................................ .............. 14 
+PART VI. MARKET PROTECTION  ................................ ................................ ................................ .................  15 
+29. Circuit Breakers ................................ ................................ ................................ ................................ ...... 15 
+30. Trading Halts ................................ ................................ ................................ ................................ ........... 15 
+31. Market Suspension ................................ ................................ ................................ ................................  15 
+32. Fair Value Pricing ................................ ................................ ................................ ................................ ... 15 
+33. Emergency Events  ................................ ................................ ................................ ................................ . 16 
+PART VII. SETTLEMENT ................................ ................................ ................................ ................................ .. 16 
+34. Settlement Process ................................ ................................ ................................ ................................  16 
+35. Match Settlement ................................ ................................ ................................ ................................ ... 16 
+36. Tournament Settlement  ................................ ................................ ................................ ......................  17 
+37. Corporate Actions ................................ ................................ ................................ ................................ .. 17 
+38. Data Corrections (Settlement)  ................................ ................................ ................................ .......... 17 
+39. Exceptional Settlements  ................................ ................................ ................................ ......................  17 
+PART VIII. MARKET INTEGRI TY ................................ ................................ ................................ ..................  18 
+40. Market Surveillance  ................................ ................................ ................................ ..............................  18 
+41. Market Abuse ................................ ................................ ................................ ................................ ........... 18 
+42. Wash Trading ................................ ................................ ................................ ................................ .......... 18 
+43. Spoofing and Layering................................ ................................ ................................ ..........................  18 
+44. Insider Trading ................................ ................................ ................................ ................................ ....... 18 
+45. Disciplinary Measures  ................................ ................................ ................................ ..........................  19 
+PART IX. FEES AND CHARGES  ................................ ................................ ................................ ......................  19 
+46. Trading Fees................................ ................................ ................................ ................................ ............. 19 
+47. Liquidation Fees ................................ ................................ ................................ ................................ ..... 20 
+48. Withdrawal Fees................................ ................................ ................................ ................................ ..... 20 
+49. Future Fee Changes ................................ ................................ ................................ ...............................  20 
+PART X. TECHNICAL OPERATIONS  ................................ ................................ ................................ ............. 20 
+50. Data Providers................................ ................................ ................................ ................................ ......... 20 
+51. Performance Engine Methodology  ................................ ................................ ................................ .. 21 
+52. API Behaviour ................................ ................................ ................................ ................................ .......... 21 
+53. Maintenance Windows  ................................ ................................ ................................ ........................  21 
+54. System Failures ................................ ................................ ................................ ................................ ....... 21 
+PART XI. SPORTS-SPECIFIC TRADING RULES  ................................ ................................ ........................  22 
+55. Cricket Trading Rules  ................................ ................................ ................................ ...........................  22 
+56. Football Trading Rules  ................................ ................................ ................................ .........................  23 
+APPENDICES ................................ ................................ ................................ ................................ ........................  23 
+Appendix A. Trading Examples  ................................ ................................ ................................ ................  23 
+Appendix B. Margin and Liquidation Examples  ................................ ................................ ................  24 
+Appendix C. Glossary................................ ................................ ................................ ................................ .... 25 
+Appendix D. Published Market Parameters  ................................ ................................ ........................  26 
+Appendix E. Version History  ................................ ................................ ................................ .....................  26 
+ 
+LINEUP TRADING RULES AND MARKET RULES  
+A Market Rulebook 
+Effective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.0 Issuer: LineUp, 
+established in the Emirate of Dubai, United Arab Emirates Platform: https://lineup.trade/ 
+| Contact: Support@Lineup.trade  
+ 
+About this Rulebook. This document sets out the operating rules of the LineUp 
+market: how instruments are created, how orders are handled, how prices form, 
+how risk is managed, and how posit ions settle. It operationalises the LineUp 
+Terms & Conditions (https://lineup.trade/terms), which remain the governing 
+agreement. Where a live numerical value is stated here, it is the value in force at 
+the Effective Date and may be updated through the pub lished parameter pages 
+referenced in Appendix D. This Rulebook describes the launch product; features 
+identified as later-phase are not available at the Effective Date.  
+ 
+PART I. MARKET FUNDAMENTALS  
+1. Purpose of the Rulebook 
+1.1. This Trading Rules and Market Rules document (the “Rulebook”) governs the 
+operation of the LineUp marketplace and the conduct of trading on it. It explains, in 
+operational detail, the market mechanics summarised in the Terms & Conditions.  
+1.2. The Rulebook forms part of, and is in corporated into, the Terms & Conditions. In the 
+event of any conflict, the Terms & Conditions prevail on matters of contractual right and 
+obligation, and this Rulebook prevails on matters of detailed market operation, in each case 
+read so far as possible to be consistent. 
+1.3. The Rulebook applies to every User and to every order, trade, and position on the 
+Platform. By trading, you agree to be bound by it.  
+1.4. Capitalised terms have the meanings given in Section 2 of this Rulebook or, where not 
+defined here, in the Terms & Conditions.  
+2. Definitions 
+2.1. In this Rulebook, in addition to the terms defined in the Terms & Conditions:  
+“Collateral” means value committed and locked to open or maintain a position, as 
+described in Part V. 
+“Equity” means, for an account or position, the committed Collateral plus unrealised profit 
+or loss at current prices. 
+“Execution Price” means the price at which an order is filled, as recorded by the Liquidity 
+Engine. 
+“Fair Value” means a price determined by LineUp under Section 32 where normal market 
+pricing cannot be relied upon.  
+“Indicative Price” means a displayed price before execution, which is not binding.  
+“Initial Margin” means the Collateral required to open a position, being 50% of position 
+Notional at the Effective Date. 
+“Liquidation” means the compulsory closure of positions under Section 27.  
+“Maintenance Margin” means the minimum Equity required to keep a position open, 
+being 25% of position Notional at the Effective Date.  
+“Notional” means the full value of a position,  calculated as quantity multiplied by price.  
+“Slippage” means the difference between an Indicative Price and the Execution Price.  
+“SPA” means a Synthetic Player Asset, as defined in the Terms & Conditions.  
+“Trading Session” means a period during which a given SPA is open for trading, as 
+described in Section 11.  
+3. Exchange Principles 
+3.1. LineUp operates the market according to the following principles:  
+(a) Fairness: market rules are applied uniformly to all Users in like circumstances, and 
+no User, Affiliate, or liquidity contributor receives preferential execution.  
+(b) Transparency: the rules of the market, the fee model, and the live market 
+parameters are published, and Users can see indicative prices, their orders, and 
+their positions. 
+(c) Market integrity: LineUp monitors activity and applies controls to protect against 
+manipulation, abuse, and disorderly conditions.  
+(d) Automated execution: orders execute through an automated  Liquidity Engine 
+against Liquidity Pools, without peer -to-peer matching and without LineUp acting as 
+counterparty. 
+(e) Investor protection: risk controls, including margin, position and exposure limits, 
+circuit breakers, and negative-balance protection, are d esigned to protect Users and 
+the market. 
+3.2. These principles guide the interpretation of this Rulebook and the exercise of any 
+discretion by LineUp. 
+4. Market Architecture 
+4.1. The LineUp market comprises the following components:  
+(a) The Platform: the website and applications through which Users access the market.  
+(b) Synthetic Player Assets (SPAs):  the instruments traded, described in Part II.  
+(c) The Performance Engine: the automated system that derives the performance 
+component of SPA prices from validated sports  data (Part IV). 
+(d) The Liquidity Engine: the automated system that quotes prices, executes orders 
+against Liquidity Pools, and applies market -protection controls (Part III and Part 
+VI). 
+(e) Liquidity Pools: pools of capital, seeded by LineUp and its investors, a gainst which 
+orders execute. Pools are legally and operationally distinct from LineUp’s role as 
+operator, as described in the Terms & Conditions.  
+(f) The Risk Engine: the systems that calculate margin, exposure, and liquidation (Part 
+V). 
+(g) The Settlement process: the reconciliation of closed positions and the crediting or 
+debiting of value through the non -custodial rails (Part VII).  
+4.2. Settlement flow (summary).  A User submits an order; the Liquidity Engine executes 
+it against a Liquidity Pool at an Execution P rice; the position is recorded and monitored by 
+the Risk Engine; and, on close, the Settlement process calculates realised profit or loss net 
+of fees and instructs the relevant payment rail (Razorpay for INR, or the User’s self -custody 
+wallet for cryptocurrency). 
+5. Market Participants 
+5.1. Retail Users are individual Users trading for their own account. Standard risk controls 
+and limits apply. 
+5.2. Professional traders  are individuals who may be classified by LineUp as professional 
+based on criteria published by LineUp. Classification may affect limits, features, or 
+disclosures, but the maximum leverage cap in Part V applies uniformly.  
+5.3. Institutional Users are entities trading through an institutional account, subject to 
+enhanced verification under the Terms & Conditions. Institutional limits and terms may 
+differ. 
+5.4. Liquidity Pools provide the capital against which trades execute. At the Effective Date, 
+Pools are seeded by LineUp and its investors. Third-party liquidity provision is a later -
+phase feature and is not available at the Effective Date.  LineUp does not act as 
+counterparty to User trades in its capacity as operator.  
+5.5. LineUp operates the Platform, the Performance Engine, the Liquidity Engine, the Risk 
+Engine, and the Settlement process, ad ministers the market rules, and provides market -
+protection and surveillance functions.  
+5.6. All participants must comply with this Rulebook, the Terms & Conditions, and 
+applicable law. 
+ 
+PART II. MARKET INSTRUMENTS  
+6. Synthetic Player Assets (SPAs) 
+6.1. An SPA is a synthetic digital asset made available for trading on the Platform, whose 
+price references market activity on the Platform and the performance of an associated 
+Reference Player. 
+6.2. SPAs are created, listed, configured, and administered s olely by LineUp. Each SPA 
+references one Reference Player, unless expressly offered as a defined group.  
+6.3. What an SPA provides:  the right to have a recorded position priced, monitored, and 
+settled in accordance with this Rulebook and the Terms & Conditions.  
+6.4. What an SPA does not represent:  an SPA is not a share, security, or financial 
+instrument issued by any player or organisa tion; it confers no ownership of, income from, 
+or claim against any Reference Player, club, league, or governing body; it is not money or e -
+money; and it has no existence or value outside the Platform. Section 4.2 and Section 16 of 
+the Terms & Conditions apply in full. 
+6.5. SPAs cannot be transferred off the Platform or between Users off -market. 
+7. Asset Lifecycle 
+7.1. An SPA progresses through the following states:  
+(a) Listing: LineUp lists the SPA and publishes its parameters (identifier, Reference 
+Player, initial price, minimum trade size, session mapping, margin and leverage 
+parameters). 
+(b) Active: the SPA is open for trading during its Trading Sessions (Section 11).  
+(c) Paused or Halted: trading is temporarily interrupted under Part VI.  
+(d) Suspended: trading is stopped for a sustained period under Section 31.  
+(e) Settled: open positions are closed and reconciled at match end or on another 
+settlement event (Part VII).  
+(f) Delisted: the SPA is removed from the market under Section 10.  
+7.2. LineUp records and publishes state cha nges for each SPA as they occur.  
+8. Fractional Trading 
+8.1. SPAs may be traded in fractional quantities. The minimum order value is INR 10 (or its 
+display equivalent). 
+8.2. Fractional positions carry the same rights, risks, pricing, margin treatment, and 
+settlement as whole units, pro -rated. 
+8.3. Rounding. Quantities are rounded to the nearest supported increment using standard 
+rounding. Any residual value arising from rounding is credited to the User’s balance. 
+Rounding does not create or destroy value bey ond the minimum increment.  
+8.4. Settlement of fractional positions follows the general Settlement process in Part VII.  
+9. Asset Availability 
+9.1. A Reference Player becomes available for trading when LineUp lists an SPA referencing 
+that player, based on listing criteria including the availability of reliable data from the Data 
+Providers, expected liquidity, and integrity considerations.  
+9.2. Availability of an SPA for trading at any moment depends on the Trading Sessions 
+mapped to that SPA (Section 11) and on the market state (Section 7).  
+9.3. Listing an SPA is an operational decision and is not a statement about the merit, 
+quality, or prospects of any Reference Player or SPA.  
+9.4. LineUp may add or remove Reference Players and SPAs, and may add or remove sp orts 
+and competitions, at its discretion.  
+10. Delisting 
+10.1. LineUp may delist an SPA where a Corporate Action requires it (Section 37), where 
+reliable data ceases to be available, where sustained illiquidity makes an orderly market 
+impracticable, for legal or regulatory reasons, or where delisting is appropriate for the 
+integrity or operation of the Platform.  
+10.2. Except where immediate delisting is required, LineUp announces delisting in advance, 
+stating the final trading time, whether the market enters  a closing-only state, and the 
+settlement basis for positions open at delisting.  
+10.3. Positions open at delisting are closed and settled at Fair Value (Section 32), with 
+proceeds credited or debited through the normal Settlement process.  
+10.4. Delisting is not a default by LineUp and gives rise to no claim beyond settlement of 
+open positions. 
+ 
+PART III. TRADING OPERATIONS  
+11. Trading Sessions 
+11.1. Live-match trading. At the Effective Date, trading in each SPA is open only during 
+live matches involving the relevant Reference Player, within the Trading Sessions 
+published for that SPA. Outside a live match there is no open market in that SPA.  
+11.2. Trading Sessions follow the fixtures of the supported competitions in cricket and 
+football. Session times are published on the Platform and may open, delay, extend, shorten, 
+pause, or close in response to fixture changes, data availability, or the market -protection 
+events in Part VI. 
+11.3. Session states: a session may be Open (orders accepted and executed), Paused or 
+Halted (orders suspended, positions continue to bear risk), Closing -only (only risk-
+reducing orders accepted), or Closed (no orders).  
+11.4. Positions in same-match products are settled at match end under Section 35. 
+Tournament and season-long settlement is a later -phase feature and is not available 
+at the Effective Date (Section 36). 
+11.5. LineUp does not guarantee that any session will open or remain open. Fixture 
+postponements, abandonments, and data interruptions may prevent or inter rupt sessions. 
+12. Order Types 
+12.1. The Platform supports the following order types at the Effective Date:  
+(a) Market Order: executes immediately at the best available Execution Price 
+determined by the Liquidity Engine, subject to available liquidity and price impact. A 
+Market Order does not guarantee a specific price.  
+(b) Limit Order: executes only at a specified price or better. A  Limit Order rests until it 
+executes, is cancelled, or expires, and does not guarantee execution.  
+12.2. Risk-reducing designation. Orders that only reduce or close an existing position 
+may be accepted during Closing-only states when opening orders are not.  
+12.3. Additional order types (including stop -loss and take-profit) may be offered and, 
+where offered, are described on the Platform. Stop orders convert to Market or Limit 
+Orders on trigger and are subject to Slippage (Section 15); the price after a stop triggers 
+may be materially worse than the trigger level.  
+12.4. Confirmation step.  For orders at or above INR 5,000 (or the equivalent of USD 
+100 or EUR 100 in the selected display currency) , the Platform presents a confirmation 
+step before execution. 
+13. Order Lifecycle 
+13.1. An order progresses through the following states:  
+(a) Submitted: received by the Platform and validated for eligibility, size, limits, and 
+margin. 
+(b) Accepted / Resting: a valid Limit Order rests in the book awaiting its price; a valid 
+Market Order proceeds to execution.  
+(c) Executed (fully or partially):  the Liquidity Engine records a fill. A partial fill 
+executes part of the order. 
+(d) Cancelled: a resting order is cancelled by the User, or automatically on session 
+close, interruption, suspension, p arameter change, or account restriction.  
+(e) Expired: a time-limited order reaches its expiry without full execution.  
+(f) Rejected: the order fails validation (Section 16).  
+13.2. Unexecuted remainders of Market Orders are cancelled. Unexecuted remainders of 
+Limit Orders continue to rest unless cancelled or expired.  
+13.3. Once executed, an order is binding and cannot be cancelled or reversed by the User, 
+subject only to manifest-error correction (Section 22 and the Terms & Conditions).  
+14. Trade Execution 
+14.1. All trades execute through the automated Liquidity Engine against Liquidity Pools. 
+There is no peer-to-peer matching, and LineUp is not a counterparty to User trades.  
+14.2. The Execution Price is determined by the Liquidity Engine at the moment of 
+execution, reflecting the Performance Engine price adjusted for order size, available Pool 
+depth, spread, and price-impact parameters. 
+14.3. Eligible orders are processed in the sequence received by the Liquidity Engine, 
+subject to uniform system throttles. Where multiple Limit Orders become executable 
+simultaneously, they are processed in time priority.  
+14.4. A trade is formed and binding when the Liquidity Engine records the execution. The 
+recorded Execution Price, quantity, and time are conclusive, subject  only to Section 22. 
+14.5. Execution is not guaranteed. Orders may execute in full, in part, or not at all, 
+depending on liquidity and price.  
+15. Slippage 
+15.1. Slippage is the difference between the Indicative Price shown before execution and 
+the actual Execution Price. 
+15.2. Slippage arises because prices can move between order submission and execution, 
+because large orders consume available Pool depth at progressively different prices (price 
+impact), and because market conditions can change rapidly durin g live play. 
+15.3. Market Orders are the most exposed to Slippage, because they prioritise execution 
+over price. Limit Orders are protected against adverse Slippage beyond the specified limit 
+price, but may execute only in part or not at all as a result.  
+15.4. Users should treat Indicative Prices as guidance only. The binding price is always the 
+recorded Execution Price. 
+16. Order Rejections 
+16.1. An order may be rejected or cancelled where it:  
+(a) fails identity, eligibility, or account -status checks; 
+(b) is below the minimum order value or otherwise malformed;  
+(c) would breach a position or exposure limit (Sections 25 and 26);  
+(d) fails a margin check (insufficient Collateral) (Part V);  
+(e) would execute outside applicable price bands;  
+(f) is submitted outside a Trading Session o r during a Pause, Halt, or Suspension;  
+(g) breaches order-rate or message throttles; or  
+(h) is flagged by market-integrity or fraud controls (Part VIII).  
+16.2. Where practicable, the Platform indicates the reason for a rejection. Rejection of an 
+order is not a statement about the merits of a trade.  
+ 
+PART IV. PRICING SYSTEM  
+17. Performance Engine 
+17.1. The Performance Engine derives the performance component of each SPA’s price 
+from validated sports data, by reference to the Reference Player’s contribution to match 
+events. 
+17.2. Different sporting events contribute differently to valuation, accordi ng to the 
+published methodology (Section 51) and the sport -specific rules in Part XI. Positive 
+contributions tend to increase the performance component and negative contributions 
+tend to decrease it, subject to caps and normalisation.  
+17.3. Per-match and per-event effects are capped and normalised to limit extreme moves 
+and to reduce manipulation incentives. These parameters are part of the methodology and 
+may be revised prospectively.  
+18. Market Pricing 
+18.1. The price of an SPA is determined by combining a market component (buying and 
+selling pressure and Pool depth on the Platform) with the performance component (Section 
+17), subject to control mechanisms including caps, smoothing, price bands, and circ uit 
+breakers. 
+18.2. Market demand and liquidity affect price and execution: higher demand tends to raise 
+prices and consume Pool depth, and lower liquidity tends to widen spreads and increase 
+price impact. 
+18.3. Prices are internal to the Platform, are not  official valuations of any player, and have 
+no meaning or use off-Platform. 
+19. Price Updates 
+19.1. Prices update in near real-time, subject to data latency.  Price adjustments follow 
+the receipt and validation of market activity and sports data, and may l ag real-world events 
+by seconds or longer. 
+19.2. During periods of high activity or infrastructure load, updates may be delayed. 
+Displayed prices are Indicative until an order executes.  
+19.3. LineUp does not guarantee that displayed prices are continuously  current, and is not 
+liable for reliance on Indicative Prices where the market rules have been applied.  
+20. Data Validation 
+20.1. Sports data received from the Data Providers is validated before it influences market 
+prices. Validation checks may include co nsistency, completeness, timing, and cross -checks 
+against expected ranges.  
+20.2. Where data fails validation, is materially delayed, or is unavailable, LineUp may freeze 
+the performance component, pause or suspend the affected session, or apply Fair Value 
+(Section 32), and may settle affected same -match products at Fair Value.  
+21. Data Corrections 
+21.1. Where a Data Provider retrospectively corrects match data, LineUp applies the 
+correction prospectively from the moment of processing.  
+21.2. Trades executed before a correction stand at their Execution Prices, except where the 
+correction reveals a manifest error (Section 22). The effect of corrections on settlement is 
+addressed in Section 38.  
+22. Price Integrity 
+22.1. LineUp monitors pricing for anomalies and applies controls to maintain accurate, fair, 
+and reliable pricing, including caps, smoothing, price bands, and circuit breakers.  
+22.2. Manifest error. Where a price, execution, or settlement results from a manifest error 
+(for example, a data-feed error, software defect, misconfiguration, or obvious mispricing 
+far outside prevailing levels), LineUp may, acting in good faith and within 48 hours of 
+discovery, cancel or amend affected trades to the price that would have applied absent the 
+error, and correct affected balances. This applies symmetrically, whether the error 
+favoured the User or the Pool. LineUp notifies affected Users and keeps records of every 
+correction. 
+22.3. Where inputs are corrupted or manipulation is suspected, LineUp may suspend 
+affected pricing and apply Part VI.  
+ 
+PART V. RISK ENGINE 
+23. Margin 
+23.1. Margin is the Collateral required to open and maintain a leveraged or short position. 
+LineUp operates a two-tier margin model: 
+(a) Initial Margin: the Collateral required to open a position, being  50% of position 
+Notional at the Effective Date.  
+(b) Maintenance Margin: the minimum Equity required to keep a position open, being 
+25% of position Notional at the Effective Date.  
+23.2. Collateral mechanics (non -custodial). Collateral is locked in place, not t ransferred 
+to LineUp: for INR, the required amount within the Razorpay -held balance is placed under 
+a hold or reservation; for cryptocurrency, the required amount is locked from the User’s 
+self-custody wallet through an on -chain escrow arrangement. Locked Collateral remains 
+the User’s, subject to application against losses and fees.  
+23.3. Margin call. If account Equity falls toward the Maintenance Margin (for example, to 
+an illustrative warning level of 30% of Notional, published at the parameter page), the  
+Platform may issue a margin call through in -Platform and registered-contact notifications, 
+satisfied by adding Collateral or reducing positions. A margin call is not guaranteed 
+before Liquidation where conditions move too quickly (Section 27).  
+23.4. Live margin parameters are published at https://lineup.trade/margin -parameters 
+(Appendix D). 
+24. Leverage 
+24.1. Leverage allows exposure exceeding committed Collateral. The maximum leverage 
+is 2x (two times), corresponding to the 50% Initial Margin in Section 23, and applies 
+uniformly to all Users unless a stricter cap is required by applicable law.  
+24.2. Leverage magnifies both gains and losses and shortens the distance to a margin call 
+and Liquidation. At the maximum 2x leverage, a 50% adverse move in an SPA can eliminate 
+the Collateral supporting a position, and Liquidation will ordinarily occur before that point 
+(Section 27). 
+24.3. LineUp may reduce available leverage prospectively at any time, including i ntraday 
+for new positions, and may deny or reduce leverage for any account on risk grounds.  
+25. Position Limits 
+25.1. Maximum position size per User per SPA is INR 100,000 in Notional  at the 
+Effective Date. Orders that would breach this limit are rejected or reduced.  
+25.2. Position limits may differ by verification tier and account type, and may be changed 
+prospectively, including intraday in stressed conditions, with the published tran sition 
+treatment for existing positions.  
+25.3. Live position limits are published at https://lineup.trade/position -limits. 
+26. Exposure Limits 
+26.1. Maximum total open exposure per User across all SPAs is INR 500,000 in 
+aggregate Notional at the Effective Date. This portfolio cap protects Users and market 
+stability by limiting concentration.  
+26.2. LineUp may apply additional concentration controls, including limits on aggregate 
+exposure to a single SPA, competition, or sport, published at the parameter page . 
+26.3. Where existing exposure exceeds a newly reduced limit, the User may be required to 
+reduce within a stated window, failing which LineUp may reduce positions at prevailing 
+prices. 
+27. Liquidation 
+27.1. Trigger. If account Equity falls to or below the  Maintenance Margin requirement, 
+LineUp may liquidate some or all of the User’s positions automatically and without further 
+notice, to the extent necessary to restore the account above the required level.  
+27.2. Order of liquidation. Where a User holds multiple positions, Liquidation proceeds 
+on a largest-loss-first basis, closing the position or positions with the greatest unrealised 
+loss first, until the account is restored above the required level. Liquidation may occur in 
+one or more tranches and, in fas t markets, at prices materially worse than the trigger level.  
+27.3. Liquidation fee. A Liquidation fee of 0.1% of the value of each liquidated position  
+applies (Section 47 and the Fee Schedule).  
+27.4. Priority of application.  Collateral and proceeds are ap plied in this order: realised 
+losses on liquidated positions; the Liquidation fee and other trading fees; other amounts 
+owed under the Terms & Conditions; and any surplus released to the User.  
+27.5. During interruptions.  During a circuit breaker, halt, or suspension, automatic 
+Liquidation is paused for the affected SPA except where a reliable Fair Value reference 
+exists. On resumption, margin is recalculated at reopening prices and Liquidation may 
+occur immediately. 
+27.6. LineUp is not liable for the occurr ence, timing, sequence, or price of any Liquidation 
+carried out in accordance with these rules.  
+28. Negative Balance Protection 
+28.1. LineUp operates negative -balance protection. The Liquidation process is designed to 
+close positions before Collateral is e xhausted, so that a User cannot lose more than the 
+Collateral committed to positions, and will not be left owing LineUp a negative 
+balance in respect of market losses.  
+28.2. Where rapid price movement (“gapping”) causes a position to close beyond its 
+Collateral, the relevant Liquidity Pool bears the shortfall, and no debt is created against the 
+User for that market loss. 
+28.3. Negative-balance protection does not cover amounts owed through fraud, market 
+abuse, chargeback reversals, taxes, or breach of the T erms & Conditions. It limits, but does 
+not remove, the risk of losing all committed Collateral.  
+ 
+PART VI. MARKET PROTECTION  
+29. Circuit Breakers 
+29.1. Circuit breakers are automatic volatility controls that pause trading in an SPA when 
+its price moves by more than a published band within a published window.  
+29.2. When a circuit breaker triggers, trading in the affected SPA is paused for a published 
+cooling period, after which it may reopen, reopen in a Closing -only state, or remain 
+suspended. 
+29.3. Circuit-breaker bands, windows, and cooling periods are published at 
+https://lineup.trade/market-parameters (Appendix D). At the Effective Date these are 
+configured to interrupt disorderly moves while allowing normal live -match volatility; the 
+live values govern. 
+29.4. During a circuit-breaker pause, new orders are rejected or held and open positions 
+continue to bear market risk but cannot be closed until trading resumes.  
+30. Trading Halts 
+30.1. LineUp may halt trading in an individual SPA where extreme volatility, a data -feed 
+failure, a suspected integrity incident, a match interruption, or a technical issue affects that 
+SPA. 
+30.2. A halt suspends order acceptance for the affected SPA. Posi tions remain open and 
+continue to bear risk. LineUp communicates halts and expected handling through the 
+Platform as promptly as practicable.  
+31. Market Suspension 
+31.1. LineUp may suspend trading in an SPA, a sport, or the entire market for a sustained 
+period where the causes of interruption persist, where required by law or regulatory 
+direction, or where continued trading would be inconsistent with fair and orderly markets.  
+31.2. During suspension, no orders execute; margin continues to be calculated agai nst the 
+last validated price or a Fair Value reference; and Liquidation is administered under 
+Section 27.5. 
+31.3. On resumption, LineUp publishes the resumption basis, which may include a 
+reference-price or auction-style reopening. Where resumption is not practicable within a 
+reasonable period, LineUp may settle open positions at Fair Value or proceed to delisting.  
+32. Fair Value Pricing 
+32.1. Where normal market pricing cannot be relied upon (including interruptions that 
+cannot resume, suspensions, delisti ngs, and Corporate Actions), LineUp determines a Fair 
+Value in good faith using, in descending priority: the last validated Execution Price; the 
+Performance Engine output computed on validated data; comparable -SPA references; and, 
+where none is reliable, a reasoned valuation documented in LineUp’s records.  
+32.2. LineUp publishes the Fair Value basis used for each such event and retains records of 
+the determination. 
+33. Emergency Events 
+33.1. Emergency events include unexpected technical failures, cyber -security incidents, 
+data-provider outages, abandonment or cancellation of matches, and regulatory or legal 
+directions. 
+33.2. On an emergency event, LineUp may pause, halt, or suspend affected markets; apply 
+Fair Value; settle or delist affected SPAs; and take any other market -protection action 
+reasonably necessary to preserve a fair and orderly market and to comply with la w. 
+33.3. Actions taken under this Section are governed by the market -protection and force-
+majeure provisions of the Terms & Conditions and give rise to no claim beyond settlement 
+of open positions. 
+ 
+PART VII. SETTLEMENT 
+34. Settlement Process 
+34.1. When a position is closed, the Settlement process calculates realised profit or loss as 
+the difference between the opening and closing Execution Prices, net of applicable fees.  
+34.2. Settlement is effected through the non -custodial rails: INR amounts are credite d or 
+debited to the Razorpay-held balance by instruction, and cryptocurrency amounts are 
+credited or debited through the escrow mechanism connected to the User’s self -custody 
+wallet. Crediting is subject to the operational timelines of the applicable rail.  
+34.3. Amounts payable on the same day and rail may be netted, and LineUp may set off 
+amounts owed against settlement amounts due. Settlement is final when recorded, subject 
+only to manifest-error correction and corrections required by law.  
+35. Match Settlement 
+35.1. Positions in same-match products are automatically closed at the published 
+settlement price at match end. Users are responsible for managing such positions before 
+automatic closure. 
+35.2. Where a match is interrupted, abandoned, or does not rea ch a valid conclusion, 
+affected positions are settled at Fair Value (Section 32), applying the sport -specific rules in 
+Part XI. 
+36. Tournament Settlement 
+36.1. Tournament and season-long settlement is a later -phase feature and is not 
+available at the Effective Date. At the Effective Date, trading and settlement occur on a 
+live-match basis only (Section 11).  
+36.2. When introduced, tournament and season -long products will be governed by 
+settlement rules published and incorporated into this Rulebook by amendme nt, and Users 
+will be notified before those products become available.  
+37. Corporate Actions 
+37.1. A Corporate Action is a real-world event affecting a Reference Player that changes or 
+ends the basis on which an SPA is priced, including retirement, disciplinary suspension or 
+ban, sustained deselection or non -participation, transfer or format chang e materially 
+affecting data coverage, loss of data coverage, and death. Injury is not a Corporate Action  
+and is addressed as trading risk (Terms & Conditions Section 52 and Part XI of this 
+Rulebook). 
+37.2. On a Corporate Action, LineUp may halt or restrict  trading, freeze or adjust the 
+performance component, re-parameterise the SPA prospectively, close and settle open 
+positions at Fair Value, or delist the SPA, in the sequence it determines and administered in 
+good faith and consistently across comparable e vents. 
+37.3. Corporate Action treatments are announced on the Platform with the event, the 
+treatment applied, the Fair Value basis where used, and effective times.  
+38. Data Corrections (Settlement) 
+38.1. Where sports data is corrected after a match, the co rrection is applied prospectively 
+from the moment of processing.  
+38.2. Settlements already completed stand, except where a correction reveals a manifest 
+error (Section 22), in which case LineUp may adjust affected settlements and balances and 
+will keep records of any adjustment.  
+39. Exceptional Settlements 
+39.1. Where a settlement cannot be completed under the normal rules because of unusual 
+or unforeseen circumstances (including prolonged data unavailability, unresolved integrity 
+investigations, or infrastructure failure), LineUp may defer settlement until reliable 
+information is available, settle at Fair Value, or void trades demonstrably connected to an 
+integrity breach. 
+39.2. LineUp documents the basis of any exceptional settlement and applies it consist ently 
+across affected Users. 
+ 
+PART VIII. MARKET INTEGRITY  
+40. Market Surveillance 
+40.1. LineUp operates automated and manual surveillance of market activity to detect 
+unusual behaviour, protect price integrity, and maintain a fair and orderly market.  
+40.2. Surveillance may analyse orders, executions, prices, positions, account relationships, 
+device and network signals, and wallet activity. LineUp may investigate any account and 
+require the User’s cooperation, including an explanation of trading rationale.  
+40.3. Surveillance records are retained and may be shared with authorities and sporting 
+bodies where required or permitted by law.  
+41. Market Abuse 
+41.1. Market abuse is any conduct that distorts, or is intended to distort, the market or its 
+price formation, or that creates a false or misleading impression of price, demand, volume, 
+or activity. 
+41.2. Market abuse is assessed by conduct and effect. Disguising abusive activity through 
+structure, size-splitting, timing, multiple accounts, or intermediaries doe s not remove it 
+from this Part. 
+41.3. Prohibited conduct includes the specific practices in Sections 42 to 44 and any other 
+conduct falling within Section 41.1.  
+42. Wash Trading 
+42.1. Wash trading is prohibited. It includes trading with oneself across acco unts or wallets, 
+and trading with colluding parties, in order to create artificial volume, price, or the 
+appearance of activity, without genuine change in market risk.  
+42.2. Self-dealing arrangements designed to generate rewards, influence pricing, or misl ead 
+other participants are prohibited.  
+43. Spoofing and Layering 
+43.1. Spoofing and layering are prohibited. They include submitting orders that the User 
+does not intend to execute, or layering orders at multiple levels, in order to create a false 
+impression of supply or demand and to influence price or the behaviour of the Liquidity 
+Engine. 
+43.2. Rapid submission and cancellation of orders intended to mislead, disrupt, or overload 
+the market is prohibited. 
+44. Insider Trading 
+44.1. Trading on the basis of material non-public sporting information obtained through a 
+position of access or in breach of a duty is prohibited until that information is public. This 
+includes undisclosed team selection, injury or fitness information, disciplinary decisions, 
+retirement decisions, and match-management intentions.  
+44.2. Persons with inside access, including players, coaches, support staff, team and league 
+officials, medical staff, agents, journalists under embargo, Data Provider personnel, and 
+LineUp personnel, are prohibited from trading SPAs to which their access relates, and 
+LineUp may impose broader trading bans on such persons’ accounts.  
+44.3. Attempting to influence a real -world sporting event, or its reporting, in order to profit 
+on the Platform is prohibited and may be a serious criminal offence.  
+45. Disciplinary Measures 
+45.1. Investigation. LineUp may investigate suspected breaches, request information and 
+explanations, review account activity, and place temporary restrictions on an account 
+during an investigation.  
+45.2. Enforcement actions and penalties.  On reasonable determination of a brea ch, 
+LineUp may void or unwind affected trades; confiscate profits attributable to the breach to 
+the extent lawful; adjust corrupted prices under Section 22; restrict, suspend, or close 
+accounts (including linked accounts); withhold or reverse benefits obta ined through the 
+breach; and pursue damages.  
+45.3. Reporting. LineUp may report conduct to law -enforcement, regulators, tax 
+authorities, and, for conduct touching real -world sport, sporting bodies and integrity units, 
+and may be legally required to do so.  
+45.4. Appeals. A User may request review of an enforcement action by contacting 
+Support@Lineup.trade within the period stated in the notice of action. LineUp will review 
+the request and communicate its decision. This internal review is without prejudice to  the 
+dispute-resolution provisions of the Terms & Conditions.  
+ 
+PART IX. FEES AND CHARGES  
+46. Trading Fees 
+46.1. A trading fee of 0.10% (ten basis points) of the Notional value of each executed 
+order applies, charged on both the opening and the closing of a position, as set out in the 
+Fee Schedule (https://lineup.trade/fees).  
+46.2. The trading fee is calculated at execution and deducted at source from the relevant 
+transaction or settlement through the applicable rail. Where the interface reasonably 
+permits, the fee is displayed before execution and recorded in the User’s transaction 
+history. 
+46.3. LineUp does not charge funding or financing charges on positions, because trading 
+occurs only during live matches and positions are not carried overnight.  
+47. Liquidation Fees 
+47.1. A Liquidation fee of 0.1% of the value of each liquidated position  applies where 
+LineUp closes positions through the Liquidation process (Section 27), to defray the costs 
+and risks of compulsory closure. It is charged in addition to any trading losses and is set out 
+in the Fee Schedule. 
+48. Withdrawal Fees 
+48.1. Withdrawal costs comprise any LineUp withdrawal fee, third -party payment-partner 
+charges (Razorpay), and, for cryptocurrency, blockchain network fees (including gas fees). 
+These are set out in the Fee Schedule and at https://lineup.trade/supported -assets. 
+48.2. Network fees for cryptocurrency transactions are determined by the relevant 
+blockchain network and are not within LineUp’s control or refundable.  
+48.3. LineUp does not charge dormancy fees. 
+49. Future Fee Changes 
+49.1. LineUp may amend the Fee Schedule prospectively on 30 days’ notice, or with 
+immediate effect for new features, promotional reductions, or pass -through changes 
+imposed by third parties. 
+49.2. Fee changes are communicated through the Platform or by email and take effect on 
+the stated date. Continued use after the effective date constitutes acceptance of amended 
+fees. Fee changes do not retroactively alter fees already charged on executed trades.  
+ 
+PART X. TECHNICAL OPERATIONS 
+50. Data Providers 
+50.1. Sports data is sourced from third -party Data Providers: for football, football -data.org; 
+for cricket, cricketdata.org; together with any successor or additional providers designated 
+by LineUp. 
+50.2. The Platform depends on the availability, accuracy, and timeliness of this data. Data 
+may be delayed, incomplete, erroneous, or subsequently corrected, and coverage may 
+lapse. LineUp validates data before it influences prices (Section 20) but does not warrant 
+third-party data. 
+50.3. Where data is unavailable or unreliable, LineUp may freeze the performance 
+component, pause or suspend affected sessions, or apply Fair Value.  
+51. Performance Engine Methodology 
+51.1. This Section provides a high -level description of the methodology without disclosing 
+proprietary algorithms. 
+51.2. The Performance Engine transforms validated match events into price movements by 
+(a) mapping each relevant event type to a contribution , positive or negative, according to 
+its significance in the sport; (b) normalising contributions for format, competition, and 
+context; (c) applying per-event and per-match caps to limit extreme moves and reduce 
+manipulation incentives; (d) smoothing to av oid disorderly single-event jumps; and (e) 
+combining the resulting performance component with the market component (demand, 
+liquidity, and Pool depth) to produce the price quoted by the Liquidity Engine.  
+51.3. The precise weightings, formulas, and paramete rs are proprietary and confidential. 
+LineUp publishes a plain-language methodology summary at https://lineup.trade/pricing -
+methodology and may revise it prospectively. Material revisions are announced and do not 
+retroactively re-price closed positions.  
+51.4. Sport-specific event mappings are described qualitatively in Part XI.  
+52. API Behaviour 
+52.1. API access is a later-phase feature and is not available at the Effective Date.  
+When introduced, API access will require an issued key and acceptance of the AP I Terms 
+(https://lineup.trade/api-terms), and will be subject to authentication, rate limits, market -
+data licensing, and technical requirements.  
+52.2. When available, API users will remain bound by this Rulebook and the Terms & 
+Conditions, including the ma rket-integrity provisions of Part VIII, and automated trading 
+will be permitted only through an authorised API key.  
+53. Maintenance Windows 
+53.1. LineUp may perform planned maintenance, ordinarily scheduled outside major 
+fixtures where practicable. Expecte d downtime and timing are notified in advance through 
+the Platform or by email where reasonably possible.  
+53.2. During maintenance, some or all Platform functions may be unavailable. Positions 
+open during maintenance continue to exist, and LineUp administe rs market-protection 
+controls (including pausing affected markets) to protect Users where appropriate.  
+54. System Failures 
+54.1. In the event of a technical failure, outage, or cyber -security incident, LineUp may 
+pause, halt, or suspend affected markets, a pply Fair Value, and take other market -
+protection actions reasonably necessary.  
+54.2. LineUp maintains recovery procedures intended to restore service and reconcile 
+records to a consistent state. On recovery, LineUp reconciles orders, executions, positions , 
+and balances, and may correct manifest errors under Section 22.  
+54.3. LineUp does not warrant uninterrupted or error -free operation. Its liability for 
+failures is governed by the Terms & Conditions.  
+ 
+PART XI. SPORTS-SPECIFIC TRADING RULES  
+55. Cricket Trading Rules 
+55.1. Event contributions. For cricket SPAs, the performance component responds to a 
+Reference Player’s contribution to match events, including runs scored and scoring rate for 
+batters; wickets, economy, and dot -balls for bowlers; catches, stumpings, and run -outs for 
+fielding; and recognised milestones (such as a half -century, century, or multi -wicket haul). 
+Powerplay and death-overs context may affect the weighting of events, according to the 
+published methodology. Contributions a re capped and normalised per event and per 
+match. 
+55.2. Formats. Event weightings are normalised for format (for example, T20, One -Day, 
+and multi-day cricket), because the significance of a given event differs by format. At the 
+Effective Date, trading occu rs during live matches only; multi -day formats trade during 
+their live sessions, and positions in same -match products settle at the conclusion of the 
+relevant match under Section 35.  
+55.3. Rain, interruptions, and DLS.  Where rain or another interruption st ops play, the 
+affected session may be paused (Section 30). Where a revised target is set under the 
+Duckworth-Lewis-Stern (DLS) method or an equivalent official method, LineUp continues 
+to price from validated official data as it becomes available. Where an  interruption 
+prevents reliable pricing, the performance component may be frozen and Fair Value 
+applied. 
+55.4. Abandoned or no -result matches. Where a match is abandoned or produces no 
+official result, open positions in same -match products are settled at F air Value (Section 32) 
+based on validated data up to the point of abandonment, rather than at a speculative post -
+abandonment level. 
+55.5. Substitutions and non -participation. Where a Reference Player does not bat, bowl, 
+or take the field, or is replaced (i ncluding by a concussion or impact substitute where the 
+rules permit), the performance component reflects only validated events attributable to 
+that player. Sustained non-participation may be handled under Corporate Actions (Section 
+37) where it becomes structural. 
+55.6. Data dependency. All cricket pricing depends on validated data from the cricket Data 
+Provider. Data delays, corrections, or unavailability are handled under Sections 20, 21, and 
+38. 
+56. Football Trading Rules 
+56.1. Event contributions. For football SPAs, the performance component responds to a 
+Reference Player’s contribution to match events, including goals and assists; shots, key 
+passes, and other attacking contributions; defensive actions; minutes played; and 
+disciplinary events such as ye llow and red cards, according to the published methodology. 
+Contributions are capped and normalised per event and per match.  
+56.2. Substitutions and minutes.  The performance component reflects validated events 
+while the Reference Player is participating. A  substitution on or off affects subsequent 
+event attribution. A player who does not feature in a match generates no performance 
+contribution for that match.  
+56.3. VAR decisions. Where a Video Assistant Referee (VAR) decision changes the official 
+record of an event (for example, a goal or card awarded, overturned, or reassigned), LineUp 
+prices from the validated official data and applies the change prospectively from the 
+moment of processing. Where a VAR review is in progress and the outcome is uncertain, 
+the affected session may be paused (Section 30) until the official position is validated.  
+56.4. Extra time and penalties.  Where a match proceeds to extra time, event 
+contributions during extra time are treated according to the published methodology. A 
+penalty shoot-out is a tie-breaking procedure rather than ordinary play, and its treatment 
+(if any) for pricing and settlement is as specified in the published methodology; where it is 
+not a priced event, it does not contribute to the performance component.  
+56.5. Abandoned or postponed fixtures.  Where a match is abandoned, open positions in 
+same-match products are settled at Fair Value (Section 32) based on validated data up to 
+the point of abandonment. Where a fixture is postponed and no live match takes pla ce, no 
+live session opens, and any related products are handled under the session and settlement 
+rules rather than by speculative pricing.  
+56.6. Data dependency. All football pricing depends on validated data from the football 
+Data Provider. Data delays, corrections, or unavailability are handled under Sections 20, 21, 
+and 38. 
+ 
+APPENDICES 
+Appendix A. Trading Examples 
+These examples are illustrative. They use round numbers to show mechanics, and they apply 
+the parameters in force at the Effective Date (Appe ndix D): 2x maximum leverage, 50% Initial 
+Margin, a 0.10% trading fee on each execution, and INR as the Base Currency. Fees and prices 
+in live trading will differ.  
+Example A1: A long position closed at a profit.  1. A User buys (goes long) 1,000 units of 
+an SPA at a price of INR 50. The position Notional is 1,000 x 50 = INR 50,000. 2. At 2x 
+leverage, the Initial Margin (Collateral) required is 50% of Notional = INR 25,000, which is 
+locked from the User’s balance. 3. A trading fee of 0.10% of Notional is char ged at open: 
+0.10% x 50,000 = INR 50. 4. During the live match, the price rises to INR 56. The User closes 
+the position by selling 1,000 units. The closing Notional is 1,000 x 56 = INR 56,000, and the 
+closing fee is 0.10% x 56,000 = INR 56. 5. Gross profit  is (56 - 50) x 1,000 = INR 6,000. Total 
+fees are 50 + 56 = INR 106. Net profit is INR 5,894.  6. The locked Collateral of INR 25,000 
+is released, and INR 5,894 net profit is credited, for a total of INR 30,894.  
+Example A2: A long position closed at a loss.  1. Same opening as A1: long 1,000 units at 
+INR 50, Collateral INR 25,000, open fee INR 50. 2. The price falls to INR 45. The User closes 
+at 45. Closing Notional is INR 45,000, closing fee INR 45. 3. Gross loss is (45 - 50) x 1,000 = 
+INR 5,000. Total fees are INR 95. Net loss is INR 5,095.  4. The Collateral of INR 25,000 is 
+released less the net loss, so INR 19,905 is returned.  
+Example A3: Same-match automatic settlement.  1. Same opening as A1. The User does 
+not close the position, and the match ends. 2. Th e position is automatically closed at the 
+published settlement price, in this example INR 52. Closing fee is 0.10% x 52,000 = INR 52. 
+3. Gross profit is (52 - 50) x 1,000 = INR 2,000. Total fees are INR 102. Net profit is INR 
+1,898, credited on settlement. 
+Appendix B. Margin and Liquidation Examples 
+Illustrative, using the Effective -Date parameters: 50% Initial Margin, 25% Maintenance 
+Margin, 0.10% trading fee, and a 0.1% Liquidation fee. For clarity, Maintenance Margin is 
+shown against the opening Notional ; in operation, margin is monitored continuously.  
+Example B1: Liquidation of a long position.  1. A User goes long 1,000 units at INR 50. 
+Notional INR 50,000; Initial Margin (Collateral) INR 25,000; open fee INR 50. 2. 
+Maintenance Margin is 25% of Notional = INR 12,500. Account Equity is Collateral plus 
+unrealised profit or loss: Equity = 25,000 + (Price - 50) x 1,000. 3. Liquidation triggers 
+when Equity falls to the Maintenance Margin of INR 12,500. Solving, this occurs at a price of 
+INR 37.50, a 25% advers e move. 4. At liquidation, the position value is 37.50 x 1,000 = 
+INR 37,500, and the Liquidation fee is 0.1% x 37,500 = INR 37.50. 5. The price loss is (37.50 
+- 50) x 1,000 = INR 12,500. After deducting the price loss, the Liquidation fee, and the open 
+trading fee, approximately INR 12,412.50 is returned from the INR 25,000 Collateral.  
+Example B2: A margin call before liquidation.  1. Same opening as B1. The illustrative 
+margin-call warning level is 30% of Notional, or INR 15,000 of Equity. 2. Equity reaches 
+INR 15,000 at a price of INR 40 (a 20% fall). At this point the Platform may issue a margin 
+call. 3. The User can add Collateral or reduce the position to avoid liquidation. If the User 
+does neither and the price continues to fall to INR 37.50, the position is liquidated as in B1. 
+A margin call is not guaranteed if the price moves too quickly.  
+Example B3: A short position liquidation.  1. A User goes short 1,000 units at INR 50. 
+Collateral INR 25,000; Maintenance Margin INR 12,500. A short profits when the price falls 
+and loses when it rises: Equity = 25,000 + (50 - Price) x 1,000. 2. Liquidation triggers at a 
+price of INR 62.50, a 25% adverse (upward) move.  The Liquidation fee is 0.1% x 62,500 
+= INR 62.50. 
+Example B4: Negative-balance protection during a gap.  1. Same long opening as B1. 
+Collateral INR 25,000 would be fully eroded at a price of INR 25 (a 50% fall). 2. Suppose the 
+price gaps sharply and the position is liquidated at INR 22, below the level at which 
+Collateral is exhausted. The price loss would be (22 - 50) x 1,000 = INR 28,000, which 
+exceeds the INR 25,000 Collateral by INR 3,000. 3. Under negative -balance protection, the 
+User does not owe the INR 3,000 shortfall.  The account balance for this position floors at 
+zero, and the relevant Liquidity Pool bears the gap. The User’s loss is limited to the INR 
+25,000 committed Collateral.  
+Appendix C. Glossary 
+• Base Currency: the Indian Rupee (INR), the unit in which prices, positions, margin, 
+and settlement are calculated. USD and EUR are display conversions only.  
+• Circuit Breaker: an automatic pause in trading triggered by a price move beyond a 
+published band (Section 29).  
+• Collateral: value locked to open or maintain a position (Section 23).  
+• Corporate Action: a real-world event affecting a Reference Player that changes or 
+ends an SPA’s pricing basis (Section 37).  
+• Equity: committed Collateral plus unrealised profit or loss.  
+• Execution Price: the binding price at which an order is filled.  
+• Fair Value: a price determined by LineUp where normal pr icing cannot be relied 
+upon (Section 32). 
+• Indicative Price: a displayed, non-binding price before execution.  
+• Initial Margin / Maintenance Margin:  the Collateral to open a position (50% of 
+Notional) and the minimum Equity to keep it open (25% of Notional).  
+• Leverage: exposure exceeding committed Collateral, capped at 2x.  
+• Liquidation: compulsory closure of positions when Equity reaches Maintenance 
+Margin (Section 27). 
+• Liquidity Engine / Liquidity Pool:  the automated execution system, and the capital 
+against which trades execute.  
+• Negative-Balance Protection: the protection that prevents a User owing more than 
+committed Collateral for market losses (Section 28).  
+• Notional: the full value of a position (quantity x price).  
+• Performance Engine: the automated system that derives the performance 
+component of prices from validated data.  
+• Reference Player: the real-world player whose performance an SPA references.  
+• Slippage: the difference between an Indicative Price and the Execution Price 
+(Section 15). 
+• SPA (Synthetic Player Asset):  the synthetic digital instrument traded on the 
+Platform. 
+• Trading Session: a period during which an SPA is open for trading (Section 11).  
+Appendix D. Published Market Parameters 
+The following values are in force at the Effec tive Date. Live values are published at the 
+referenced pages and govern in case of difference.  
+Parameter Value at Effective Date Published at 
+Maximum leverage 2x https://lineup.trade/margin-
+parameters 
+Initial Margin 50% of Notional https://lineup.trade/margin-
+parameters 
+Maintenance Margin 25% of Notional https://lineup.trade/margin-
+parameters 
+Margin-call warning 
+level (illustrative) 
+~30% of Notional https://lineup.trade/margin-
+parameters 
+Minimum order value INR 10 https://lineup.trade/supported -
+assets 
+Confirmation-step 
+threshold 
+INR 5,000 / USD 100 / 
+EUR 100 
+https://lineup.trade/fees  
+Maximum position per 
+User per SPA 
+INR 100,000 Notional https://lineup.trade/position-
+limits 
+Maximum total 
+exposure per User 
+INR 500,000 Notional https://lineup.trade/position-
+limits 
+Trading fee 0.10% of Notional per 
+execution 
+https://lineup.trade/fees  
+Liquidation fee 0.1% of liquidated position 
+value 
+https://lineup.trade/fees  
+Funding / financing 
+charges 
+None https://lineup.trade/fees  
+Dormancy fee None https://lineup.trade/fees  
+Circuit-breaker bands 
+and cooling periods 
+Published (configured to 
+interrupt disorderly 
+moves) 
+https://lineup.trade/market-
+parameters 
+Price update cadence Near real-time, subject to 
+data latency 
+https://lineup.trade/market-
+parameters 
+Appendix E. Version History 
+Version Date Summary 
+1.0 15 July Initial publication of the LineUp Trading Rules and Market Rules 
+Version Date Summary 
+2026 (launch product: live-match trading in cricket and football; API, 
+tournament settlement, and third -party liquidity provision identified as 
+later-phase). 
+ 
+Issuer: LineUp, established in the Emirate of Dubai, United Arab Emirates. Website: 
+https://lineup.trade/ | Contact: Support@Lineup.trade  

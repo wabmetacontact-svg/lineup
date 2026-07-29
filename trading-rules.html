@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LINEUP TRADING AND MARKET RULES · LineUp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+  .terms-hero {
+    padding: 60px 0 40px;
+    background: linear-gradient(180deg, rgba(91, 75, 214, 0.12) 0%, rgba(10, 7, 24, 0) 100%);
+    border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  }
+  .terms-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(91, 75, 214, 0.2);
+    border: 1px solid rgba(91, 75, 214, 0.4);
+    border-radius: 20px;
+    color: #a59bf4;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .terms-title {
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #cfc9fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .terms-subtitle {
+    font-size: 16px;
+    color: var(--text-muted, #938eb4);
+    max-width: 680px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    font-size: 13px;
+  }
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .meta-item span.label {
+    color: #8b85b4;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .meta-item span.val {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .terms-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    padding: 40px 0 80px;
+  }
+  @media (max-width: 900px) {
+    .terms-layout {
+      grid-template-columns: 1fr;
+    }
+    .terms-sidebar {
+      position: static !important;
+      max-height: none !important;
+    }
+  }
+
+  .terms-sidebar {
+    position: sticky;
+    top: 90px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 12px;
+  }
+  .terms-sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .terms-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
+
+  .toc-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8b85b4;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .toc-link {
+    color: #a099c7;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: block;
+    line-height: 1.4;
+  }
+  .toc-link:hover, .toc-link.active {
+    background: rgba(108, 92, 231, 0.15);
+    color: #fff;
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+  }
+  .search-box input:focus {
+    border-color: #6c5ce7;
+  }
+
+  .section-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6c5ce7 0%, #4834d4 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(108, 92, 231, 0.5);
+  }
+</style>
+</head>
+<body data-page="legal">
+<div class="page-bg"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="LineUp home">
+      <img src="logo.png" alt="LineUp" width="34" height="34" style="border-radius: 9px;" />
+      <span class="wordmark">Line<b>Up</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Features.html">Features</a>
+      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost btn-sm" href="https://app.lineup.trade/sport-select">Open app</a>
+      <a class="download-btn" href="LineUp_Trading_and_Market_Rules.pdf" download="LineUp_Trading_and_Market_Rules.pdf" style="padding: 8px 16px; font-size: 13px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="terms-hero">
+  <div class="container">
+    <div class="terms-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Official Exchange Policy & Governance Document
+    </div>
+    <h1 class="terms-title">LINEUP TRADING AND MARKET RULES</h1>
+    <p class="terms-subtitle">Comprehensive Rulebook & Exchange Operating Standards</p>
+    
+    <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 24px;">
+      <a class="download-btn" href="LineUp_Trading_and_Market_Rules.pdf" download="LineUp_Trading_and_Market_Rules.pdf">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full Document (PDF)
+      </a>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">Effective Date</span><span class="val">15 July 2026</span></div>
+      <div class="meta-item"><span class="label">Last Updated</span><span class="val">20 July 2026</span></div>
+      <div class="meta-item"><span class="label">Version</span><span class="val">1.0</span></div>
+      <div class="meta-item"><span class="label">Operator</span><span class="val">LineUp, Emirate of Dubai, United Arab Emirates</span></div>
+      <div class="meta-item"><span class="label">Platform URL</span><span class="val">https://lineup.trade/</span></div>
+      <div class="meta-item"><span class="label">Contact</span><span class="val">Support@Lineup.trade</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAIN CONTENT LAYOUT ============ -->
+<div class="container terms-layout">
+  <aside class="terms-sidebar">
+    <div class="search-box">
+      <input type="text" id="terms-search" placeholder="Search document..." />
+    </div>
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-list">
+      <a href="#Part 1" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART I. MARKET FUNDAMENTALS</a><a href="#Part 2" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART II. MARKET INSTRUMENTS</a><a href="#Part 3" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART III. TRADING OPERATIONS</a><a href="#Part 4" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART IV. PRICING SYSTEM</a><a href="#Part 6" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART VI. MARKET PROTECTION</a><a href="#Part 7" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART VII. SETTLEMENT</a><a href="#Part 8" class="toc-link" style="font-weight: 700; color: #a59bf4;">PART VIII. MARKET INTEGRITY</a>
+    </div>
+  </aside>
+
+  <main class="terms-body">
+    
+            <div id="Part 1" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART I. MARKET FUNDAMENTALS</h2>
+                
+                <div class="section-card" id="sec-1" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">1. Purpose of the Rulebook  ................................ ................................ ................................ ...........................  3</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-2" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">2. Definitions ................................ ................................ ................................ ................................ ......................  4</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-3" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">3. Exchange Principles  ................................ ................................ ................................ ................................ .... 4</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-4" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">4. Market Architecture ................................ ................................ ................................ ................................ ... 5</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-5" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">5. Market Participants  ................................ ................................ ................................ ................................ .... 5</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+            </div>
+            
+            <div id="Part 2" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART II. MARKET INSTRUMENTS</h2>
+                
+                <div class="section-card" id="sec-6" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">6. Synthetic Player Assets (SPAs)  ................................ ................................ ................................ ............... 6</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-7" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">7. Asset Lifecycle ................................ ................................ ................................ ................................ ............... 6</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-8" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">8. Fractional Trading ................................ ................................ ................................ ................................ ....... 7</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-9" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">9. Asset Availability ................................ ................................ ................................ ................................ ......... 7</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-10" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">10. Delisting ................................ ................................ ................................ ................................ ........................  7</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+            </div>
+            
+            <div id="Part 3" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART III. TRADING OPERATIONS</h2>
+                
+                <div class="section-card" id="sec-11" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">11. Trading Sessions................................ ................................ ................................ ................................ ........ 8</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-12" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">12. Order Types ................................ ................................ ................................ ................................ .................  8</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-13" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">13. Order Lifecycle ................................ ................................ ................................ ................................ ........... 9</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-14" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">14. Trade Execution ................................ ................................ ................................ ................................ ......... 9</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-15" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">15. Slippage ................................ ................................ ................................ ................................ ......................  10</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-16" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">16. Order Rejections ................................ ................................ ................................ ................................ ..... 10</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+            </div>
+            
+            <div id="Part 4" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART IV. PRICING SYSTEM</h2>
+                
+                <div class="section-card" id="sec-17" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">17. Performance Engine ................................ ................................ ................................ ..............................  11</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-18" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">18. Market Pricing ................................ ................................ ................................ ................................ ......... 11</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-19" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">19. Price Updates ................................ ................................ ................................ ................................ ........... 11</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-20" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">20. Data Validation................................ ................................ ................................ ................................ ........ 11</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-21" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">21. Data Corrections ................................ ................................ ................................ ................................ ..... 12</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-22" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">22. Price Integrity ................................ ................................ ................................ ................................ .......... 12</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">PART V. RISK ENGINE ................................ ................................ ................................ ................................ ...... 12</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">PART V. RISK ENGINE ................................ ................................ ................................ ................................ ...... 12</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-23" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">23. Margin ................................ ................................ ................................ ................................ ........................  12</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-24" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">24. Leverage ................................ ................................ ................................ ................................ ....................  13</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-25" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">25. Position Limits ................................ ................................ ................................ ................................ ........ 13</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-26" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">26. Exposure Limits ................................ ................................ ................................ ................................ ...... 13</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-27" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">27. Liquidation ................................ ................................ ................................ ................................ ............... 14</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-28" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">28. Negative Balance Protection  ................................ ................................ ................................ .............. 14</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+            </div>
+            
+            <div id="Part 6" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART VI. MARKET PROTECTION</h2>
+                
+                <div class="section-card" id="sec-29" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">29. Circuit Breakers ................................ ................................ ................................ ................................ ...... 15</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-30" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">30. Trading Halts ................................ ................................ ................................ ................................ ........... 15</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-31" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">31. Market Suspension ................................ ................................ ................................ ................................  15</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-32" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">32. Fair Value Pricing ................................ ................................ ................................ ................................ ... 15</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-33" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">33. Emergency Events  ................................ ................................ ................................ ................................ . 16</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+            </div>
+            
+            <div id="Part 7" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART VII. SETTLEMENT</h2>
+                
+                <div class="section-card" id="sec-34" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">34. Settlement Process ................................ ................................ ................................ ................................  16</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-35" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">35. Match Settlement ................................ ................................ ................................ ................................ ... 16</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-36" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">36. Tournament Settlement  ................................ ................................ ................................ ......................  17</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-37" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">37. Corporate Actions ................................ ................................ ................................ ................................ .. 17</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-38" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">38. Data Corrections (Settlement)  ................................ ................................ ................................ .......... 17</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-39" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">39. Exceptional Settlements  ................................ ................................ ................................ ......................  17</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">PART VIII. MARKET INTEGRI TY ................................ ................................ ................................ ..................  18</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">PART VIII. MARKET INTEGRI TY ................................ ................................ ................................ ..................  18</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-40" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">40. Market Surveillance  ................................ ................................ ................................ ..............................  18</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-41" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">41. Market Abuse ................................ ................................ ................................ ................................ ........... 18</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-42" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">42. Wash Trading ................................ ................................ ................................ ................................ .......... 18</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-43" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">43. Spoofing and Layering................................ ................................ ................................ ..........................  18</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-44" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">44. Insider Trading ................................ ................................ ................................ ................................ ....... 18</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-45" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">45. Disciplinary Measures  ................................ ................................ ................................ ..........................  19</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">PART IX. FEES AND CHARGES  ................................ ................................ ................................ ......................  19</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">PART IX. FEES AND CHARGES  ................................ ................................ ................................ ......................  19</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-46" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">46. Trading Fees................................ ................................ ................................ ................................ ............. 19</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-47" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">47. Liquidation Fees ................................ ................................ ................................ ................................ ..... 20</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-48" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">48. Withdrawal Fees................................ ................................ ................................ ................................ ..... 20</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-49" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">49. Future Fee Changes ................................ ................................ ................................ ...............................  20</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">PART X. TECHNICAL OPERATIONS  ................................ ................................ ................................ ............. 20</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">PART X. TECHNICAL OPERATIONS  ................................ ................................ ................................ ............. 20</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-50" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">50. Data Providers................................ ................................ ................................ ................................ ......... 20</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-51" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">51. Performance Engine Methodology  ................................ ................................ ................................ .. 21</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-52" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">52. API Behaviour ................................ ................................ ................................ ................................ .......... 21</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-53" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">53. Maintenance Windows  ................................ ................................ ................................ ........................  21</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-54" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">54. System Failures ................................ ................................ ................................ ................................ ....... 21</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">PART XI. SPORTS-SPECIFIC TRADING RULES  ................................ ................................ ........................  22</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">PART XI. SPORTS-SPECIFIC TRADING RULES  ................................ ................................ ........................  22</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-55" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">55. Cricket Trading Rules  ................................ ................................ ................................ ...........................  22</h4>
+                    <p style="color: #b8b3d6; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"></p>
+                </div>
+                
+                <div class="section-card" id="sec-56" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">56. Football Trading Rules  ................................ ................................ ................................ .........................  23</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">APPENDICES ................................ ................................ ................................ ................................ ........................  23</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Appendix A. Trading Examples  ................................ ................................ ................................ ................  23 
+Appendix B. Margin and Liquidation Examples  ................................ ................................ ................  24 
+Appendix C. Glossary................................ ................................ ................................ ................................ .... 25 
+Appendix D. Published Market Parameters  ................................ ................................ ........................  26 
+Appendix E. Version History  ................................ ................................ ................................ .....................  26 
+ 
+  
+A Market Rulebook 
+Effective Date: 15 July 2026 | Last Updated: 20 July 2026 | Version: 1.0 Issuer: LineUp, 
+established in the Emirate of Dubai, United Arab Emirates Platform: https://lineup.trade/ 
+| Contact: Support@Lineup.trade  
+ 
+About this Rulebook. This document sets out the operating rules of the LineUp 
+market: how instruments are created, how orders are handled, how prices form, 
+how risk is managed, and how posit ions settle. It operationalises the LineUp 
+Terms & Conditions (https://lineup.trade/terms), which remain the governing 
+agreement. Where a live numerical value is stated here, it is the value in force at 
+the Effective Date and may be updated through the pub lished parameter pages 
+referenced in Appendix D. This Rulebook describes the launch product; features 
+identified as later-phase are not available at the Effective Date.  
+ 
+PART I. MARKET FUNDAMENTALS</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-57" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">1. Purpose of the Rulebook</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">1.1. This Trading Rules and Market Rules document (the "Rulebook") governs the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">operation of the LineUp marketplace and the conduct of trading on it. It explains, in 
+operational detail, the market mechanics summarised in the Terms & Conditions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">1.2. The Rulebook forms part of, and is in corporated into, the Terms & Conditions. In the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">event of any conflict, the Terms & Conditions prevail on matters of contractual right and 
+obligation, and this Rulebook prevails on matters of detailed market operation, in each case 
+read so far as possible to be consistent.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">1.3. The Rulebook applies to every User and to every order, trade, and position on the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Platform. By trading, you agree to be bound by it.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">1.4. Capitalised terms have the meanings given in Section 2 of this Rulebook or, where not</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">defined here, in the Terms & Conditions.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-58" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">2. Definitions</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">2.1. In this Rulebook, in addition to the terms defined in the Terms & Conditions:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">"Collateral" means value committed and locked to open or maintain a position, as 
+described in Part V. 
+"Equity" means, for an account or position, the committed Collateral plus unrealised profit 
+or loss at current prices. 
+"Execution Price" means the price at which an order is filled, as recorded by the Liquidity 
+Engine. 
+"Fair Value" means a price determined by LineUp under Section 32 where normal market 
+pricing cannot be relied upon.  
+"Indicative Price" means a displayed price before execution, which is not binding.  
+"Initial Margin" means the Collateral required to open a position, being 50% of position 
+Notional at the Effective Date. 
+"Liquidation" means the compulsory closure of positions under Section 27.  
+"Maintenance Margin" means the minimum Equity required to keep a position open, 
+being 25% of position Notional at the Effective Date.  
+"Notional" means the full value of a position,  calculated as quantity multiplied by price.  
+"Slippage" means the difference between an Indicative Price and the Execution Price.  
+"SPA" means a Synthetic Player Asset, as defined in the Terms & Conditions.  
+"Trading Session" means a period during which a given SPA is open for trading, as 
+described in Section 11.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-59" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">3. Exchange Principles</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">3.1. LineUp operates the market according to the following principles:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) Fairness: market rules are applied uniformly to all Users in like circumstances, and 
+no User, Affiliate, or liquidity contributor receives preferential execution.  
+(b) Transparency: the rules of the market, the fee model, and the live market 
+parameters are published, and Users can see indicative prices, their orders, and 
+their positions. 
+(c) Market integrity: LineUp monitors activity and applies controls to protect against 
+manipulation, abuse, and disorderly conditions.  
+(d) Automated execution: orders execute through an automated  Liquidity Engine 
+against Liquidity Pools, without peer -to-peer matching and without LineUp acting as 
+counterparty. 
+(e) Investor protection: risk controls, including margin, position and exposure limits, 
+circuit breakers, and negative-balance protection, are d esigned to protect Users and 
+the market.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">3.2. These principles guide the interpretation of this Rulebook and the exercise of any</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">discretion by LineUp.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-60" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">4. Market Architecture</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">4.1. The LineUp market comprises the following components:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) The Platform: the website and applications through which Users access the market.  
+(b) Synthetic Player Assets (SPAs):  the instruments traded, described in Part II.  
+(c) The Performance Engine: the automated system that derives the performance 
+component of SPA prices from validated sports  data (Part IV). 
+(d) The Liquidity Engine: the automated system that quotes prices, executes orders 
+against Liquidity Pools, and applies market -protection controls (Part III and Part 
+VI). 
+(e) Liquidity Pools: pools of capital, seeded by LineUp and its investors, a gainst which 
+orders execute. Pools are legally and operationally distinct from LineUp's role as 
+operator, as described in the Terms & Conditions.  
+(f) The Risk Engine: the systems that calculate margin, exposure, and liquidation (Part 
+V). 
+(g) The Settlement process: the reconciliation of closed positions and the crediting or 
+debiting of value through the non -custodial rails (Part VII).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">4.2. Settlement flow (summary).  A User submits an order; the Liquidity Engine executes</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">it against a Liquidity Pool at an Execution P rice; the position is recorded and monitored by 
+the Risk Engine; and, on close, the Settlement process calculates realised profit or loss net 
+of fees and instructs the relevant payment rail (Razorpay for INR, or the User's self -custody 
+wallet for cryptocurrency).</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-61" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">5. Market Participants</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">5.1. Retail Users are individual Users trading for their own account. Standard risk controls</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and limits apply.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">5.2. Professional traders  are individuals who may be classified by LineUp as professional</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">based on criteria published by LineUp. Classification may affect limits, features, or 
+disclosures, but the maximum leverage cap in Part V applies uniformly.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">5.3. Institutional Users are entities trading through an institutional account, subject to</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">enhanced verification under the Terms & Conditions. Institutional limits and terms may 
+differ.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">5.4. Liquidity Pools provide the capital against which trades execute. At the Effective Date,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Pools are seeded by LineUp and its investors. Third-party liquidity provision is a later -
+phase feature and is not available at the Effective Date.  LineUp does not act as 
+counterparty to User trades in its capacity as operator.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">5.5. LineUp operates the Platform, the Performance Engine, the Liquidity Engine, the Risk</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Engine, and the Settlement process, ad ministers the market rules, and provides market -
+protection and surveillance functions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">5.6. All participants must comply with this Rulebook, the Terms & Conditions, and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">applicable law. 
+ 
+PART II. MARKET INSTRUMENTS</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-62" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">6. Synthetic Player Assets (SPAs)</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">6.1. An SPA is a synthetic digital asset made available for trading on the Platform, whose</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">price references market activity on the Platform and the performance of an associated 
+Reference Player.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">6.2. SPAs are created, listed, configured, and administered s olely by LineUp. Each SPA</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">references one Reference Player, unless expressly offered as a defined group.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">6.3. What an SPA provides:  the right to have a recorded position priced, monitored, and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">settled in accordance with this Rulebook and the Terms & Conditions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">6.4. What an SPA does not represent:  an SPA is not a share, security, or financial</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">instrument issued by any player or organisa tion; it confers no ownership of, income from, 
+or claim against any Reference Player, club, league, or governing body; it is not money or e -
+money; and it has no existence or value outside the Platform. Section 4.2 and Section 16 of 
+the Terms & Conditions apply in full.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">6.5. SPAs cannot be transferred off the Platform or between Users off -market.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">6.5. SPAs cannot be transferred off the Platform or between Users off -market.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-63" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">7. Asset Lifecycle</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">7.1. An SPA progresses through the following states:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) Listing: LineUp lists the SPA and publishes its parameters (identifier, Reference 
+Player, initial price, minimum trade size, session mapping, margin and leverage 
+parameters). 
+(b) Active: the SPA is open for trading during its Trading Sessions (Section 11).  
+(c) Paused or Halted: trading is temporarily interrupted under Part VI.  
+(d) Suspended: trading is stopped for a sustained period under Section 31.  
+(e) Settled: open positions are closed and reconciled at match end or on another 
+settlement event (Part VII).  
+(f) Delisted: the SPA is removed from the market under Section 10.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">7.2. LineUp records and publishes state cha nges for each SPA as they occur.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">7.2. LineUp records and publishes state cha nges for each SPA as they occur.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-64" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">8. Fractional Trading</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">8.1. SPAs may be traded in fractional quantities. The minimum order value is INR 10 (or its</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">display equivalent).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">8.2. Fractional positions carry the same rights, risks, pricing, margin treatment, and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">settlement as whole units, pro -rated.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">8.3. Rounding. Quantities are rounded to the nearest supported increment using standard</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">rounding. Any residual value arising from rounding is credited to the User's balance. 
+Rounding does not create or destroy value bey ond the minimum increment.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">8.4. Settlement of fractional positions follows the general Settlement process in Part VII.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">8.4. Settlement of fractional positions follows the general Settlement process in Part VII.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-65" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">9. Asset Availability</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">9.1. A Reference Player becomes available for trading when LineUp lists an SPA referencing</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">that player, based on listing criteria including the availability of reliable data from the Data 
+Providers, expected liquidity, and integrity considerations.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">9.2. Availability of an SPA for trading at any moment depends on the Trading Sessions</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">mapped to that SPA (Section 11) and on the market state (Section 7).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">9.3. Listing an SPA is an operational decision and is not a statement about the merit,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">quality, or prospects of any Reference Player or SPA.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">9.4. LineUp may add or remove Reference Players and SPAs, and may add or remove sp orts</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and competitions, at its discretion.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-66" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">10. Delisting</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">10.1. LineUp may delist an SPA where a Corporate Action requires it (Section 37), where</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">reliable data ceases to be available, where sustained illiquidity makes an orderly market 
+impracticable, for legal or regulatory reasons, or where delisting is appropriate for the 
+integrity or operation of the Platform.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">10.2. Except where immediate delisting is required, LineUp announces delisting in advance,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">stating the final trading time, whether the market enters  a closing-only state, and the 
+settlement basis for positions open at delisting.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">10.3. Positions open at delisting are closed and settled at Fair Value (Section 32), with</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">proceeds credited or debited through the normal Settlement process.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">10.4. Delisting is not a default by LineUp and gives rise to no claim beyond settlement of</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">open positions. 
+ 
+PART III. TRADING OPERATIONS</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-67" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">11. Trading Sessions</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">11.1. Live-match trading. At the Effective Date, trading in each SPA is open only during</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">live matches involving the relevant Reference Player, within the Trading Sessions 
+published for that SPA. Outside a live match there is no open market in that SPA.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">11.2. Trading Sessions follow the fixtures of the supported competitions in cricket and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">football. Session times are published on the Platform and may open, delay, extend, shorten, 
+pause, or close in response to fixture changes, data availability, or the market -protection 
+events in Part VI.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">11.3. Session states: a session may be Open (orders accepted and executed), Paused or</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Halted (orders suspended, positions continue to bear risk), Closing -only (only risk-
+reducing orders accepted), or Closed (no orders).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">11.4. Positions in same-match products are settled at match end under Section 35.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Tournament and season-long settlement is a later -phase feature and is not available 
+at the Effective Date (Section 36).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">11.5. LineUp does not guarantee that any session will open or remain open. Fixture</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">postponements, abandonments, and data interruptions may prevent or inter rupt sessions.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-68" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">12. Order Types</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">12.1. The Platform supports the following order types at the Effective Date:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) Market Order: executes immediately at the best available Execution Price 
+determined by the Liquidity Engine, subject to available liquidity and price impact. A 
+Market Order does not guarantee a specific price.  
+(b) Limit Order: executes only at a specified price or better. A  Limit Order rests until it 
+executes, is cancelled, or expires, and does not guarantee execution.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">12.2. Risk-reducing designation. Orders that only reduce or close an existing position</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">may be accepted during Closing-only states when opening orders are not.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">12.3. Additional order types (including stop -loss and take-profit) may be offered and,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">where offered, are described on the Platform. Stop orders convert to Market or Limit 
+Orders on trigger and are subject to Slippage (Section 15); the price after a stop triggers 
+may be materially worse than the trigger level.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">12.4. Confirmation step.  For orders at or above INR 5,000 (or the equivalent of USD</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">100 or EUR 100 in the selected display currency) , the Platform presents a confirmation 
+step before execution.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-69" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">13. Order Lifecycle</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">13.1. An order progresses through the following states:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) Submitted: received by the Platform and validated for eligibility, size, limits, and 
+margin. 
+(b) Accepted / Resting: a valid Limit Order rests in the book awaiting its price; a valid 
+Market Order proceeds to execution.  
+(c) Executed (fully or partially):  the Liquidity Engine records a fill. A partial fill 
+executes part of the order. 
+(d) Cancelled: a resting order is cancelled by the User, or automatically on session 
+close, interruption, suspension, p arameter change, or account restriction.  
+(e) Expired: a time-limited order reaches its expiry without full execution.  
+(f) Rejected: the order fails validation (Section 16).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">13.2. Unexecuted remainders of Market Orders are cancelled. Unexecuted remainders of</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Limit Orders continue to rest unless cancelled or expired.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">13.3. Once executed, an order is binding and cannot be cancelled or reversed by the User,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">subject only to manifest-error correction (Section 22 and the Terms & Conditions).</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-70" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">14. Trade Execution</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">14.1. All trades execute through the automated Liquidity Engine against Liquidity Pools.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">There is no peer-to-peer matching, and LineUp is not a counterparty to User trades.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">14.2. The Execution Price is determined by the Liquidity Engine at the moment of</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">execution, reflecting the Performance Engine price adjusted for order size, available Pool 
+depth, spread, and price-impact parameters.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">14.3. Eligible orders are processed in the sequence received by the Liquidity Engine,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">subject to uniform system throttles. Where multiple Limit Orders become executable 
+simultaneously, they are processed in time priority.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">14.4. A trade is formed and binding when the Liquidity Engine records the execution. The</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">recorded Execution Price, quantity, and time are conclusive, subject  only to Section 22.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">14.5. Execution is not guaranteed. Orders may execute in full, in part, or not at all,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">depending on liquidity and price.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-71" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">15. Slippage</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">15.1. Slippage is the difference between the Indicative Price shown before execution and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the actual Execution Price.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">15.2. Slippage arises because prices can move between order submission and execution,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">because large orders consume available Pool depth at progressively different prices (price 
+impact), and because market conditions can change rapidly durin g live play.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">15.3. Market Orders are the most exposed to Slippage, because they prioritise execution</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">over price. Limit Orders are protected against adverse Slippage beyond the specified limit 
+price, but may execute only in part or not at all as a result.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">15.4. Users should treat Indicative Prices as guidance only. The binding price is always the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">recorded Execution Price.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-72" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">16. Order Rejections</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">16.1. An order may be rejected or cancelled where it:</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) fails identity, eligibility, or account -status checks; 
+(b) is below the minimum order value or otherwise malformed;  
+(c) would breach a position or exposure limit (Sections 25 and 26);  
+(d) fails a margin check (insufficient Collateral) (Part V);  
+(e) would execute outside applicable price bands;  
+(f) is submitted outside a Trading Session o r during a Pause, Halt, or Suspension;  
+(g) breaches order-rate or message throttles; or  
+(h) is flagged by market-integrity or fraud controls (Part VIII).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">16.2. Where practicable, the Platform indicates the reason for a rejection. Rejection of an</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">order is not a statement about the merits of a trade.  
+ 
+PART IV. PRICING SYSTEM</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-73" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">17. Performance Engine</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">17.1. The Performance Engine derives the performance component of each SPA's price</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">from validated sports data, by reference to the Reference Player's contribution to match 
+events.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">17.2. Different sporting events contribute differently to valuation, accordi ng to the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">published methodology (Section 51) and the sport -specific rules in Part XI. Positive 
+contributions tend to increase the performance component and negative contributions 
+tend to decrease it, subject to caps and normalisation.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">17.3. Per-match and per-event effects are capped and normalised to limit extreme moves</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and to reduce manipulation incentives. These parameters are part of the methodology and 
+may be revised prospectively.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-74" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">18. Market Pricing</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">18.1. The price of an SPA is determined by combining a market component (buying and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">selling pressure and Pool depth on the Platform) with the performance component (Section 
+17), subject to control mechanisms including caps, smoothing, price bands, and circ uit 
+breakers.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">18.2. Market demand and liquidity affect price and execution: higher demand tends to raise</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">prices and consume Pool depth, and lower liquidity tends to widen spreads and increase 
+price impact.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">18.3. Prices are internal to the Platform, are not  official valuations of any player, and have</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">no meaning or use off-Platform.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-75" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">19. Price Updates</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">19.1. Prices update in near real-time, subject to data latency.  Price adjustments follow</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the receipt and validation of market activity and sports data, and may l ag real-world events 
+by seconds or longer.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">19.2. During periods of high activity or infrastructure load, updates may be delayed.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Displayed prices are Indicative until an order executes.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">19.3. LineUp does not guarantee that displayed prices are continuously  current, and is not</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">liable for reliance on Indicative Prices where the market rules have been applied.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-76" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">20. Data Validation</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">20.1. Sports data received from the Data Providers is validated before it influences market</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">prices. Validation checks may include co nsistency, completeness, timing, and cross -checks 
+against expected ranges.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">20.2. Where data fails validation, is materially delayed, or is unavailable, LineUp may freeze</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the performance component, pause or suspend the affected session, or apply Fair Value 
+(Section 32), and may settle affected same -match products at Fair Value.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-77" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">21. Data Corrections</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">21.1. Where a Data Provider retrospectively corrects match data, LineUp applies the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">correction prospectively from the moment of processing.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">21.2. Trades executed before a correction stand at their Execution Prices, except where the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">correction reveals a manifest error (Section 22). The effect of corrections on settlement is 
+addressed in Section 38.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-78" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">22. Price Integrity</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">22.1. LineUp monitors pricing for anomalies and applies controls to maintain accurate, fair,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and reliable pricing, including caps, smoothing, price bands, and circuit breakers.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">22.2. Manifest error. Where a price, execution, or settlement results from a manifest error</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(for example, a data-feed error, software defect, misconfiguration, or obvious mispricing 
+far outside prevailing levels), LineUp may, acting in good faith and within 48 hours of 
+discovery, cancel or amend affected trades to the price that would have applied absent the 
+error, and correct affected balances. This applies symmetrically, whether the error 
+favoured the User or the Pool. LineUp notifies affected Users and keeps records of every 
+correction.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">22.3. Where inputs are corrupted or manipulation is suspected, LineUp may suspend</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">affected pricing and apply Part VI.  
+ 
+PART V. RISK ENGINE</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-79" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">23. Margin</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">23.1. Margin is the Collateral required to open and maintain a leveraged or short position.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">LineUp operates a two-tier margin model: 
+(a) Initial Margin: the Collateral required to open a position, being  50% of position 
+Notional at the Effective Date.  
+(b) Maintenance Margin: the minimum Equity required to keep a position open, being 
+25% of position Notional at the Effective Date.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">23.2. Collateral mechanics (non -custodial). Collateral is locked in place, not t ransferred</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">to LineUp: for INR, the required amount within the Razorpay -held balance is placed under 
+a hold or reservation; for cryptocurrency, the required amount is locked from the User's 
+self-custody wallet through an on -chain escrow arrangement. Locked Collateral remains 
+the User's, subject to application against losses and fees.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">23.3. Margin call. If account Equity falls toward the Maintenance Margin (for example, to</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">an illustrative warning level of 30% of Notional, published at the parameter page), the  
+Platform may issue a margin call through in -Platform and registered-contact notifications, 
+satisfied by adding Collateral or reducing positions. A margin call is not guaranteed 
+before Liquidation where conditions move too quickly (Section 27).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">23.4. Live margin parameters are published at https://lineup.trade/margin -parameters</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(Appendix D).</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-80" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">24. Leverage</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">24.1. Leverage allows exposure exceeding committed Collateral. The maximum leverage</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">is 2x (two times), corresponding to the 50% Initial Margin in Section 23, and applies 
+uniformly to all Users unless a stricter cap is required by applicable law.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">24.2. Leverage magnifies both gains and losses and shortens the distance to a margin call</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and Liquidation. At the maximum 2x leverage, a 50% adverse move in an SPA can eliminate 
+the Collateral supporting a position, and Liquidation will ordinarily occur before that point 
+(Section 27).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">24.3. LineUp may reduce available leverage prospectively at any time, including i ntraday</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">for new positions, and may deny or reduce leverage for any account on risk grounds.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-81" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">25. Position Limits</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">25.1. Maximum position size per User per SPA is INR 100,000 in Notional  at the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Effective Date. Orders that would breach this limit are rejected or reduced.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">25.2. Position limits may differ by verification tier and account type, and may be changed</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">prospectively, including intraday in stressed conditions, with the published tran sition 
+treatment for existing positions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">25.3. Live position limits are published at https://lineup.trade/position -limits.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">25.3. Live position limits are published at https://lineup.trade/position -limits.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-82" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">26. Exposure Limits</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">26.1. Maximum total open exposure per User across all SPAs is INR 500,000 in</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">aggregate Notional at the Effective Date. This portfolio cap protects Users and market 
+stability by limiting concentration.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">26.2. LineUp may apply additional concentration controls, including limits on aggregate</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">exposure to a single SPA, competition, or sport, published at the parameter page .</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">26.3. Where existing exposure exceeds a newly reduced limit, the User may be required to</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">reduce within a stated window, failing which LineUp may reduce positions at prevailing 
+prices.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-83" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">27. Liquidation</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">27.1. Trigger. If account Equity falls to or below the  Maintenance Margin requirement,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">LineUp may liquidate some or all of the User's positions automatically and without further 
+notice, to the extent necessary to restore the account above the required level.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">27.2. Order of liquidation. Where a User holds multiple positions, Liquidation proceeds</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">on a largest-loss-first basis, closing the position or positions with the greatest unrealised 
+loss first, until the account is restored above the required level. Liquidation may occur in 
+one or more tranches and, in fas t markets, at prices materially worse than the trigger level.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">27.3. Liquidation fee. A Liquidation fee of 0.1% of the value of each liquidated position</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">applies (Section 47 and the Fee Schedule).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">27.4. Priority of application.  Collateral and proceeds are ap plied in this order: realised</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">losses on liquidated positions; the Liquidation fee and other trading fees; other amounts 
+owed under the Terms & Conditions; and any surplus released to the User.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">27.5. During interruptions.  During a circuit breaker, halt, or suspension, automatic</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Liquidation is paused for the affected SPA except where a reliable Fair Value reference 
+exists. On resumption, margin is recalculated at reopening prices and Liquidation may 
+occur immediately.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">27.6. LineUp is not liable for the occurr ence, timing, sequence, or price of any Liquidation</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">carried out in accordance with these rules.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-84" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">28. Negative Balance Protection</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">28.1. LineUp operates negative -balance protection. The Liquidation process is designed to</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">close positions before Collateral is e xhausted, so that a User cannot lose more than the 
+Collateral committed to positions, and will not be left owing LineUp a negative 
+balance in respect of market losses.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">28.2. Where rapid price movement ("gapping") causes a position to close beyond its</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Collateral, the relevant Liquidity Pool bears the shortfall, and no debt is created against the 
+User for that market loss.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">28.3. Negative-balance protection does not cover amounts owed through fraud, market</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">abuse, chargeback reversals, taxes, or breach of the T erms & Conditions. It limits, but does 
+not remove, the risk of losing all committed Collateral.  
+ 
+PART VI. MARKET PROTECTION</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-85" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">29. Circuit Breakers</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">29.1. Circuit breakers are automatic volatility controls that pause trading in an SPA when</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">its price moves by more than a published band within a published window.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">29.2. When a circuit breaker triggers, trading in the affected SPA is paused for a published</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">cooling period, after which it may reopen, reopen in a Closing -only state, or remain 
+suspended.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">29.3. Circuit-breaker bands, windows, and cooling periods are published at</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">https://lineup.trade/market-parameters (Appendix D). At the Effective Date these are 
+configured to interrupt disorderly moves while allowing normal live -match volatility; the 
+live values govern.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">29.4. During a circuit-breaker pause, new orders are rejected or held and open positions</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">continue to bear market risk but cannot be closed until trading resumes.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-86" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">30. Trading Halts</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">30.1. LineUp may halt trading in an individual SPA where extreme volatility, a data -feed</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">failure, a suspected integrity incident, a match interruption, or a technical issue affects that 
+SPA.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">30.2. A halt suspends order acceptance for the affected SPA. Posi tions remain open and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">continue to bear risk. LineUp communicates halts and expected handling through the 
+Platform as promptly as practicable.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-87" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">31. Market Suspension</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">31.1. LineUp may suspend trading in an SPA, a sport, or the entire market for a sustained</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">period where the causes of interruption persist, where required by law or regulatory 
+direction, or where continued trading would be inconsistent with fair and orderly markets.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">31.2. During suspension, no orders execute; margin continues to be calculated agai nst the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">last validated price or a Fair Value reference; and Liquidation is administered under 
+Section 27.5.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">31.3. On resumption, LineUp publishes the resumption basis, which may include a</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">reference-price or auction-style reopening. Where resumption is not practicable within a 
+reasonable period, LineUp may settle open positions at Fair Value or proceed to delisting.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-88" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">32. Fair Value Pricing</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">32.1. Where normal market pricing cannot be relied upon (including interruptions that</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">cannot resume, suspensions, delisti ngs, and Corporate Actions), LineUp determines a Fair 
+Value in good faith using, in descending priority: the last validated Execution Price; the 
+Performance Engine output computed on validated data; comparable -SPA references; and, 
+where none is reliable, a reasoned valuation documented in LineUp's records.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">32.2. LineUp publishes the Fair Value basis used for each such event and retains records of</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the determination.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-89" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">33. Emergency Events</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">33.1. Emergency events include unexpected technical failures, cyber -security incidents,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">data-provider outages, abandonment or cancellation of matches, and regulatory or legal 
+directions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">33.2. On an emergency event, LineUp may pause, halt, or suspend affected markets; apply</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Fair Value; settle or delist affected SPAs; and take any other market -protection action 
+reasonably necessary to preserve a fair and orderly market and to comply with la w.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">33.3. Actions taken under this Section are governed by the market -protection and force-</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">majeure provisions of the Terms & Conditions and give rise to no claim beyond settlement 
+of open positions. 
+ 
+PART VII. SETTLEMENT</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-90" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">34. Settlement Process</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">34.1. When a position is closed, the Settlement process calculates realised profit or loss as</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the difference between the opening and closing Execution Prices, net of applicable fees.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">34.2. Settlement is effected through the non -custodial rails: INR amounts are credite d or</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">debited to the Razorpay-held balance by instruction, and cryptocurrency amounts are 
+credited or debited through the escrow mechanism connected to the User's self -custody 
+wallet. Crediting is subject to the operational timelines of the applicable rail.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">34.3. Amounts payable on the same day and rail may be netted, and LineUp may set off</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">amounts owed against settlement amounts due. Settlement is final when recorded, subject 
+only to manifest-error correction and corrections required by law.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-91" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">35. Match Settlement</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">35.1. Positions in same-match products are automatically closed at the published</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">settlement price at match end. Users are responsible for managing such positions before 
+automatic closure.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">35.2. Where a match is interrupted, abandoned, or does not rea ch a valid conclusion,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">affected positions are settled at Fair Value (Section 32), applying the sport -specific rules in 
+Part XI.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-92" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">36. Tournament Settlement</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">36.1. Tournament and season-long settlement is a later -phase feature and is not</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">available at the Effective Date. At the Effective Date, trading and settlement occur on a 
+live-match basis only (Section 11).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">36.2. When introduced, tournament and season -long products will be governed by</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">settlement rules published and incorporated into this Rulebook by amendme nt, and Users 
+will be notified before those products become available.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-93" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">37. Corporate Actions</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">37.1. A Corporate Action is a real-world event affecting a Reference Player that changes or</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">ends the basis on which an SPA is priced, including retirement, disciplinary suspension or 
+ban, sustained deselection or non -participation, transfer or format chang e materially 
+affecting data coverage, loss of data coverage, and death. Injury is not a Corporate Action  
+and is addressed as trading risk (Terms & Conditions Section 52 and Part XI of this 
+Rulebook).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">37.2. On a Corporate Action, LineUp may halt or restrict  trading, freeze or adjust the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">performance component, re-parameterise the SPA prospectively, close and settle open 
+positions at Fair Value, or delist the SPA, in the sequence it determines and administered in 
+good faith and consistently across comparable e vents.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">37.3. Corporate Action treatments are announced on the Platform with the event, the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">treatment applied, the Fair Value basis where used, and effective times.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-94" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">38. Data Corrections (Settlement)</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">38.1. Where sports data is corrected after a match, the co rrection is applied prospectively</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">from the moment of processing.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">38.2. Settlements already completed stand, except where a correction reveals a manifest</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">error (Section 22), in which case LineUp may adjust affected settlements and balances and 
+will keep records of any adjustment.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-95" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">39. Exceptional Settlements</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">39.1. Where a settlement cannot be completed under the normal rules because of unusual</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">or unforeseen circumstances (including prolonged data unavailability, unresolved integrity 
+investigations, or infrastructure failure), LineUp may defer settlement until reliable 
+information is available, settle at Fair Value, or void trades demonstrably connected to an 
+integrity breach.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">39.2. LineUp documents the basis of any exceptional settlement and applies it consist ently</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">across affected Users.</p>
+                        </div>
+                        
+                </div>
+                
+            </div>
+            
+            <div id="Part 8" style="margin-bottom: 40px;">
+                <h2 style="font-size: 22px; font-weight: 800; color: #6c5ce7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid rgba(108, 92, 231, 0.4);">PART VIII. MARKET INTEGRITY</h2>
+                
+                <div class="section-card" id="sec-96" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">41. Market Abuse</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">41.1. Market abuse is any conduct that distorts, or is intended to distort, the market or its</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">price formation, or that creates a false or misleading impression of price, demand, volume, 
+or activity.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">41.2. Market abuse is assessed by conduct and effect. Disguising abusive activity through</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">structure, size-splitting, timing, multiple accounts, or intermediaries doe s not remove it 
+from this Part.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">41.3. Prohibited conduct includes the specific practices in Sections 42 to 44 and any other</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">conduct falling within Section 41.1.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-97" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">42. Wash Trading</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">42.1. Wash trading is prohibited. It includes trading with oneself across acco unts or wallets,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and trading with colluding parties, in order to create artificial volume, price, or the 
+appearance of activity, without genuine change in market risk.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">42.2. Self-dealing arrangements designed to generate rewards, influence pricing, or misl ead</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">other participants are prohibited.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-98" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">43. Spoofing and Layering</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">43.1. Spoofing and layering are prohibited. They include submitting orders that the User</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">does not intend to execute, or layering orders at multiple levels, in order to create a false 
+impression of supply or demand and to influence price or the behaviour of the Liquidity 
+Engine.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">43.2. Rapid submission and cancellation of orders intended to mislead, disrupt, or overload</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the market is prohibited.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-99" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">44. Insider Trading</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">44.1. Trading on the basis of material non-public sporting information obtained through a</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">position of access or in breach of a duty is prohibited until that information is public. This 
+includes undisclosed team selection, injury or fitness information, disciplinary decisions, 
+retirement decisions, and match-management intentions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">44.2. Persons with inside access, including players, coaches, support staff, team and league</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">officials, medical staff, agents, journalists under embargo, Data Provider personnel, and 
+LineUp personnel, are prohibited from trading SPAs to which their access relates, and 
+LineUp may impose broader trading bans on such persons' accounts.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">44.3. Attempting to influence a real -world sporting event, or its reporting, in order to profit</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">on the Platform is prohibited and may be a serious criminal offence.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-100" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">45. Disciplinary Measures</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">45.1. Investigation. LineUp may investigate suspected breaches, request information and</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">explanations, review account activity, and place temporary restrictions on an account 
+during an investigation.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">45.2. Enforcement actions and penalties.  On reasonable determination of a brea ch,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">LineUp may void or unwind affected trades; confiscate profits attributable to the breach to 
+the extent lawful; adjust corrupted prices under Section 22; restrict, suspend, or close 
+accounts (including linked accounts); withhold or reverse benefits obta ined through the 
+breach; and pursue damages.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">45.3. Reporting. LineUp may report conduct to law -enforcement, regulators, tax</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">authorities, and, for conduct touching real -world sport, sporting bodies and integrity units, 
+and may be legally required to do so.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">45.4. Appeals. A User may request review of an enforcement action by contacting</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Support@Lineup.trade within the period stated in the notice of action. LineUp will review 
+the request and communicate its decision. This internal review is without prejudice to  the 
+dispute-resolution provisions of the Terms & Conditions.  
+ 
+PART IX. FEES AND CHARGES</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-101" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">46. Trading Fees</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">46.1. A trading fee of 0.10% (ten basis points) of the Notional value of each executed</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">order applies, charged on both the opening and the closing of a position, as set out in the 
+Fee Schedule (https://lineup.trade/fees).</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">46.2. The trading fee is calculated at execution and deducted at source from the relevant</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">transaction or settlement through the applicable rail. Where the interface reasonably 
+permits, the fee is displayed before execution and recorded in the User's transaction 
+history.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">46.3. LineUp does not charge funding or financing charges on positions, because trading</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">occurs only during live matches and positions are not carried overnight.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-102" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">47. Liquidation Fees</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">47.1. A Liquidation fee of 0.1% of the value of each liquidated position  applies where</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">LineUp closes positions through the Liquidation process (Section 27), to defray the costs 
+and risks of compulsory closure. It is charged in addition to any trading losses and is set out 
+in the Fee Schedule.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-103" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">48. Withdrawal Fees</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">48.1. Withdrawal costs comprise any LineUp withdrawal fee, third -party payment-partner</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">charges (Razorpay), and, for cryptocurrency, blockchain network fees (including gas fees). 
+These are set out in the Fee Schedule and at https://lineup.trade/supported -assets.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">48.2. Network fees for cryptocurrency transactions are determined by the relevant</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">blockchain network and are not within LineUp's control or refundable.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">48.3. LineUp does not charge dormancy fees.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">48.3. LineUp does not charge dormancy fees.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-104" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">49. Future Fee Changes</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">49.1. LineUp may amend the Fee Schedule prospectively on 30 days' notice, or with</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">immediate effect for new features, promotional reductions, or pass -through changes 
+imposed by third parties.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">49.2. Fee changes are communicated through the Platform or by email and take effect on</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">the stated date. Continued use after the effective date constitutes acceptance of amended 
+fees. Fee changes do not retroactively alter fees already charged on executed trades.  
+ 
+PART X. TECHNICAL OPERATIONS</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-105" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">50. Data Providers</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">50.1. Sports data is sourced from third -party Data Providers: for football, football -data.org;</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">for cricket, cricketdata.org; together with any successor or additional providers designated 
+by LineUp.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">50.2. The Platform depends on the availability, accuracy, and timeliness of this data. Data</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">may be delayed, incomplete, erroneous, or subsequently corrected, and coverage may 
+lapse. LineUp validates data before it influences prices (Section 20) but does not warrant 
+third-party data.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">50.3. Where data is unavailable or unreliable, LineUp may freeze the performance</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">component, pause or suspend affected sessions, or apply Fair Value.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-106" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">51. Performance Engine Methodology</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">51.1. This Section provides a high -level description of the methodology without disclosing</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">proprietary algorithms.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">51.2. The Performance Engine transforms validated match events into price movements by</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">(a) mapping each relevant event type to a contribution , positive or negative, according to 
+its significance in the sport; (b) normalising contributions for format, competition, and 
+context; (c) applying per-event and per-match caps to limit extreme moves and reduce 
+manipulation incentives; (d) smoothing to av oid disorderly single-event jumps; and (e) 
+combining the resulting performance component with the market component (demand, 
+liquidity, and Pool depth) to produce the price quoted by the Liquidity Engine.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">51.3. The precise weightings, formulas, and paramete rs are proprietary and confidential.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">LineUp publishes a plain-language methodology summary at https://lineup.trade/pricing -
+methodology and may revise it prospectively. Material revisions are announced and do not 
+retroactively re-price closed positions.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">51.4. Sport-specific event mappings are described qualitatively in Part XI.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">51.4. Sport-specific event mappings are described qualitatively in Part XI.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-107" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">52. API Behaviour</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">52.1. API access is a later-phase feature and is not available at the Effective Date.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">When introduced, API access will require an issued key and acceptance of the AP I Terms 
+(https://lineup.trade/api-terms), and will be subject to authentication, rate limits, market -
+data licensing, and technical requirements.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">52.2. When available, API users will remain bound by this Rulebook and the Terms &</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Conditions, including the ma rket-integrity provisions of Part VIII, and automated trading 
+will be permitted only through an authorised API key.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-108" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">53. Maintenance Windows</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">53.1. LineUp may perform planned maintenance, ordinarily scheduled outside major</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">fixtures where practicable. Expecte d downtime and timing are notified in advance through 
+the Platform or by email where reasonably possible.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">53.2. During maintenance, some or all Platform functions may be unavailable. Positions</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">open during maintenance continue to exist, and LineUp administe rs market-protection 
+controls (including pausing affected markets) to protect Users where appropriate.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-109" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">54. System Failures</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">54.1. In the event of a technical failure, outage, or cyber -security incident, LineUp may</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">pause, halt, or suspend affected markets, a pply Fair Value, and take other market -
+protection actions reasonably necessary.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">54.2. LineUp maintains recovery procedures intended to restore service and reconcile</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">records to a consistent state. On recovery, LineUp reconciles orders, executions, positions , 
+and balances, and may correct manifest errors under Section 22.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">54.3. LineUp does not warrant uninterrupted or error -free operation. Its liability for</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">failures is governed by the Terms & Conditions.  
+ 
+PART XI. SPORTS-SPECIFIC TRADING RULES</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-110" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">55. Cricket Trading Rules</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">55.1. Event contributions. For cricket SPAs, the performance component responds to a</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Reference Player's contribution to match events, including runs scored and scoring rate for 
+batters; wickets, economy, and dot -balls for bowlers; catches, stumpings, and run -outs for 
+fielding; and recognised milestones (such as a half -century, century, or multi -wicket haul). 
+Powerplay and death-overs context may affect the weighting of events, according to the 
+published methodology. Contributions a re capped and normalised per event and per 
+match.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">55.2. Formats. Event weightings are normalised for format (for example, T20, One -Day,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">and multi-day cricket), because the significance of a given event differs by format. At the 
+Effective Date, trading occu rs during live matches only; multi -day formats trade during 
+their live sessions, and positions in same -match products settle at the conclusion of the 
+relevant match under Section 35.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">55.3. Rain, interruptions, and DLS.  Where rain or another interruption st ops play, the</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">affected session may be paused (Section 30). Where a revised target is set under the 
+Duckworth-Lewis-Stern (DLS) method or an equivalent official method, LineUp continues 
+to price from validated official data as it becomes available. Where an  interruption 
+prevents reliable pricing, the performance component may be frozen and Fair Value 
+applied.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">55.4. Abandoned or no -result matches. Where a match is abandoned or produces no</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">official result, open positions in same -match products are settled at F air Value (Section 32) 
+based on validated data up to the point of abandonment, rather than at a speculative post -
+abandonment level.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">55.5. Substitutions and non -participation. Where a Reference Player does not bat, bowl,</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">or take the field, or is replaced (i ncluding by a concussion or impact substitute where the 
+rules permit), the performance component reflects only validated events attributable to 
+that player. Sustained non-participation may be handled under Corporate Actions (Section 
+37) where it becomes structural.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">55.6. Data dependency. All cricket pricing depends on validated data from the cricket Data</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Provider. Data delays, corrections, or unavailability are handled under Sections 20, 21, and</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-111" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">38. 
+56. Football Trading Rules</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">56.1. Event contributions. For football SPAs, the performance component responds to a</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Reference Player's contribution to match events, including goals and assists; shots, key 
+passes, and other attacking contributions; defensive actions; minutes played; and 
+disciplinary events such as ye llow and red cards, according to the published methodology. 
+Contributions are capped and normalised per event and per match.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">56.2. Substitutions and minutes.  The performance component reflects validated events</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">while the Reference Player is participating. A  substitution on or off affects subsequent 
+event attribution. A player who does not feature in a match generates no performance 
+contribution for that match.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">56.3. VAR decisions. Where a Video Assistant Referee (VAR) decision changes the official</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">record of an event (for example, a goal or card awarded, overturned, or reassigned), LineUp 
+prices from the validated official data and applies the change prospectively from the 
+moment of processing. Where a VAR review is in progress and the outcome is uncertain, 
+the affected session may be paused (Section 30) until the official position is validated.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">56.4. Extra time and penalties.  Where a match proceeds to extra time, event</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">contributions during extra time are treated according to the published methodology. A 
+penalty shoot-out is a tie-breaking procedure rather than ordinary play, and its treatment 
+(if any) for pricing and settlement is as specified in the published methodology; where it is 
+not a priced event, it does not contribute to the performance component.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">56.5. Abandoned or postponed fixtures.  Where a match is abandoned, open positions in</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">same-match products are settled at Fair Value (Section 32) based on validated data up to 
+the point of abandonment. Where a fixture is postponed and no live match takes pla ce, no 
+live session opens, and any related products are handled under the session and settlement 
+rules rather than by speculative pricing.</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">56.6. Data dependency. All football pricing depends on validated data from the football</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Data Provider. Data delays, corrections, or unavailability are handled under Sections 20, 21, 
+and 38. 
+ 
+APPENDICES 
+Appendix A. Trading Examples 
+These examples are illustrative. They use round numbers to show mechanics, and they apply 
+the parameters in force at the Effective Date (Appe ndix D): 2x maximum leverage, 50% Initial 
+Margin, a 0.10% trading fee on each execution, and INR as the Base Currency. Fees and prices 
+in live trading will differ.  
+Example A1: A long position closed at a profit.  1. A User buys (goes long) 1,000 units of 
+an SPA at a price of INR 50. The position Notional is 1,000 x 50 = INR 50,000. 2. At 2x 
+leverage, the Initial Margin (Collateral) required is 50% of Notional = INR 25,000, which is 
+locked from the User's balance. 3. A trading fee of 0.10% of Notional is char ged at open: 
+0.10% x 50,000 = INR 50. 4. During the live match, the price rises to INR 56. The User closes 
+the position by selling 1,000 units. The closing Notional is 1,000 x 56 = INR 56,000, and the 
+closing fee is 0.10% x 56,000 = INR 56. 5. Gross profit  is (56 - 50) x 1,000 = INR 6,000. Total 
+fees are 50 + 56 = INR 106. Net profit is INR 5,894.  6. The locked Collateral of INR 25,000 
+is released, and INR 5,894 net profit is credited, for a total of INR 30,894.  
+Example A2: A long position closed at a loss.  1. Same opening as A1: long 1,000 units at 
+INR 50, Collateral INR 25,000, open fee INR 50. 2. The price falls to INR 45. The User closes 
+at 45. Closing Notional is INR 45,000, closing fee INR 45. 3. Gross loss is (45 - 50) x 1,000 = 
+INR 5,000. Total fees are INR 95. Net loss is INR 5,095.  4. The Collateral of INR 25,000 is 
+released less the net loss, so INR 19,905 is returned.  
+Example A3: Same-match automatic settlement.  1. Same opening as A1. The User does 
+not close the position, and the match ends. 2. Th e position is automatically closed at the 
+published settlement price, in this example INR 52. Closing fee is 0.10% x 52,000 = INR 52.</p>
+                        </div>
+                        
+                </div>
+                
+                <div class="section-card" id="sec-112" style="margin-top: 20px;">
+                    <h4 style="font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;">3. Gross profit is (52 - 50) x 1,000 = INR 2,000. Total fees are INR 102. Net profit is INR</h4>
+                    
+                        <div style="margin-bottom: 16px; padding: 14px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <h4 style="color: #6c5ce7; margin-bottom: 6px; font-size: 14px;">1,898, credited on settlement.</h4>
+                            <p style="color: #b8b3d6; font-size: 13.5px; line-height: 1.6; white-space: pre-wrap;">Appendix B. Margin and Liquidation Examples 
+Illustrative, using the Effective -Date parameters: 50% Initial Margin, 25% Maintenance 
+Margin, 0.10% trading fee, and a 0.1% Liquidation fee. For clarity, Maintenance Margin is 
+shown against the opening Notional ; in operation, margin is monitored continuously.  
+Example B1: Liquidation of a long position.  1. A User goes long 1,000 units at INR 50. 
+Notional INR 50,000; Initial Margin (Collateral) INR 25,000; open fee INR 50. 2. 
+Maintenance Margin is 25% of Notional = INR 12,500. Account Equity is Collateral plus 
+unrealised profit or loss: Equity = 25,000 + (Price - 50) x 1,000. 3. Liquidation triggers 
+when Equity falls to the Maintenance Margin of INR 12,500. Solving, this occurs at a price of 
+INR 37.50, a 25% advers e move. 4. At liquidation, the position value is 37.50 x 1,000 = 
+INR 37,500, and the Liquidation fee is 0.1% x 37,500 = INR 37.50. 5. The price loss is (37.50 
+- 50) x 1,000 = INR 12,500. After deducting the price loss, the Liquidation fee, and the open 
+trading fee, approximately INR 12,412.50 is returned from the INR 25,000 Collateral.  
+Example B2: A margin call before liquidation.  1. Same opening as B1. The illustrative 
+margin-call warning level is 30% of Notional, or INR 15,000 of Equity. 2. Equity reaches 
+INR 15,000 at a price of INR 40 (a 20% fall). At this point the Platform may issue a margin 
+call. 3. The User can add Collateral or reduce the position to avoid liquidation. If the User 
+does neither and the price continues to fall to INR 37.50, the position is liquidated as in B1. 
+A margin call is not guaranteed if the price moves too quickly.  
+Example B3: A short position liquidation.  1. A User goes short 1,000 units at INR 50. 
+Collateral INR 25,000; Maintenance Margin INR 12,500. A short profits when the price falls 
+and loses when it rises: Equity = 25,000 + (50 - Price) x 1,000. 2. Liquidation triggers at a 
+price of INR 62.50, a 25% adverse (upward) move.  The Liquidation fee is 0.1% x 62,500 
+= INR 62.50. 
+Example B4: Negative-balance protection during a gap.  1. Same long opening as B1. 
+Collateral INR 25,000 would be fully eroded at a price of INR 25 (a 50% fall). 2. Suppose the 
+price gaps sharply and the position is liquidated at INR 22, below the level at which 
+Collateral is exhausted. The price loss would be (22 - 50) x 1,000 = INR 28,000, which 
+exceeds the INR 25,000 Collateral by INR 3,000. 3. Under negative -balance protection, the 
+User does not owe the INR 3,000 shortfall.  The account balance for this position floors at 
+zero, and the relevant Liquidity Pool bears the gap. The User's loss is limited to the INR 
+25,000 committed Collateral.  
+Appendix C. Glossary 
+• Base Currency: the Indian Rupee (INR), the unit in which prices, positions, margin, 
+and settlement are calculated. USD and EUR are display conversions only.  
+• Circuit Breaker: an automatic pause in trading triggered by a price move beyond a 
+published band (Section 29).  
+• Collateral: value locked to open or maintain a position (Section 23).  
+• Corporate Action: a real-world event affecting a Reference Player that changes or 
+ends an SPA's pricing basis (Section 37).  
+• Equity: committed Collateral plus unrealised profit or loss.  
+• Execution Price: the binding price at which an order is filled.  
+• Fair Value: a price determined by LineUp where normal pr icing cannot be relied 
+upon (Section 32). 
+• Indicative Price: a displayed, non-binding price before execution.  
+• Initial Margin / Maintenance Margin:  the Collateral to open a position (50% of 
+Notional) and the minimum Equity to keep it open (25% of Notional).  
+• Leverage: exposure exceeding committed Collateral, capped at 2x.  
+• Liquidation: compulsory closure of positions when Equity reaches Maintenance 
+Margin (Section 27). 
+• Liquidity Engine / Liquidity Pool:  the automated execution system, and the capital 
+against which trades execute.  
+• Negative-Balance Protection: the protection that prevents a User owing more than 
+committed Collateral for market losses (Section 28).  
+• Notional: the full value of a position (quantity x price).  
+• Performance Engine: the automated system that derives the performance 
+component of prices from validated data.  
+• Reference Player: the real-world player whose performance an SPA references.  
+• Slippage: the difference between an Indicative Price and the Execution Price 
+(Section 15). 
+• SPA (Synthetic Player Asset):  the synthetic digital instrument traded on the 
+Platform. 
+• Trading Session: a period during which an SPA is open for trading (Section 11).  
+Appendix D. Published Market Parameters 
+The following values are in force at the Effec tive Date. Live values are published at the 
+referenced pages and govern in case of difference.  
+Parameter Value at Effective Date Published at 
+Maximum leverage 2x https://lineup.trade/margin-
+parameters 
+Initial Margin 50% of Notional https://lineup.trade/margin-
+parameters 
+Maintenance Margin 25% of Notional https://lineup.trade/margin-
+parameters 
+Margin-call warning 
+level (illustrative) 
+~30% of Notional https://lineup.trade/margin-
+parameters 
+Minimum order value INR 10 https://lineup.trade/supported -
+assets 
+Confirmation-step 
+threshold 
+INR 5,000 / USD 100 / 
+EUR 100 
+https://lineup.trade/fees  
+Maximum position per 
+User per SPA 
+INR 100,000 Notional https://lineup.trade/position-
+limits 
+Maximum total 
+exposure per User 
+INR 500,000 Notional https://lineup.trade/position-
+limits 
+Trading fee 0.10% of Notional per 
+execution 
+https://lineup.trade/fees  
+Liquidation fee 0.1% of liquidated position 
+value 
+https://lineup.trade/fees  
+Funding / financing 
+charges 
+None https://lineup.trade/fees  
+Dormancy fee None https://lineup.trade/fees  
+Circuit-breaker bands 
+and cooling periods 
+Published (configured to 
+interrupt disorderly 
+moves) 
+https://lineup.trade/market-
+parameters 
+Price update cadence Near real-time, subject to 
+data latency 
+https://lineup.trade/market-
+parameters 
+Appendix E. Version History 
+Version Date Summary 
+1.0 15 July Initial publication of the LineUp Trading Rules and Market Rules 
+Version Date Summary 
+2026 (launch product: live-match trading in cricket and football; API, 
+tournament settlement, and third -party liquidity provision identified as 
+later-phase). 
+ 
+Issuer: LineUp, established in the Emirate of Dubai, United Arab Emirates. Website: 
+https://lineup.trade/ | Contact: Support@Lineup.trade</p>
+                        </div>
+                        
+                </div>
+                
+            </div>
+            
+  </main>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="LineUp" width="30" height="30" style="border-radius: 8px;" />
+        <span class="wordmark">Line<b>Up</b></span>
+      </a>
+      <p style="margin-top: 12px; font-size: 13px; color: #8b85b4;">The premier synthetic cricket player asset &amp; liquidity exchange.</p>
+    </div>
+    <div>
+      <h5>Legal &amp; Governance</h5>
+      <div class="f-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="trading-rules.html">Trading &amp; Market Rules</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="risk-disclosure.html">Risk Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('terms-search');
+  const sections = document.querySelectorAll('.section-card');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      sections.forEach(sec => {
+        const text = sec.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      const secTop = sec.offsetTop;
+      if (pageYOffset >= secTop - 120) {
+        current = sec.getAttribute('id');
+      }
+    });
+
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
