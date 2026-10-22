@@ -1,5 +1,5 @@
 /* ============================================================================
-   LineUp — Screens C: Live match, Leaderboard, Wallet, Add funds,
+   LineUp — Screens C: Live match, Leaderboard, Wallet, Add points,
             Profile/Settings, Search, Notifications, History
    ============================================================================ */
 (function () {
@@ -105,7 +105,7 @@
         {tab === 'trade' && (
           <div className="screen-pad" style={{ marginTop: 14 }}>
             <div className="card" style={{ padding: '11px 14px', display: 'flex', gap: 10, alignItems: 'center', background: 'var(--brand-soft)', border: '1px solid var(--border-2)', marginBottom: 12 }}>
-              <Icon name="bolt" size={18} style={{ color: 'var(--brand-2)' }} /><span style={{ fontSize: 12.5, fontWeight: 700 }}>Tap any player to play live — join from just ₹10.</span>
+              <Icon name="bolt" size={18} style={{ color: 'var(--brand-2)' }} /><span style={{ fontSize: 12.5, fontWeight: 700 }}>Tap any player to play live — join from just 10 points.</span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {livePlayers.map((p) => (
@@ -334,11 +334,11 @@
         </div>
         <div className="screen-pad">
           <div className="card" style={{ padding: 18, background: 'linear-gradient(150deg,#1C1542,#0C0820)', color: '#fff', border: 'none' }}>
-            <span style={{ fontSize: 13, color: '#B8B2DC', fontWeight: 600 }}>Available balance</span>
+            <span style={{ fontSize: 13, color: '#B8B2DC', fontWeight: 600 }}>Available points</span>
             <div className="num" style={{ fontSize: 34, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>{fmtINR(w.available)}</div>
             <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
-              <button className="btn btn-sm" style={{ flex: 1, height: 44, background: '#fff', color: 'var(--brand)' }} onClick={() => app.go('addfunds')}><Icon name="plus" size={17} stroke={2.6} /> Add funds</button>
-              <button className="btn btn-sm" style={{ flex: 1, height: 44, background: 'rgba(255,255,255,.14)', color: '#fff' }} onClick={() => app.toast('Withdrawal request sent', 'check')}><Icon name="bank" size={17} /> Withdraw</button>
+              <button className="btn btn-sm" style={{ flex: 1, height: 44, background: '#fff', color: 'var(--brand)' }} onClick={() => app.go('addfunds')}><Icon name="plus" size={17} stroke={2.6} /> Add points</button>
+              <button className="btn btn-sm" style={{ flex: 1, height: 44, background: 'rgba(255,255,255,.14)', color: '#fff' }} onClick={() => app.toast('Redemption request sent', 'check')}><Icon name="bank" size={17} /> Redeem</button>
             </div>
           </div>
         </div>
@@ -367,7 +367,7 @@
     );
   }
 
-  /* ===================== ADD FUNDS ===================== */
+  /* ===================== ADD POINTS ===================== */
   function AddFunds({ app }) {
     const [amt, setAmt] = useState('5000');
     const [method, setMethod] = useState('upi');
@@ -377,14 +377,14 @@
       <div className="screen" style={{ paddingBottom: 96 }}>
         <div className="appbar solid" style={{ background: 'var(--bg)' }}>
           <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
-          <div style={{ flex: 1, fontWeight: 800, fontSize: 17 }}>Add funds</div>
+          <div style={{ flex: 1, fontWeight: 800, fontSize: 17 }}>Add points</div>
         </div>
         <div className="viewport" style={{ overflow: 'auto' }}>
           <div className="screen-pad" style={{ marginTop: 10 }}>
             <div className="label" style={{ marginBottom: 10, textAlign: 'center' }}>Enter amount</div>
-            <div className="num" style={{ textAlign: 'center', fontSize: 46, fontWeight: 800, letterSpacing: '-0.03em' }}>₹{val.toLocaleString('en-IN')}</div>
+            <div className="num" style={{ textAlign: 'center', fontSize: 46, fontWeight: 800, letterSpacing: '-0.03em' }}>{val.toLocaleString('en-IN')} <span style={{ fontSize: 20 }}>pts</span></div>
             <div style={{ display: 'flex', gap: 8, justifyContent: 'center', marginTop: 18 }}>
-              {[1000, 5000, 10000, 25000].map((n) => <button key={n} className="btn-sm" style={{ borderRadius: 11, padding: '0 14px', height: 38, background: val === n ? 'var(--brand)' : 'var(--surface-3)', color: val === n ? '#fff' : 'var(--text-2)', fontWeight: 800, fontSize: 13 }} onClick={() => setAmt('' + n)}>₹{(n / 1000) + 'K'}</button>)}
+              {[1000, 5000, 10000, 25000].map((n) => <button key={n} className="btn-sm" style={{ borderRadius: 11, padding: '0 14px', height: 38, background: val === n ? 'var(--brand)' : 'var(--surface-3)', color: val === n ? '#fff' : 'var(--text-2)', fontWeight: 800, fontSize: 13 }} onClick={() => setAmt('' + n)}>{(n / 1000) + 'K'}</button>)}
             </div>
             <div className="label" style={{ margin: '24px 0 10px' }}>Payment method</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -467,7 +467,7 @@
         <div className="screen-pad" style={{ marginTop: 18 }}>
           <div className="label" style={{ marginBottom: 10 }}>Account</div>
           <div className="card" style={{ overflow: 'hidden' }}>
-            <Item icon="wallet" label="Wallet & balance" sub={fmtINR(app.wallet.available) + ' available'} onClick={() => app.go('wallet')} />
+            <Item icon="wallet" label="Wallet & points" sub={fmtINR(app.wallet.available) + ' available'} onClick={() => app.go('wallet')} />
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="shield" label="KYC & verification" sub="Verified" right={<span className="chip" style={{ background: 'var(--up-bg)', color: 'var(--up)' }}>Done</span>} onClick={() => app.toast('KYC verified', 'shield')} />
             <div className="divider" style={{ marginLeft: 62 }} />
@@ -483,7 +483,7 @@
           <div className="card" style={{ overflow: 'hidden' }}>
             <Item icon="bell" label="Notifications" right={<Toggle on={app.prefs.notif} onChange={() => app.setPref('notif', !app.prefs.notif)} />} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="eye" label="Hide balances" sub="Mask team value" right={<Toggle on={app.hideBalance} onChange={() => app.setHideBalance(!app.hideBalance)} />} />
+            <Item icon="eye" label="Hide points" sub="Mask team value" right={<Toggle on={app.hideBalance} onChange={() => app.setHideBalance(!app.hideBalance)} />} />
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="bolt" label="Live player alerts" right={<Toggle on={app.prefs.alerts} onChange={() => app.setPref('alerts', !app.prefs.alerts)} />} />
           </div>
@@ -501,7 +501,7 @@
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="bolt" label="Game Rules & Fair Play" sub="How picks, formats & results work" onClick={() => app.go('tradingRules')} />
             <div className="divider" style={{ marginLeft: 62 }} />
-            <Item icon="refresh" label="Refund Policy" sub="Deposit refunds & pick finality" onClick={() => app.go('refundPolicy')} />
+            <Item icon="refresh" label="Redemption Policy" sub="Point redemptions & pick finality" onClick={() => app.go('refundPolicy')} />
             <div className="divider" style={{ marginLeft: 62 }} />
             <Item icon="alert" label="Risk Disclosure" sub="Gameplay involves risk of loss" onClick={() => app.go('riskDisclosure')} />
             <div className="divider" style={{ marginLeft: 62 }} />
@@ -547,12 +547,12 @@
   /* ===================== NOTIFICATIONS ===================== */
   function Notifications({ app }) {
     const items = [
-      { ic: 'arrowUR', c: 'up', t: 'V. Kohli is up 3.4% today', s: 'Your Kohli pick is up +₹2,850 · 2m ago', new: true },
+      { ic: 'arrowUR', c: 'up', t: 'V. Kohli is up 3.4% today', s: 'Your Kohli pick is up +2,850 pts · 2m ago', new: true },
       { ic: 'bolt', c: 'brand', t: 'SIX! Suryakumar Yadav', s: 'SKY\'s value jumped 1.2% on that hit · 5m ago', new: true },
-      { ic: 'arrowDR', c: 'down', t: 'B. Azam dropped below ₹2,200', s: 'Your fade pick is up +₹700 · 22m ago', new: true },
-      { ic: 'clock', c: 'text', t: 'Match pick settled', s: 'J. Bumrah · result +₹1,284 · 3h ago' },
+      { ic: 'arrowDR', c: 'down', t: 'B. Azam dropped below 2,200 pts', s: 'Your fade pick is up +700 pts · 22m ago', new: true },
+      { ic: 'clock', c: 'text', t: 'Match pick settled', s: 'J. Bumrah · result +1,284 pts · 3h ago' },
       { ic: 'trophy', c: 'warn', t: 'You climbed to rank #6', s: 'Leaderboard · this week · 5h ago' },
-      { ic: 'gift', c: 'brand', t: '₹100 bonus credited', s: 'Welcome reward · Yesterday' },
+      { ic: 'gift', c: 'brand', t: '100 bonus points credited', s: 'Welcome reward · Yesterday' },
     ];
     const cmap = { up: ['var(--up-bg)', 'var(--up)'], down: ['var(--down-bg)', 'var(--down)'], brand: ['var(--brand-soft)', 'var(--brand-2)'], warn: ['var(--warn-bg)', 'var(--warn)'], text: ['var(--surface-3)', 'var(--text-2)'] };
     return (
@@ -726,7 +726,7 @@
             <div className="card" style={{ padding: 30, textAlign: 'center' }}>
               <Icon name="search" size={28} style={{ color: 'var(--text-3)', marginBottom: 8 }} />
               <div style={{ fontWeight: 700, fontSize: 14 }}>No matches found</div>
-              <div className="muted" style={{ fontSize: 12, marginTop: 4 }}>Try searching for keywords like "margin", "withdrawal", "KYC", or "liquidation".</div>
+              <div className="muted" style={{ fontSize: 12, marginTop: 4 }}>Try searching for keywords like "KYC", "results", or "fair play".</div>
             </div>
           )}
         </div>
@@ -973,7 +973,7 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      app.toast('Downloading Refund Policy PDF...', 'doc');
+      app.toast('Downloading Redemption Policy PDF...', 'doc');
     };
 
     const filteredSections = useMemo(() => {
@@ -990,7 +990,7 @@
         <div className="appbar solid" style={{ background: 'var(--bg)', gap: 10 }}>
           <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Refund & Cancellation</div>
+            <div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Redemption & Cancellation</div>
             <div className="muted" style={{ fontSize: 11, fontWeight: 600 }}>Effective {meta.effectiveDate || '15 Jul 2026'}</div>
           </div>
           <button className="btn-sm btn-outline" style={{ borderRadius: 10, fontSize: 11.5, gap: 5, display: 'flex', alignItems: 'center' }} onClick={handleDownload}>
@@ -1000,11 +1000,11 @@
 
         <div className="screen-pad" style={{ marginTop: 6 }}>
           <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
-            <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{meta.title || 'Refund & Cancellation Policy'}</div>
-            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Refund & Pick Cancellation Rules'}</div>
+            <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{meta.title || 'Redemption & Cancellation Policy'}</div>
+            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Redemption & Pick Cancellation Rules'}</div>
             <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'var(--bg)', borderRadius: 10 }}>
               <Icon name="search" size={16} style={{ color: 'var(--text-3)' }} />
-              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search refund policy..." style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontSize: 13, width: '100%' }} />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search redemption policy..." style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontSize: 13, width: '100%' }} />
               {q && <button onClick={() => setQ('')}><Icon name="x" size={16} style={{ color: 'var(--text-3)' }} /></button>}
             </div>
           </div>
@@ -1093,7 +1093,7 @@
         <div className="screen-pad" style={{ marginTop: 6 }}>
           <div className="card" style={{ padding: 14, background: 'linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%)' }}>
             <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{meta.title || 'Risk Disclosure Statement'}</div>
-            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Key Risks of Real-Money Gameplay'}</div>
+            <div className="muted" style={{ fontSize: 12, lineHeight: 1.4, marginBottom: 12 }}>{meta.subtitle || 'Key Risks of Points-Based Gameplay'}</div>
             <div className="field" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'var(--bg)', borderRadius: 10 }}>
               <Icon name="search" size={16} style={{ color: 'var(--text-3)' }} />
               <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search risk disclosure..." style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontSize: 13, width: '100%' }} />

@@ -127,8 +127,8 @@
     }, [holdings, players, showToast, back]);
 
     const addFunds = useCallback((val) => {
-      setWallet((w) => ({ ...w, available: +(w.available + val).toFixed(2), tx: [{ id: Date.now(), type: 'deposit', label: 'Added to wallet', amt: val, t: 'Just now', icon: 'deposit' }, ...w.tx] }));
-      showToast(`${LU.fmtINR(val, 0)} added`, 'check'); back();
+      setWallet((w) => ({ ...w, available: +(w.available + val).toFixed(2), tx: [{ id: Date.now(), type: 'deposit', label: 'Points added to wallet', amt: val, t: 'Just now', icon: 'deposit' }, ...w.tx] }));
+      showToast(`${LU.fmtINR(val, 0)} added to your wallet`, 'check'); back();
     }, [showToast, back]);
 
     const setPref = useCallback((k, v) => setPrefs((p) => ({ ...p, [k]: v })), []);

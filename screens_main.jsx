@@ -108,7 +108,7 @@
               <button onClick={() => app.setHideBalance(!app.hideBalance)} style={{ color: '#D6D0F5', display: 'grid', placeItems: 'center' }}><Icon name={app.hideBalance ? 'eyeOff' : 'eye'} size={18} /></button>
             </div>
             <div className="num" style={{ fontSize: 34, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>
-              {app.hideBalance ? '₹ • • • • •' : fmtINR(totals.value)}
+              {app.hideBalance ? '• • • • • pts' : fmtINR(totals.value)}
             </div>
             <div className="row" style={{ gap: 8, marginTop: 6 }}>
               <span className="delta-pill" style={{ background: 'rgba(255,255,255,.16)', color: '#fff' }}>
@@ -117,7 +117,7 @@
               <span style={{ fontSize: 13, color: '#D6D0F5', fontWeight: 600 }}>{app.hideBalance ? '••••' : window.LU.fmtSigned(totals.dayPL)} today</span>
             </div>
             <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
-              <button className="btn btn-sm" style={{ flex: 1, background: '#fff', color: 'var(--brand)', height: 44 }} onClick={() => app.go('addfunds')}><Icon name="plus" size={17} stroke={2.6} /> Add funds</button>
+              <button className="btn btn-sm" style={{ flex: 1, background: '#fff', color: 'var(--brand)', height: 44 }} onClick={() => app.go('addfunds')}><Icon name="plus" size={17} stroke={2.6} /> Add points</button>
               <button className="btn btn-sm" style={{ flex: 1, background: 'rgba(255,255,255,.14)', color: '#fff', height: 44 }} onClick={() => app.setTab('portfolio')}><Icon name="layers" size={17} /> My Team</button>
             </div>
           </div>

@@ -85,7 +85,7 @@
               <Stat label="Open" value={fmtINR(p.dayOpen)} />
               <Stat label="High" value={fmtINR(p.dayHigh)} />
               <Stat label="Low" value={fmtINR(p.dayLow)} />
-              <Stat label="Activity" value={'₹' + fmtNum(p.volume * 1e5)} />
+              <Stat label="Activity" value={fmtNum(p.volume * 1e5) + ' pts'} />
             </div>
           </div>
 
@@ -277,40 +277,40 @@
               <div style={{ marginTop: 10 }}>
                 <div className="label" style={{ marginBottom: 6 }}>Target value</div>
                 <div className="row" style={{ gap: 8 }}>
-                  <div className="field" style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 6 }}><span className="muted" style={{ fontWeight: 800 }}>₹</span><input className="num" value={limit} onChange={(e) => setLimit(e.target.value.replace(/[^0-9.]/g, ''))} inputMode="decimal" style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontWeight: 800, fontSize: 16, width: '100%' }} /></div>
+                  <div className="field" style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 6 }}><input className="num" value={limit} onChange={(e) => setLimit(e.target.value.replace(/[^0-9.]/g, ''))} inputMode="decimal" style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontWeight: 800, fontSize: 16, width: '100%' }} /><span className="muted" style={{ fontWeight: 800 }}>pts</span></div>
                 </div>
               </div>
             )}
 
             {/* amount */}
-            <div className="row-between" style={{ margin: '20px 0 10px' }}><span className="label">{closing ? 'Release' : 'Entry amount'}</span><span className="muted" style={{ fontSize: 11.5, fontWeight: 700 }}>Balance {fmtINR(bal)}</span></div>
+            <div className="row-between" style={{ margin: '20px 0 10px' }}><span className="label">{closing ? 'Release' : 'Entry amount'}</span><span className="muted" style={{ fontSize: 11.5, fontWeight: 700 }}>Available {fmtINR(bal)}</span></div>
             <div className="card" style={{ padding: 16 }}>
               <div className="row" style={{ gap: 4, alignItems: 'center' }}>
-                <span className="num" style={{ fontWeight: 800, fontSize: 30, color: belowMin ? 'var(--down)' : 'var(--text)' }}>₹</span>
                 <input className="num" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ''))} inputMode="numeric"
                   style={{ flex: 1, minWidth: 0, border: 'none', background: 'transparent', outline: 'none', color: belowMin ? 'var(--down)' : 'var(--text)', fontWeight: 800, fontSize: 30 }} />
+                <span className="num" style={{ fontWeight: 800, fontSize: 16, color: belowMin ? 'var(--down)' : 'var(--text-2)' }}>pts</span>
               </div>
               <div className="row-between" style={{ marginTop: 4 }}>
                 <span className="muted num" style={{ fontSize: 12, fontWeight: 700, whiteSpace: 'nowrap' }}>≈ {units.toFixed(units < 1 ? 3 : 2)} units</span>
                 <span className="muted num" style={{ fontSize: 12, fontWeight: 700, whiteSpace: 'nowrap' }}>@ {fmtINR(price)}</span>
               </div>
               <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
-                {[100, 500, 1000, 5000].map((n) => <button key={n} className="btn-sm" style={{ flex: 1, borderRadius: 10, background: amt === n ? 'var(--brand)' : 'var(--surface-3)', color: amt === n ? '#fff' : 'var(--text-2)', fontWeight: 800, fontSize: 12.5, height: 36 }} onClick={() => setAmount('' + n)}>₹{n >= 1000 ? (n / 1000) + 'K' : n}</button>)}
+                {[100, 500, 1000, 5000].map((n) => <button key={n} className="btn-sm" style={{ flex: 1, borderRadius: 10, background: amt === n ? 'var(--brand)' : 'var(--surface-3)', color: amt === n ? '#fff' : 'var(--text-2)', fontWeight: 800, fontSize: 12.5, height: 36 }} onClick={() => setAmount('' + n)}>{n >= 1000 ? (n / 1000) + 'K' : n}</button>)}
               </div>
               <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
-                {[['Min ₹10', 10], ['25%', Math.floor(bal * 0.25)], ['50%', Math.floor(bal * 0.5)], ['Max', Math.floor(side === 'short' ? bal / 0.252 : bal / 1.002)]].map(([l, v]) => <button key={l} className="btn-sm" style={{ flex: 1, borderRadius: 10, background: 'var(--surface-3)', color: 'var(--text-2)', fontWeight: 700, fontSize: 11.5, height: 32 }} onClick={() => setAmount('' + v)}>{l}</button>)}
+                {[['Min 10', 10], ['25%', Math.floor(bal * 0.25)], ['50%', Math.floor(bal * 0.5)], ['Max', Math.floor(side === 'short' ? bal / 0.252 : bal / 1.002)]].map(([l, v]) => <button key={l} className="btn-sm" style={{ flex: 1, borderRadius: 10, background: 'var(--surface-3)', color: 'var(--text-2)', fontWeight: 700, fontSize: 11.5, height: 32 }} onClick={() => setAmount('' + v)}>{l}</button>)}
               </div>
             </div>
-            <p className="muted row" style={{ fontSize: 11.5, marginTop: 8, gap: 6 }}><Icon name="info" size={14} style={{ flexShrink: 0, color: belowMin ? 'var(--down)' : 'var(--brand-2)' }} />{belowMin ? 'Minimum entry is ₹10.' : `Enter with any amount from ₹10 — you'll hold ${units.toFixed(units < 1 ? 3 : 2)} player units.`}</p>
+            <p className="muted row" style={{ fontSize: 11.5, marginTop: 8, gap: 6 }}><Icon name="info" size={14} style={{ flexShrink: 0, color: belowMin ? 'var(--down)' : 'var(--brand-2)' }} />{belowMin ? 'Minimum entry is 10 points.' : `Enter with any amount from 10 points — you'll hold ${units.toFixed(units < 1 ? 3 : 2)} player units.`}</p>
 
             {/* summary */}
             <div className="card" style={{ padding: 16, marginTop: 12 }}>
               {[['Pick type', orderType === 'market' ? 'Instant' : 'Target @ ' + fmtINR(+limit || p.price)], ['Est. player value', fmtINR(price)], ['Entry amount', fmtINR(amt)], ['≈ Units', units.toFixed(units < 1 ? 3 : 2)], ['Platform fee (0.2%)', fmtINR(fee)]].map(([l, v], i) => (
                 <div key={i} className="row-between" style={{ padding: '5px 0' }}><span className="muted" style={{ fontSize: 13 }}>{l}</span><span className="num" style={{ fontWeight: 700, fontSize: 13.5 }}>{v}</span></div>
               ))}
-              {side === 'short' && <div className="row-between" style={{ padding: '5px 0' }}><span className="muted" style={{ fontSize: 13 }}>Fade deposit (25%)</span><span className="num" style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--warn)' }}>{fmtINR(margin)}</span></div>}
+              {side === 'short' && <div className="row-between" style={{ padding: '5px 0' }}><span className="muted" style={{ fontSize: 13 }}>Points held (25%)</span><span className="num" style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--warn)' }}>{fmtINR(margin)}</span></div>}
               <div className="divider" style={{ margin: '8px 0' }} />
-              <div className="row-between"><span style={{ fontWeight: 800, fontSize: 14.5 }}>{side === 'short' ? 'Deposit required' : 'Total payable'}</span><span className="num" style={{ fontWeight: 800, fontSize: 16 }}>{fmtINR(need)}</span></div>
+              <div className="row-between"><span style={{ fontWeight: 800, fontSize: 14.5 }}>{side === 'short' ? 'Points required' : 'Total points'}</span><span className="num" style={{ fontWeight: 800, fontSize: 16 }}>{fmtINR(need)}</span></div>
               <div className="row-between" style={{ marginTop: 8 }}><span className="muted" style={{ fontSize: 12 }}>Wallet used</span><span className="muted num" style={{ fontSize: 12, fontWeight: 700 }}>{pct}% of {fmtINR(bal)}</span></div>
               <div className="meter" style={{ marginTop: 6 }}><i style={{ width: pct + '%', background: insufficient ? 'var(--down)' : 'var(--brand-2)' }} /></div>
             </div>
@@ -322,7 +322,7 @@
         <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '12px 18px calc(14px)', background: 'var(--nav-bg)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', borderTop: '1px solid var(--border)', zIndex: 40 }}>
           <button className={'btn btn-block ' + (side === 'long' ? 'btn-up' : 'btn-down')} disabled={insufficient}
             onClick={() => app.executeTrade({ pid: p.id, side, amount: amt, qty: units, horizon, price, closing, entryBall: horizon === 'Over' ? window.LU.match.ball : null })}>
-            {belowMin ? 'Enter at least ₹10' : insufficient ? 'Insufficient balance' : `${closing ? 'Release' : side === 'long' ? 'Back' : 'Fade'} ${p.short} · ${fmtINR(need)}`}
+            {belowMin ? 'Enter at least 10 points' : insufficient ? 'Not enough points' : `${closing ? 'Release' : side === 'long' ? 'Back' : 'Fade'} ${p.short} · ${fmtINR(need)}`}
           </button>
         </div>
       </div>
@@ -354,13 +354,13 @@
         <div className="screen-pad">
           <div className="card" style={{ padding: 18 }}>
             <div className="row-between"><span className="label">Team value</span><span className="muted" style={{ fontSize: 12, fontWeight: 700 }}>Entered {fmtINR(t.invested)}</span></div>
-            <div className="num" style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>{app.hideBalance ? '₹ • • • •' : fmtINR(t.value)}</div>
+            <div className="num" style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>{app.hideBalance ? '• • • • pts' : fmtINR(t.value)}</div>
             <div className="row" style={{ gap: 10, marginTop: 8 }}>
               <Delta value={t.totalPct} pill /><span className="muted" style={{ fontSize: 13, fontWeight: 600 }}>{app.hideBalance ? '••••' : fmtSigned(t.totalPL)} all-time</span>
             </div>
             <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
               <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Today's result</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3, color: t.dayPL >= 0 ? 'var(--up)' : 'var(--down)' }}>{fmtSigned(t.dayPL)}</div></div>
-              <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Wallet balance</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3 }}>{fmtINR(app.wallet.available)}</div></div>
+              <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Available points</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3 }}>{fmtINR(app.wallet.available)}</div></div>
             </div>
           </div>
         </div>

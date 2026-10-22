@@ -30,7 +30,7 @@
         <window.TweakSection label="Game simulation" />
         <window.TweakToggle label="Live ticking values" value={app.live}
           onChange={(v) => app.setLive(v)} />
-        <window.TweakToggle label="Hide balances" value={app.hideBalance}
+        <window.TweakToggle label="Hide points" value={app.hideBalance}
           onChange={(v) => app.setHideBalance(v)} />
         <window.TweakToggle label="Player alerts" value={app.prefs.alerts}
           onChange={(v) => app.setPref('alerts', v)} />

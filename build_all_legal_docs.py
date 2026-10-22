@@ -575,7 +575,7 @@ def generate_section_html(meta, sections_or_parts, is_parts=False):
         <a href="terms.html">Terms &amp; Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="trading-rules.html">Game Rules &amp; Fair Play</a>
-        <a href="refund-policy.html">Refund Policy</a>
+        <a href="refund-policy.html">Redemption Policy</a>
         <a href="risk-disclosure.html">Risk Disclosure</a>
       </div>
     </div>

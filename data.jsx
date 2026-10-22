@@ -31,7 +31,7 @@
     if (rest) last3 = ',' + last3;
     rest = rest.replace(/\B(?=(\d{2})+(?!\d))/g, ',');
     const s = rest + last3 + (dec ? '.' + frac : '');
-    return (neg ? '-₹' : '₹') + s;
+    return (neg ? '-' : '') + s + ' pts';
   };
   const fmtNum = (n) => {
     if (Math.abs(n) >= 1e7) return (n / 1e7).toFixed(2) + ' Cr';
@@ -143,7 +143,7 @@
     ball: '17.2', // current over.ball
     striker: 'surya', nonStriker: 'hardik', bowler: 'cummins',
     crr: 10.27, rrr: null,
-    // recent ball events newest-last; t = price effect player id, imp = ₹ move
+    // recent ball events newest-last; t = price effect player id, imp = points move
     timeline: [
       { o: '17.2', r: '6', t: 'surya', txt: 'SIX! Surya pulls Cummins over deep mid-wicket', big: true, imp: 14.2, up: true },
       { o: '17.1', r: '1', t: 'hardik', txt: 'Pandya tucks to fine leg, quick single', imp: 1.1, up: true },
@@ -200,12 +200,12 @@
   const wallet = {
     balance: 48250.75, invested: 132480.0, available: 48250.75,
     tx: [
-      { id: 1, type: 'buy', label: 'Backed V. Kohli · ₹11,240', amt: -11240.0, t: '2m ago', icon: 'long' },
-      { id: 2, type: 'sell', label: 'Released G. Maxwell · ₹8,060', amt: +8060.0, t: '18m ago', icon: 'short' },
-      { id: 3, type: 'deposit', label: 'Added via UPI', amt: +25000.0, t: '1h ago', icon: 'deposit' },
+      { id: 1, type: 'buy', label: 'Backed V. Kohli · 11,240 pts', amt: -11240.0, t: '2m ago', icon: 'long' },
+      { id: 2, type: 'sell', label: 'Released G. Maxwell · 8,060 pts', amt: +8060.0, t: '18m ago', icon: 'short' },
+      { id: 3, type: 'deposit', label: 'Points added via UPI', amt: +25000.0, t: '1h ago', icon: 'deposit' },
       { id: 4, type: 'settle', label: 'Match pick settled · J. Bumrah', amt: +1284.0, t: '3h ago', icon: 'settle' },
-      { id: 5, type: 'buy', label: 'Faded B. Azam · ₹22,700', amt: -22700.0, t: '5h ago', icon: 'short' },
-      { id: 6, type: 'deposit', label: 'Added via Card', amt: +15000.0, t: 'Yesterday', icon: 'deposit' },
+      { id: 5, type: 'buy', label: 'Faded B. Azam · 22,700 pts', amt: -22700.0, t: '5h ago', icon: 'short' },
+      { id: 6, type: 'deposit', label: 'Points added via Card', amt: +15000.0, t: 'Yesterday', icon: 'deposit' },
     ],
   };
 

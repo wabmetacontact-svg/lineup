@@ -78,7 +78,7 @@
           if (Math.random() > 0.4) return;
           var base = parseFloat(el.getAttribute('data-jitter'));
           var v = base + (Math.random() - 0.5) * base * 0.01;
-          el.textContent = '₹' + v.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+          el.textContent = v.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' pts';
           el.style.color = v >= base ? 'var(--up)' : 'var(--down)';
           setTimeout(function () { el.style.color = ''; }, 600);
         });
@@ -118,7 +118,7 @@
       ['RS', 'R. Sharma', 'IND', 'BAT', '#2A6FDB', '#1B4F9E', 2410.0, -1.18, 'm'],
       ['BS', 'B. Stokes', 'ENG', 'AR', '#4257C7', '#2c3a8f', 1845.7, 1.47, 'l']
     ];
-    function inr(n) { return '₹' + n.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
+    function inr(n) { return n.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' pts'; }
     function avatarURI(initials, c1, c2, id) {
       var fs = initials.length > 2 ? 32 : 42;
       var svg = "<svg xmlns='http://www.w3.org/2000/svg' width='112' height='112'>" +
