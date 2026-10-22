@@ -101,7 +101,7 @@
     buildTweaks();
   });
 
-  /* ---- Trading players rail (shared, every page) ---- */
+  /* ---- Players rail (shared, every page) ---- */
   function buildRail() {
     var host = document.getElementById('players-rail');
     if (!host) return;
@@ -143,7 +143,7 @@
     // two identical sets so the -50% loop is seamless
     var setA = P.map(function (p, i) { return chip(p, i, ''); }).join('');
     var setB = P.map(function (p, i) { return chip(p, i, '-b'); }).join('');
-    host.innerHTML = '<div class="rail-track" aria-label="Live player prices">' + setA + setB + '</div>';
+    host.innerHTML = '<div class="rail-track" aria-label="Live player values">' + setA + setB + '</div>';
 
     // mirror a dropped cartoon from the primary chip onto its marquee twin
     function syncTwins() {

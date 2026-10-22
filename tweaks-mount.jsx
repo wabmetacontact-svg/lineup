@@ -27,12 +27,12 @@
           </div>
         </div>
 
-        <window.TweakSection label="Market simulation" />
-        <window.TweakToggle label="Live ticking prices" value={app.live}
+        <window.TweakSection label="Game simulation" />
+        <window.TweakToggle label="Live ticking values" value={app.live}
           onChange={(v) => app.setLive(v)} />
         <window.TweakToggle label="Hide balances" value={app.hideBalance}
           onChange={(v) => app.setHideBalance(v)} />
-        <window.TweakToggle label="Price alerts" value={app.prefs.alerts}
+        <window.TweakToggle label="Player alerts" value={app.prefs.alerts}
           onChange={(v) => app.setPref('alerts', v)} />
 
         <window.TweakSection label="Session" />

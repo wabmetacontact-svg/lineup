@@ -1,5 +1,5 @@
 /* ============================================================================
-   LineUp — Screens B: Player detail, Trade ticket, Portfolio
+   LineUp — Screens B: Player detail, Pick ticket, My Team
    ============================================================================ */
 (function () {
   const { useState, useMemo } = React;
@@ -52,9 +52,9 @@
         </div>
 
         <div className="viewport">
-          {/* price */}
+          {/* player value */}
           <div className="screen-pad fade-up" style={{ marginTop: 4 }}>
-            {p.playing && <span className="chip" style={{ background: 'var(--down-bg)', color: 'var(--live)', marginBottom: 8 }}><span className="live-dot" /> Trading live · batting</span>}
+            {p.playing && <span className="chip" style={{ background: 'var(--down-bg)', color: 'var(--live)', marginBottom: 8 }}><span className="live-dot" /> In play · batting</span>}
             <div className="num" style={{ fontSize: 38, fontWeight: 800, letterSpacing: '-0.03em' }}>{fmtINR(p.price)}</div>
             <div className="row" style={{ gap: 8, marginTop: 4 }}>
               <Delta value={p.change} abs={p.changeAbs} pill size={13.5} />
@@ -85,7 +85,7 @@
               <Stat label="Open" value={fmtINR(p.dayOpen)} />
               <Stat label="High" value={fmtINR(p.dayHigh)} />
               <Stat label="Low" value={fmtINR(p.dayLow)} />
-              <Stat label="Volume" value={'₹' + fmtNum(p.volume * 1e5)} />
+              <Stat label="Activity" value={'₹' + fmtNum(p.volume * 1e5)} />
             </div>
           </div>
 
@@ -136,7 +136,7 @@
                   </div>
                 ))}
               </div>
-              <p className="muted" style={{ fontSize: 11.5, lineHeight: 1.5, marginTop: 12, marginBottom: 0 }}>Price = base (supply/demand) × performance index, recalculated live from runs, wickets &amp; catches. Capped per match to prevent manipulation.</p>
+              <p className="muted" style={{ fontSize: 11.5, lineHeight: 1.5, marginTop: 12, marginBottom: 0 }}>Player value = base (fan demand) × performance index, recalculated live from runs, wickets &amp; catches. Capped per match to keep play fair.</p>
               <div className="divider" style={{ margin: '14px 0' }} />
               <div className="label" style={{ marginBottom: 10 }}>Recent form · last 6</div>
               <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8, height: 56 }}>
@@ -150,12 +150,12 @@
             </div>
           </div>
 
-          {/* why moving (if playing) */}
+          {/* what's driving it (if playing) */}
           {p.playing && (
             <div className="screen-pad" style={{ marginTop: 18 }}>
               <div className="card" style={{ padding: 16 }}>
                 <div className="row-between" style={{ marginBottom: 12 }}>
-                  <span style={{ fontWeight: 800, fontSize: 14.5 }}>Why it's moving</span>
+                  <span style={{ fontWeight: 800, fontSize: 14.5 }}>What's driving it</span>
                   <button className="row" style={{ gap: 3, color: 'var(--brand-2)', fontSize: 12.5, fontWeight: 700 }} onClick={() => app.go('live')}>Live match <Icon name="chevR" size={15} /></button>
                 </div>
                 {window.LU.match.timeline.filter((e) => e.t === p.id).slice(0, 3).map((e, i) => (
@@ -169,21 +169,21 @@
             </div>
           )}
 
-          {/* your position */}
+          {/* your pick */}
           {hold && (() => { const pl = app.holdingPL(hold); return (
             <div className="screen-pad" style={{ marginTop: 18 }}>
-              <div className="label" style={{ marginBottom: 10 }}>Your position</div>
+              <div className="label" style={{ marginBottom: 10 }}>Your pick</div>
               <div className="card" style={{ padding: 16 }}>
                 <div className="row-between">
-                  <span className="chip" style={{ background: hold.side === 'long' ? 'var(--up-bg)' : 'var(--down-bg)', color: hold.side === 'long' ? 'var(--up)' : 'var(--down)' }}>{hold.side === 'long' ? 'BUY' : 'SELL'} · {hold.horizon}{hold.horizon === 'Scalp' && hold.entryBall ? ' · ball ' + hold.entryBall : ''}</span>
+                  <span className="chip" style={{ background: hold.side === 'long' ? 'var(--up-bg)' : 'var(--down-bg)', color: hold.side === 'long' ? 'var(--up)' : 'var(--down)' }}>{hold.side === 'long' ? 'BACK' : 'FADE'} · {hold.horizon}{hold.horizon === 'Over' && hold.entryBall ? ' · ball ' + hold.entryBall : ''}</span>
                   <Delta value={pl.pct} pill />
                 </div>
                 <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
                   <Stat label="Units" value={(+hold.qty).toFixed(hold.qty < 1 ? 3 : 2)} />
                   <Stat label="Avg entry" value={fmtINR(hold.avg)} />
-                  <Stat label="P&L" value={fmtSigned(pl.abs)} />
+                  <Stat label="Result" value={fmtSigned(pl.abs)} />
                 </div>
-                <button className="btn btn-outline btn-block btn-sm" style={{ marginTop: 14 }} onClick={() => app.go('trade', { id: p.id, close: hold })}>Close / modify position</button>
+                <button className="btn btn-outline btn-block btn-sm" style={{ marginTop: 14 }} onClick={() => app.go('trade', { id: p.id, close: hold })}>Release / edit pick</button>
               </div>
             </div>
           ); })()}
@@ -191,26 +191,26 @@
           <div style={{ height: 20 }} />
         </div>
 
-        {/* sticky trade bar */}
+        {/* sticky pick bar */}
         <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '12px 18px calc(14px)', background: 'var(--nav-bg)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', borderTop: '1px solid var(--border)', display: 'flex', gap: 10, zIndex: 40 }}>
-          <button className="btn btn-down" style={{ flex: 1 }} onClick={() => app.go('trade', { id: p.id, side: 'short' })}>Sell</button>
-          <button className="btn btn-up" style={{ flex: 1 }} onClick={() => app.go('trade', { id: p.id, side: 'long' })}>Buy</button>
+          <button className="btn btn-down" style={{ flex: 1 }} onClick={() => app.go('trade', { id: p.id, side: 'short' })}>Fade</button>
+          <button className="btn btn-up" style={{ flex: 1 }} onClick={() => app.go('trade', { id: p.id, side: 'long' })}>Back</button>
         </div>
       </div>
     );
   }
 
-  /* ===================== TRADE TICKET ===================== */
+  /* ===================== PICK TICKET ===================== */
   const HORIZONS = [
-    { k: 'Scalp', d: 'Seconds–minutes · per over/ball', ic: 'bolt' },
-    { k: 'Day', d: 'Within the match · auto-settles at end', ic: 'clock' },
-    { k: 'Swing', d: 'Days–weeks · Test matches', ic: 'swap' },
-    { k: 'Position', d: 'Weeks–months · full tournament', ic: 'trophy' },
+    { k: 'Over', d: 'Seconds–minutes · per over/ball', ic: 'bolt' },
+    { k: 'Match', d: 'Within the match · auto-settles at end', ic: 'clock' },
+    { k: 'Series', d: 'Days–weeks · Test matches', ic: 'swap' },
+    { k: 'Season', d: 'Weeks–months · full tournament', ic: 'trophy' },
   ];
   function TradeTicket({ app, params }) {
     const p = app.byId[params.id];
     const [side, setSide] = useState(params.side || (params.close ? params.close.side : 'long'));
-    const [horizon, setHorizon] = useState(params.close ? params.close.horizon : (params.horizon || (p.playing ? 'Day' : 'Position')));
+    const [horizon, setHorizon] = useState(params.close ? params.close.horizon : (params.horizon || (p.playing ? 'Match' : 'Season')));
     const [orderType, setOrderType] = useState('market');
     const [limit, setLimit] = useState(p.price.toFixed(0));
     const closing = !!params.close;
@@ -231,25 +231,25 @@
       <div className="screen" style={{ paddingBottom: 96 }}>
         <div className="appbar solid" style={{ background: 'var(--bg)' }}>
           <button className="back-btn" onClick={app.back}><Icon name="chevL" size={22} /></button>
-          <div className="row" style={{ flex: 1, gap: 10, minWidth: 0 }}><Avatar player={p} size={34} /><div style={{ minWidth: 0 }}><div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{closing ? 'Close' : 'Trade'} {p.short}</div><div className="num muted" style={{ fontSize: 11.5, fontWeight: 700 }}>{fmtINR(p.price)} · {fmtPct(p.change)}</div></div></div>
+          <div className="row" style={{ flex: 1, gap: 10, minWidth: 0 }}><Avatar player={p} size={34} /><div style={{ minWidth: 0 }}><div style={{ fontWeight: 800, fontSize: 15, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{closing ? 'Release' : 'Play'} {p.short}</div><div className="num muted" style={{ fontSize: 11.5, fontWeight: 700 }}>{fmtINR(p.price)} · {fmtPct(p.change)}</div></div></div>
         </div>
 
         <div className="viewport" style={{ overflow: 'auto' }}>
           <div className="screen-pad" style={{ marginTop: 6 }}>
-            {/* long/short */}
+            {/* back/fade */}
             <div className="ls-toggle">
               <button className={'ls-btn' + (side === 'long' ? ' on-long' : '')} onClick={() => setSide('long')}>
-                <span className="row" style={{ gap: 6 }}><Icon name="arrowUR" size={18} stroke={2.4} /> Buy</span>
-                <small>Profit if price rises</small>
+                <span className="row" style={{ gap: 6 }}><Icon name="arrowUR" size={18} stroke={2.4} /> Back</span>
+                <small>Gain if value rises</small>
               </button>
               <button className={'ls-btn' + (side === 'short' ? ' on-short' : '')} onClick={() => setSide('short')}>
-                <span className="row" style={{ gap: 6 }}><Icon name="arrowDR" size={18} stroke={2.4} /> Sell</span>
-                <small>Profit if price falls</small>
+                <span className="row" style={{ gap: 6 }}><Icon name="arrowDR" size={18} stroke={2.4} /> Fade</span>
+                <small>Gain if value drops</small>
               </button>
             </div>
 
-            {/* horizon */}
-            <div className="label" style={{ margin: '20px 0 10px' }}>Trade horizon</div>
+            {/* game format */}
+            <div className="label" style={{ margin: '20px 0 10px' }}>Game format</div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
               {HORIZONS.map((h) => (
                 <button key={h.k} className="card tap" style={{ padding: 12, textAlign: 'left', border: horizon === h.k ? '1.5px solid var(--brand-2)' : '1px solid var(--border)', background: horizon === h.k ? 'var(--brand-soft)' : 'var(--surface)' }} onClick={() => setHorizon(h.k)}>
@@ -259,23 +259,23 @@
                 </button>
               ))}
             </div>
-            {horizon === 'Scalp' && (
+            {horizon === 'Over' && (
               <div className="card" style={{ padding: '11px 13px', marginTop: 10, display: 'flex', alignItems: 'center', gap: 10, background: 'var(--brand-soft)', border: '1px solid var(--border-2)' }}>
                 <span className="live-dot" />
-                <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 12.5 }}>Entry at ball {window.LU.match.ball}</div><div className="muted" style={{ fontSize: 10.5, fontWeight: 600 }}>Scalp trades are stamped to the live ball &amp; settle per over</div></div>
+                <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 12.5 }}>Entry at ball {window.LU.match.ball}</div><div className="muted" style={{ fontSize: 10.5, fontWeight: 600 }}>Over picks are stamped to the live ball &amp; settle per over</div></div>
                 <span className="num chip" style={{ background: 'var(--surface)', color: 'var(--brand-2)', height: 26 }}>Over {window.LU.match.ball}</span>
               </div>
             )}
 
-            {/* order type */}
+            {/* pick type */}
             <div className="row" style={{ gap: 8, marginTop: 20 }}>
               <div className="seg" style={{ flex: 1 }}>
-                {['market', 'limit'].map((o) => <button key={o} className={orderType === o ? 'on' : ''} onClick={() => setOrderType(o)} style={{ textTransform: 'capitalize' }}>{o}</button>)}
+                {['market', 'limit'].map((o) => <button key={o} className={orderType === o ? 'on' : ''} onClick={() => setOrderType(o)} >{o === 'market' ? 'Instant' : 'Target value'}</button>)}
               </div>
             </div>
             {orderType === 'limit' && (
               <div style={{ marginTop: 10 }}>
-                <div className="label" style={{ marginBottom: 6 }}>Limit price</div>
+                <div className="label" style={{ marginBottom: 6 }}>Target value</div>
                 <div className="row" style={{ gap: 8 }}>
                   <div className="field" style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 6 }}><span className="muted" style={{ fontWeight: 800 }}>₹</span><input className="num" value={limit} onChange={(e) => setLimit(e.target.value.replace(/[^0-9.]/g, ''))} inputMode="decimal" style={{ border: 'none', background: 'transparent', outline: 'none', color: 'var(--text)', fontWeight: 800, fontSize: 16, width: '100%' }} /></div>
                 </div>
@@ -283,7 +283,7 @@
             )}
 
             {/* amount */}
-            <div className="row-between" style={{ margin: '20px 0 10px' }}><span className="label">{closing ? 'Close' : 'Invest'}</span><span className="muted" style={{ fontSize: 11.5, fontWeight: 700 }}>Balance {fmtINR(bal)}</span></div>
+            <div className="row-between" style={{ margin: '20px 0 10px' }}><span className="label">{closing ? 'Release' : 'Entry amount'}</span><span className="muted" style={{ fontSize: 11.5, fontWeight: 700 }}>Balance {fmtINR(bal)}</span></div>
             <div className="card" style={{ padding: 16 }}>
               <div className="row" style={{ gap: 4, alignItems: 'center' }}>
                 <span className="num" style={{ fontWeight: 800, fontSize: 30, color: belowMin ? 'var(--down)' : 'var(--text)' }}>₹</span>
@@ -301,73 +301,73 @@
                 {[['Min ₹10', 10], ['25%', Math.floor(bal * 0.25)], ['50%', Math.floor(bal * 0.5)], ['Max', Math.floor(side === 'short' ? bal / 0.252 : bal / 1.002)]].map(([l, v]) => <button key={l} className="btn-sm" style={{ flex: 1, borderRadius: 10, background: 'var(--surface-3)', color: 'var(--text-2)', fontWeight: 700, fontSize: 11.5, height: 32 }} onClick={() => setAmount('' + v)}>{l}</button>)}
               </div>
             </div>
-            <p className="muted row" style={{ fontSize: 11.5, marginTop: 8, gap: 6 }}><Icon name="info" size={14} style={{ flexShrink: 0, color: belowMin ? 'var(--down)' : 'var(--brand-2)' }} />{belowMin ? 'Minimum investment is ₹10.' : `Invest any amount from ₹10 — you'll own ${units.toFixed(units < 1 ? 3 : 2)} fractional units.`}</p>
+            <p className="muted row" style={{ fontSize: 11.5, marginTop: 8, gap: 6 }}><Icon name="info" size={14} style={{ flexShrink: 0, color: belowMin ? 'var(--down)' : 'var(--brand-2)' }} />{belowMin ? 'Minimum entry is ₹10.' : `Enter with any amount from ₹10 — you'll hold ${units.toFixed(units < 1 ? 3 : 2)} player units.`}</p>
 
             {/* summary */}
             <div className="card" style={{ padding: 16, marginTop: 12 }}>
-              {[['Order type', orderType === 'market' ? 'Market' : 'Limit @ ' + fmtINR(+limit || p.price)], ['Est. price', fmtINR(price)], ['Investment', fmtINR(amt)], ['≈ Units', units.toFixed(units < 1 ? 3 : 2)], ['Platform fee (0.2%)', fmtINR(fee)]].map(([l, v], i) => (
+              {[['Pick type', orderType === 'market' ? 'Instant' : 'Target @ ' + fmtINR(+limit || p.price)], ['Est. player value', fmtINR(price)], ['Entry amount', fmtINR(amt)], ['≈ Units', units.toFixed(units < 1 ? 3 : 2)], ['Platform fee (0.2%)', fmtINR(fee)]].map(([l, v], i) => (
                 <div key={i} className="row-between" style={{ padding: '5px 0' }}><span className="muted" style={{ fontSize: 13 }}>{l}</span><span className="num" style={{ fontWeight: 700, fontSize: 13.5 }}>{v}</span></div>
               ))}
-              {side === 'short' && <div className="row-between" style={{ padding: '5px 0' }}><span className="muted" style={{ fontSize: 13 }}>Margin (25%)</span><span className="num" style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--warn)' }}>{fmtINR(margin)}</span></div>}
+              {side === 'short' && <div className="row-between" style={{ padding: '5px 0' }}><span className="muted" style={{ fontSize: 13 }}>Fade deposit (25%)</span><span className="num" style={{ fontWeight: 700, fontSize: 13.5, color: 'var(--warn)' }}>{fmtINR(margin)}</span></div>}
               <div className="divider" style={{ margin: '8px 0' }} />
-              <div className="row-between"><span style={{ fontWeight: 800, fontSize: 14.5 }}>{side === 'short' ? 'Margin required' : 'Total payable'}</span><span className="num" style={{ fontWeight: 800, fontSize: 16 }}>{fmtINR(need)}</span></div>
-              <div className="row-between" style={{ marginTop: 8 }}><span className="muted" style={{ fontSize: 12 }}>Buying power used</span><span className="muted num" style={{ fontSize: 12, fontWeight: 700 }}>{pct}% of {fmtINR(bal)}</span></div>
+              <div className="row-between"><span style={{ fontWeight: 800, fontSize: 14.5 }}>{side === 'short' ? 'Deposit required' : 'Total payable'}</span><span className="num" style={{ fontWeight: 800, fontSize: 16 }}>{fmtINR(need)}</span></div>
+              <div className="row-between" style={{ marginTop: 8 }}><span className="muted" style={{ fontSize: 12 }}>Wallet used</span><span className="muted num" style={{ fontSize: 12, fontWeight: 700 }}>{pct}% of {fmtINR(bal)}</span></div>
               <div className="meter" style={{ marginTop: 6 }}><i style={{ width: pct + '%', background: insufficient ? 'var(--down)' : 'var(--brand-2)' }} /></div>
             </div>
-            {side === 'short' && <p className="muted row" style={{ fontSize: 11.5, marginTop: 10, gap: 6, lineHeight: 1.4 }}><Icon name="info" size={15} style={{ flexShrink: 0, color: 'var(--warn)' }} /> Sell positions profit when the price falls, but carry risk if the player outperforms. A circuit breaker caps daily moves at ±20%.</p>}
+            {side === 'short' && <p className="muted row" style={{ fontSize: 11.5, marginTop: 10, gap: 6, lineHeight: 1.4 }}><Icon name="info" size={15} style={{ flexShrink: 0, color: 'var(--warn)' }} /> Fade picks gain when a player's value drops, but carry risk if the player outperforms. A circuit breaker caps daily value changes at ±20%.</p>}
             <div style={{ height: 12 }} />
           </div>
         </div>
 
         <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '12px 18px calc(14px)', background: 'var(--nav-bg)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', borderTop: '1px solid var(--border)', zIndex: 40 }}>
           <button className={'btn btn-block ' + (side === 'long' ? 'btn-up' : 'btn-down')} disabled={insufficient}
-            onClick={() => app.executeTrade({ pid: p.id, side, amount: amt, qty: units, horizon, price, closing, entryBall: horizon === 'Scalp' ? window.LU.match.ball : null })}>
-            {belowMin ? 'Enter at least ₹10' : insufficient ? 'Insufficient balance' : `${closing ? 'Close' : side === 'long' ? 'Buy' : 'Sell'} ${p.short} · ${fmtINR(need)}`}
+            onClick={() => app.executeTrade({ pid: p.id, side, amount: amt, qty: units, horizon, price, closing, entryBall: horizon === 'Over' ? window.LU.match.ball : null })}>
+            {belowMin ? 'Enter at least ₹10' : insufficient ? 'Insufficient balance' : `${closing ? 'Release' : side === 'long' ? 'Back' : 'Fade'} ${p.short} · ${fmtINR(need)}`}
           </button>
         </div>
       </div>
     );
   }
 
-  /* ===================== PORTFOLIO ===================== */
+  /* ===================== MY TEAM ===================== */
   function Portfolio({ app }) {
     const [view, setView] = useState('positions');
     const [hz, setHz] = useState('All');
     const HZ = window.LU.HZ;
     const t = app.portfolioTotals();
     const sorted = [...app.holdings].filter((h) => hz === 'All' || h.horizon === hz).sort((a, b) => app.holdingPL(b).abs - app.holdingPL(a).abs);
-    // allocation by horizon
+    // split by game format
     const alloc = useMemo(() => {
       const m = {};
       app.holdings.forEach((h) => { const v = app.byId[h.pid].price * h.qty; m[h.horizon] = (m[h.horizon] || 0) + v; });
       const tot = Object.values(m).reduce((s, v) => s + v, 0) || 1;
-      const colors = { Scalp: '#E0863A', Day: '#5B4BD6', Swing: '#3A86E0', Position: '#1FAA6E' };
+      const colors = { Over: '#E0863A', Match: '#5B4BD6', Series: '#3A86E0', Season: '#1FAA6E' };
       return Object.entries(m).map(([k, v]) => ({ k, v, pct: v / tot * 100, c: colors[k] || '#888' })).sort((a, b) => b.v - a.v);
     }, [app.holdings, app.players]);
 
     return (
       <div className="screen screen-scroll">
-        <div className="appbar"><div style={{ flex: 1 }}><h1>Portfolio</h1><div className="sub">{app.holdings.length} open positions</div></div>
+        <div className="appbar"><div style={{ flex: 1 }}><h1>My Team</h1><div className="sub">{app.holdings.length} active picks</div></div>
           <button className="icon-btn" onClick={() => app.go('history')}><Icon name="history" size={20} /></button></div>
 
         {/* summary */}
         <div className="screen-pad">
           <div className="card" style={{ padding: 18 }}>
-            <div className="row-between"><span className="label">Total value</span><span className="muted" style={{ fontSize: 12, fontWeight: 700 }}>Invested {fmtINR(t.invested)}</span></div>
+            <div className="row-between"><span className="label">Team value</span><span className="muted" style={{ fontSize: 12, fontWeight: 700 }}>Entered {fmtINR(t.invested)}</span></div>
             <div className="num" style={{ fontSize: 32, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>{app.hideBalance ? '₹ • • • •' : fmtINR(t.value)}</div>
             <div className="row" style={{ gap: 10, marginTop: 8 }}>
               <Delta value={t.totalPct} pill /><span className="muted" style={{ fontSize: 13, fontWeight: 600 }}>{app.hideBalance ? '••••' : fmtSigned(t.totalPL)} all-time</span>
             </div>
             <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
-              <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Today's P&L</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3, color: t.dayPL >= 0 ? 'var(--up)' : 'var(--down)' }}>{fmtSigned(t.dayPL)}</div></div>
-              <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Available cash</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3 }}>{fmtINR(app.wallet.available)}</div></div>
+              <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Today's result</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3, color: t.dayPL >= 0 ? 'var(--up)' : 'var(--down)' }}>{fmtSigned(t.dayPL)}</div></div>
+              <div className="card flat" style={{ flex: 1, padding: 12, background: 'var(--surface-2)', border: 'none' }}><div className="label" style={{ fontSize: 10 }}>Wallet balance</div><div className="num" style={{ fontWeight: 800, fontSize: 15, marginTop: 3 }}>{fmtINR(app.wallet.available)}</div></div>
             </div>
           </div>
         </div>
 
         {/* allocation */}
         <div className="screen-pad" style={{ marginTop: 18 }}>
-          <div className="label" style={{ marginBottom: 10 }}>Allocation by horizon</div>
+          <div className="label" style={{ marginBottom: 10 }}>Team split by format</div>
           <div className="card" style={{ padding: 16 }}>
             <div style={{ display: 'flex', height: 12, borderRadius: 6, overflow: 'hidden', gap: 2 }}>
               {alloc.map((a) => <div key={a.k} style={{ width: a.pct + '%', background: a.c }} />)}
@@ -380,15 +380,15 @@
           </div>
         </div>
 
-        {/* positions */}
+        {/* picks */}
         <div className="screen-pad" style={{ marginTop: 18 }}>
           <div className="seg" style={{ marginBottom: 14 }}>
-            {[['positions', 'Open positions'], ['closed', 'Closed']].map(([k, l]) => <button key={k} className={view === k ? 'on' : ''} onClick={() => setView(k)}>{l}</button>)}
+            {[['positions', 'Active picks'], ['closed', 'Released']].map(([k, l]) => <button key={k} className={view === k ? 'on' : ''} onClick={() => setView(k)}>{l}</button>)}
           </div>
           {view === 'positions' ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div className="pill-tabs" style={{ marginBottom: 2 }}>
-                {['All', 'Scalp', 'Day', 'Swing', 'Position'].map((k) => (
+                {['All', 'Over', 'Match', 'Series', 'Season'].map((k) => (
                   <button key={k} className={'pill-tab' + (hz === k ? ' on' : '')} onClick={() => setHz(k)} style={hz === k && k !== 'All' ? { background: HZ[k].c, borderColor: HZ[k].c } : undefined}>
                     {k !== 'All' && <span style={{ display: 'inline-block', width: 7, height: 7, borderRadius: 2, marginRight: 6, background: hz === k ? '#fff' : HZ[k].c, verticalAlign: 'middle' }} />}{k}
                   </button>
@@ -399,10 +399,10 @@
                   <div className="row" style={{ gap: 12 }}>
                     <Avatar player={p} size={44} />
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div className="row" style={{ gap: 6 }}><span style={{ fontWeight: 800, fontSize: 14.5, whiteSpace: 'nowrap' }}>{p.short}</span><span className="chip" style={{ height: 20, fontSize: 10, padding: '0 7px', background: h.side === 'long' ? 'var(--up-bg)' : 'var(--down-bg)', color: h.side === 'long' ? 'var(--up)' : 'var(--down)' }}>{h.side === 'long' ? 'BUY' : 'SELL'}</span></div>
+                      <div className="row" style={{ gap: 6 }}><span style={{ fontWeight: 800, fontSize: 14.5, whiteSpace: 'nowrap' }}>{p.short}</span><span className="chip" style={{ height: 20, fontSize: 10, padding: '0 7px', background: h.side === 'long' ? 'var(--up-bg)' : 'var(--down-bg)', color: h.side === 'long' ? 'var(--up)' : 'var(--down)' }}>{h.side === 'long' ? 'BACK' : 'FADE'}</span></div>
                       <div className="row" style={{ gap: 6, marginTop: 5 }}>
                         <span className="chip" style={{ height: 21, fontSize: 10.5, padding: '0 8px', background: hc.c + '22', color: hc.c }}><span style={{ width: 6, height: 6, borderRadius: 2, background: hc.c }} />{h.horizon}</span>
-                        <span className="muted" style={{ fontSize: 10.5, fontWeight: 700 }}>{h.horizon === 'Scalp' && h.entryBall ? 'Entry ball ' + h.entryBall : hc.tag}</span>
+                        <span className="muted" style={{ fontSize: 10.5, fontWeight: 700 }}>{h.horizon === 'Over' && h.entryBall ? 'Entry ball ' + h.entryBall : hc.tag}</span>
                       </div>
                     </div>
                     <div style={{ textAlign: 'right' }}>
@@ -412,21 +412,21 @@
                   </div>
                   <div className="divider" style={{ margin: '12px 0 10px' }} />
                   <div className="row-between">
-                    <span className="muted" style={{ fontSize: 11.5, fontWeight: 600 }}>Invested {fmtINR(h.avg * h.qty)} · {(+h.qty).toFixed(h.qty < 1 ? 3 : 2)} units</span>
+                    <span className="muted" style={{ fontSize: 11.5, fontWeight: 600 }}>Entry {fmtINR(h.avg * h.qty)} · {(+h.qty).toFixed(h.qty < 1 ? 3 : 2)} units</span>
                     <span className="num" style={{ fontWeight: 800, fontSize: 13.5, color: pl.abs >= 0 ? 'var(--up)' : 'var(--down)' }}>{fmtSigned(pl.abs)}</span>
                   </div>
                 </button>
               ); })}
-              {sorted.length === 0 && <div className="card" style={{ padding: 40, textAlign: 'center' }}><div className="muted">{hz === 'All' ? 'No open positions yet.' : `No ${hz} positions.`}</div><button className="btn btn-primary btn-sm" style={{ marginTop: 14 }} onClick={() => app.setTab('market')}>Explore market</button></div>}
+              {sorted.length === 0 && <div className="card" style={{ padding: 40, textAlign: 'center' }}><div className="muted">{hz === 'All' ? 'No active picks yet.' : `No ${hz} picks.`}</div><button className="btn btn-primary btn-sm" style={{ marginTop: 14 }} onClick={() => app.setTab('market')}>Explore players</button></div>}
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {app.closed.length === 0 && <div className="card" style={{ padding: 36, textAlign: 'center' }} ><div className="muted">No closed positions in this session.</div></div>}
+              {app.closed.length === 0 && <div className="card" style={{ padding: 36, textAlign: 'center' }} ><div className="muted">No released picks in this session.</div></div>}
               {app.closed.map((c, i) => { const p = app.byId[c.pid]; return (
                 <div key={i} className="card" style={{ padding: 14 }}>
                   <div className="row" style={{ gap: 12 }}>
                     <Avatar player={p} size={40} />
-                    <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 14 }}>{p.short}</div><div className="muted" style={{ fontSize: 11.5, fontWeight: 600 }}>Closed {c.side === 'long' ? 'buy' : 'sell'} · {(+c.qty).toFixed(c.qty < 1 ? 3 : 2)} units</div></div>
+                    <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 14 }}>{p.short}</div><div className="muted" style={{ fontSize: 11.5, fontWeight: 600 }}>Released {c.side === 'long' ? 'back' : 'fade'} · {(+c.qty).toFixed(c.qty < 1 ? 3 : 2)} units</div></div>
                     <span className="num" style={{ fontWeight: 800, fontSize: 14, color: c.pl >= 0 ? 'var(--up)' : 'var(--down)' }}>{fmtSigned(c.pl)}</span>
                   </div>
                 </div>

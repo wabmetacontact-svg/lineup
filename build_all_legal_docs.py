@@ -501,7 +501,7 @@ def generate_section_html(meta, sections_or_parts, is_parts=False):
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="Features.html">Features</a>
-      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Liquidity-Engine.html">Game Engine</a>
       <a href="Contact.html">Contact</a>
     </nav>
     <div class="nav-right">
@@ -574,7 +574,7 @@ def generate_section_html(meta, sections_or_parts, is_parts=False):
       <div class="f-links">
         <a href="terms.html">Terms &amp; Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
-        <a href="trading-rules.html">Trading &amp; Market Rules</a>
+        <a href="trading-rules.html">Game Rules &amp; Fair Play</a>
         <a href="refund-policy.html">Refund Policy</a>
         <a href="risk-disclosure.html">Risk Disclosure</a>
       </div>

@@ -1,3 +1,3 @@
 # lineup
 
-LineUp — Cricket Trading Web Application & Marketing Site.
+LineUp — Live Cricket Gameplay Web Application & Marketing Site.

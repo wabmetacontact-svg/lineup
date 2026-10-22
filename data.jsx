@@ -1,6 +1,6 @@
 /* ============================================================================
    LineUp — Data layer
-   Players (as stocks), live match, portfolio, leaderboard, wallet, helpers
+   Players, live match, team, leaderboard, wallet, helpers
    Exposed on window: LU (namespace)
    ============================================================================ */
 (function () {
@@ -187,12 +187,12 @@
   // ---- portfolio (open positions) ----
   // side long/short, qty, avg entry, horizon
   const holdings = [
-    { pid: 'kohli',   side: 'long',  qty: 12, avg: 2610.0, horizon: 'Position' },
-    { pid: 'bumrah',  side: 'long',  qty: 8,  avg: 2455.5, horizon: 'Day' },
-    { pid: 'maxwell', side: 'long',  qty: 15, avg: 1490.0, horizon: 'Scalp', entryBall: '14.3' },
-    { pid: 'babar',   side: 'short', qty: 10, avg: 2270.0, horizon: 'Swing' },
-    { pid: 'pant',    side: 'long',  qty: 9,  avg: 1810.0, horizon: 'Day' },
-    { pid: 'rashid',  side: 'long',  qty: 6,  avg: 1740.0, horizon: 'Position' },
+    { pid: 'kohli',   side: 'long',  qty: 12, avg: 2610.0, horizon: 'Season' },
+    { pid: 'bumrah',  side: 'long',  qty: 8,  avg: 2455.5, horizon: 'Match' },
+    { pid: 'maxwell', side: 'long',  qty: 15, avg: 1490.0, horizon: 'Over', entryBall: '14.3' },
+    { pid: 'babar',   side: 'short', qty: 10, avg: 2270.0, horizon: 'Series' },
+    { pid: 'pant',    side: 'long',  qty: 9,  avg: 1810.0, horizon: 'Match' },
+    { pid: 'rashid',  side: 'long',  qty: 6,  avg: 1740.0, horizon: 'Season' },
   ];
   const watchlist = ['surya', 'cummins', 'head', 'archer', 'gurbaz', 'rohit'];
 
@@ -200,30 +200,30 @@
   const wallet = {
     balance: 48250.75, invested: 132480.0, available: 48250.75,
     tx: [
-      { id: 1, type: 'buy', label: 'Bought V. Kohli · ₹11,240', amt: -11240.0, t: '2m ago', icon: 'long' },
-      { id: 2, type: 'sell', label: 'Sold G. Maxwell · ₹8,060', amt: +8060.0, t: '18m ago', icon: 'short' },
+      { id: 1, type: 'buy', label: 'Backed V. Kohli · ₹11,240', amt: -11240.0, t: '2m ago', icon: 'long' },
+      { id: 2, type: 'sell', label: 'Released G. Maxwell · ₹8,060', amt: +8060.0, t: '18m ago', icon: 'short' },
       { id: 3, type: 'deposit', label: 'Added via UPI', amt: +25000.0, t: '1h ago', icon: 'deposit' },
-      { id: 4, type: 'settle', label: 'Day position settled · J. Bumrah', amt: +1284.0, t: '3h ago', icon: 'settle' },
-      { id: 5, type: 'buy', label: 'Sold B. Azam · ₹22,700', amt: -22700.0, t: '5h ago', icon: 'short' },
+      { id: 4, type: 'settle', label: 'Match pick settled · J. Bumrah', amt: +1284.0, t: '3h ago', icon: 'settle' },
+      { id: 5, type: 'buy', label: 'Faded B. Azam · ₹22,700', amt: -22700.0, t: '5h ago', icon: 'short' },
       { id: 6, type: 'deposit', label: 'Added via Card', amt: +15000.0, t: 'Yesterday', icon: 'deposit' },
     ],
   };
 
   // ---- leaderboard ----
   const leaders = [
-    { rank: 1, name: 'Arjun Mehta', handle: '@arjun_trades', ret: 184.2, val: 842500, you: false, av: '#E0863A' },
+    { rank: 1, name: 'Arjun Mehta', handle: '@arjun_plays', ret: 184.2, val: 842500, you: false, av: '#E0863A' },
     { rank: 2, name: 'Priya Nair', handle: '@priyaplays', ret: 152.8, val: 610200, you: false, av: '#8B4DE0' },
-    { rank: 3, name: 'Dev Kapoor', handle: '@devthebull', ret: 138.6, val: 528900, you: false, av: '#1FAA6E' },
-    { rank: 4, name: 'Sana Iqbal', handle: '@sana_swing', ret: 121.3, val: 471000, you: false, av: '#3A86E0' },
-    { rank: 5, name: 'Karthik R', handle: '@kartrade', ret: 109.7, val: 402300, you: false, av: '#E03A57' },
+    { rank: 3, name: 'Dev Kapoor', handle: '@dev_xi', ret: 138.6, val: 528900, you: false, av: '#1FAA6E' },
+    { rank: 4, name: 'Sana Iqbal', handle: '@sana_spins', ret: 121.3, val: 471000, you: false, av: '#3A86E0' },
+    { rank: 5, name: 'Karthik R', handle: '@kart_xi', ret: 109.7, val: 402300, you: false, av: '#E03A57' },
     { rank: 6, name: 'You', handle: '@rohan', ret: 96.4, val: 180730, you: true, av: '#5B4BD6' },
     { rank: 7, name: 'Meera Joshi', handle: '@meera_j', ret: 88.1, val: 165400, you: false, av: '#D9892B' },
-    { rank: 8, name: 'Vikram S', handle: '@vik_scalp', ret: 74.5, val: 142800, you: false, av: '#2C3440' },
+    { rank: 8, name: 'Vikram S', handle: '@vik_yorker', ret: 74.5, val: 142800, you: false, av: '#2C3440' },
   ];
 
-  const user = { name: 'Rohan Kapoor', handle: '@rohan', tier: 'Pro Trader', joined: 'Jan 2025', kyc: true, av: '#5B4BD6' };
+  const user = { name: 'Rohan Kapoor', handle: '@rohan', tier: 'Pro Strategist', joined: 'Jan 2025', kyc: true, av: '#5B4BD6' };
 
-  const trendingTags = ['All', 'Live now', 'Top gainers', 'Top losers', 'Batters', 'Bowlers', 'All-rounders', 'Watchlist'];
+  const trendingTags = ['All', 'Live now', 'In form', 'Out of form', 'Batters', 'Bowlers', 'All-rounders', 'Watchlist'];
 
   const statLine = (p) => {
     const s = p.stats;
@@ -256,10 +256,10 @@
     players, byId, match, holdings, watchlist, wallet, leaders, user,
     TEAMS, ROLES, trendingTags, statLine, priceDrivers, chartMarkers,
     HZ: {
-      Scalp: { c: '#E0863A', d: 'Seconds–minutes · per over/ball', tag: 'Auto · live' },
-      Day: { c: '#5B4BD6', d: 'Settles at match end', tag: 'Settles today' },
-      Swing: { c: '#3A86E0', d: 'Days–weeks · Test matches', tag: 'Multi-day' },
-      Position: { c: '#1FAA6E', d: 'Weeks–months · full tournament', tag: 'Long-term' },
+      Over: { c: '#E0863A', d: 'Seconds–minutes · per over/ball', tag: 'Auto · live' },
+      Match: { c: '#5B4BD6', d: 'Settles at match end', tag: 'Settles today' },
+      Series: { c: '#3A86E0', d: 'Days–weeks · Test matches', tag: 'Multi-day' },
+      Season: { c: '#1FAA6E', d: 'Weeks–months · full tournament', tag: 'Long-term' },
     },
     fmtINR, fmtNum, fmtPct, fmtSigned, genSeries, seeded,
   };

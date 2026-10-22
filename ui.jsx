@@ -226,9 +226,9 @@
   function BottomNav({ tab, go }) {
     const items = [
       { k: 'home', icon: 'home', label: 'Home' },
-      { k: 'market', icon: 'market', label: 'Market' },
+      { k: 'market', icon: 'market', label: 'Players' },
       { k: 'trade', icon: 'swap', label: '', fab: true },
-      { k: 'portfolio', icon: 'layers', label: 'Portfolio' },
+      { k: 'portfolio', icon: 'layers', label: 'My Team' },
       { k: 'profile', icon: 'profile', label: 'Profile' },
     ];
     return (

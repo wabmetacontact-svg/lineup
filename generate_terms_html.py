@@ -240,7 +240,7 @@ html_content = f"""<!DOCTYPE html>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="Features.html">Features</a>
-      <a href="Liquidity-Engine.html">Liquidity &amp; Engine</a>
+      <a href="Liquidity-Engine.html">Game Engine</a>
       <a href="Contact.html">Contact</a>
     </nav>
     <div class="nav-right">

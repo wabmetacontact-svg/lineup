@@ -1,5 +1,5 @@
 /* ============================================================================
-   LineUp — Screens A: Onboarding/Login, Home, Market
+   LineUp — Screens A: Onboarding/Login, Home, Players
    ============================================================================ */
 (function () {
   const { useState, useMemo } = React;
@@ -22,10 +22,10 @@
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
                 <div className="fade-up" style={{ marginBottom: 26 }}><LogoMark size={68} /></div>
                 <h1 className="fade-up" style={{ fontSize: 40, fontWeight: 800, lineHeight: 1.04, letterSpacing: '-0.04em', margin: 0 }}>
-                  Trade cricket<br />like the <span style={{ color: '#8B7BF5' }}>stock market.</span>
+                  Build your team.<br />Play <span style={{ color: '#8B7BF5' }}>every ball.</span>
                 </h1>
                 <p className="fade-up muted" style={{ fontSize: 16, lineHeight: 1.5, marginTop: 16, color: '#B8B2DC', maxWidth: 300 }}>
-                  Buy, sell &amp; short your favourite players. Prices move live with every run, wicket and over.
+                  Back your favourite players and build your dream team. Player values react live to every run, wicket and over.
                 </p>
                 <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%', marginTop: 28 }}>
                   {movers.map((p) => (
@@ -68,7 +68,7 @@
                   ))}
                 </div>
               </div>
-              <p className="muted" style={{ color: '#7d76a8', fontSize: 11.5, textAlign: 'center', lineHeight: 1.5 }}>By continuing you agree to LineUp's <span style={{ color: 'var(--brand-2)', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => app.go('terms')}>Terms</span> &amp; our Risk Disclosure. Trading involves risk of loss.</p>
+              <p className="muted" style={{ color: '#7d76a8', fontSize: 11.5, textAlign: 'center', lineHeight: 1.5 }}>By continuing you agree to LineUp's <span style={{ color: 'var(--brand-2)', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => app.go('terms')}>Terms</span> &amp; our Risk Disclosure. Gameplay involves risk of loss.</p>
             </>
           )}
         </div>
@@ -99,12 +99,12 @@
           </button>
         </div>
 
-        {/* portfolio value card */}
+        {/* team value card */}
         <div className="screen-pad">
           <div className="card" style={{ padding: 18, background: 'linear-gradient(155deg, var(--brand) 0%, #2A2160 100%)', border: 'none', color: '#fff', overflow: 'hidden', position: 'relative' }}>
             <div style={{ position: 'absolute', right: -30, top: -30, width: 140, height: 140, borderRadius: '50%', background: 'rgba(255,255,255,.06)' }} />
             <div className="row-between">
-              <span style={{ fontSize: 13, color: '#D6D0F5', fontWeight: 600 }}>Portfolio value</span>
+              <span style={{ fontSize: 13, color: '#D6D0F5', fontWeight: 600 }}>Team value</span>
               <button onClick={() => app.setHideBalance(!app.hideBalance)} style={{ color: '#D6D0F5', display: 'grid', placeItems: 'center' }}><Icon name={app.hideBalance ? 'eyeOff' : 'eye'} size={18} /></button>
             </div>
             <div className="num" style={{ fontSize: 34, fontWeight: 800, letterSpacing: '-0.03em', marginTop: 4 }}>
@@ -118,7 +118,7 @@
             </div>
             <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
               <button className="btn btn-sm" style={{ flex: 1, background: '#fff', color: 'var(--brand)', height: 44 }} onClick={() => app.go('addfunds')}><Icon name="plus" size={17} stroke={2.6} /> Add funds</button>
-              <button className="btn btn-sm" style={{ flex: 1, background: 'rgba(255,255,255,.14)', color: '#fff', height: 44 }} onClick={() => app.setTab('portfolio')}><Icon name="layers" size={17} /> Holdings</button>
+              <button className="btn btn-sm" style={{ flex: 1, background: 'rgba(255,255,255,.14)', color: '#fff', height: 44 }} onClick={() => app.setTab('portfolio')}><Icon name="layers" size={17} /> My Team</button>
             </div>
           </div>
         </div>
@@ -142,14 +142,14 @@
               </div>
             </div>
             <div className="divider" style={{ margin: '12px 0 10px' }} />
-            <div className="row-between"><span style={{ fontSize: 12.5, color: 'var(--brand-2)', fontWeight: 700 }}>⚡ 6 players trading live</span><span className="row" style={{ gap: 4, color: 'var(--text-2)', fontSize: 12.5, fontWeight: 700 }}>Open match<Icon name="chevR" size={15} /></span></div>
+            <div className="row-between"><span style={{ fontSize: 12.5, color: 'var(--brand-2)', fontWeight: 700 }}>⚡ 6 players in play live</span><span className="row" style={{ gap: 4, color: 'var(--text-2)', fontSize: 12.5, fontWeight: 700 }}>Open match<Icon name="chevR" size={15} /></span></div>
           </button>
         </div>
 
-        {/* your positions */}
+        {/* your picks */}
         <div className="screen-pad" style={{ marginTop: 20 }}>
           <div className="row-between" style={{ marginBottom: 12 }}>
-            <span className="section-title">Your positions</span>
+            <span className="section-title">Your picks</span>
             <button className="muted" style={{ fontSize: 13, fontWeight: 700 }} onClick={() => app.setTab('portfolio')}>See all</button>
           </div>
         </div>
@@ -158,7 +158,7 @@
             <button key={h.pid} className="card tap" style={{ minWidth: 158, padding: 13, textAlign: 'left' }} onClick={() => app.go('player', { id: p.id })}>
               <div className="row-between" style={{ marginBottom: 8 }}>
                 <Avatar player={p} size={38} />
-                <span className="chip" style={{ height: 22, fontSize: 10.5, background: h.side === 'long' ? 'var(--up-bg)' : 'var(--down-bg)', color: h.side === 'long' ? 'var(--up)' : 'var(--down)' }}>{h.side === 'long' ? 'BUY' : 'SELL'}</span>
+                <span className="chip" style={{ height: 22, fontSize: 10.5, background: h.side === 'long' ? 'var(--up-bg)' : 'var(--down-bg)', color: h.side === 'long' ? 'var(--up)' : 'var(--down)' }}>{h.side === 'long' ? 'BACK' : 'FADE'}</span>
               </div>
               <div style={{ fontWeight: 800, fontSize: 13.5, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{p.short}</div>
               <div className="muted" style={{ fontSize: 11, fontWeight: 600, marginTop: 1 }}>{fmtINR(h.avg * h.qty, 0)} · {h.horizon}</div>
@@ -168,7 +168,7 @@
           ); })}
           <button className="card tap flat" style={{ minWidth: 96, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, color: 'var(--brand-2)', background: 'var(--brand-soft)', border: '1px dashed var(--border-2)' }} onClick={() => app.setTab('market')}>
             <span style={{ width: 38, height: 38, borderRadius: 12, background: 'var(--surface)', display: 'grid', placeItems: 'center' }}><Icon name="plus" size={20} stroke={2.4} /></span>
-            <span style={{ fontSize: 12, fontWeight: 800 }}>Trade more</span>
+            <span style={{ fontSize: 12, fontWeight: 800 }}>Pick more</span>
           </button>
         </HScroll>
 
@@ -176,7 +176,7 @@
         <div className="screen-pad" style={{ marginTop: 22 }}>
           <div className="row-between" style={{ marginBottom: 12 }}>
             <span className="section-title">🔥 Trending now</span>
-            <button className="muted" style={{ fontSize: 13, fontWeight: 700 }} onClick={() => app.setTab('market')}>Market</button>
+            <button className="muted" style={{ fontSize: 13, fontWeight: 700 }} onClick={() => app.setTab('market')}>All players</button>
           </div>
         </div>
         <HScroll>
@@ -211,12 +211,12 @@
           </div>
         </div>
 
-        <p className="screen-pad muted" style={{ fontSize: 11, textAlign: 'center', marginTop: 18, lineHeight: 1.5 }}>Prices are simulated for demo. Player tokens are synthetic — value tracks live performance. Trading involves risk.</p>
+        <p className="screen-pad muted" style={{ fontSize: 11, textAlign: 'center', marginTop: 18, lineHeight: 1.5 }}>Player values are simulated for demo and track live performance. Gameplay involves risk.</p>
       </div>
     );
   }
 
-  /* ===================== MARKET ===================== */
+  /* ===================== PLAYERS ===================== */
   function Market({ app }) {
     const [tag, setTag] = useState('All');
     const [sort, setSort] = useState('change');
@@ -224,8 +224,8 @@
     const tags = window.LU.trendingTags;
     let list = app.players;
     if (tag === 'Live now') list = list.filter((p) => p.playing);
-    else if (tag === 'Top gainers') list = [...list].sort((a, b) => b.change - a.change);
-    else if (tag === 'Top losers') list = [...list].sort((a, b) => a.change - b.change);
+    else if (tag === 'In form') list = [...list].sort((a, b) => b.change - a.change);
+    else if (tag === 'Out of form') list = [...list].sort((a, b) => a.change - b.change);
     else if (tag === 'Batters') list = list.filter((p) => p.role === 'BAT');
     else if (tag === 'Bowlers') list = list.filter((p) => p.role === 'BWL');
     else if (tag === 'All-rounders') list = list.filter((p) => p.role === 'AR' || p.role === 'WK');
@@ -239,7 +239,7 @@
     return (
       <div className="screen screen-scroll">
         <div className="appbar">
-          <div style={{ flex: 1 }}><h1>Market</h1><div className="sub">{app.players.length} players · LineUp Index {idx >= 0 ? '+' : ''}{idx.toFixed(2)}%</div></div>
+          <div style={{ flex: 1 }}><h1>Players</h1><div className="sub">{app.players.length} players · LineUp Index {idx >= 0 ? '+' : ''}{idx.toFixed(2)}%</div></div>
           <button className="icon-btn" onClick={() => app.go('leaderboard')}><Icon name="trophy" size={20} /></button>
         </div>
         <div className="screen-pad">
@@ -252,11 +252,11 @@
             {tags.map((t) => <button key={t} className={'pill-tab' + (tag === t ? ' on' : '')} onClick={() => setTag(t)}>{t === 'Live now' ? '🔴 Live now' : t}</button>)}
           </div>
         </div>
-        {/* market index banner */}
+        {/* index banner */}
         <div className="screen-pad" style={{ marginTop: 14 }}>
           <div className="card" style={{ padding: '12px 14px', display: 'flex', alignItems: 'center', gap: 12 }}>
             <span style={{ width: 40, height: 40, borderRadius: 13, background: idx >= 0 ? 'var(--up-bg)' : 'var(--down-bg)', color: idx >= 0 ? 'var(--up)' : 'var(--down)', display: 'grid', placeItems: 'center' }}><Icon name="trend" size={20} /></span>
-            <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 13.5 }}>LineUp Index</div><div className="muted" style={{ fontSize: 11.5, fontWeight: 600 }}>Avg of all player tokens</div></div>
+            <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 13.5 }}>LineUp Index</div><div className="muted" style={{ fontSize: 11.5, fontWeight: 600 }}>Avg of all player values</div></div>
             <div style={{ textAlign: 'right' }}><div className="num" style={{ fontWeight: 800, fontSize: 15 }}>{(100 + idx * 4).toFixed(2)}</div><Delta value={idx} /></div>
           </div>
         </div>
@@ -265,7 +265,7 @@
           <div className="row-between">
             <span className="label">{list.length} players</span>
             <div className="seg" style={{ width: 196 }}>
-              {[['change', 'Movers'], ['price', 'Price'], ['volume', 'Volume']].map(([k, l]) => <button key={k} className={sort === k ? 'on' : ''} onClick={() => setSort(k)}>{l}</button>)}
+              {[['change', 'Form'], ['price', 'Value'], ['volume', 'Popular']].map(([k, l]) => <button key={k} className={sort === k ? 'on' : ''} onClick={() => setSort(k)}>{l}</button>)}
             </div>
           </div>
         </div>
