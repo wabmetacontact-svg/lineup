@@ -1,5 +1,5 @@
 /* ============================================================================
-   LineUp — App root: navigation, live value engine, pick logic, theming
+   LineUp — App root: navigation, live price engine, trade logic, theming
    ============================================================================ */
 (function () {
   const { useState, useEffect, useRef, useCallback } = React;
@@ -109,26 +109,26 @@
           setClosed((c) => [{ pid, side: h.side, qty, pl: pl.abs }, ...c]);
           setHoldings((hs) => hs.filter((x) => x.pid !== pid));
           setWallet((w) => ({ ...w, available: +(w.available + credit).toFixed(2) }));
-          showToast(`Released ${p.short} · ${pl.abs >= 0 ? '+' : ''}${LU.fmtINR(pl.abs)}`, pl.abs >= 0 ? 'check' : 'info');
+          showToast(`Closed ${p.short} · ${pl.abs >= 0 ? '+' : ''}${LU.fmtINR(pl.abs)}`, pl.abs >= 0 ? 'check' : 'info');
         }
       } else {
         const amt = amount != null ? amount : price * qty;
         const fee = amt * 0.002;
         const need = side === 'short' ? amt * 0.25 + fee : amt + fee;
-        setWallet((w) => ({ ...w, available: +(w.available - need).toFixed(2), tx: [{ id: Date.now(), type: side, label: `${side === 'long' ? 'Backed' : 'Faded'} ${p.short} · ${LU.fmtINR(amt, 0)}`, amt: -need, t: 'Just now', icon: side === 'long' ? 'long' : 'short' }, ...w.tx] }));
+        setWallet((w) => ({ ...w, available: +(w.available - need).toFixed(2), tx: [{ id: Date.now(), type: side, label: `${side === 'long' ? 'Bought' : 'Shorted'} ${p.short} · ${LU.fmtINR(amt, 0)}`, amt: -need, t: 'Just now', icon: side === 'long' ? 'long' : 'short' }, ...w.tx] }));
         setHoldings((hs) => {
           const ex = hs.find((x) => x.pid === pid && x.side === side);
           if (ex) return hs.map((x) => x === ex ? { ...x, qty: +(x.qty + qty).toFixed(4), avg: +((x.avg * x.qty + price * qty) / (x.qty + qty)).toFixed(2) } : x);
           return [{ pid, side, qty: +qty.toFixed(4), avg: price, horizon, entryBall: entryBall || null }, ...hs];
         });
-        showToast(`${side === 'long' ? 'Backed' : 'Faded'} ${p.short} · ${LU.fmtINR(amt, 0)}${entryBall ? ' · ball ' + entryBall : ''}`, side === 'long' ? 'arrowUR' : 'arrowDR');
+        showToast(`${side === 'long' ? 'Bought' : 'Sold'} ${LU.fmtINR(amt, 0)} of ${p.short}${entryBall ? ' · ball ' + entryBall : ''}`, side === 'long' ? 'arrowUR' : 'arrowDR');
       }
       back();
     }, [holdings, players, showToast, back]);
 
     const addFunds = useCallback((val) => {
-      setWallet((w) => ({ ...w, available: +(w.available + val).toFixed(2), tx: [{ id: Date.now(), type: 'deposit', label: 'Points added to wallet', amt: val, t: 'Just now', icon: 'deposit' }, ...w.tx] }));
-      showToast(`${LU.fmtINR(val, 0)} added to your wallet`, 'check'); back();
+      setWallet((w) => ({ ...w, available: +(w.available + val).toFixed(2), tx: [{ id: Date.now(), type: 'deposit', label: 'Added to wallet', amt: val, t: 'Just now', icon: 'deposit' }, ...w.tx] }));
+      showToast(`${LU.fmtINR(val, 0)} added`, 'check'); back();
     }, [showToast, back]);
 
     const setPref = useCallback((k, v) => setPrefs((p) => ({ ...p, [k]: v })), []);

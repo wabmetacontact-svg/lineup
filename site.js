@@ -78,7 +78,7 @@
           if (Math.random() > 0.4) return;
           var base = parseFloat(el.getAttribute('data-jitter'));
           var v = base + (Math.random() - 0.5) * base * 0.01;
-          el.textContent = v.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' pts';
+          el.textContent = '₹' + v.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
           el.style.color = v >= base ? 'var(--up)' : 'var(--down)';
           setTimeout(function () { el.style.color = ''; }, 600);
         });
@@ -101,7 +101,7 @@
     buildTweaks();
   });
 
-  /* ---- Players rail (shared, every page) ---- */
+  /* ---- Trading players rail (shared, every page) ---- */
   function buildRail() {
     var host = document.getElementById('players-rail');
     if (!host) return;
@@ -118,7 +118,7 @@
       ['RS', 'R. Sharma', 'IND', 'BAT', '#2A6FDB', '#1B4F9E', 2410.0, -1.18, 'm'],
       ['BS', 'B. Stokes', 'ENG', 'AR', '#4257C7', '#2c3a8f', 1845.7, 1.47, 'l']
     ];
-    function inr(n) { return n.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' pts'; }
+    function inr(n) { return '₹' + n.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
     function avatarURI(initials, c1, c2, id) {
       var fs = initials.length > 2 ? 32 : 42;
       var svg = "<svg xmlns='http://www.w3.org/2000/svg' width='112' height='112'>" +
@@ -143,7 +143,7 @@
     // two identical sets so the -50% loop is seamless
     var setA = P.map(function (p, i) { return chip(p, i, ''); }).join('');
     var setB = P.map(function (p, i) { return chip(p, i, '-b'); }).join('');
-    host.innerHTML = '<div class="rail-track" aria-label="Live player values">' + setA + setB + '</div>';
+    host.innerHTML = '<div class="rail-track" aria-label="Live player prices">' + setA + setB + '</div>';
 
     // mirror a dropped cartoon from the primary chip onto its marquee twin
     function syncTwins() {
